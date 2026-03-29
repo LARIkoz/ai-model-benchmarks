@@ -293,8 +293,8 @@
           "price": null
         },
         "quality_2": {
-          "name": "Claude Sonnet 4",
-          "id": null,
+          "name": "Claude Sonnet 4.6",
+          "id": "claude-sonnet-4-6",
           "score": 75.0,
           "price": null
         },
@@ -398,7 +398,7 @@
       },
       "tool_reliability_error_rate": {
         "cat": "tools_and_agents",
-        "bench": "error_rate",
+        "bench": "tool_error_rate",
         "quality_1": {
           "name": "GLM-5-Turbo",
           "id": "glm-5-turbo",
@@ -752,7 +752,7 @@
     "domain_and_infrastructure": {
       "legal_finance_seal": {
         "cat": "domain_and_infrastructure",
-        "bench": "seal",
+        "bench": "scale_seal",
         "quality_1": {
           "name": "Claude Opus 4.6",
           "id": "claude-opus-4-6",
@@ -829,8 +829,8 @@
           "price": null
         },
         "budget_1": {
-          "name": "Mercury Lightning",
-          "id": null,
+          "name": "Inception Mercury 2",
+          "id": "inception-mercury-2",
           "score": null,
           "price": 0.3
         },
@@ -909,7 +909,7 @@
     "web_scraping": {
       "scraper_code_gen_zyte": {
         "cat": "web_scraping",
-        "bench": "zyte_rouge",
+        "bench": "scraper_code_zyte",
         "quality_1": {
           "name": "Claude Sonnet 4.6",
           "id": "claude-sonnet-4-6",
@@ -1311,7 +1311,7 @@
     "medical": {
       "medical_qa_usmle": {
         "cat": "medical",
-        "bench": "usmle",
+        "bench": "medqa",
         "quality_1": {
           "name": "GPT-5.4",
           "id": "gpt-5-4",
@@ -1509,25 +1509,35 @@
     "code_generation": {
       "best_free_or": "Qwen3 Coder 480B",
       "backup_free_or": "MiniMax M2.5",
-      "free_cli": ["Qwen CLI", "Codex CLI"],
+      "free_cli": [
+        "Qwen CLI",
+        "Codex CLI"
+      ],
       "reason": "480B MoE, SWE-bench leader, 262K ctx"
     },
     "code_review": {
       "best_free_or": "MiniMax M2.5 (SWE 80.2%)",
       "backup_free_or": "Qwen3 Coder 480B",
-      "free_cli": ["Codex CLI", "Qwen CLI"],
+      "free_cli": [
+        "Codex CLI",
+        "Qwen CLI"
+      ],
       "reason": "M2.5 = frontier coding quality for free"
     },
     "niche_classification": {
       "best_free_or": "MiniMax M2.5",
       "backup_free_or": "GLM-4.5 Air",
-      "free_cli": ["Qwen CLI"],
+      "free_cli": [
+        "Qwen CLI"
+      ],
       "reason": "Qwen CLI = 2000 RPD batch free"
     },
     "app_dna_categorization": {
       "best_free_or": "GLM-4.5 Air",
       "backup_free_or": "MiniMax M2.5",
-      "free_cli": ["Qwen CLI"],
+      "free_cli": [
+        "Qwen CLI"
+      ],
       "reason": "GLM stable in classification"
     },
     "consilium_second_opinion": {
@@ -1539,25 +1549,33 @@
     "reasoning_architecture": {
       "best_free_or": "Hermes 3 405B (131K)",
       "backup_free_or": "NVIDIA Nemotron Super (262K)",
-      "free_cli": ["Gemini CLI"],
+      "free_cli": [
+        "Gemini CLI"
+      ],
       "reason": "405B reasoning, Gemini for deep"
     },
     "long_document_analysis": {
       "best_free_or": "NVIDIA Nemotron Super (262K)",
       "backup_free_or": "Qwen3 Next 80B (262K)",
-      "free_cli": ["Gemini CLI (2M)"],
+      "free_cli": [
+        "Gemini CLI (2M)"
+      ],
       "reason": "262K ctx for free on OR"
     },
     "batch_general_1000_plus": {
       "best_free_or": "GLM-4.5 Air",
       "backup_free_or": "MiniMax M2.5",
-      "free_cli": ["Qwen CLI"],
+      "free_cli": [
+        "Qwen CLI"
+      ],
       "reason": "All three stable for batch"
     },
     "vision_screenshots": {
       "best_free_or": "NVIDIA Nemotron Nano 12B VL",
       "backup_free_or": null,
-      "free_cli": ["Gemini CLI"],
+      "free_cli": [
+        "Gemini CLI"
+      ],
       "reason": "Only FREE vision model on OR"
     },
     "writing_copywriting": {
@@ -1575,13 +1593,17 @@
     "tool_calling": {
       "best_free_or": "GLM-4.5 Air",
       "backup_free_or": null,
-      "free_cli": ["GLM-4.7-Flash (Tau2 98.8%)"],
+      "free_cli": [
+        "GLM-4.7-Flash (Tau2 98.8%)"
+      ],
       "reason": "Z.ai = king tool calling"
     },
     "research": {
       "best_free_or": null,
       "backup_free_or": null,
-      "free_cli": ["Gemini CLI (2M)"],
+      "free_cli": [
+        "Gemini CLI (2M)"
+      ],
       "reason": "OR free not for research, Gemini better"
     },
     "uncensored_no_filter": {

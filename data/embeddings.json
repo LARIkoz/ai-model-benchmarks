@@ -18,7 +18,7 @@
       "clustering"
     ],
     "measured": "2026-03",
-    "source": "mteb-leaderboard",
+    "source": "https://huggingface.co/spaces/mteb/leaderboard",
     "availability": "openrouter"
   },
   {
@@ -41,7 +41,7 @@
       "privacy self-host"
     ],
     "measured": "2026-03",
-    "source": "mteb-leaderboard",
+    "source": "https://huggingface.co/spaces/mteb/leaderboard",
     "availability": "openrouter",
     "open_weight": true
   },
@@ -56,9 +56,12 @@
     "context_length": 32000,
     "pricing_per_million_tokens": 0.02,
     "license": "Apache 2.0",
-    "best_for": ["Lighter Qwen", "budget open-source"],
+    "best_for": [
+      "Lighter Qwen",
+      "budget open-source"
+    ],
     "measured": "2026-03",
-    "source": "openrouter",
+    "source": "https://openrouter.ai",
     "availability": "openrouter",
     "open_weight": true
   },
@@ -79,7 +82,7 @@
       "free on OpenRouter"
     ],
     "measured": "2026-03",
-    "source": "openrouter",
+    "source": "https://openrouter.ai",
     "availability": "openrouter_free",
     "multimodal": true
   },
@@ -94,9 +97,11 @@
     "context_length": 32000,
     "pricing_per_million_tokens": 0.03,
     "license": "proprietary",
-    "best_for": ["Web-scale retrieval optimized"],
+    "best_for": [
+      "Web-scale retrieval optimized"
+    ],
     "measured": "2026-03",
-    "source": "openrouter",
+    "source": "https://openrouter.ai",
     "availability": "openrouter"
   },
   {
@@ -110,9 +115,13 @@
     "context_length": 32000,
     "pricing_per_million_tokens": 0.004,
     "license": "proprietary",
-    "best_for": ["Ultra-cheap", "low-latency", "bulk indexing"],
+    "best_for": [
+      "Ultra-cheap",
+      "low-latency",
+      "bulk indexing"
+    ],
     "measured": "2026-03",
-    "source": "openrouter",
+    "source": "https://openrouter.ai",
     "availability": "openrouter"
   },
   {
@@ -126,9 +135,13 @@
     "context_length": 8000,
     "pricing_per_million_tokens": 0.15,
     "license": "proprietary",
-    "best_for": ["Code embedding", "codebase RAG", "IDE search"],
+    "best_for": [
+      "Code embedding",
+      "codebase RAG",
+      "IDE search"
+    ],
     "measured": "2026-03",
-    "source": "openrouter",
+    "source": "https://openrouter.ai",
     "availability": "openrouter"
   },
   {
@@ -143,9 +156,13 @@
     "context_length": 8000,
     "pricing_per_million_tokens": 0.13,
     "license": "proprietary",
-    "best_for": ["General purpose", "high-dim clustering", "MRL flex dims"],
+    "best_for": [
+      "General purpose",
+      "high-dim clustering",
+      "MRL flex dims"
+    ],
     "measured": "2026-03",
-    "source": "mteb-leaderboard",
+    "source": "https://huggingface.co/spaces/mteb/leaderboard",
     "availability": "openrouter"
   },
   {
@@ -166,7 +183,7 @@
       "prototype"
     ],
     "measured": "2026-03",
-    "source": "mteb-leaderboard",
+    "source": "https://huggingface.co/spaces/mteb/leaderboard",
     "availability": "openrouter"
   },
   {
@@ -180,9 +197,11 @@
     "context_length": 8000,
     "pricing_per_million_tokens": 0.1,
     "license": "proprietary",
-    "best_for": ["Legacy — do not use for new projects"],
+    "best_for": [
+      "Legacy — do not use for new projects"
+    ],
     "measured": "2026-03",
-    "source": "mteb-leaderboard",
+    "source": "https://huggingface.co/spaces/mteb/leaderboard",
     "availability": "openrouter",
     "deprecated": true
   },
@@ -198,9 +217,12 @@
     "context_length": 32000,
     "pricing_per_million_tokens": 0,
     "license": "Open-weight",
-    "best_for": ["Best free multilingual", "self-host GPU"],
+    "best_for": [
+      "Best free multilingual",
+      "self-host GPU"
+    ],
     "measured": "2026-03",
-    "source": "mteb-leaderboard",
+    "source": "https://huggingface.co/spaces/mteb/leaderboard",
     "availability": "nim_free",
     "open_weight": true
   },
@@ -223,7 +245,7 @@
       "domain fine-tuning"
     ],
     "measured": "2026-03",
-    "source": "mteb-leaderboard",
+    "source": "https://huggingface.co/spaces/mteb/leaderboard",
     "availability": "direct_api"
   },
   {
@@ -237,9 +259,11 @@
     "context_length": 32000,
     "pricing_per_million_tokens": 0.06,
     "license": "proprietary",
-    "best_for": ["Strong retrieval"],
+    "best_for": [
+      "Strong retrieval"
+    ],
     "measured": "2026-03",
-    "source": "mteb-leaderboard",
+    "source": "https://huggingface.co/spaces/mteb/leaderboard",
     "availability": "direct_api"
   },
   {
@@ -253,9 +277,12 @@
     "context_length": 32000,
     "pricing_per_million_tokens": 0.02,
     "license": "proprietary",
-    "best_for": ["Long ctx budget", "32K without chunking"],
+    "best_for": [
+      "Long ctx budget",
+      "32K without chunking"
+    ],
     "measured": "2026-03",
-    "source": "mteb-leaderboard",
+    "source": "https://huggingface.co/spaces/mteb/leaderboard",
     "availability": "direct_api"
   },
   {
@@ -269,9 +296,13 @@
     "context_length": 512,
     "pricing_per_million_tokens": 0.12,
     "license": "proprietary",
-    "best_for": ["Enterprise noisy data", "OCR text", "user-generated content"],
+    "best_for": [
+      "Enterprise noisy data",
+      "OCR text",
+      "user-generated content"
+    ],
     "measured": "2026-03",
-    "source": "mteb-leaderboard",
+    "source": "https://huggingface.co/spaces/mteb/leaderboard",
     "availability": "direct_api"
   },
   {
@@ -285,9 +316,12 @@
     "context_length": 512,
     "pricing_per_million_tokens": 0.01,
     "license": "MIT",
-    "best_for": ["Budget on OpenRouter", "open-source"],
+    "best_for": [
+      "Budget on OpenRouter",
+      "open-source"
+    ],
     "measured": "2026-03",
-    "source": "mteb-leaderboard",
+    "source": "https://huggingface.co/spaces/mteb/leaderboard",
     "availability": "openrouter",
     "open_weight": true
   },
@@ -302,9 +336,11 @@
     "context_length": 512,
     "pricing_per_million_tokens": 0.005,
     "license": "MIT",
-    "best_for": ["Ultra-budget on OpenRouter"],
+    "best_for": [
+      "Ultra-budget on OpenRouter"
+    ],
     "measured": "2026-03",
-    "source": "mteb-leaderboard",
+    "source": "https://huggingface.co/spaces/mteb/leaderboard",
     "availability": "openrouter",
     "open_weight": true
   },
@@ -319,9 +355,13 @@
     "context_length": 8000,
     "pricing_per_million_tokens": 0,
     "license": "MIT",
-    "best_for": ["Budget self-host", "multilingual", "CPU ok (568M params)"],
+    "best_for": [
+      "Budget self-host",
+      "multilingual",
+      "CPU ok (568M params)"
+    ],
     "measured": "2026-03",
-    "source": "mteb-leaderboard",
+    "source": "https://huggingface.co/spaces/mteb/leaderboard",
     "availability": "self_host",
     "open_weight": true
   },
@@ -336,9 +376,11 @@
     "context_length": 32000,
     "pricing_per_million_tokens": 0,
     "license": "Open",
-    "best_for": ["NVIDIA GPU ecosystem"],
+    "best_for": [
+      "NVIDIA GPU ecosystem"
+    ],
     "measured": "2026-03",
-    "source": "mteb-leaderboard",
+    "source": "https://huggingface.co/spaces/mteb/leaderboard",
     "availability": "nim_free",
     "open_weight": true
   },
@@ -353,9 +395,11 @@
     "context_length": null,
     "pricing_per_million_tokens": 0,
     "license": "Open",
-    "best_for": ["Code retrieval NVIDIA"],
+    "best_for": [
+      "Code retrieval NVIDIA"
+    ],
     "measured": "2026-03",
-    "source": "nvidia.com",
+    "source": "https://nvidia.com",
     "availability": "nim_free",
     "open_weight": true
   },
@@ -370,9 +414,12 @@
     "context_length": 8000,
     "pricing_per_million_tokens": 0.01,
     "license": "proprietary",
-    "best_for": ["Cheapest commercial direct", "bulk indexing"],
+    "best_for": [
+      "Cheapest commercial direct",
+      "bulk indexing"
+    ],
     "measured": "2026-03",
-    "source": "mteb-leaderboard",
+    "source": "https://huggingface.co/spaces/mteb/leaderboard",
     "availability": "direct_api"
   },
   {
@@ -386,9 +433,14 @@
     "context_length": 512,
     "pricing_per_million_tokens": 0.005,
     "license": "Apache 2.0",
-    "best_for": ["Prototyping", "edge", "mobile", "22MB model"],
+    "best_for": [
+      "Prototyping",
+      "edge",
+      "mobile",
+      "22MB model"
+    ],
     "measured": "2026-03",
-    "source": "mteb-leaderboard",
+    "source": "https://huggingface.co/spaces/mteb/leaderboard",
     "availability": "openrouter",
     "open_weight": true
   },
@@ -403,9 +455,11 @@
     "context_length": 512,
     "pricing_per_million_tokens": 0.005,
     "license": "Apache 2.0",
-    "best_for": ["Slightly better MiniLM"],
+    "best_for": [
+      "Slightly better MiniLM"
+    ],
     "measured": "2026-03",
-    "source": "mteb-leaderboard",
+    "source": "https://huggingface.co/spaces/mteb/leaderboard",
     "availability": "openrouter",
     "open_weight": true
   },
@@ -420,9 +474,11 @@
     "context_length": 512,
     "pricing_per_million_tokens": 0.005,
     "license": "Apache 2.0",
-    "best_for": ["Best sentence-transformer"],
+    "best_for": [
+      "Best sentence-transformer"
+    ],
     "measured": "2026-03",
-    "source": "mteb-leaderboard",
+    "source": "https://huggingface.co/spaces/mteb/leaderboard",
     "availability": "openrouter",
     "open_weight": true
   },
@@ -437,9 +493,11 @@
     "context_length": 8000,
     "pricing_per_million_tokens": 0.05,
     "license": "Apache 2.0",
-    "best_for": ["Budget open-weight 8K ctx"],
+    "best_for": [
+      "Budget open-weight 8K ctx"
+    ],
     "measured": "2026-03",
-    "source": "mteb-leaderboard",
+    "source": "https://huggingface.co/spaces/mteb/leaderboard",
     "availability": "direct_api_or_self_host",
     "open_weight": true
   },
@@ -461,7 +519,7 @@
       "similarity/recommendations"
     ],
     "measured": "2026-03",
-    "source": "mteb-leaderboard",
+    "source": "https://huggingface.co/spaces/mteb/leaderboard",
     "availability": "direct_api"
   }
 ]

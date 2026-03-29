@@ -85,7 +85,7 @@ Pull requests welcome. Requirements:
 1. **Source link required** — every score must have a `source` URL pointing to the leaderboard or paper
 2. **Measured date required** — use `YYYY-MM` format minimum, `YYYY-MM-DD` preferred
 3. **No self-reported scores** — scores must come from independent benchmarking (not the model provider's own blog)
-4. Run `python scripts/validate.py` before submitting — PRs that fail validation are auto-rejected
+4. Run `python scripts/validate.py` before submitting — PRs should pass validation before submission
 
 See `docs/CONTRIBUTING.md` for full guidelines.
 

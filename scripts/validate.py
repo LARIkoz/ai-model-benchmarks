@@ -146,8 +146,11 @@ def validate_models(models: list[dict], strict: bool):
             threshold_days = staleness_thresholds.get(volatility, 60)
             age_days = (today - measured_dt).days
 
-            if not score.get("source"):
+            source = score.get("source")
+            if not source:
                 warn(f"models.json: {mid}.{bench_id} missing 'source' URL")
+            elif not source.startswith("http"):
+                warn(f"models.json: {mid}.{bench_id} source is not a URL: '{source}'")
 
             if age_days > threshold_days:
                 msg = (
