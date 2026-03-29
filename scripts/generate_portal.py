@@ -38,6 +38,24 @@ def fmt_score(v) -> str:
     return str(v)
 
 
+def fmt_score_obj(entry) -> str:
+    """Преобразует score-объект из models.json в JS-объект с метаданными."""
+    if entry is None:
+        return "null"
+    if isinstance(entry, dict):
+        val = entry.get("value")
+        if val is None:
+            return "null"
+        measured = entry.get("measured") or ""
+        source = entry.get("source") or ""
+        # Экранируем строки через json.dumps
+        d_str = json.dumps(measured)
+        s_str = json.dumps(source)
+        return f"{{v:{val},d:{d_str},s:{s_str}}}"
+    # backward compat: plain number
+    return str(entry)
+
+
 def fmt_str(s) -> str:
     if s is None:
         return "null"
@@ -115,8 +133,13 @@ def gen_models(models: list) -> str:
         s = m.get("scores", {})
 
         def sc(k):
-            v = s.get(k, {})
-            return v.get("value") if isinstance(v, dict) else None
+            """Возвращает полный score-объект (dict) или None."""
+            v = s.get(k)
+            if v is None:
+                return None
+            if isinstance(v, dict):
+                return v if v.get("value") is not None else None
+            return None
 
         best = m.get("best_for", [])
         best_str = ", ".join(best) if best else ""
@@ -150,13 +173,13 @@ def gen_models(models: list) -> str:
             f'ctx: "{fmt_ctx(m.get("context_length"))}", '
             f'maxOut: "{max_out_str}", '
             f'caps: "{cap_str}", '
-            f"swe_v: {fmt_score(sc('swe_v'))}, "
-            f"swe_pro: {fmt_score(sc('swe_pro'))}, "
-            f"gpqa: {fmt_score(sc('gpqa'))}, "
-            f"hle: {fmt_score(sc('hle'))}, "
-            f"arc: {fmt_score(sc('arc_agi_2'))}, "
-            f"tau2: {fmt_score(sc('tau2'))}, "
-            f"benchlm: {fmt_score(sc('benchlm'))}, "
+            f"swe_v: {fmt_score_obj(sc('swe_v'))}, "
+            f"swe_pro: {fmt_score_obj(sc('swe_pro'))}, "
+            f"gpqa: {fmt_score_obj(sc('gpqa'))}, "
+            f"hle: {fmt_score_obj(sc('hle'))}, "
+            f"arc: {fmt_score_obj(sc('arc_agi_2'))}, "
+            f"tau2: {fmt_score_obj(sc('tau2'))}, "
+            f"benchlm: {fmt_score_obj(sc('benchlm'))}, "
             f"best: {fmt_str(best_str)}"
             "},"
         )

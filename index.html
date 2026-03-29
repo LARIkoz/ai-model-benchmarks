@@ -536,6 +536,80 @@
         opacity: 0.9;
       }
 
+      .score-ref {
+        cursor: pointer;
+        border-bottom: 1px dotted currentColor;
+      }
+      .score-ref:hover {
+        opacity: 0.8;
+      }
+      .score-popup {
+        position: absolute;
+        z-index: 1000;
+        background: var(--bg2);
+        border: 1px solid var(--glass-border);
+        border-radius: 10px;
+        padding: 16px;
+        width: 260px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+        font-size: 0.82rem;
+        animation: tooltipIn 0.15s ease;
+      }
+      @keyframes tooltipIn {
+        from {
+          opacity: 0;
+          transform: translateY(-4px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .score-popup-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 8px;
+      }
+      .score-popup-title {
+        font-weight: 700;
+        color: var(--cyan);
+        font-size: 0.85rem;
+      }
+      .score-popup-close {
+        cursor: pointer;
+        color: var(--text-muted);
+        font-size: 0.9rem;
+      }
+      .score-popup-close:hover {
+        color: var(--text);
+      }
+      .score-popup-desc {
+        color: var(--text-muted);
+        font-size: 0.78rem;
+        margin-bottom: 10px;
+        line-height: 1.5;
+      }
+      .score-popup-value {
+        color: var(--text);
+        margin-bottom: 4px;
+      }
+      .score-popup-date {
+        color: var(--text-muted);
+        font-size: 0.75rem;
+        margin-bottom: 8px;
+      }
+      .score-popup-link {
+        display: block;
+        color: var(--cyan);
+        text-decoration: none;
+        font-size: 0.78rem;
+        margin-top: 4px;
+      }
+      .score-popup-link:hover {
+        text-decoration: underline;
+      }
+
       /* KING SECTION */
       .king-groups {
         display: flex;
@@ -1371,43 +1445,43 @@
 
       // MEGA-TABLE rows
       const MODELS = [
-        {tier: "1", name: "Claude Opus 4.6", priceIn: 5.0, priceOut: 25.0, ctx: "1M", maxOut: "128K", caps: "VTRS", swe_v: 80.8, swe_pro: 45.9, gpqa: 91.3, hle: 36.7, arc: 68.8, tau2: 99.3, benchlm: 76, best: "Reasoning, tool calling, writing, medical content, code review"},
-        {tier: "1", name: "Claude Opus 4.5", priceIn: 5.0, priceOut: 25.0, ctx: "200K", maxOut: "64K", caps: "VTRS", swe_v: 80.9, swe_pro: 45.9, gpqa: 87.0, hle: 28.4, arc: null, tau2: null, benchlm: 62, best: "Reasoning, long-horizon tasks"},
+        {tier: "1", name: "Claude Opus 4.6", priceIn: 5.0, priceOut: 25.0, ctx: "1M", maxOut: "128K", caps: "VTRS", swe_v: {v:80.8,d:"2026-03",s:"https://scale.com/leaderboard"}, swe_pro: {v:45.9,d:"2026-03",s:"https://scale.com/leaderboard"}, gpqa: {v:91.3,d:"2026-03",s:"https://artificial-analysis.com"}, hle: {v:36.7,d:"2026-03",s:"https://lastexam.ai"}, arc: {v:68.8,d:"2026-03",s:"https://arcprize.org"}, tau2: {v:99.3,d:"2026-03",s:"https://github.com/tau-bench/tau-bench"}, benchlm: {v:76,d:"2026-03",s:"https://benchlm.ai"}, best: "Reasoning, tool calling, writing, medical content, code review"},
+        {tier: "1", name: "Claude Opus 4.5", priceIn: 5.0, priceOut: 25.0, ctx: "200K", maxOut: "64K", caps: "VTRS", swe_v: {v:80.9,d:"2026-03",s:"https://scale.com/leaderboard"}, swe_pro: {v:45.9,d:"2026-03",s:"https://scale.com/leaderboard"}, gpqa: {v:87.0,d:"2026-03",s:"https://artificial-analysis.com"}, hle: {v:28.4,d:"2026-03",s:"https://lastexam.ai"}, arc: null, tau2: null, benchlm: {v:62,d:"2026-03",s:"https://benchlm.ai"}, best: "Reasoning, long-horizon tasks"},
         {tier: "1", name: "Claude Opus 4.1", priceIn: 15.0, priceOut: 75.0, ctx: "200K", maxOut: "32K", caps: "VTRS", swe_v: null, swe_pro: null, gpqa: null, hle: null, arc: null, tau2: null, benchlm: null, best: "Function calling"},
-        {tier: "1", name: "Gemini 3.1 Pro", priceIn: 2.0, priceOut: 12.0, ctx: "1M", maxOut: "65K", caps: "VTRSA", swe_v: 80.6, swe_pro: 43.3, gpqa: 94.3, hle: 37.2, arc: 77.1, tau2: null, benchlm: 83, best: "GPQA, ARC-AGI-2, medical research, vision, long documents"},
-        {tier: "1", name: "Gemini 3 Pro", priceIn: 2.0, priceOut: 12.0, ctx: "65K", maxOut: "32K", caps: "VRSI", swe_v: 76.2, swe_pro: 43.3, gpqa: 91.9, hle: null, arc: null, tau2: null, benchlm: null, best: "Scraper code generation, vision"},
-        {tier: "1", name: "GPT-5.4", priceIn: 2.5, priceOut: 15.0, ctx: "1M", maxOut: "128K", caps: "VTRS", swe_v: 80, swe_pro: 41.8, gpqa: 92.0, hle: 41.6, arc: 73.3, tau2: null, benchlm: 80, best: "Math, agentic coding, JS deobfuscation, scientific coding"},
-        {tier: "1", name: "GPT-5.2", priceIn: 1.75, priceOut: 14.0, ctx: "400K", maxOut: "128K", caps: "VTRS", swe_v: 80.0, swe_pro: 41.0, gpqa: 92.4, hle: 35.4, arc: null, tau2: null, benchlm: 67, best: "GPQA, general knowledge"},
-        {tier: "1", name: "GPT-5.3 Codex", priceIn: 1.75, priceOut: 14.0, ctx: "400K", maxOut: "128K", caps: "VTRS", swe_v: null, swe_pro: 41.0, gpqa: 91.5, hle: 39.9, arc: null, tau2: null, benchlm: 70, best: "Code generation"},
-        {tier: "1", name: "Claude Sonnet 4.6", priceIn: 3.0, priceOut: 15.0, ctx: "1M", maxOut: "128K", caps: "VTRS", swe_v: 79.6, swe_pro: null, gpqa: 89.9, hle: null, arc: 58.3, tau2: null, benchlm: 76, best: "Main coding, scraper code gen, browser automation, fast batch"},
-        {tier: "1", name: "Claude Sonnet 4.5", priceIn: 3.0, priceOut: 15.0, ctx: "1M", maxOut: "64K", caps: "VTRS", swe_v: null, swe_pro: 43.6, gpqa: null, hle: null, arc: null, tau2: null, benchlm: null, best: "General assistant, GAIA"},
-        {tier: "1", name: "Claude Haiku 4.5", priceIn: 1.0, priceOut: 5.0, ctx: "200K", maxOut: "64K", caps: "VTRS", swe_v: null, swe_pro: 39.5, gpqa: null, hle: null, arc: null, tau2: null, benchlm: 61, best: "Budget Claude, fast tasks"},
-        {tier: "1", name: "Grok 4", priceIn: 3.0, priceOut: 15.0, ctx: "256K", maxOut: "", caps: "VTRS", swe_v: 75.0, swe_pro: null, gpqa: 87.5, hle: 25.4, arc: null, tau2: null, benchlm: 67, best: "Assembly deobfuscation, coding"},
+        {tier: "1", name: "Gemini 3.1 Pro", priceIn: 2.0, priceOut: 12.0, ctx: "1M", maxOut: "65K", caps: "VTRSA", swe_v: {v:80.6,d:"2026-03",s:"https://scale.com/leaderboard"}, swe_pro: {v:43.3,d:"2026-03",s:"https://scale.com/leaderboard"}, gpqa: {v:94.3,d:"2026-03",s:"https://artificial-analysis.com"}, hle: {v:37.2,d:"2026-03",s:"https://lastexam.ai"}, arc: {v:77.1,d:"2026-03",s:"https://arcprize.org"}, tau2: null, benchlm: {v:83,d:"2026-03",s:"https://benchlm.ai"}, best: "GPQA, ARC-AGI-2, medical research, vision, long documents"},
+        {tier: "1", name: "Gemini 3 Pro", priceIn: 2.0, priceOut: 12.0, ctx: "65K", maxOut: "32K", caps: "VRSI", swe_v: {v:76.2,d:"2026-03",s:"https://scale.com/leaderboard"}, swe_pro: {v:43.3,d:"2026-03",s:"https://scale.com/leaderboard"}, gpqa: {v:91.9,d:"2026-03",s:"https://artificial-analysis.com"}, hle: null, arc: null, tau2: null, benchlm: null, best: "Scraper code generation, vision"},
+        {tier: "1", name: "GPT-5.4", priceIn: 2.5, priceOut: 15.0, ctx: "1M", maxOut: "128K", caps: "VTRS", swe_v: {v:80,d:"2026-03",s:"https://scale.com/leaderboard"}, swe_pro: {v:41.8,d:"2026-03",s:"https://scale.com/leaderboard"}, gpqa: {v:92.0,d:"2026-03",s:"https://artificial-analysis.com"}, hle: {v:41.6,d:"2026-03",s:"https://lastexam.ai"}, arc: {v:73.3,d:"2026-03",s:"https://arcprize.org"}, tau2: null, benchlm: {v:80,d:"2026-03",s:"https://benchlm.ai"}, best: "Math, agentic coding, JS deobfuscation, scientific coding"},
+        {tier: "1", name: "GPT-5.2", priceIn: 1.75, priceOut: 14.0, ctx: "400K", maxOut: "128K", caps: "VTRS", swe_v: {v:80.0,d:"2026-03",s:"https://scale.com/leaderboard"}, swe_pro: {v:41.0,d:"2026-03",s:"https://scale.com/leaderboard"}, gpqa: {v:92.4,d:"2026-03",s:"https://artificial-analysis.com"}, hle: {v:35.4,d:"2026-03",s:"https://lastexam.ai"}, arc: null, tau2: null, benchlm: {v:67,d:"2026-03",s:"https://benchlm.ai"}, best: "GPQA, general knowledge"},
+        {tier: "1", name: "GPT-5.3 Codex", priceIn: 1.75, priceOut: 14.0, ctx: "400K", maxOut: "128K", caps: "VTRS", swe_v: null, swe_pro: {v:41.0,d:"2026-03",s:"https://scale.com/leaderboard"}, gpqa: {v:91.5,d:"2026-03",s:"https://artificial-analysis.com"}, hle: {v:39.9,d:"2026-03",s:"https://lastexam.ai"}, arc: null, tau2: null, benchlm: {v:70,d:"2026-03",s:"https://benchlm.ai"}, best: "Code generation"},
+        {tier: "1", name: "Claude Sonnet 4.6", priceIn: 3.0, priceOut: 15.0, ctx: "1M", maxOut: "128K", caps: "VTRS", swe_v: {v:79.6,d:"2026-03",s:"https://scale.com/leaderboard"}, swe_pro: null, gpqa: {v:89.9,d:"2026-03",s:"https://artificial-analysis.com"}, hle: null, arc: {v:58.3,d:"2026-03",s:"https://arcprize.org"}, tau2: null, benchlm: {v:76,d:"2026-03",s:"https://benchlm.ai"}, best: "Main coding, scraper code gen, browser automation, fast batch"},
+        {tier: "1", name: "Claude Sonnet 4.5", priceIn: 3.0, priceOut: 15.0, ctx: "1M", maxOut: "64K", caps: "VTRS", swe_v: null, swe_pro: {v:43.6,d:"2026-03",s:"https://scale.com/leaderboard"}, gpqa: null, hle: null, arc: null, tau2: null, benchlm: null, best: "General assistant, GAIA"},
+        {tier: "1", name: "Claude Haiku 4.5", priceIn: 1.0, priceOut: 5.0, ctx: "200K", maxOut: "64K", caps: "VTRS", swe_v: null, swe_pro: {v:39.5,d:"2026-03",s:"https://scale.com/leaderboard"}, gpqa: null, hle: null, arc: null, tau2: null, benchlm: {v:61,d:"2026-03",s:"https://benchlm.ai"}, best: "Budget Claude, fast tasks"},
+        {tier: "1", name: "Grok 4", priceIn: 3.0, priceOut: 15.0, ctx: "256K", maxOut: "", caps: "VTRS", swe_v: {v:75.0,d:"2026-03",s:"https://scale.com/leaderboard"}, swe_pro: null, gpqa: {v:87.5,d:"2026-03",s:"https://artificial-analysis.com"}, hle: {v:25.4,d:"2026-03",s:"https://lastexam.ai"}, arc: null, tau2: null, benchlm: {v:67,d:"2026-03",s:"https://benchlm.ai"}, best: "Assembly deobfuscation, coding"},
         {tier: "1", name: "Grok 4.20 Beta", priceIn: 2.0, priceOut: 6.0, ctx: "2M", maxOut: "", caps: "VTRS", swe_v: null, swe_pro: null, gpqa: null, hle: null, arc: null, tau2: null, benchlm: null, best: "Hallucination resistance, fact-checking, long context 2M, consilium critical"},
-        {tier: "1", name: "GLM-5", priceIn: 1.0, priceOut: 3.2, ctx: "80K", maxOut: "131K", caps: "TRS", swe_v: 77.8, swe_pro: null, gpqa: 68.2, hle: 30.5, arc: null, tau2: 98.2, benchlm: null, best: "Tool calling, multilingual, long-horizon tasks, open-weight"},
+        {tier: "1", name: "GLM-5", priceIn: 1.0, priceOut: 3.2, ctx: "80K", maxOut: "131K", caps: "TRS", swe_v: {v:77.8,d:"2026-03",s:"https://scale.com/leaderboard"}, swe_pro: null, gpqa: {v:68.2,d:"2026-03",s:"https://artificial-analysis.com"}, hle: {v:30.5,d:"2026-03",s:"https://lastexam.ai"}, arc: null, tau2: {v:98.2,d:"2026-03",s:"https://github.com/tau-bench/tau-bench"}, benchlm: null, best: "Tool calling, multilingual, long-horizon tasks, open-weight"},
         {tier: "1", name: "GLM-5-Turbo", priceIn: 1.2, priceOut: 4.0, ctx: "202K", maxOut: "131K", caps: "TR", swe_v: null, swe_pro: null, gpqa: null, hle: null, arc: null, tau2: null, benchlm: null, best: "Tool reliability, low error rate"},
-        {tier: "1", name: "Gemini 2.5 Pro", priceIn: 1.25, priceOut: 10.0, ctx: "1M", maxOut: "65K", caps: "VTRSA", swe_v: null, swe_pro: null, gpqa: 86.4, hle: 21.6, arc: null, tau2: null, benchlm: null, best: "Adaptive reasoning, GRIND"},
+        {tier: "1", name: "Gemini 2.5 Pro", priceIn: 1.25, priceOut: 10.0, ctx: "1M", maxOut: "65K", caps: "VTRSA", swe_v: null, swe_pro: null, gpqa: {v:86.4,d:"2026-03",s:"https://artificial-analysis.com"}, hle: {v:21.6,d:"2026-03",s:"https://lastexam.ai"}, arc: null, tau2: null, benchlm: null, best: "Adaptive reasoning, GRIND"},
         {tier: "1", name: "Amazon Nova Premier", priceIn: 2.5, priceOut: 12.5, ctx: "1M", maxOut: "32K", caps: "VT", swe_v: null, swe_pro: null, gpqa: null, hle: null, arc: null, tau2: null, benchlm: null, best: "AWS ecosystem"},
         {tier: "1", name: "Cohere Command-A", priceIn: 2.5, priceOut: 10.0, ctx: "256K", maxOut: "8K", caps: "S", swe_v: null, swe_pro: null, gpqa: null, hle: null, arc: null, tau2: null, benchlm: null, best: "Enterprise"},
-        {tier: "2", name: "MiniMax M2.5", priceIn: 0.2, priceOut: 1.17, ctx: "196K", maxOut: "65K", caps: "TRS", swe_v: 80.2, swe_pro: 36.8, gpqa: 47, hle: 32, arc: null, tau2: null, benchlm: null, best: "Best SWE/$, batch coding, browser automation, writing"},
-        {tier: "2", name: "MiniMax M2.7", priceIn: 0.3, priceOut: 1.2, ctx: "204K", maxOut: "131K", caps: "TR", swe_v: null, swe_pro: 56.2, gpqa: null, hle: null, arc: null, tau2: null, benchlm: null, best: "Agentic tasks, GDPval"},
-        {tier: "2", name: "Kimi K2.5", priceIn: 0.45, priceOut: 2.2, ctx: "262K", maxOut: "", caps: "", swe_v: 76.8, swe_pro: null, gpqa: 87.6, hle: 31.5, arc: null, tau2: null, benchlm: null, best: "Vision + reasoning, budget GPQA, writing"},
-        {tier: "2", name: "Kimi K2", priceIn: 0.4, priceOut: 2.0, ctx: "131K", maxOut: "", caps: "", swe_v: null, swe_pro: 27.7, gpqa: null, hle: null, arc: null, tau2: null, benchlm: null, best: "Budget Kimi"},
-        {tier: "2", name: "GLM-4.7", priceIn: 0.39, priceOut: 1.75, ctx: "202K", maxOut: "65K", caps: "TRS", swe_v: null, swe_pro: null, gpqa: null, hle: null, arc: null, tau2: 95.9, benchlm: null, best: "Tool calling budget"},
-        {tier: "2", name: "GLM-4.6", priceIn: 0.39, priceOut: 1.9, ctx: "204K", maxOut: "204K", caps: "TRS", swe_v: 68.0, swe_pro: null, gpqa: 81.0, hle: null, arc: null, tau2: null, benchlm: null, best: "General tasks"},
+        {tier: "2", name: "MiniMax M2.5", priceIn: 0.2, priceOut: 1.17, ctx: "196K", maxOut: "65K", caps: "TRS", swe_v: {v:80.2,d:"2026-03",s:"https://scale.com/leaderboard"}, swe_pro: {v:36.8,d:"2026-03",s:"https://scale.com/leaderboard"}, gpqa: {v:47,d:"2026-03",s:"https://artificial-analysis.com"}, hle: {v:32,d:"2026-03",s:"https://lastexam.ai"}, arc: null, tau2: null, benchlm: null, best: "Best SWE/$, batch coding, browser automation, writing"},
+        {tier: "2", name: "MiniMax M2.7", priceIn: 0.3, priceOut: 1.2, ctx: "204K", maxOut: "131K", caps: "TR", swe_v: null, swe_pro: {v:56.2,d:"2026-03",s:"https://scale.com/leaderboard"}, gpqa: null, hle: null, arc: null, tau2: null, benchlm: null, best: "Agentic tasks, GDPval"},
+        {tier: "2", name: "Kimi K2.5", priceIn: 0.45, priceOut: 2.2, ctx: "262K", maxOut: "", caps: "", swe_v: {v:76.8,d:"2026-03",s:"https://scale.com/leaderboard"}, swe_pro: null, gpqa: {v:87.6,d:"2026-03",s:"https://artificial-analysis.com"}, hle: {v:31.5,d:"2026-03",s:"https://lastexam.ai"}, arc: null, tau2: null, benchlm: null, best: "Vision + reasoning, budget GPQA, writing"},
+        {tier: "2", name: "Kimi K2", priceIn: 0.4, priceOut: 2.0, ctx: "131K", maxOut: "", caps: "", swe_v: null, swe_pro: {v:27.7,d:"2026-03",s:"https://scale.com/leaderboard"}, gpqa: null, hle: null, arc: null, tau2: null, benchlm: null, best: "Budget Kimi"},
+        {tier: "2", name: "GLM-4.7", priceIn: 0.39, priceOut: 1.75, ctx: "202K", maxOut: "65K", caps: "TRS", swe_v: null, swe_pro: null, gpqa: null, hle: null, arc: null, tau2: {v:95.9,d:"2026-03",s:"https://github.com/tau-bench/tau-bench"}, benchlm: null, best: "Tool calling budget"},
+        {tier: "2", name: "GLM-4.6", priceIn: 0.39, priceOut: 1.9, ctx: "204K", maxOut: "204K", caps: "TRS", swe_v: {v:68.0,d:"2026-03",s:"https://scale.com/leaderboard"}, swe_pro: null, gpqa: {v:81.0,d:"2026-03",s:"https://artificial-analysis.com"}, hle: null, arc: null, tau2: null, benchlm: null, best: "General tasks"},
         {tier: "2", name: "GLM-4.5", priceIn: 0.6, priceOut: 2.2, ctx: "131K", maxOut: "98K", caps: "TRS", swe_v: null, swe_pro: null, gpqa: null, hle: null, arc: null, tau2: null, benchlm: null, best: "Function calling #1"},
-        {tier: "2", name: "Qwen3.5-397B", priceIn: 0.39, priceOut: 2.34, ctx: "262K", maxOut: "65K", caps: "VTRS", swe_v: 76.4, swe_pro: 38.7, gpqa: 88.4, hle: null, arc: null, tau2: null, benchlm: null, best: "Vision+video+reasoning, instruction following #1, budget GPQA"},
-        {tier: "2", name: "Qwen3.5-122B", priceIn: 0.26, priceOut: 2.08, ctx: "262K", maxOut: "65K", caps: "VTRS", swe_v: 72.0, swe_pro: null, gpqa: 86.6, hle: null, arc: null, tau2: null, benchlm: null, best: "Budget reasoning"},
-        {tier: "2", name: "Qwen3.5-35B", priceIn: 0.16, priceOut: 1.3, ctx: "262K", maxOut: "65K", caps: "VTRS", swe_v: 69.2, swe_pro: null, gpqa: 84.2, hle: null, arc: null, tau2: null, benchlm: null, best: "Mid-tier reasoning"},
+        {tier: "2", name: "Qwen3.5-397B", priceIn: 0.39, priceOut: 2.34, ctx: "262K", maxOut: "65K", caps: "VTRS", swe_v: {v:76.4,d:"2026-03",s:"https://scale.com/leaderboard"}, swe_pro: {v:38.7,d:"2026-03",s:"https://scale.com/leaderboard"}, gpqa: {v:88.4,d:"2026-03",s:"https://artificial-analysis.com"}, hle: null, arc: null, tau2: null, benchlm: null, best: "Vision+video+reasoning, instruction following #1, budget GPQA"},
+        {tier: "2", name: "Qwen3.5-122B", priceIn: 0.26, priceOut: 2.08, ctx: "262K", maxOut: "65K", caps: "VTRS", swe_v: {v:72.0,d:"2026-03",s:"https://scale.com/leaderboard"}, swe_pro: null, gpqa: {v:86.6,d:"2026-03",s:"https://artificial-analysis.com"}, hle: null, arc: null, tau2: null, benchlm: null, best: "Budget reasoning"},
+        {tier: "2", name: "Qwen3.5-35B", priceIn: 0.16, priceOut: 1.3, ctx: "262K", maxOut: "65K", caps: "VTRS", swe_v: {v:69.2,d:"2026-03",s:"https://scale.com/leaderboard"}, swe_pro: null, gpqa: {v:84.2,d:"2026-03",s:"https://artificial-analysis.com"}, hle: null, arc: null, tau2: null, benchlm: null, best: "Mid-tier reasoning"},
         {tier: "2", name: "Qwen3-Coder", priceIn: 0.22, priceOut: 1.0, ctx: "262K", maxOut: "", caps: "TS", swe_v: null, swe_pro: null, gpqa: null, hle: null, arc: null, tau2: null, benchlm: null, best: "Coding"},
         {tier: "2", name: "Qwen3-Coder-Plus", priceIn: 0.65, priceOut: 3.25, ctx: "1M", maxOut: "65K", caps: "TS", swe_v: null, swe_pro: null, gpqa: null, hle: null, arc: null, tau2: null, benchlm: null, best: "Long context code"},
-        {tier: "2", name: "DeepSeek V3.2", priceIn: 0.26, priceOut: 0.38, ctx: "163K", maxOut: "", caps: "TRS", swe_v: 73, swe_pro: 29.9, gpqa: null, hle: 25.1, arc: null, tau2: null, benchlm: null, best: "Cheapest quality, hallucination resistance budget"},
+        {tier: "2", name: "DeepSeek V3.2", priceIn: 0.26, priceOut: 0.38, ctx: "163K", maxOut: "", caps: "TRS", swe_v: {v:73,d:"2026-03",s:"https://scale.com/leaderboard"}, swe_pro: {v:29.9,d:"2026-03",s:"https://scale.com/leaderboard"}, gpqa: null, hle: {v:25.1,d:"2026-03",s:"https://lastexam.ai"}, arc: null, tau2: null, benchlm: null, best: "Cheapest quality, hallucination resistance budget"},
         {tier: "2", name: "DeepSeek R1", priceIn: 0.45, priceOut: 2.15, ctx: "64K", maxOut: "16K", caps: "TR", swe_v: null, swe_pro: null, gpqa: null, hle: null, arc: null, tau2: null, benchlm: null, best: "Deep reasoning, medical budget king"},
         {tier: "2", name: "DeepSeek V3.2 Speciale", priceIn: 0.4, priceOut: 1.2, ctx: "163K", maxOut: "163K", caps: "RS", swe_v: null, swe_pro: null, gpqa: null, hle: null, arc: null, tau2: null, benchlm: null, best: "Enhanced V3.2"},
         {tier: "2", name: "Grok 4.1 Fast", priceIn: 0.2, priceOut: 0.5, ctx: "2M", maxOut: "30K", caps: "VTRS", swe_v: null, swe_pro: null, gpqa: null, hle: null, arc: null, tau2: null, benchlm: null, best: "Consilium, 2M context, long context budget"},
         {tier: "2", name: "Grok 4 Fast", priceIn: 0.2, priceOut: 0.5, ctx: "2M", maxOut: "30K", caps: "VTRS", swe_v: null, swe_pro: null, gpqa: null, hle: null, arc: null, tau2: null, benchlm: null, best: "Classification, 2M context"},
         {tier: "2", name: "Grok Code Fast 1", priceIn: 0.2, priceOut: 1.5, ctx: "256K", maxOut: "10K", caps: "TRS", swe_v: null, swe_pro: null, gpqa: null, hle: null, arc: null, tau2: null, benchlm: null, best: "Code review budget"},
-        {tier: "2", name: "Gemini 3 Flash", priceIn: 0.5, priceOut: 3.0, ctx: "1M", maxOut: "65K", caps: "VTRSA", swe_v: 78.0, swe_pro: 34.6, gpqa: 90.4, hle: null, arc: null, tau2: null, benchlm: null, best: "Fast + cheap Gemini, simple scrapers"},
+        {tier: "2", name: "Gemini 3 Flash", priceIn: 0.5, priceOut: 3.0, ctx: "1M", maxOut: "65K", caps: "VTRSA", swe_v: {v:78.0,d:"2026-03",s:"https://scale.com/leaderboard"}, swe_pro: {v:34.6,d:"2026-03",s:"https://scale.com/leaderboard"}, gpqa: {v:90.4,d:"2026-03",s:"https://artificial-analysis.com"}, hle: null, arc: null, tau2: null, benchlm: null, best: "Fast + cheap Gemini, simple scrapers"},
         {tier: "2", name: "Gemini 2.5 Flash", priceIn: 0.3, priceOut: 2.5, ctx: "1M", maxOut: "65K", caps: "VTRSA", swe_v: null, swe_pro: null, gpqa: null, hle: null, arc: null, tau2: null, benchlm: null, best: "Budget Gemini, ultra-cheap cached"},
         {tier: "2", name: "Amazon Nova Pro", priceIn: 0.8, priceOut: 3.2, ctx: "300K", maxOut: "5K", caps: "VT", swe_v: null, swe_pro: null, gpqa: null, hle: null, arc: null, tau2: null, benchlm: null, best: "Vision, AWS ecosystem"},
         {tier: "2", name: "Amazon Nova 2 Lite", priceIn: 0.3, priceOut: 2.5, ctx: "1M", maxOut: "65K", caps: "VTR", swe_v: null, swe_pro: null, gpqa: null, hle: null, arc: null, tau2: null, benchlm: null, best: "Multimodal 1M context"},
@@ -1419,14 +1493,14 @@
         {tier: "2", name: "Mistral Medium 3.1", priceIn: 0.4, priceOut: 2.0, ctx: "131K", maxOut: "", caps: "VTS", swe_v: null, swe_pro: null, gpqa: null, hle: null, arc: null, tau2: null, benchlm: null, best: "EU compliance"},
         {tier: "2", name: "Codestral", priceIn: 0.3, priceOut: 0.9, ctx: "256K", maxOut: "", caps: "TS", swe_v: null, swe_pro: null, gpqa: null, hle: null, arc: null, tau2: null, benchlm: null, best: "Code, JS deobfuscation budget"},
         {tier: "2", name: "Devstral Medium", priceIn: 0.4, priceOut: 2.0, ctx: "131K", maxOut: "", caps: "TS", swe_v: null, swe_pro: null, gpqa: null, hle: null, arc: null, tau2: null, benchlm: null, best: "Code agent"},
-        {tier: "2", name: "Llama 4 Maverick", priceIn: null, priceOut: null, ctx: "1M", maxOut: "16K", caps: "VTS", swe_v: null, swe_pro: null, gpqa: 69.8, hle: null, arc: null, tau2: null, benchlm: null, best: "Vision, MMLU-Pro"},
+        {tier: "2", name: "Llama 4 Maverick", priceIn: null, priceOut: null, ctx: "1M", maxOut: "16K", caps: "VTS", swe_v: null, swe_pro: null, gpqa: {v:69.8,d:"2026-03",s:"https://artificial-analysis.com"}, hle: null, arc: null, tau2: null, benchlm: null, best: "Vision, MMLU-Pro"},
         {tier: "2", name: "GLM-4.6V", priceIn: 0.3, priceOut: 0.9, ctx: "131K", maxOut: "131K", caps: "VTRS", swe_v: null, swe_pro: null, gpqa: null, hle: null, arc: null, tau2: null, benchlm: null, best: "Vision + VIDEO input"},
         {tier: "2", name: "GLM-4.5V", priceIn: 0.6, priceOut: 1.8, ctx: "65K", maxOut: "16K", caps: "VTRS", swe_v: null, swe_pro: null, gpqa: null, hle: null, arc: null, tau2: null, benchlm: null, best: "Vision"},
         {tier: "3", name: "Qwen3.5-27B", priceIn: 0.2, priceOut: 1.56, ctx: "262K", maxOut: "65K", caps: "VTRS", swe_v: null, swe_pro: null, gpqa: null, hle: null, arc: null, tau2: null, benchlm: null, best: "Vision+video"},
         {tier: "3", name: "GLM-4.5 Air", priceIn: 0.13, priceOut: 0.85, ctx: "131K", maxOut: "98K", caps: "TRS", swe_v: null, swe_pro: null, gpqa: null, hle: null, arc: null, tau2: null, benchlm: null, best: "Budget GLM, batch general, classification"},
         {tier: "3", name: "Qwen Plus", priceIn: 0.26, priceOut: 0.78, ctx: "1M", maxOut: "32K", caps: "T", swe_v: null, swe_pro: null, gpqa: null, hle: null, arc: null, tau2: null, benchlm: null, best: "1M context budget"},
-        {tier: "3", name: "Llama 4 Scout", priceIn: 0.08, priceOut: 0.3, ctx: "327K", maxOut: "16K", caps: "VTS", swe_v: null, swe_pro: null, gpqa: 57.2, hle: null, arc: null, tau2: null, benchlm: null, best: "10M context!, Vision, Speed king"},
-        {tier: "3", name: "GLM-4.7-FlashX", priceIn: 0.06, priceOut: 0.4, ctx: "202K", maxOut: "", caps: "TRS", swe_v: null, swe_pro: null, gpqa: null, hle: null, arc: null, tau2: 98.8, benchlm: null, best: "Ultra-cheap tool calling, Tau2 98.8%"},
+        {tier: "3", name: "Llama 4 Scout", priceIn: 0.08, priceOut: 0.3, ctx: "327K", maxOut: "16K", caps: "VTS", swe_v: null, swe_pro: null, gpqa: {v:57.2,d:"2026-03",s:"https://artificial-analysis.com"}, hle: null, arc: null, tau2: null, benchlm: null, best: "10M context!, Vision, Speed king"},
+        {tier: "3", name: "GLM-4.7-FlashX", priceIn: 0.06, priceOut: 0.4, ctx: "202K", maxOut: "", caps: "TRS", swe_v: null, swe_pro: null, gpqa: null, hle: null, arc: null, tau2: {v:98.8,d:"2026-03",s:"https://github.com/tau-bench/tau-bench"}, benchlm: null, best: "Ultra-cheap tool calling, Tau2 98.8%"},
         {tier: "3", name: "GLM-4-32B", priceIn: 0.1, priceOut: 0.1, ctx: "128K", maxOut: "", caps: "T", swe_v: null, swe_pro: null, gpqa: null, hle: null, arc: null, tau2: null, benchlm: null, best: "Open-weight 32B"},
         {tier: "3", name: "Qwen3.5-Flash", priceIn: 0.07, priceOut: 0.26, ctx: "1M", maxOut: "65K", caps: "VTRS", swe_v: null, swe_pro: null, gpqa: null, hle: null, arc: null, tau2: null, benchlm: null, best: "1M context ultra-budget"},
         {tier: "3", name: "Qwen3.5-9B", priceIn: 0.05, priceOut: 0.15, ctx: "256K", maxOut: "65K", caps: "VTRS", swe_v: null, swe_pro: null, gpqa: null, hle: null, arc: null, tau2: null, benchlm: null, best: "Tiny + vision+video"},
@@ -1443,7 +1517,7 @@
         {tier: "3", name: "Mistral Nemo", priceIn: 0.02, priceOut: 0.04, ctx: "131K", maxOut: "16K", caps: "TS", swe_v: null, swe_pro: null, gpqa: null, hle: null, arc: null, tau2: null, benchlm: null, best: "Cheapest text"},
         {tier: "3", name: "Devstral Small", priceIn: 0.1, priceOut: 0.3, ctx: "131K", maxOut: "", caps: "TS", swe_v: null, swe_pro: null, gpqa: null, hle: null, arc: null, tau2: null, benchlm: null, best: "Code budget EU"},
         {tier: "3", name: "Google Gemma 3 27B", priceIn: 0.08, priceOut: 0.16, ctx: "131K", maxOut: "16K", caps: "VS", swe_v: null, swe_pro: null, gpqa: null, hle: null, arc: null, tau2: null, benchlm: null, best: "Open-weight vision"},
-        {tier: "free", name: "MiniMax M2.5 (Free)", priceIn: 0, priceOut: 0, ctx: "196K", maxOut: "196K", caps: "TR", swe_v: 80.2, swe_pro: null, gpqa: null, hle: null, arc: null, tau2: null, benchlm: null, best: "Best free coder, batch coding, code review free"},
+        {tier: "free", name: "MiniMax M2.5 (Free)", priceIn: 0, priceOut: 0, ctx: "196K", maxOut: "196K", caps: "TR", swe_v: {v:80.2,d:"2026-03",s:"https://scale.com/leaderboard"}, swe_pro: null, gpqa: null, hle: null, arc: null, tau2: null, benchlm: null, best: "Best free coder, batch coding, code review free"},
         {tier: "free", name: "Qwen3 Coder 480B (Free)", priceIn: 0, priceOut: 0, ctx: "262K", maxOut: "262K", caps: "T", swe_v: null, swe_pro: null, gpqa: null, hle: null, arc: null, tau2: null, benchlm: null, best: "Coding free #1, 480B MoE 35B active"},
         {tier: "free", name: "Hermes 3 405B (Free)", priceIn: 0, priceOut: 0, ctx: "131K", maxOut: "", caps: "", swe_v: null, swe_pro: null, gpqa: null, hle: null, arc: null, tau2: null, benchlm: null, best: "Reasoning free, uncensored, general 405B"},
         {tier: "free", name: "NVIDIA Nemotron 3 Super 120B (Free)", priceIn: 0, priceOut: 0, ctx: "262K", maxOut: "262K", caps: "TRS", swe_v: null, swe_pro: null, gpqa: null, hle: null, arc: null, tau2: null, benchlm: null, best: "Long-context reasoning free, 120B MoE"},
@@ -1470,7 +1544,7 @@
         {tier: "free", name: "Liquid LFM 1.2B Instruct (Free)", priceIn: 0, priceOut: 0, ctx: "32K", maxOut: "", caps: "", swe_v: null, swe_pro: null, gpqa: null, hle: null, arc: null, tau2: null, benchlm: null, best: "Ultra-small instruct free"},
         {tier: "free", name: "Venice Uncensored (Free)", priceIn: 0, priceOut: 0, ctx: "32K", maxOut: "", caps: "S", swe_v: null, swe_pro: null, gpqa: null, hle: null, arc: null, tau2: null, benchlm: null, best: "No content filter free"},
         {tier: "free", name: "Free Models Router", priceIn: 0, priceOut: 0, ctx: "200K", maxOut: "", caps: "VTRS", swe_v: null, swe_pro: null, gpqa: null, hle: null, arc: null, tau2: null, benchlm: null, best: "Auto-routes to best free model"},
-        {tier: "free", name: "GLM-4.7-Flash (CLI)", priceIn: 0, priceOut: 0, ctx: "200K", maxOut: "", caps: "", swe_v: null, swe_pro: null, gpqa: null, hle: null, arc: null, tau2: 98.8, benchlm: null, best: "Tool calling free CLI"},
+        {tier: "free", name: "GLM-4.7-Flash (CLI)", priceIn: 0, priceOut: 0, ctx: "200K", maxOut: "", caps: "", swe_v: null, swe_pro: null, gpqa: null, hle: null, arc: null, tau2: {v:98.8,d:"2026-03",s:"https://github.com/tau-bench/tau-bench"}, benchlm: null, best: "Tool calling free CLI"},
         {tier: "free", name: "GLM-4.5-Flash (CLI)", priceIn: 0, priceOut: 0, ctx: "200K", maxOut: "", caps: "", swe_v: null, swe_pro: null, gpqa: null, hle: null, arc: null, tau2: null, benchlm: null, best: "Simple tasks free CLI"},
         {tier: "free", name: "Qwen CLI (Qwen3-Coder)", priceIn: 0, priceOut: 0, ctx: "1M", maxOut: "", caps: "", swe_v: null, swe_pro: null, gpqa: null, hle: null, arc: null, tau2: null, benchlm: null, best: "Classification batch 2000 RPD free"},
         {tier: "free", name: "Codex CLI (GPT Codex)", priceIn: 0, priceOut: 0, ctx: "?", maxOut: "", caps: "", swe_v: null, swe_pro: null, gpqa: null, hle: null, arc: null, tau2: null, benchlm: null, best: "Code review free, architecture review"},
@@ -2005,11 +2079,22 @@
       function scoreColor(val, col) {
         if (val === null || val === undefined)
           return '<span class="score-dash">—</span>';
+        // val может быть объектом {v, d, s} или числом (backward compat)
+        const num = typeof val === "object" ? val.v : val;
+        const date = typeof val === "object" ? val.d : null;
+        const src = typeof val === "object" ? val.s : null;
+        if (num === null || num === undefined)
+          return '<span class="score-dash">—</span>';
         const max = COL_MAX[col] || 100;
-        const pct = val / max;
+        const pct = num / max;
         const cls =
           pct >= 0.85 ? "score-high" : pct >= 0.6 ? "score-mid" : "score-low";
-        return `<span class="${cls}">${val}</span>`;
+        if (date || src) {
+          const safeDate = (date || "").replace(/'/g, "");
+          const safeSrc = (src || "").replace(/'/g, "");
+          return `<span class="${cls} score-ref" onclick="showBenchScore('${col}', ${num}, '${safeDate}', '${safeSrc}', event)" title="Click for source">${num}</span>`;
+        }
+        return `<span class="${cls}">${num}</span>`;
       }
 
       function priceStr(m) {
@@ -2043,6 +2128,85 @@
               : c;
           })
           .join("");
+      }
+
+      const BENCH_META = {
+        swe_v: {
+          name: "SWE-Bench Verified",
+          desc: "Real GitHub issues solved by AI. Verified subset — less contaminated.",
+          url: "https://scale.com/leaderboard",
+        },
+        swe_pro: {
+          name: "SWE-Bench Pro",
+          desc: "Harder coding tasks. Less contamination risk than SWE-V.",
+          url: "https://scale.com/leaderboard",
+        },
+        gpqa: {
+          name: "GPQA Diamond",
+          desc: "Graduate-level science questions. PhD-verified, hard to guess.",
+          url: "https://artificial-analysis.com",
+        },
+        hle: {
+          name: "Humanity's Last Exam",
+          desc: "Hardest known reasoning benchmark. Expert questions no model aces.",
+          url: "https://lastexam.ai",
+        },
+        arc: {
+          name: "ARC-AGI-2",
+          desc: "Abstract reasoning puzzles. Tests generalization, not memorization.",
+          url: "https://arcprize.org",
+        },
+        tau2: {
+          name: "Tau2-Bench",
+          desc: "Multi-turn tool use. Tests agent reliability over many steps.",
+          url: "https://github.com/sierra-research/tau-bench",
+        },
+        benchlm: {
+          name: "BenchLM",
+          desc: "Aggregate benchmark across practical tasks.",
+          url: "https://benchlm.ai",
+        },
+      };
+
+      function showBenchScore(col, val, date, src, event) {
+        event.stopPropagation();
+        const old = document.getElementById("scorePopup");
+        if (old) old.remove();
+
+        const meta = BENCH_META[col] || { name: col, desc: "", url: "" };
+        const popup = document.createElement("div");
+        popup.id = "scorePopup";
+        popup.className = "score-popup";
+
+        let html = `<div class="score-popup-header">
+          <span class="score-popup-title">${meta.name}</span>
+          <span class="score-popup-close" onclick="this.parentElement.parentElement.remove()">✕</span>
+        </div>`;
+        if (meta.desc)
+          html += `<div class="score-popup-desc">${meta.desc}</div>`;
+        html += `<div class="score-popup-value">Score: <strong>${val}</strong></div>`;
+        if (date)
+          html += `<div class="score-popup-date">Measured: ${date}</div>`;
+        if (src)
+          html += `<a class="score-popup-link" href="${src}" target="_blank" rel="noopener">View source ↗</a>`;
+        if (meta.url && meta.url !== src)
+          html += `<a class="score-popup-link" href="${meta.url}" target="_blank" rel="noopener">Leaderboard ↗</a>`;
+
+        popup.innerHTML = html;
+        document.body.appendChild(popup);
+
+        const rect = event.target.getBoundingClientRect();
+        popup.style.top = rect.bottom + window.scrollY + 8 + "px";
+        popup.style.left = Math.min(rect.left, window.innerWidth - 280) + "px";
+
+        setTimeout(() => {
+          document.addEventListener("click", function handler(e) {
+            if (!popup.contains(e.target)) {
+              popup.remove();
+              document.removeEventListener("click", handler);
+            }
+          });
+        }, 10);
       }
 
       // Build mega table
