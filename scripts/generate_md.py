@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Generates MODEL_BENCHMARKS.md from data/*.json files.
-Output mirrors the format used in ~/.claude/skills/openrouter-api/MODEL_BENCHMARKS.md
+Output: markdown tables suitable for GitHub rendering and documentation
 
 Usage:
     python scripts/generate_md.py > MODEL_BENCHMARKS.md
