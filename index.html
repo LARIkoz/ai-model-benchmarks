@@ -379,6 +379,22 @@
       .tier-btn.hidden-btn {
         opacity: 0.4;
       }
+      .cap-filter-btn {
+        padding: 5px 10px;
+        border-radius: 6px;
+        font-size: 0.75rem;
+        cursor: pointer;
+        border: 1px solid var(--glass-border);
+        background: transparent;
+        color: var(--text-muted);
+        font-family: inherit;
+        transition: all 0.2s;
+      }
+      .cap-filter-btn.active {
+        background: rgba(0, 210, 255, 0.15);
+        color: var(--cyan);
+        border-color: var(--cyan);
+      }
       .search-box {
         padding: 7px 14px;
         background: var(--glass);
@@ -1049,6 +1065,22 @@
         <button class="tier-btn active" data-tier="2">Tier 2: Mid-range</button>
         <button class="tier-btn active" data-tier="3">Tier 3: Budget</button>
         <button class="tier-btn active" data-tier="free">Free tier</button>
+        <span
+          style="color: var(--text-muted); font-size: 0.75rem; margin: 0 4px"
+          >|</span
+        >
+        <button class="cap-filter-btn" data-cap="V" title="Vision">
+          👁 Vision
+        </button>
+        <button class="cap-filter-btn" data-cap="T" title="Tool Calling">
+          🔧 Tools
+        </button>
+        <button class="cap-filter-btn" data-cap="R" title="Reasoning">
+          🧠 Reasoning
+        </button>
+        <button class="cap-filter-btn" data-cap="S" title="Structured Output">
+          📋 Structured
+        </button>
         <input
           type="text"
           class="search-box"
@@ -2214,7 +2246,7 @@
         const tbody = document.getElementById("megaBody");
         let html = "";
         MODELS.forEach((m, i) => {
-          html += `<tr class="tier-${m.tier}" data-tier="${m.tier}" data-name="${m.name.toLowerCase()}">
+          html += `<tr class="tier-${m.tier}" data-tier="${m.tier}" data-name="${m.name.toLowerCase()}" data-caps="${m.caps || ""}">
       <td class="model-name">${m.name}<span class="tier-badge">${tierLabel(m.tier)}</span></td>
       <td>${priceStr(m)}</td>
       <td class="ctx-cell">${m.ctx || "—"}</td>
@@ -2252,6 +2284,23 @@
         });
       });
 
+      // Capability filter
+      const activeCaps = new Set();
+
+      document.querySelectorAll(".cap-filter-btn").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const cap = btn.dataset.cap;
+          if (activeCaps.has(cap)) {
+            activeCaps.delete(cap);
+            btn.classList.remove("active");
+          } else {
+            activeCaps.add(cap);
+            btn.classList.add("active");
+          }
+          applyFilters();
+        });
+      });
+
       function applyFilters() {
         const query = document
           .getElementById("modelSearch")
@@ -2259,9 +2308,13 @@
         document.querySelectorAll("#megaBody tr").forEach((row) => {
           const tier = row.dataset.tier;
           const name = row.dataset.name;
+          const caps = row.dataset.caps || "";
           const tierOk = activeTiers.has(tier);
           const nameOk = !query || name.includes(query);
-          row.classList.toggle("hidden", !(tierOk && nameOk));
+          const capsOk =
+            activeCaps.size === 0 ||
+            [...activeCaps].every((c) => caps.includes(c));
+          row.classList.toggle("hidden", !(tierOk && nameOk && capsOk));
         });
       }
 
