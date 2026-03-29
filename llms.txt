@@ -1,39 +1,46 @@
 # AI Model Benchmarks 2026
 
-> Community-driven reference for AI model selection: benchmarks, pricing, routing, embeddings.
+> Structured, machine-readable AI model data for agents, pipelines, and developers. Auto-updated daily.
 
 ## What this is
 
-A structured dataset of 119 AI models compared across 48 benchmarks with:
-- Per-score freshness dates (every score has a measured date and source URL)
-- Auto-updated pricing from OpenRouter API (daily)
-- Task routing recommendations (best model for each task at each budget tier)
-- Benchmark lifecycle tracking (active, saturated, dead)
-- 26 embedding models with MTEB scores
+A structured JSON dataset of 119 AI models designed for programmatic consumption by AI agents, model routers, and developer tools:
+- 97 models with capability profiles (vision, tool_calling, reasoning, structured_output, json_mode, max_output_tokens)
+- Per-score freshness dates (every benchmark score has a measured date and source URL)
+- Auto-updated pricing and capabilities from OpenRouter API (daily GitHub Actions)
+- Task routing tables (25 categories × 4 budget tiers: quality, budget, free)
+- 48 benchmarks with lifecycle tracking (active, saturated, dead, contaminated)
+- 26 embedding models with MTEB scores and use-case routing
 
-## Why it exists
+## Primary use cases
 
-Most benchmark tables show one score per model, measured at some unknown date. Scores go stale, prices change, new models appear. This repo solves that by tracking *when* each score was measured, *where* it came from, and whether the benchmark itself is still meaningful.
+1. **Agent model routing** — use data/routing.json quick_matrix to pick the right model for each pipeline step
+2. **Capability matching** — filter models by capabilities (vision, tools, reasoning) from data/models.json
+3. **Cost optimization** — compare pricing across 119 models, find free alternatives
+4. **Pipeline integration** — structured JSON ready for LangChain, LiteLLM, custom routers
 
 ## How to use this data
 
-- **Pick a model for a task:** see data/routing.json → quick_matrix (25 task categories)
-- **Compare models:** see data/models.json (119 models with scores, pricing, metadata)
-- **Find embeddings:** see data/embeddings.json (26 models with MTEB scores)
-- **Understand benchmarks:** see data/benchmarks.json (48 benchmarks with lifecycle status)
+- **Automated model selection:** data/routing.json → quick_matrix (25 task categories with use/backup/free picks)
+- **Capability filtering:** data/models.json → capabilities object per model (vision, tool_calling, reasoning, etc.)
+- **Compare models:** data/models.json (119 models with scores, pricing, capabilities)
+- **Find embeddings:** data/embeddings.json (26 models with MTEB scores)
+- **Benchmark status:** data/benchmarks.json (48 benchmarks — know which are still meaningful)
 
 ## Data format
 
-All data is in JSON files under data/. Every score includes:
-- `value` — the benchmark score
-- `measured` — date when the score was collected (YYYY-MM or YYYY-MM-DD)
-- `source` — URL to the leaderboard or paper
+All data is in JSON files under data/. Key fields per model:
+- `capabilities` — structured object: vision, tool_calling, reasoning, structured_output, json_mode, logprobs, max_output_tokens
+- `pricing` — input/output per million tokens, cache discount
+- `scores` — each with `value`, `measured` date, `source` URL
+- `manual` — knowledge_cutoff, effective_context, caching type (for top 15 models)
 
 ## Trust model
 
 - No self-reported scores from model providers
 - 16 independent sources in trust hierarchy (see docs/METHODOLOGY.md)
-- Automated validation (scripts/validate.py)
+- Automated validation enforces source URLs, schema integrity, routing references
+- Daily CI: capabilities sync → price fetch → portal regeneration → validation → commit
 - Full git history as audit trail
 
 ## Links
