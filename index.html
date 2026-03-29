@@ -1262,7 +1262,7 @@
         "
       >
         <div style="font-weight: 700; color: var(--cyan); margin-bottom: 8px">
-          Decision Tree
+          Quick Pick by Use Case
         </div>
         <div>1. Multimodal (image+text)? → NVIDIA Nemotron-VL (FREE)</div>
         <div>2. Privacy / self-host? → Qwen3-Emb-8B (Apache 2.0, 32K)</div>
@@ -2189,6 +2189,33 @@
         }, 10);
       }
 
+      function benchRiskStyle(key) {
+        if (!key) return "";
+        const m = BENCH_META[key];
+        if (!m) return "";
+        if (m.risk === "high") return "color:var(--red);";
+        if (m.risk === "medium") return "color:var(--amber);";
+        return "";
+      }
+      function benchRiskBadge(key) {
+        if (!key) return "";
+        const m = BENCH_META[key];
+        if (!m) return "";
+        if (m.risk === "high")
+          return (
+            ' <span style="font-size:0.6rem" title="Conflict of interest: ' +
+            m.creator +
+            '">⚠️</span>'
+          );
+        if (m.risk === "medium")
+          return (
+            ' <span style="font-size:0.6rem;opacity:0.7" title="Affiliated: ' +
+            m.creator +
+            '">⚠</span>'
+          );
+        return "";
+      }
+
       function showBenchInfo(benchKey, event) {
         event.stopPropagation();
         const old = document.getElementById("scorePopup");
@@ -2406,7 +2433,7 @@
           group.rows.forEach((row) => {
             html += `<tr>
         <td><span class="cat-name">${row.cat}</span></td>
-        <td><span class="cat-bench score-ref" style="cursor:pointer" onclick="showBenchInfo('${row.benchKey || row.bench}', event)">${row.bench}</span></td>
+        <td><span class="cat-bench score-ref" style="cursor:pointer;${benchRiskStyle(row.benchKey)}" onclick="showBenchInfo('${row.benchKey || row.bench}', event)">${row.bench}${benchRiskBadge(row.benchKey)}</span></td>
         <td class="q1">${row.q1}</td>
         <td class="q2">${row.q2}</td>
         <td class="b1">${row.b1}</td>
@@ -2737,7 +2764,7 @@
         if (!tbody) return;
         FREE_ROUTING.forEach((r) => {
           const tr = document.createElement("tr");
-          tr.innerHTML = `<td style="font-weight:600;white-space:nowrap">${r.task}</td><td>${r.best}</td><td>${r.backup}</td><td>${r.cli}</td>`;
+          tr.innerHTML = `<td style="font-weight:600;white-space:nowrap">${r.task}</td><td>${r.best || "—"}</td><td>${r.backup || "—"}</td><td>${r.cli || "—"}</td>`;
           tbody.appendChild(tr);
         });
       })();
@@ -2748,7 +2775,7 @@
         if (!tbody) return;
         EMB_USE_CASES.forEach((r) => {
           const tr = document.createElement("tr");
-          tr.innerHTML = `<td style="font-weight:600;white-space:nowrap">${r.task}</td><td>${r.best}</td><td>${r.budget}</td><td>${r.free}</td>`;
+          tr.innerHTML = `<td style="font-weight:600;white-space:nowrap">${r.task}</td><td>${r.best || "—"}</td><td>${r.budget || "—"}</td><td>${r.free || "—"}</td>`;
           tbody.appendChild(tr);
         });
       })();
