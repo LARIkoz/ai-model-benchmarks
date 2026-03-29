@@ -265,7 +265,7 @@ def main():
     pricing = load_json("pricing")
     today = date.today().isoformat()
 
-    # Определяем диапазон дат данных, а не дату генерации
+    # Determine the data date range, not the generation date
     measured_dates = []
     for m in models:
         for score in m.get("scores", {}).values():

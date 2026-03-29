@@ -53,6 +53,7 @@ Rule of thumb: if `measured` is >30 days ago and `volatility` is `high`, treat w
 
 | Status      | Meaning                                                        |
 | ----------- | -------------------------------------------------------------- |
+| `planned`   | Benchmark tracked in registry but no scores collected yet.     |
 | `active`    | Meaningful separation between models, worth tracking           |
 | `saturated` | Frontier models all score 90%+, no separation                  |
 | `dead`      | Saturated AND contaminated AND replaced by better alternatives |

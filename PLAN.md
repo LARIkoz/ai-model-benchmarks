@@ -83,6 +83,20 @@ https://<org>.github.io/ai-model-benchmarks/  (GitHub Pages portal)
 - [ ] Or Cloudflare Worker / Vercel edge function
 - [ ] Following Wu Long api pattern
 
+### Model Capability Profiles (v2)
+
+Deep-dive per model — like skills/spec sheets. For each model, a structured profile:
+
+- [ ] `data/model_profiles/` directory — one JSON per model
+- [ ] Capabilities: vision, tool_calling, function_calling, streaming, JSON mode, system prompt, multi-turn, file upload, image generation, code execution
+- [ ] API features: batching, caching, structured output, logprobs, stop sequences, seed/deterministic
+- [ ] Provider details: rate limits, regions, SLA, deprecation policy
+- [ ] Quirks/gotchas: known bugs, workarounds, context window behavior at limits
+- [ ] Compatibility matrix: which features work with which providers (OpenRouter vs direct)
+- [ ] Think of it as "SKILL.md per model" — everything you need to know to use the model correctly
+
+This turns the repo from "which model scores best" into "which model actually works for my use case" — the real question practitioners ask.
+
 ## Decisions
 
 1. **MD primary, JSON backing** — humans read MD, automation reads JSON

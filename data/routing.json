@@ -2,363 +2,1506 @@
   "king_picks": {
     "coding": {
       "coding_general_swe_v": {
-        "quality_1": "Claude Opus 4.6 (80.8%)",
-        "quality_2": "Gemini 3.1 Pro (80.6%)",
-        "budget_1": "MiniMax M2.5 (80.2%, $0.20)",
-        "budget_2": "Claude Sonnet 4.6 (79.6%, $3)",
-        "free": "MiniMax M2.5 FREE"
+        "cat": "coding",
+        "bench": "swe_v",
+        "quality_1": {
+          "name": "Claude Opus 4.6",
+          "id": "claude-opus-4-6",
+          "score": 80.8,
+          "price": null
+        },
+        "quality_2": {
+          "name": "Gemini 3.1 Pro",
+          "id": "gemini-3-1-pro",
+          "score": 80.6,
+          "price": null
+        },
+        "budget_1": {
+          "name": "MiniMax M2.5",
+          "id": "minimax-m2-5",
+          "score": 80.2,
+          "price": 0.2
+        },
+        "budget_2": {
+          "name": "Claude Sonnet 4.6",
+          "id": "claude-sonnet-4-6",
+          "score": 79.6,
+          "price": 3.0
+        },
+        "free": {
+          "name": "MiniMax M2.5 FREE",
+          "id": "minimax-m2-5-free",
+          "score": null,
+          "price": 0
+        }
       },
       "coding_uncontaminated_swe_pro": {
-        "quality_1": "Claude Opus 4.5 (45.9%)",
-        "quality_2": "Claude Sonnet 4.5 (43.6%)",
-        "budget_1": "Qwen3.5-397B (38.7%, $0.39)",
-        "budget_2": "MiniMax M2.5 (36.8%, $0.20)",
+        "cat": "coding",
+        "bench": "swe_pro",
+        "quality_1": {
+          "name": "Claude Opus 4.5",
+          "id": "claude-opus-4-5",
+          "score": 45.9,
+          "price": null
+        },
+        "quality_2": {
+          "name": "Claude Sonnet 4.5",
+          "id": "claude-sonnet-4-5",
+          "score": 43.6,
+          "price": null
+        },
+        "budget_1": {
+          "name": "Qwen3.5-397B",
+          "id": "qwen3-5-397b",
+          "score": 38.7,
+          "price": 0.39
+        },
+        "budget_2": {
+          "name": "MiniMax M2.5",
+          "id": "minimax-m2-5",
+          "score": 36.8,
+          "price": 0.2
+        },
         "free": null
       },
       "code_generation_humaneval": {
-        "quality_1": "GPT-5.3 Codex (97.5%)",
-        "quality_2": "GLM-5 (90%)",
-        "budget_1": "GLM-5 (90%, $1)",
-        "budget_2": "Kimi K2.5 ($0.45)",
+        "cat": "coding",
+        "bench": "humaneval",
+        "quality_1": {
+          "name": "GPT-5.3 Codex",
+          "id": "gpt-5-3-codex",
+          "score": 97.5,
+          "price": null
+        },
+        "quality_2": {
+          "name": "GLM-5",
+          "id": "glm-5",
+          "score": 90.0,
+          "price": null
+        },
+        "budget_1": {
+          "name": "GLM-5",
+          "id": "glm-5",
+          "score": 90.0,
+          "price": 1.0
+        },
+        "budget_2": {
+          "name": "Kimi K2.5",
+          "id": "kimi-k2-5",
+          "score": null,
+          "price": 0.45
+        },
         "free": null
       },
       "scientific_coding_scicode": {
-        "quality_1": "GPT-5.4 (56.6%)",
-        "quality_2": "Gemini 3.1 Pro (56.1%)",
+        "cat": "coding",
+        "bench": "scicode",
+        "quality_1": {
+          "name": "GPT-5.4",
+          "id": "gpt-5-4",
+          "score": 56.6,
+          "price": null
+        },
+        "quality_2": {
+          "name": "Gemini 3.1 Pro",
+          "id": "gemini-3-1-pro",
+          "score": 56.1,
+          "price": null
+        },
         "budget_1": null,
         "budget_2": null,
         "free": null
       },
       "agentic_coding_terminal_b2": {
-        "quality_1": "GPT-5.4 (57.6%)",
-        "quality_2": "GLM-5 (56.2%)",
-        "budget_1": "MiniMax M2.7 (56.2%, $0.30)",
-        "budget_2": "GLM-5 ($1)",
+        "cat": "coding",
+        "bench": "terminal_bench_2",
+        "quality_1": {
+          "name": "GPT-5.4",
+          "id": "gpt-5-4",
+          "score": 57.6,
+          "price": null
+        },
+        "quality_2": {
+          "name": "GLM-5",
+          "id": "glm-5",
+          "score": 56.2,
+          "price": null
+        },
+        "budget_1": {
+          "name": "MiniMax M2.7",
+          "id": "minimax-m2-7",
+          "score": 56.2,
+          "price": 0.3
+        },
+        "budget_2": {
+          "name": "GLM-5",
+          "id": "glm-5",
+          "score": null,
+          "price": 1.0
+        },
         "free": null
       },
       "code_review_practical": {
-        "quality_1": "Claude Opus 4.6",
-        "quality_2": "Claude Sonnet 4.6",
-        "budget_1": "Grok Code Fast 1 ($0.20)",
-        "budget_2": "MiniMax M2.5 ($0.20)",
-        "free": "Codex CLI"
+        "cat": "coding",
+        "bench": null,
+        "quality_1": {
+          "name": "Claude Opus 4.6",
+          "id": "claude-opus-4-6",
+          "score": null,
+          "price": null
+        },
+        "quality_2": {
+          "name": "Claude Sonnet 4.6",
+          "id": "claude-sonnet-4-6",
+          "score": null,
+          "price": null
+        },
+        "budget_1": {
+          "name": "Grok Code Fast 1",
+          "id": "grok-code-fast-1",
+          "score": null,
+          "price": 0.2
+        },
+        "budget_2": {
+          "name": "MiniMax M2.5",
+          "id": "minimax-m2-5",
+          "score": null,
+          "price": 0.2
+        },
+        "free": {
+          "name": "Codex CLI",
+          "id": "codex-cli",
+          "score": null,
+          "price": 0
+        }
       }
     },
     "reasoning": {
       "graduate_science_gpqa": {
-        "quality_1": "Gemini 3.1 Pro (94.3%)",
-        "quality_2": "GPT-5.2 (92.4%)",
-        "budget_1": "Qwen3.5-397B (88.4%, $0.39)",
-        "budget_2": "Kimi K2.5 (87.6%, $0.45)",
+        "cat": "reasoning",
+        "bench": "gpqa",
+        "quality_1": {
+          "name": "Gemini 3.1 Pro",
+          "id": "gemini-3-1-pro",
+          "score": 94.3,
+          "price": null
+        },
+        "quality_2": {
+          "name": "GPT-5.2",
+          "id": "gpt-5-2",
+          "score": 92.4,
+          "price": null
+        },
+        "budget_1": {
+          "name": "Qwen3.5-397B",
+          "id": "qwen3-5-397b",
+          "score": 88.4,
+          "price": 0.39
+        },
+        "budget_2": {
+          "name": "Kimi K2.5",
+          "id": "kimi-k2-5",
+          "score": 87.6,
+          "price": 0.45
+        },
         "free": null
       },
       "hardest_reasoning_hle": {
-        "quality_1": "GPT-5.4 (41.6%)",
-        "quality_2": "Gemini 3.1 Pro (37.2%)",
-        "budget_1": "MiniMax M2.5 (32%, $0.20)",
-        "budget_2": "Kimi K2.5 (31.5%, $0.45)",
+        "cat": "reasoning",
+        "bench": "hle",
+        "quality_1": {
+          "name": "GPT-5.4",
+          "id": "gpt-5-4",
+          "score": 41.6,
+          "price": null
+        },
+        "quality_2": {
+          "name": "Gemini 3.1 Pro",
+          "id": "gemini-3-1-pro",
+          "score": 37.2,
+          "price": null
+        },
+        "budget_1": {
+          "name": "MiniMax M2.5",
+          "id": "minimax-m2-5",
+          "score": 32.0,
+          "price": 0.2
+        },
+        "budget_2": {
+          "name": "Kimi K2.5",
+          "id": "kimi-k2-5",
+          "score": 31.5,
+          "price": 0.45
+        },
         "free": null
       },
       "abstract_reasoning_arc_agi_2": {
-        "quality_1": "Gemini 3.1 Pro (77.1%)",
-        "quality_2": "GPT-5.4 (73.3%)",
+        "cat": "reasoning",
+        "bench": "arc_agi_2",
+        "quality_1": {
+          "name": "Gemini 3.1 Pro",
+          "id": "gemini-3-1-pro",
+          "score": 77.1,
+          "price": null
+        },
+        "quality_2": {
+          "name": "GPT-5.4",
+          "id": "gpt-5-4",
+          "score": 73.3,
+          "price": null
+        },
         "budget_1": null,
         "budget_2": null,
         "free": null
       },
       "math_competition_aime_2025": {
-        "quality_1": "GPT-5.4 (100%)",
-        "quality_2": "Gemini 3.1 Pro (92%)",
-        "budget_1": "GLM-5 (84%, $1)",
-        "budget_2": "Kimi K2.5 ($0.45)",
+        "cat": "reasoning",
+        "bench": "aime_2025",
+        "quality_1": {
+          "name": "GPT-5.4",
+          "id": "gpt-5-4",
+          "score": 100.0,
+          "price": null
+        },
+        "quality_2": {
+          "name": "Gemini 3.1 Pro",
+          "id": "gemini-3-1-pro",
+          "score": 92.0,
+          "price": null
+        },
+        "budget_1": {
+          "name": "GLM-5",
+          "id": "glm-5",
+          "score": 84.0,
+          "price": 1.0
+        },
+        "budget_2": {
+          "name": "Kimi K2.5",
+          "id": "kimi-k2-5",
+          "score": null,
+          "price": 0.45
+        },
         "free": null
       },
       "adaptive_reasoning_grind": {
-        "quality_1": "Gemini 2.5 Pro (82.1%)",
-        "quality_2": "Claude Sonnet 4 (75%)",
+        "cat": "reasoning",
+        "bench": "grind",
+        "quality_1": {
+          "name": "Gemini 2.5 Pro",
+          "id": "gemini-2-5-pro",
+          "score": 82.1,
+          "price": null
+        },
+        "quality_2": {
+          "name": "Claude Sonnet 4",
+          "id": null,
+          "score": 75.0,
+          "price": null
+        },
         "budget_1": null,
         "budget_2": null,
         "free": null
       },
       "general_knowledge_mmlu_pro": {
-        "quality_1": "GPT-5.2",
-        "quality_2": "Gemini 3.1 Pro",
-        "budget_1": "Qwen3.5-397B ($0.39)",
-        "budget_2": "GLM-5 ($1)",
+        "cat": "reasoning",
+        "bench": "mmlu_pro",
+        "quality_1": {
+          "name": "GPT-5.2",
+          "id": "gpt-5-2",
+          "score": null,
+          "price": null
+        },
+        "quality_2": {
+          "name": "Gemini 3.1 Pro",
+          "id": "gemini-3-1-pro",
+          "score": null,
+          "price": null
+        },
+        "budget_1": {
+          "name": "Qwen3.5-397B",
+          "id": "qwen3-5-397b",
+          "score": null,
+          "price": 0.39
+        },
+        "budget_2": {
+          "name": "GLM-5",
+          "id": "glm-5",
+          "score": null,
+          "price": 1.0
+        },
         "free": null
       }
     },
     "tools_and_agents": {
       "function_calling_bfcl": {
-        "quality_1": "GLM-4.5 (72.0%)",
-        "quality_2": "Claude Opus 4.1 (70.4%)",
-        "budget_1": "GLM-4.5 ($0.60)",
-        "budget_2": "GLM-4.7 ($0.39)",
+        "cat": "tools_and_agents",
+        "bench": "bfcl",
+        "quality_1": {
+          "name": "GLM-4.5",
+          "id": "glm-4-5",
+          "score": 72.0,
+          "price": null
+        },
+        "quality_2": {
+          "name": "Claude Opus 4.1",
+          "id": "claude-opus-4-1",
+          "score": 70.4,
+          "price": null
+        },
+        "budget_1": {
+          "name": "GLM-4.5",
+          "id": "glm-4-5",
+          "score": null,
+          "price": 0.6
+        },
+        "budget_2": {
+          "name": "GLM-4.7",
+          "id": "glm-4-7",
+          "score": null,
+          "price": 0.39
+        },
         "free": null
       },
       "multi_turn_tools_tau2": {
-        "quality_1": "Claude Opus 4.6 (99.3%)",
-        "quality_2": "GLM-5 (98.2%)",
-        "budget_1": "GLM-4.7 (95.9%, $0.39)",
-        "budget_2": "GLM-4.7-FlashX ($0.06)",
-        "free": "GLM-4.7-Flash"
+        "cat": "tools_and_agents",
+        "bench": "tau2",
+        "quality_1": {
+          "name": "Claude Opus 4.6",
+          "id": "claude-opus-4-6",
+          "score": 99.3,
+          "price": null
+        },
+        "quality_2": {
+          "name": "GLM-5",
+          "id": "glm-5",
+          "score": 98.2,
+          "price": null
+        },
+        "budget_1": {
+          "name": "GLM-4.7",
+          "id": "glm-4-7",
+          "score": 95.9,
+          "price": 0.39
+        },
+        "budget_2": {
+          "name": "GLM-4.7-FlashX",
+          "id": "glm-4-7-flashx",
+          "score": null,
+          "price": 0.06
+        },
+        "free": {
+          "name": "GLM-4.7-Flash",
+          "id": "glm-4-7-flash-cli",
+          "score": null,
+          "price": 0
+        }
       },
       "tool_reliability_error_rate": {
-        "quality_1": "GLM-5-Turbo (0.67% error)",
-        "quality_2": "Claude (<1% error)",
-        "budget_1": "GLM-5-Turbo ($1.20)",
-        "budget_2": "GLM-4.7 ($0.39)",
+        "cat": "tools_and_agents",
+        "bench": "error_rate",
+        "quality_1": {
+          "name": "GLM-5-Turbo",
+          "id": "glm-5-turbo",
+          "score": 0.67,
+          "price": null
+        },
+        "quality_2": {
+          "name": "Claude",
+          "id": "claude-opus-4-6",
+          "score": null,
+          "price": null
+        },
+        "budget_1": {
+          "name": "GLM-5-Turbo",
+          "id": "glm-5-turbo",
+          "score": null,
+          "price": 1.2
+        },
+        "budget_2": {
+          "name": "GLM-4.7",
+          "id": "glm-4-7",
+          "score": null,
+          "price": 0.39
+        },
         "free": null
       },
       "general_assistant_gaia": {
-        "quality_1": "Claude Sonnet 4.5 (74.6%)",
-        "quality_2": "Claude Opus 4.6",
+        "cat": "tools_and_agents",
+        "bench": "gaia",
+        "quality_1": {
+          "name": "Claude Sonnet 4.5",
+          "id": "claude-sonnet-4-5",
+          "score": 74.6,
+          "price": null
+        },
+        "quality_2": {
+          "name": "Claude Opus 4.6",
+          "id": "claude-opus-4-6",
+          "score": null,
+          "price": null
+        },
         "budget_1": null,
         "budget_2": null,
         "free": null
       },
       "real_world_work_gdpval": {
-        "quality_1": "Claude Opus 4.6 (~1500+)",
-        "quality_2": "MiniMax M2.7 (1495)",
-        "budget_1": "MiniMax M2.7 ($0.30)",
-        "budget_2": "GLM-5 ($1)",
+        "cat": "tools_and_agents",
+        "bench": "gdpval",
+        "quality_1": {
+          "name": "Claude Opus 4.6",
+          "id": "claude-opus-4-6",
+          "score": 1500,
+          "price": null
+        },
+        "quality_2": {
+          "name": "MiniMax M2.7",
+          "id": "minimax-m2-7",
+          "score": 1495,
+          "price": null
+        },
+        "budget_1": {
+          "name": "MiniMax M2.7",
+          "id": "minimax-m2-7",
+          "score": null,
+          "price": 0.3
+        },
+        "budget_2": {
+          "name": "GLM-5",
+          "id": "glm-5",
+          "score": null,
+          "price": 1.0
+        },
         "free": null
       },
       "long_horizon_vending_b2": {
-        "quality_1": "Claude Opus 4.5",
-        "quality_2": "GLM-5 (#1 OS)",
-        "budget_1": "GLM-5 ($1)",
-        "budget_2": "MiniMax M2.7 ($0.30)",
+        "cat": "tools_and_agents",
+        "bench": "vending_b2",
+        "quality_1": {
+          "name": "Claude Opus 4.5",
+          "id": "claude-opus-4-5",
+          "score": null,
+          "price": null
+        },
+        "quality_2": {
+          "name": "GLM-5",
+          "id": "glm-5",
+          "score": null,
+          "price": null
+        },
+        "budget_1": {
+          "name": "GLM-5",
+          "id": "glm-5",
+          "score": null,
+          "price": 1.0
+        },
+        "budget_2": {
+          "name": "MiniMax M2.7",
+          "id": "minimax-m2-7",
+          "score": null,
+          "price": 0.3
+        },
         "free": null
       }
     },
     "content_and_communication": {
       "instruction_following_ifbench": {
-        "quality_1": "Qwen3.5-397B (78.8%)",
-        "quality_2": "Gemini 3 Flash (78.0%)",
-        "budget_1": "Qwen3.5-397B ($0.39)",
-        "budget_2": "GLM-5 (88% IFEval, $1)",
+        "cat": "content_and_communication",
+        "bench": "ifbench",
+        "quality_1": {
+          "name": "Qwen3.5-397B",
+          "id": "qwen3-5-397b",
+          "score": 78.8,
+          "price": null
+        },
+        "quality_2": {
+          "name": "Gemini 3 Flash",
+          "id": "gemini-3-flash",
+          "score": 78.0,
+          "price": null
+        },
+        "budget_1": {
+          "name": "Qwen3.5-397B",
+          "id": "qwen3-5-397b",
+          "score": null,
+          "price": 0.39
+        },
+        "budget_2": {
+          "name": "GLM-5",
+          "id": "glm-5",
+          "score": 88.0,
+          "price": 1.0
+        },
         "free": null
       },
       "hallucination_resistance_simpleqa": {
-        "quality_1": "Grok 4.20 (lowest hallucination)",
-        "quality_2": "Claude Opus 4.6",
-        "budget_1": "GLM-5 (48%, $1)",
-        "budget_2": "DeepSeek V3.2 ($0.26)",
+        "cat": "content_and_communication",
+        "bench": "simpleqa",
+        "quality_1": {
+          "name": "Grok 4.20",
+          "id": "grok-4-20-beta",
+          "score": null,
+          "price": null
+        },
+        "quality_2": {
+          "name": "Claude Opus 4.6",
+          "id": "claude-opus-4-6",
+          "score": null,
+          "price": null
+        },
+        "budget_1": {
+          "name": "GLM-5",
+          "id": "glm-5",
+          "score": 48.0,
+          "price": 1.0
+        },
+        "budget_2": {
+          "name": "DeepSeek V3.2",
+          "id": "deepseek-v3-2",
+          "score": null,
+          "price": 0.26
+        },
         "free": null
       },
       "writing_quality_human_pref": {
-        "quality_1": "Claude Opus 4.6",
-        "quality_2": "GPT-5.4",
-        "budget_1": "Kimi K2.5 ($0.45)",
-        "budget_2": "MiniMax M2.5 ($0.20)",
-        "free": "MiniMax M2.5 FREE"
+        "cat": "content_and_communication",
+        "bench": "human_pref",
+        "quality_1": {
+          "name": "Claude Opus 4.6",
+          "id": "claude-opus-4-6",
+          "score": null,
+          "price": null
+        },
+        "quality_2": {
+          "name": "GPT-5.4",
+          "id": "gpt-5-4",
+          "score": null,
+          "price": null
+        },
+        "budget_1": {
+          "name": "Kimi K2.5",
+          "id": "kimi-k2-5",
+          "score": null,
+          "price": 0.45
+        },
+        "budget_2": {
+          "name": "MiniMax M2.5",
+          "id": "minimax-m2-5",
+          "score": null,
+          "price": 0.2
+        },
+        "free": {
+          "name": "MiniMax M2.5 FREE",
+          "id": "minimax-m2-5-free",
+          "score": null,
+          "price": 0
+        }
       },
       "chat_preference_lmarena": {
-        "quality_1": "Claude Opus 4.6 (1476 ELO)",
-        "quality_2": "Claude Opus 4.5 (1345 ELO)",
-        "budget_1": "Kimi K2.5 (988, $0.45)",
-        "budget_2": "Claude Sonnet 4.6 (941, $3)",
+        "cat": "content_and_communication",
+        "bench": "lmarena",
+        "quality_1": {
+          "name": "Claude Opus 4.6",
+          "id": "claude-opus-4-6",
+          "score": 1476,
+          "price": null
+        },
+        "quality_2": {
+          "name": "Claude Opus 4.5",
+          "id": "claude-opus-4-5",
+          "score": 1345,
+          "price": null
+        },
+        "budget_1": {
+          "name": "Kimi K2.5",
+          "id": "kimi-k2-5",
+          "score": 988,
+          "price": 0.45
+        },
+        "budget_2": {
+          "name": "Claude Sonnet 4.6",
+          "id": "claude-sonnet-4-6",
+          "score": 941,
+          "price": 3.0
+        },
         "free": null
       },
       "multilingual_mgsm": {
-        "quality_1": "GLM-5 (90%)",
-        "quality_2": "Gemini 3.1 Pro",
-        "budget_1": "GLM-5 ($1)",
-        "budget_2": "Qwen3.5 ($0.39)",
+        "cat": "content_and_communication",
+        "bench": "mgsm",
+        "quality_1": {
+          "name": "GLM-5",
+          "id": "glm-5",
+          "score": 90.0,
+          "price": null
+        },
+        "quality_2": {
+          "name": "Gemini 3.1 Pro",
+          "id": "gemini-3-1-pro",
+          "score": null,
+          "price": null
+        },
+        "budget_1": {
+          "name": "GLM-5",
+          "id": "glm-5",
+          "score": null,
+          "price": 1.0
+        },
+        "budget_2": {
+          "name": "Qwen3.5-397B",
+          "id": "qwen3-5-397b",
+          "score": null,
+          "price": 0.39
+        },
         "free": null
       }
     },
     "multimodal": {
       "vision_mmmu": {
-        "quality_1": "Gemini 3.1 Pro",
-        "quality_2": "GPT-5.4",
-        "budget_1": "GLM-4.6V ($0.30)",
-        "budget_2": "Qwen3.5 ($0.39)",
+        "cat": "multimodal",
+        "bench": "mmmu",
+        "quality_1": {
+          "name": "Gemini 3.1 Pro",
+          "id": "gemini-3-1-pro",
+          "score": null,
+          "price": null
+        },
+        "quality_2": {
+          "name": "GPT-5.4",
+          "id": "gpt-5-4",
+          "score": null,
+          "price": null
+        },
+        "budget_1": {
+          "name": "GLM-4.6V",
+          "id": "glm-4-6v",
+          "score": null,
+          "price": 0.3
+        },
+        "budget_2": {
+          "name": "Qwen3.5-397B",
+          "id": "qwen3-5-397b",
+          "score": null,
+          "price": 0.39
+        },
         "free": null
       },
       "video_input": {
-        "quality_1": "Gemini 3.1 Pro",
-        "quality_2": "GLM-4.6V ($0.30)",
-        "budget_1": "GLM-4.6V ($0.30)",
-        "budget_2": "Qwen3.5 ($0.39)",
+        "cat": "multimodal",
+        "bench": "video",
+        "quality_1": {
+          "name": "Gemini 3.1 Pro",
+          "id": "gemini-3-1-pro",
+          "score": null,
+          "price": null
+        },
+        "quality_2": {
+          "name": "GLM-4.6V",
+          "id": "glm-4-6v",
+          "score": null,
+          "price": 0.3
+        },
+        "budget_1": {
+          "name": "GLM-4.6V",
+          "id": "glm-4-6v",
+          "score": null,
+          "price": 0.3
+        },
+        "budget_2": {
+          "name": "Qwen3.5-397B",
+          "id": "qwen3-5-397b",
+          "score": null,
+          "price": 0.39
+        },
         "free": null
       },
       "web_understanding_browsecomp": {
-        "quality_1": "MiniMax M2.5 (76.3%)",
-        "quality_2": "GLM-5",
-        "budget_1": "MiniMax M2.5 ($0.20)",
-        "budget_2": "GLM-5 ($1)",
-        "free": "MiniMax M2.5 FREE"
+        "cat": "multimodal",
+        "bench": "browsecomp",
+        "quality_1": {
+          "name": "MiniMax M2.5",
+          "id": "minimax-m2-5",
+          "score": 76.3,
+          "price": null
+        },
+        "quality_2": {
+          "name": "GLM-5",
+          "id": "glm-5",
+          "score": null,
+          "price": null
+        },
+        "budget_1": {
+          "name": "MiniMax M2.5",
+          "id": "minimax-m2-5",
+          "score": null,
+          "price": 0.2
+        },
+        "budget_2": {
+          "name": "GLM-5",
+          "id": "glm-5",
+          "score": null,
+          "price": 1.0
+        },
+        "free": {
+          "name": "MiniMax M2.5 FREE",
+          "id": "minimax-m2-5-free",
+          "score": null,
+          "price": 0
+        }
       }
     },
     "domain_and_infrastructure": {
       "legal_finance_seal": {
-        "quality_1": "Claude Opus 4.6",
-        "quality_2": "GPT-5.4",
-        "budget_1": "Kimi K2.5 ($0.45)",
-        "budget_2": "Qwen3.5 ($0.39)",
+        "cat": "domain_and_infrastructure",
+        "bench": "seal",
+        "quality_1": {
+          "name": "Claude Opus 4.6",
+          "id": "claude-opus-4-6",
+          "score": null,
+          "price": null
+        },
+        "quality_2": {
+          "name": "GPT-5.4",
+          "id": "gpt-5-4",
+          "score": null,
+          "price": null
+        },
+        "budget_1": {
+          "name": "Kimi K2.5",
+          "id": "kimi-k2-5",
+          "score": null,
+          "price": 0.45
+        },
+        "budget_2": {
+          "name": "Qwen3.5-397B",
+          "id": "qwen3-5-397b",
+          "score": null,
+          "price": 0.39
+        },
         "free": null
       },
       "long_context_over_200k": {
-        "quality_1": "Gemini 3.1 Pro (1M)",
-        "quality_2": "Grok 4.1 Fast (2M)",
-        "budget_1": "MiniMax 01 ($0.20, 1M)",
-        "budget_2": "Qwen Plus ($0.26, 1M)",
-        "free": "Gemini CLI (2M)"
+        "cat": "domain_and_infrastructure",
+        "bench": "long_context",
+        "quality_1": {
+          "name": "Gemini 3.1 Pro",
+          "id": "gemini-3-1-pro",
+          "score": null,
+          "price": null
+        },
+        "quality_2": {
+          "name": "Grok 4.1 Fast",
+          "id": "grok-4-1-fast",
+          "score": null,
+          "price": null
+        },
+        "budget_1": {
+          "name": "MiniMax 01",
+          "id": "minimax-01",
+          "score": null,
+          "price": 0.2
+        },
+        "budget_2": {
+          "name": "Qwen Plus",
+          "id": "qwen-plus",
+          "score": null,
+          "price": 0.26
+        },
+        "free": {
+          "name": "Gemini CLI",
+          "id": "gemini-cli",
+          "score": null,
+          "price": 0
+        }
       },
       "speed_throughput": {
-        "quality_1": "Llama 4 Scout (2600 tok/s)",
-        "quality_2": "Inception Mercury 2 (872 tok/s)",
-        "budget_1": "Mercury Lightning ($0.30)",
-        "budget_2": "GLM-4.7-FlashX ($0.06)",
+        "cat": "domain_and_infrastructure",
+        "bench": "throughput_tps",
+        "quality_1": {
+          "name": "Llama 4 Scout",
+          "id": "llama-4-scout",
+          "score": 2600,
+          "price": null
+        },
+        "quality_2": {
+          "name": "Inception Mercury 2",
+          "id": "inception-mercury-2",
+          "score": 872,
+          "price": null
+        },
+        "budget_1": {
+          "name": "Mercury Lightning",
+          "id": null,
+          "score": null,
+          "price": 0.3
+        },
+        "budget_2": {
+          "name": "GLM-4.7-FlashX",
+          "id": "glm-4-7-flashx",
+          "score": null,
+          "price": 0.06
+        },
         "free": null
       },
       "eu_compliance": {
-        "quality_1": "Mistral Large ($0.50)",
-        "quality_2": "Mistral Medium ($0.40)",
-        "budget_1": "Mistral Small ($0.07)",
-        "budget_2": "Devstral Small ($0.10)",
+        "cat": "domain_and_infrastructure",
+        "bench": null,
+        "quality_1": {
+          "name": "Mistral Large",
+          "id": "mistral-large-2512",
+          "score": null,
+          "price": 0.5
+        },
+        "quality_2": {
+          "name": "Mistral Medium",
+          "id": "mistral-medium-3-1",
+          "score": null,
+          "price": 0.4
+        },
+        "budget_1": {
+          "name": "Mistral Small",
+          "id": "mistral-small-3-2",
+          "score": null,
+          "price": 0.07
+        },
+        "budget_2": {
+          "name": "Devstral Small",
+          "id": "devstral-small",
+          "score": null,
+          "price": 0.1
+        },
         "free": null
       },
       "self_host_open_weight": {
-        "quality_1": "GLM-5 (744B MIT)",
-        "quality_2": "DeepSeek V3.2 (671B)",
-        "budget_1": "Qwen3.5-397B",
-        "budget_2": "GLM-4-32B ($0.10)",
-        "free": "Qwen CLI"
+        "cat": "domain_and_infrastructure",
+        "bench": null,
+        "quality_1": {
+          "name": "GLM-5",
+          "id": "glm-5",
+          "score": null,
+          "price": null
+        },
+        "quality_2": {
+          "name": "DeepSeek V3.2",
+          "id": "deepseek-v3-2",
+          "score": null,
+          "price": null
+        },
+        "budget_1": {
+          "name": "Qwen3.5-397B",
+          "id": "qwen3-5-397b",
+          "score": null,
+          "price": null
+        },
+        "budget_2": {
+          "name": "GLM-4-32B",
+          "id": "glm-4-32b",
+          "score": null,
+          "price": 0.1
+        },
+        "free": {
+          "name": "Qwen CLI",
+          "id": "qwen-cli",
+          "score": null,
+          "price": 0
+        }
       }
     },
     "web_scraping": {
       "scraper_code_gen_zyte": {
-        "quality_1": "Claude Sonnet 4.6 (0.835)",
-        "quality_2": "Gemini 3 Pro (0.833)",
-        "budget_1": "Gemini 3 Flash (0.817, $0.50)",
-        "budget_2": "MiniMax M2.5 ($0.20)",
-        "free": "MiniMax M2.5 FREE"
+        "cat": "web_scraping",
+        "bench": "zyte_rouge",
+        "quality_1": {
+          "name": "Claude Sonnet 4.6",
+          "id": "claude-sonnet-4-6",
+          "score": 0.835,
+          "price": null
+        },
+        "quality_2": {
+          "name": "Gemini 3 Pro",
+          "id": "gemini-3-pro",
+          "score": 0.833,
+          "price": null
+        },
+        "budget_1": {
+          "name": "Gemini 3 Flash",
+          "id": "gemini-3-flash",
+          "score": 0.817,
+          "price": 0.5
+        },
+        "budget_2": {
+          "name": "MiniMax M2.5",
+          "id": "minimax-m2-5",
+          "score": null,
+          "price": 0.2
+        },
+        "free": {
+          "name": "MiniMax M2.5 FREE",
+          "id": "minimax-m2-5-free",
+          "score": null,
+          "price": 0
+        }
       },
       "saas_api_reverse_engineering": {
-        "quality_1": "Claude Opus 4.6",
-        "quality_2": "GPT-5.4",
-        "budget_1": "Claude Sonnet 4.6 ($3)",
-        "budget_2": "DeepSeek V3.2 ($0.26)",
-        "free": "Gemini CLI"
+        "cat": "web_scraping",
+        "bench": null,
+        "quality_1": {
+          "name": "Claude Opus 4.6",
+          "id": "claude-opus-4-6",
+          "score": null,
+          "price": null
+        },
+        "quality_2": {
+          "name": "GPT-5.4",
+          "id": "gpt-5-4",
+          "score": null,
+          "price": null
+        },
+        "budget_1": {
+          "name": "Claude Sonnet 4.6",
+          "id": "claude-sonnet-4-6",
+          "score": null,
+          "price": 3.0
+        },
+        "budget_2": {
+          "name": "DeepSeek V3.2",
+          "id": "deepseek-v3-2",
+          "score": null,
+          "price": 0.26
+        },
+        "free": {
+          "name": "Gemini CLI",
+          "id": "gemini-cli",
+          "score": null,
+          "price": 0
+        }
       },
       "browser_automation_browseruse": {
-        "quality_1": "Claude Sonnet 4.6",
-        "quality_2": "Claude Opus 4.6",
-        "budget_1": "MiniMax M2.5 ($0.20)",
-        "budget_2": "Gemini 3 Flash ($0.50)",
-        "free": "MiniMax M2.5 FREE"
+        "cat": "web_scraping",
+        "bench": "browseruse",
+        "quality_1": {
+          "name": "Claude Sonnet 4.6",
+          "id": "claude-sonnet-4-6",
+          "score": null,
+          "price": null
+        },
+        "quality_2": {
+          "name": "Claude Opus 4.6",
+          "id": "claude-opus-4-6",
+          "score": null,
+          "price": null
+        },
+        "budget_1": {
+          "name": "MiniMax M2.5",
+          "id": "minimax-m2-5",
+          "score": null,
+          "price": 0.2
+        },
+        "budget_2": {
+          "name": "Gemini 3 Flash",
+          "id": "gemini-3-flash",
+          "score": null,
+          "price": 0.5
+        },
+        "free": {
+          "name": "MiniMax M2.5 FREE",
+          "id": "minimax-m2-5-free",
+          "score": null,
+          "price": 0
+        }
       },
       "anti_bot_bypass_strategy": {
-        "quality_1": "Claude Opus 4.6",
-        "quality_2": "GPT-5.4",
-        "budget_1": "Claude Sonnet 4.6 ($3)",
-        "budget_2": "Kimi K2.5 ($0.45)",
-        "free": "Gemini CLI"
+        "cat": "web_scraping",
+        "bench": null,
+        "quality_1": {
+          "name": "Claude Opus 4.6",
+          "id": "claude-opus-4-6",
+          "score": null,
+          "price": null
+        },
+        "quality_2": {
+          "name": "GPT-5.4",
+          "id": "gpt-5-4",
+          "score": null,
+          "price": null
+        },
+        "budget_1": {
+          "name": "Claude Sonnet 4.6",
+          "id": "claude-sonnet-4-6",
+          "score": null,
+          "price": 3.0
+        },
+        "budget_2": {
+          "name": "Kimi K2.5",
+          "id": "kimi-k2-5",
+          "score": null,
+          "price": 0.45
+        },
+        "free": {
+          "name": "Gemini CLI",
+          "id": "gemini-cli",
+          "score": null,
+          "price": 0
+        }
       },
       "websocket_interception": {
-        "quality_1": "Claude Opus 4.6",
-        "quality_2": "Claude Sonnet 4.6",
-        "budget_1": "DeepSeek V3.2 ($0.26)",
-        "budget_2": "Qwen3-Coder ($0.22)",
-        "free": "Qwen CLI"
+        "cat": "web_scraping",
+        "bench": null,
+        "quality_1": {
+          "name": "Claude Opus 4.6",
+          "id": "claude-opus-4-6",
+          "score": null,
+          "price": null
+        },
+        "quality_2": {
+          "name": "Claude Sonnet 4.6",
+          "id": "claude-sonnet-4-6",
+          "score": null,
+          "price": null
+        },
+        "budget_1": {
+          "name": "DeepSeek V3.2",
+          "id": "deepseek-v3-2",
+          "score": null,
+          "price": 0.26
+        },
+        "budget_2": {
+          "name": "Qwen3-Coder",
+          "id": "qwen3-coder",
+          "score": null,
+          "price": 0.22
+        },
+        "free": {
+          "name": "Qwen CLI",
+          "id": "qwen-cli",
+          "score": null,
+          "price": 0
+        }
       },
       "html_dom_extraction": {
-        "quality_1": "Claude Sonnet 4.6",
-        "quality_2": "Gemini 3 Pro",
-        "budget_1": "Gemini 3 Flash ($0.50)",
-        "budget_2": "MiniMax M2.5 ($0.20)",
-        "free": "MiniMax M2.5 FREE"
+        "cat": "web_scraping",
+        "bench": null,
+        "quality_1": {
+          "name": "Claude Sonnet 4.6",
+          "id": "claude-sonnet-4-6",
+          "score": null,
+          "price": null
+        },
+        "quality_2": {
+          "name": "Gemini 3 Pro",
+          "id": "gemini-3-pro",
+          "score": null,
+          "price": null
+        },
+        "budget_1": {
+          "name": "Gemini 3 Flash",
+          "id": "gemini-3-flash",
+          "score": null,
+          "price": 0.5
+        },
+        "budget_2": {
+          "name": "MiniMax M2.5",
+          "id": "minimax-m2-5",
+          "score": null,
+          "price": 0.2
+        },
+        "free": {
+          "name": "MiniMax M2.5 FREE",
+          "id": "minimax-m2-5-free",
+          "score": null,
+          "price": 0
+        }
       }
     },
     "reverse_engineering": {
       "js_deobfuscation": {
-        "quality_1": "GPT-5.4 (exec 0.93)",
-        "quality_2": "Gemini 3.1 Pro (CASCADE prod)",
-        "budget_1": "Codestral ($0.30)",
-        "budget_2": "DeepSeek V3.2 ($0.26)",
-        "free": "Qwen CLI"
+        "cat": "reverse_engineering",
+        "bench": "jsdeobs",
+        "quality_1": {
+          "name": "GPT-5.4",
+          "id": "gpt-5-4",
+          "score": 0.93,
+          "price": null
+        },
+        "quality_2": {
+          "name": "Gemini 3.1 Pro",
+          "id": "gemini-3-1-pro",
+          "score": null,
+          "price": null
+        },
+        "budget_1": {
+          "name": "Codestral",
+          "id": "codestral",
+          "score": null,
+          "price": 0.3
+        },
+        "budget_2": {
+          "name": "DeepSeek V3.2",
+          "id": "deepseek-v3-2",
+          "score": null,
+          "price": 0.26
+        },
+        "free": {
+          "name": "Qwen CLI",
+          "id": "qwen-cli",
+          "score": null,
+          "price": 0
+        }
       },
       "assembly_deobfuscation": {
-        "quality_1": "Claude Sonnet 4.6",
-        "quality_2": "GPT-5.4",
-        "budget_1": "Grok 4 ($3)",
-        "budget_2": "DeepSeek R1 ($0.45)",
+        "cat": "reverse_engineering",
+        "bench": "promon",
+        "quality_1": {
+          "name": "Claude Sonnet 4.6",
+          "id": "claude-sonnet-4-6",
+          "score": null,
+          "price": null
+        },
+        "quality_2": {
+          "name": "GPT-5.4",
+          "id": "gpt-5-4",
+          "score": null,
+          "price": null
+        },
+        "budget_1": {
+          "name": "Grok 4",
+          "id": "grok-4",
+          "score": null,
+          "price": 3.0
+        },
+        "budget_2": {
+          "name": "DeepSeek R1",
+          "id": "deepseek-r1",
+          "score": null,
+          "price": 0.45
+        },
         "free": null
       },
       "android_apk": {
-        "quality_1": "Claude Sonnet 4.6",
-        "quality_2": "Claude Opus 4.6",
-        "budget_1": "DeepSeek V3.2 ($0.26)",
-        "budget_2": "Qwen3-Coder ($0.22)",
-        "free": "Codex CLI"
+        "cat": "reverse_engineering",
+        "bench": "fuzzing_labs",
+        "quality_1": {
+          "name": "Claude Sonnet 4.6",
+          "id": "claude-sonnet-4-6",
+          "score": null,
+          "price": null
+        },
+        "quality_2": {
+          "name": "Claude Opus 4.6",
+          "id": "claude-opus-4-6",
+          "score": null,
+          "price": null
+        },
+        "budget_1": {
+          "name": "DeepSeek V3.2",
+          "id": "deepseek-v3-2",
+          "score": null,
+          "price": 0.26
+        },
+        "budget_2": {
+          "name": "Qwen3-Coder",
+          "id": "qwen3-coder",
+          "score": null,
+          "price": 0.22
+        },
+        "free": {
+          "name": "Codex CLI",
+          "id": "codex-cli",
+          "score": null,
+          "price": 0
+        }
       },
       "ios_ipa_macho": {
-        "quality_1": "Claude Opus 4.6",
-        "quality_2": "Claude Sonnet 4.6",
-        "budget_1": "GPT-5.2 ($1.75)",
-        "budget_2": "DeepSeek V3.2 ($0.26)",
-        "free": "Codex CLI"
+        "cat": "reverse_engineering",
+        "bench": null,
+        "quality_1": {
+          "name": "Claude Opus 4.6",
+          "id": "claude-opus-4-6",
+          "score": null,
+          "price": null
+        },
+        "quality_2": {
+          "name": "Claude Sonnet 4.6",
+          "id": "claude-sonnet-4-6",
+          "score": null,
+          "price": null
+        },
+        "budget_1": {
+          "name": "GPT-5.2",
+          "id": "gpt-5-2",
+          "score": null,
+          "price": 1.75
+        },
+        "budget_2": {
+          "name": "DeepSeek V3.2",
+          "id": "deepseek-v3-2",
+          "score": null,
+          "price": 0.26
+        },
+        "free": {
+          "name": "Codex CLI",
+          "id": "codex-cli",
+          "score": null,
+          "price": 0
+        }
       },
       "binary_arm_x86": {
-        "quality_1": "Claude Opus 4.6",
-        "quality_2": "GPT-5.4",
-        "budget_1": "Claude Sonnet 4.6 ($3)",
-        "budget_2": "DeepSeek R1 ($0.45)",
+        "cat": "reverse_engineering",
+        "bench": null,
+        "quality_1": {
+          "name": "Claude Opus 4.6",
+          "id": "claude-opus-4-6",
+          "score": null,
+          "price": null
+        },
+        "quality_2": {
+          "name": "GPT-5.4",
+          "id": "gpt-5-4",
+          "score": null,
+          "price": null
+        },
+        "budget_1": {
+          "name": "Claude Sonnet 4.6",
+          "id": "claude-sonnet-4-6",
+          "score": null,
+          "price": 3.0
+        },
+        "budget_2": {
+          "name": "DeepSeek R1",
+          "id": "deepseek-r1",
+          "score": null,
+          "price": 0.45
+        },
         "free": null
       },
       "frida_scripting": {
-        "quality_1": "Claude Sonnet 4.6",
-        "quality_2": "Claude Opus 4.6",
-        "budget_1": "MiniMax M2.5 ($0.20)",
-        "budget_2": "Qwen3-Coder ($0.22)",
-        "free": "MiniMax M2.5 FREE"
+        "cat": "reverse_engineering",
+        "bench": null,
+        "quality_1": {
+          "name": "Claude Sonnet 4.6",
+          "id": "claude-sonnet-4-6",
+          "score": null,
+          "price": null
+        },
+        "quality_2": {
+          "name": "Claude Opus 4.6",
+          "id": "claude-opus-4-6",
+          "score": null,
+          "price": null
+        },
+        "budget_1": {
+          "name": "MiniMax M2.5",
+          "id": "minimax-m2-5",
+          "score": null,
+          "price": 0.2
+        },
+        "budget_2": {
+          "name": "Qwen3-Coder",
+          "id": "qwen3-coder",
+          "score": null,
+          "price": 0.22
+        },
+        "free": {
+          "name": "MiniMax M2.5 FREE",
+          "id": "minimax-m2-5-free",
+          "score": null,
+          "price": 0
+        }
       }
     },
     "medical": {
       "medical_qa_usmle": {
-        "quality_1": "GPT-5.4 (~95%)",
-        "quality_2": "Gemini 3.1 Pro (~95%)",
-        "budget_1": "DeepSeek R1 (92%, $0.45)",
-        "budget_2": "Qwen3.5-397B (~88%, $0.39)",
-        "free": "MiniMax M2.5 FREE"
+        "cat": "medical",
+        "bench": "usmle",
+        "quality_1": {
+          "name": "GPT-5.4",
+          "id": "gpt-5-4",
+          "score": 95.0,
+          "price": null
+        },
+        "quality_2": {
+          "name": "Gemini 3.1 Pro",
+          "id": "gemini-3-1-pro",
+          "score": 95.0,
+          "price": null
+        },
+        "budget_1": {
+          "name": "DeepSeek R1",
+          "id": "deepseek-r1",
+          "score": 92.0,
+          "price": 0.45
+        },
+        "budget_2": {
+          "name": "Qwen3.5-397B",
+          "id": "qwen3-5-397b",
+          "score": 88.0,
+          "price": 0.39
+        },
+        "free": {
+          "name": "MiniMax M2.5 FREE",
+          "id": "minimax-m2-5-free",
+          "score": null,
+          "price": 0
+        }
       },
       "biomedical_literature": {
-        "quality_1": "Gemini 3.1 Pro",
-        "quality_2": "GPT-5.4",
-        "budget_1": "DeepSeek R1 ($0.45)",
-        "budget_2": "Kimi K2.5 ($0.45)",
-        "free": "Gemini CLI"
+        "cat": "medical",
+        "bench": null,
+        "quality_1": {
+          "name": "Gemini 3.1 Pro",
+          "id": "gemini-3-1-pro",
+          "score": null,
+          "price": null
+        },
+        "quality_2": {
+          "name": "GPT-5.4",
+          "id": "gpt-5-4",
+          "score": null,
+          "price": null
+        },
+        "budget_1": {
+          "name": "DeepSeek R1",
+          "id": "deepseek-r1",
+          "score": null,
+          "price": 0.45
+        },
+        "budget_2": {
+          "name": "Kimi K2.5",
+          "id": "kimi-k2-5",
+          "score": null,
+          "price": 0.45
+        },
+        "free": {
+          "name": "Gemini CLI",
+          "id": "gemini-cli",
+          "score": null,
+          "price": 0
+        }
       },
       "health_content_writing": {
-        "quality_1": "Claude Opus 4.6",
-        "quality_2": "GPT-5.4",
-        "budget_1": "Claude Sonnet 4.6 ($3)",
-        "budget_2": "Kimi K2.5 ($0.45)",
+        "cat": "medical",
+        "bench": null,
+        "quality_1": {
+          "name": "Claude Opus 4.6",
+          "id": "claude-opus-4-6",
+          "score": null,
+          "price": null
+        },
+        "quality_2": {
+          "name": "GPT-5.4",
+          "id": "gpt-5-4",
+          "score": null,
+          "price": null
+        },
+        "budget_1": {
+          "name": "Claude Sonnet 4.6",
+          "id": "claude-sonnet-4-6",
+          "score": null,
+          "price": 3.0
+        },
+        "budget_2": {
+          "name": "Kimi K2.5",
+          "id": "kimi-k2-5",
+          "score": null,
+          "price": 0.45
+        },
         "free": null
       },
       "immunology_research": {
-        "quality_1": "Gemini 3.1 Pro",
-        "quality_2": "Claude Opus 4.6",
-        "budget_1": "DeepSeek R1 ($0.45)",
-        "budget_2": "Qwen3.5 ($0.39)",
-        "free": "Gemini CLI"
+        "cat": "medical",
+        "bench": null,
+        "quality_1": {
+          "name": "Gemini 3.1 Pro",
+          "id": "gemini-3-1-pro",
+          "score": null,
+          "price": null
+        },
+        "quality_2": {
+          "name": "Claude Opus 4.6",
+          "id": "claude-opus-4-6",
+          "score": null,
+          "price": null
+        },
+        "budget_1": {
+          "name": "DeepSeek R1",
+          "id": "deepseek-r1",
+          "score": null,
+          "price": 0.45
+        },
+        "budget_2": {
+          "name": "Qwen3.5-397B",
+          "id": "qwen3-5-397b",
+          "score": null,
+          "price": 0.39
+        },
+        "free": {
+          "name": "Gemini CLI",
+          "id": "gemini-cli",
+          "score": null,
+          "price": 0
+        }
       },
       "medical_fact_check": {
-        "quality_1": "Grok 4.20 (low hallucination)",
-        "quality_2": "Claude Opus 4.6",
-        "budget_1": "DeepSeek R1 ($0.45)",
-        "budget_2": "GLM-5 ($1)",
+        "cat": "medical",
+        "bench": "simpleqa",
+        "quality_1": {
+          "name": "Grok 4.20",
+          "id": "grok-4-20-beta",
+          "score": null,
+          "price": null
+        },
+        "quality_2": {
+          "name": "Claude Opus 4.6",
+          "id": "claude-opus-4-6",
+          "score": null,
+          "price": null
+        },
+        "budget_1": {
+          "name": "DeepSeek R1",
+          "id": "deepseek-r1",
+          "score": null,
+          "price": 0.45
+        },
+        "budget_2": {
+          "name": "GLM-5",
+          "id": "glm-5",
+          "score": null,
+          "price": 1.0
+        },
         "free": null
       },
       "patient_facing_content": {
-        "quality_1": "Claude Opus 4.6 (tone)",
-        "quality_2": "Claude Sonnet 4.6",
-        "budget_1": "Kimi K2.5 ($0.45)",
-        "budget_2": "MiniMax M2.5 ($0.20)",
-        "free": "MiniMax M2.5 FREE"
+        "cat": "medical",
+        "bench": null,
+        "quality_1": {
+          "name": "Claude Opus 4.6",
+          "id": "claude-opus-4-6",
+          "score": null,
+          "price": null
+        },
+        "quality_2": {
+          "name": "Claude Sonnet 4.6",
+          "id": "claude-sonnet-4-6",
+          "score": null,
+          "price": null
+        },
+        "budget_1": {
+          "name": "Kimi K2.5",
+          "id": "kimi-k2-5",
+          "score": null,
+          "price": 0.45
+        },
+        "budget_2": {
+          "name": "MiniMax M2.5",
+          "id": "minimax-m2-5",
+          "score": null,
+          "price": 0.2
+        },
+        "free": {
+          "name": "MiniMax M2.5 FREE",
+          "id": "minimax-m2-5-free",
+          "score": null,
+          "price": 0
+        }
       }
     }
   },
@@ -570,7 +1713,7 @@
     },
     {
       "task": "Code review (post-implement)",
-      "use": "Codex CLI ($0, subscription)",
+      "use": "Codex CLI",
       "use_id": "codex-cli",
       "backup": "Qwen CLI",
       "backup_id": "qwen-cli",
@@ -579,7 +1722,7 @@
     },
     {
       "task": "Spec/architecture review",
-      "use": "GPT-5.4 (OpenRouter)",
+      "use": "GPT-5.4",
       "use_id": "gpt-5-4",
       "backup": "Grok 4.20",
       "backup_id": "grok-4-20-beta",
@@ -651,11 +1794,11 @@
     },
     {
       "task": "Long document (>200K)",
-      "use": "Gemini 3.1 Pro (1M)",
+      "use": "Gemini 3.1 Pro",
       "use_id": "gemini-3-1-pro",
-      "backup": "MiniMax 01 (1M)",
+      "backup": "MiniMax 01",
       "backup_id": "minimax-01",
-      "free": "Gemini CLI (2M)",
+      "free": "Gemini CLI",
       "free_id": "gemini-cli"
     },
     {
@@ -671,7 +1814,7 @@
       "task": "Video analysis",
       "use": "Gemini 3.1 Pro",
       "use_id": "gemini-3-1-pro",
-      "backup": "GLM-4.6V ($0.30)",
+      "backup": "GLM-4.6V",
       "backup_id": "glm-4-6v",
       "free": null,
       "free_id": null
@@ -696,7 +1839,7 @@
     },
     {
       "task": "Math/competition",
-      "use": "GPT-5.4 (AIME 100%)",
+      "use": "GPT-5.4",
       "use_id": "gpt-5-4",
       "backup": "Gemini 3.1 Pro",
       "backup_id": "gemini-3-1-pro",
@@ -705,9 +1848,9 @@
     },
     {
       "task": "Cheap but quality coding",
-      "use": "MiniMax M2.5 ($0.20)",
+      "use": "MiniMax M2.5",
       "use_id": "minimax-m2-5",
-      "backup": "GLM-5 ($1)",
+      "backup": "GLM-5",
       "backup_id": "glm-5",
       "free": "MiniMax M2.5 FREE",
       "free_id": "minimax-m2-5-free"
@@ -723,7 +1866,7 @@
     },
     {
       "task": "Speed critical",
-      "use": "MiniMax Lightning (100 tps)",
+      "use": "MiniMax Lightning",
       "use_id": null,
       "backup": "Mistral Small",
       "backup_id": "mistral-small-3-2",
@@ -761,7 +1904,7 @@
       "task": "Scraper code gen",
       "use": "Claude Sonnet 4.6",
       "use_id": "claude-sonnet-4-6",
-      "backup": "Gemini 3 Flash ($0.50)",
+      "backup": "Gemini 3 Flash",
       "backup_id": "gemini-3-flash",
       "free": "MiniMax M2.5 FREE",
       "free_id": "minimax-m2-5-free"
@@ -770,18 +1913,18 @@
       "task": "Medical QA/USMLE",
       "use": "GPT-5.4 or Gemini 3.1 Pro",
       "use_id": null,
-      "backup": "DeepSeek R1 ($0.45)",
+      "backup": "DeepSeek R1",
       "backup_id": "deepseek-r1",
       "free": "MiniMax M2.5 FREE",
       "free_id": "minimax-m2-5-free"
     },
     {
       "task": "Function calling #1",
-      "use": "GLM-4.5 (72% BFCL)",
+      "use": "GLM-4.5",
       "use_id": "glm-4-5",
       "backup": "Claude Opus 4.1",
       "backup_id": "claude-opus-4-1",
-      "free": "GLM-4.7-Flash (Tau2 98.8%)",
+      "free": "GLM-4.7-Flash",
       "free_id": "glm-4-7-flash-cli"
     }
   ]
