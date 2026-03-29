@@ -844,7 +844,7 @@
       },
       "eu_compliance": {
         "cat": "domain_and_infrastructure",
-        "bench": null,
+        "bench": "scale_seal",
         "quality_1": {
           "name": "Mistral Large",
           "id": "mistral-large-2512",
@@ -873,7 +873,7 @@
       },
       "self_host_open_weight": {
         "cat": "domain_and_infrastructure",
-        "bench": null,
+        "bench": "benchlm",
         "quality_1": {
           "name": "GLM-5",
           "id": "glm-5",
@@ -943,7 +943,7 @@
       },
       "saas_api_reverse_engineering": {
         "cat": "web_scraping",
-        "bench": null,
+        "bench": "scraper_code_zyte",
         "quality_1": {
           "name": "Claude Opus 4.6",
           "id": "claude-opus-4-6",
@@ -1011,7 +1011,7 @@
       },
       "anti_bot_bypass_strategy": {
         "cat": "web_scraping",
-        "bench": null,
+        "bench": "browseruse",
         "quality_1": {
           "name": "Claude Opus 4.6",
           "id": "claude-opus-4-6",
@@ -1045,7 +1045,7 @@
       },
       "websocket_interception": {
         "cat": "web_scraping",
-        "bench": null,
+        "bench": "scraper_code_zyte",
         "quality_1": {
           "name": "Claude Opus 4.6",
           "id": "claude-opus-4-6",
@@ -1079,7 +1079,7 @@
       },
       "html_dom_extraction": {
         "cat": "web_scraping",
-        "bench": null,
+        "bench": "scraper_code_zyte",
         "quality_1": {
           "name": "Claude Sonnet 4.6",
           "id": "claude-sonnet-4-6",
@@ -1212,7 +1212,7 @@
       },
       "ios_ipa_macho": {
         "cat": "reverse_engineering",
-        "bench": null,
+        "bench": "bin_metric",
         "quality_1": {
           "name": "Claude Opus 4.6",
           "id": "claude-opus-4-6",
@@ -1275,7 +1275,7 @@
       },
       "frida_scripting": {
         "cat": "reverse_engineering",
-        "bench": null,
+        "bench": "swe_v",
         "quality_1": {
           "name": "Claude Sonnet 4.6",
           "id": "claude-sonnet-4-6",
@@ -1379,7 +1379,7 @@
       },
       "health_content_writing": {
         "cat": "medical",
-        "bench": null,
+        "bench": "pmc_patients",
         "quality_1": {
           "name": "Claude Opus 4.6",
           "id": "claude-opus-4-6",
@@ -1408,7 +1408,7 @@
       },
       "immunology_research": {
         "cat": "medical",
-        "bench": null,
+        "bench": "pubmedqa",
         "quality_1": {
           "name": "Gemini 3.1 Pro",
           "id": "gemini-3-1-pro",
@@ -1681,7 +1681,7 @@
     "local_models": {
       "local_16gb_plus": {
         "cat": "local_models",
-        "bench": null,
+        "bench": "benchlm",
         "quality_1": {
           "name": "Llama 3.3 70B Q4",
           "id": "llama-3-3-70b-q4",
@@ -1698,7 +1698,7 @@
       },
       "local_8gb": {
         "cat": "local_models",
-        "bench": null,
+        "bench": "benchlm",
         "quality_1": {
           "name": "Gemma 3 27B Q4",
           "id": "gemma-3-27b-q4",
@@ -1715,7 +1715,7 @@
       },
       "local_4gb_cpu": {
         "cat": "local_models",
-        "bench": null,
+        "bench": "throughput_tps",
         "quality_1": {
           "name": "Llama 3.2 8B Q4",
           "id": "llama-3-2-8b-q4",
