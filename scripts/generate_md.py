@@ -11,7 +11,7 @@ Usage:
 import json
 import argparse
 from pathlib import Path
-from datetime import date
+from datetime import date, datetime
 
 REPO_ROOT = Path(__file__).parent.parent
 
@@ -265,11 +265,22 @@ def main():
     pricing = load_json("pricing")
     today = date.today().isoformat()
 
+    # Определяем диапазон дат данных, а не дату генерации
+    measured_dates = []
+    for m in models:
+        for score in m.get("scores", {}).values():
+            d = score.get("measured")
+            if d:
+                measured_dates.append(d)
+    measured_dates.sort()
+    oldest_date = measured_dates[0] if measured_dates else today
+    newest_date = measured_dates[-1] if measured_dates else today
+
     sections = [
         f"# Model Benchmarks — Generated Reference ({today})",
         "",
         f"> Auto-generated from data/*.json. Edit source files, not this document.",
-        f"> Verified: {today}. Sources: see docs/METHODOLOGY.md",
+        f"> Data as of: {oldest_date} — {newest_date}. Generated: {today}. Sources: see docs/METHODOLOGY.md",
         "",
         "---",
         "",

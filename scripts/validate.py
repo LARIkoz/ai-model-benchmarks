@@ -23,7 +23,7 @@ PRICING_FILE = REPO_ROOT / "data" / "pricing.json"
 REQUIRED_MODEL_FIELDS = {"id", "name", "provider", "tier", "pricing", "context_length"}
 REQUIRED_BENCHMARK_FIELDS = {"id", "name", "category", "lifecycle"}
 VALID_TIERS = {0, 1, 2, 3}
-VALID_LIFECYCLES = {"active", "saturated", "dead"}
+VALID_LIFECYCLES = {"active", "saturated", "dead", "planned"}
 
 # Benchmark IDs loaded from benchmarks.json for score key validation
 KNOWN_BENCHMARK_IDS: set[str] = set()

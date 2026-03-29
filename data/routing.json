@@ -562,152 +562,227 @@
     {
       "task": "Write/review code",
       "use": "Claude Sonnet 4.6",
+      "use_id": "claude-sonnet-4-6",
       "backup": "MiniMax M2.5",
-      "free": "MiniMax M2.5 FREE"
+      "backup_id": "minimax-m2-5",
+      "free": "MiniMax M2.5 FREE",
+      "free_id": "minimax-m2-5-free"
     },
     {
       "task": "Code review (post-implement)",
       "use": "Codex CLI ($0, subscription)",
+      "use_id": "codex-cli",
       "backup": "Qwen CLI",
-      "free": null
+      "backup_id": "qwen-cli",
+      "free": null,
+      "free_id": null
     },
     {
       "task": "Spec/architecture review",
       "use": "GPT-5.4 (OpenRouter)",
+      "use_id": "gpt-5-4",
       "backup": "Grok 4.20",
-      "free": null
+      "backup_id": "grok-4-20-beta",
+      "free": null,
+      "free_id": null
     },
     {
       "task": "Complex reasoning/architecture",
       "use": "Claude Opus 4.6",
+      "use_id": "claude-opus-4-6",
       "backup": "Gemini 3.1 Pro",
-      "free": "Gemini CLI"
+      "backup_id": "gemini-3-1-pro",
+      "free": "Gemini CLI",
+      "free_id": "gemini-cli"
     },
     {
       "task": "Consilium (second opinion)",
       "use": "Grok 4.1 Fast",
+      "use_id": "grok-4-1-fast",
       "backup": "DeepSeek V3.2",
-      "free": null
+      "backup_id": "deepseek-v3-2",
+      "free": null,
+      "free_id": null
     },
     {
       "task": "Consilium (critical)",
       "use": "Grok 4.20",
+      "use_id": "grok-4-20-beta",
       "backup": "Opus + Gemini",
-      "free": null
+      "backup_id": null,
+      "free": null,
+      "free_id": null
     },
     {
       "task": "Consilium (concept/spec)",
       "use": "GPT-5.4 + Grok 4.20",
+      "use_id": null,
       "backup": "+ DeepSeek R1",
-      "free": null
+      "backup_id": null,
+      "free": null,
+      "free_id": null
     },
     {
       "task": "Tool calling pipeline",
       "use": "Claude Opus 4.6",
+      "use_id": "claude-opus-4-6",
       "backup": "GLM-5-Turbo",
-      "free": "GLM-4.7-Flash"
+      "backup_id": "glm-5-turbo",
+      "free": "GLM-4.7-Flash",
+      "free_id": "glm-4-7-flash-cli"
     },
     {
       "task": "Batch classification",
       "use": "Qwen CLI",
+      "use_id": "qwen-cli",
       "backup": "MiniMax M2.5",
-      "free": "Both free"
+      "backup_id": "minimax-m2-5",
+      "free": "Both free",
+      "free_id": null
     },
     {
       "task": "Niche/gap analysis",
       "use": "Claude Opus 4.6",
+      "use_id": "claude-opus-4-6",
       "backup": "+ consilium stack",
-      "free": null
+      "backup_id": null,
+      "free": null,
+      "free_id": null
     },
     {
       "task": "Long document (>200K)",
       "use": "Gemini 3.1 Pro (1M)",
+      "use_id": "gemini-3-1-pro",
       "backup": "MiniMax 01 (1M)",
-      "free": "Gemini CLI (2M)"
+      "backup_id": "minimax-01",
+      "free": "Gemini CLI (2M)",
+      "free_id": "gemini-cli"
     },
     {
       "task": "Vision/screenshots",
       "use": "Gemini 3.1 Pro",
+      "use_id": "gemini-3-1-pro",
       "backup": "GLM-4.6V",
-      "free": null
+      "backup_id": "glm-4-6v",
+      "free": null,
+      "free_id": null
     },
     {
       "task": "Video analysis",
       "use": "Gemini 3.1 Pro",
+      "use_id": "gemini-3-1-pro",
       "backup": "GLM-4.6V ($0.30)",
-      "free": null
+      "backup_id": "glm-4-6v",
+      "free": null,
+      "free_id": null
     },
     {
       "task": "Writing/copywriting",
       "use": "Claude Opus 4.6",
+      "use_id": "claude-opus-4-6",
       "backup": "GPT-5.4",
-      "free": null
+      "backup_id": "gpt-5-4",
+      "free": null,
+      "free_id": null
     },
     {
       "task": "Factual accuracy",
       "use": "Grok 4.20",
+      "use_id": "grok-4-20-beta",
       "backup": "Claude Opus 4.6",
-      "free": null
+      "backup_id": "claude-opus-4-6",
+      "free": null,
+      "free_id": null
     },
     {
       "task": "Math/competition",
       "use": "GPT-5.4 (AIME 100%)",
+      "use_id": "gpt-5-4",
       "backup": "Gemini 3.1 Pro",
-      "free": null
+      "backup_id": "gemini-3-1-pro",
+      "free": null,
+      "free_id": null
     },
     {
       "task": "Cheap but quality coding",
       "use": "MiniMax M2.5 ($0.20)",
+      "use_id": "minimax-m2-5",
       "backup": "GLM-5 ($1)",
-      "free": "MiniMax M2.5 FREE"
+      "backup_id": "glm-5",
+      "free": "MiniMax M2.5 FREE",
+      "free_id": "minimax-m2-5-free"
     },
     {
       "task": "Maximum quality at $0",
       "use": "MiniMax M2.5 FREE",
+      "use_id": "minimax-m2-5-free",
       "backup": "GLM-4.5 Air FREE",
-      "free": "Qwen CLI"
+      "backup_id": "glm-4-5-air-free",
+      "free": "Qwen CLI",
+      "free_id": "qwen-cli"
     },
     {
       "task": "Speed critical",
       "use": "MiniMax Lightning (100 tps)",
+      "use_id": null,
       "backup": "Mistral Small",
-      "free": null
+      "backup_id": "mistral-small-3-2",
+      "free": null,
+      "free_id": null
     },
     {
       "task": "EU compliance",
       "use": "Mistral Large",
+      "use_id": "mistral-large-2512",
       "backup": "Mistral Medium",
-      "free": null
+      "backup_id": "mistral-medium-3-1",
+      "free": null,
+      "free_id": null
     },
     {
       "task": "Research structured data",
       "use": "Exa API",
+      "use_id": null,
       "backup": "Tavily",
-      "free": "Exa (1K/mo)"
+      "backup_id": null,
+      "free": "Exa (1K/mo)",
+      "free_id": null
     },
     {
       "task": "Research web/PDF/fresh",
       "use": "Gemini CLI",
+      "use_id": "gemini-cli",
       "backup": "Perplexity Sonar",
-      "free": "Gemini CLI"
+      "backup_id": null,
+      "free": "Gemini CLI",
+      "free_id": "gemini-cli"
     },
     {
       "task": "Scraper code gen",
       "use": "Claude Sonnet 4.6",
+      "use_id": "claude-sonnet-4-6",
       "backup": "Gemini 3 Flash ($0.50)",
-      "free": "MiniMax M2.5 FREE"
+      "backup_id": "gemini-3-flash",
+      "free": "MiniMax M2.5 FREE",
+      "free_id": "minimax-m2-5-free"
     },
     {
       "task": "Medical QA/USMLE",
       "use": "GPT-5.4 or Gemini 3.1 Pro",
+      "use_id": null,
       "backup": "DeepSeek R1 ($0.45)",
-      "free": "MiniMax M2.5 FREE"
+      "backup_id": "deepseek-r1",
+      "free": "MiniMax M2.5 FREE",
+      "free_id": "minimax-m2-5-free"
     },
     {
       "task": "Function calling #1",
       "use": "GLM-4.5 (72% BFCL)",
+      "use_id": "glm-4-5",
       "backup": "Claude Opus 4.1",
-      "free": "GLM-4.7-Flash (Tau2 98.8%)"
+      "backup_id": "claude-opus-4-1",
+      "free": "GLM-4.7-Flash (Tau2 98.8%)",
+      "free_id": "glm-4-7-flash-cli"
     }
   ]
 }

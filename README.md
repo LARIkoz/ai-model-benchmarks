@@ -3,8 +3,8 @@
 > **Community-driven reference for AI model selection: benchmarks, pricing, routing, embeddings**
 
 [![Last Update](https://img.shields.io/badge/last_update-2026--03--29-blue)](CHANGELOG.md)
-[![Models](https://img.shields.io/badge/models-70%2B-green)](data/models.json)
-[![Embeddings](https://img.shields.io/badge/embeddings-25%2B-purple)](data/embeddings.json)
+[![Models](https://img.shields.io/badge/models-104-green)](data/models.json)
+[![Embeddings](https://img.shields.io/badge/embeddings-26-purple)](data/embeddings.json)
 [![License](https://img.shields.io/badge/license-MIT-orange)](LICENSE)
 
 ## What makes this different
@@ -26,8 +26,8 @@ Most benchmark tables show one score per model, measured at some unknown date. T
 
 ```
 data/
-  models.json       — 70+ chat/completion models with scores, pricing, metadata
-  embeddings.json   — 25+ embedding models with MTEB scores and use-case routing
+  models.json       — 104 chat/completion models with scores, pricing, metadata
+  embeddings.json   — 26 embedding models with MTEB scores and use-case routing
   benchmarks.json   — Registry of all tracked benchmarks with lifecycle status
   routing.json      — Task routing: KING picks, FREE routing, quick decision matrix
   pricing.json      — Cache pricing by provider (auto-updated daily)
@@ -47,10 +47,20 @@ scripts/
 
 ### Find the right model for a task
 
-Check `data/routing.json`, section `quick_matrix`:
+Check `data/routing.json`, section `quick_matrix`. Example entries:
+
+| Task                  | Use                 | Backup          | Free              |
+| --------------------- | ------------------- | --------------- | ----------------- |
+| Write/review code     | Claude Sonnet 4.6   | MiniMax M2.5    | MiniMax M2.5 FREE |
+| Complex reasoning     | Claude Opus 4.6     | Gemini 3.1 Pro  | Gemini CLI        |
+| Batch classification  | Qwen CLI            | MiniMax M2.5    | Both free         |
+| Long document (>200K) | Gemini 3.1 Pro (1M) | MiniMax 01 (1M) | Gemini CLI (2M)   |
+| EU compliance         | Mistral Large       | Mistral Medium  | —                 |
+
+Full routing table: `data/routing.json` → `quick_matrix` (25 task categories).
 
 ```bash
-# Or generate the full markdown reference
+# Generate the full markdown reference
 python scripts/generate_md.py > MODEL_BENCHMARKS.md
 ```
 
@@ -84,6 +94,8 @@ See `docs/CONTRIBUTING.md` for full guidelines.
 - **Daily (06:00 UTC):** Prices fetched from OpenRouter API, `data/pricing.json` updated
 - **Weekly (manual):** Benchmark scores reviewed against leaderboards, freshness dates updated
 - **On PR:** Schema validation runs automatically
+
+> **Note:** GitHub Actions workflows for daily price updates and PR validation are planned but not yet deployed. Until CI is active, run `python scripts/fetch_openrouter_prices.py` and `python scripts/validate.py` manually before submitting a PR.
 
 ## Sources
 

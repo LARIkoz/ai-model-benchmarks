@@ -157,6 +157,59 @@ def update_model_prices(
     return our_models
 
 
+def update_cache_pricing(
+    pricing_data: dict, our_models: list[dict], or_price_map: dict[str, dict]
+) -> tuple[dict, bool]:
+    """
+    Update key_models_cache_pricing in pricing.json based on fetched OR prices.
+    Recalculates cached_per_m using the existing discount rate.
+    Returns (updated_pricing_data, changed).
+    """
+    # Строим map имя → openrouter_id из our_models
+    name_to_or_id = {}
+    for m in our_models:
+        or_id = m.get("openrouter_id")
+        if or_id:
+            name_to_or_id[m["name"]] = or_id
+
+    changed = False
+    for row in pricing_data.get("key_models_cache_pricing", []):
+        model_name = row.get("model", "")
+        or_id = name_to_or_id.get(model_name)
+        if not or_id:
+            continue
+        or_pricing = or_price_map.get(or_id)
+        if not or_pricing:
+            continue
+
+        new_input = or_pricing["input"]
+        old_input = row.get("input_per_m")
+
+        if old_input is None:
+            continue
+
+        # Проверяем изменение с допуском 1%
+        if abs(float(old_input) - new_input) / max(new_input, 0.001) > 0.01:
+            # Пересчитываем cached_per_m на основе текущего discount
+            discount_str = row.get("discount", "")
+            discount_pct = None
+            if discount_str.endswith("%"):
+                try:
+                    discount_pct = float(discount_str[:-1]) / 100
+                except ValueError:
+                    pass
+
+            row["input_per_m"] = new_input
+            if discount_pct is not None:
+                row["cached_per_m"] = round(new_input * (1 - discount_pct), 4)
+            changed = True
+            print(
+                f"  Cache pricing updated: {model_name} input ${old_input} -> ${new_input}"
+            )
+
+    return pricing_data, changed
+
+
 def update_pricing_json(pricing_data: dict, today: str) -> dict:
     """Update the top-level updated date in pricing.json."""
     pricing_data["updated"] = today
@@ -219,7 +272,12 @@ def main():
         updated_models = update_model_prices(our_models, price_changes, today)
         save_json(MODELS_FILE, updated_models)
 
-    updated_pricing = update_pricing_json(pricing_data, today)
+    updated_pricing, cache_changed = update_cache_pricing(
+        pricing_data, our_models, or_price_map
+    )
+    # Штампуем дату только если были реальные изменения
+    if price_changes or cache_changed:
+        updated_pricing = update_pricing_json(updated_pricing, today)
     save_json(PRICING_FILE, updated_pricing)
 
     if new_models:
