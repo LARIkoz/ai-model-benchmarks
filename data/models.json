@@ -1,0 +1,2363 @@
+[
+  {
+    "id": "claude-opus-4-6",
+    "name": "Claude Opus 4.6",
+    "provider": "Anthropic",
+    "tier": 1,
+    "pricing": {
+      "input": 5.0,
+      "output": 25.0,
+      "unit": "per_million_tokens",
+      "cached_input": 0.5,
+      "cache_discount": "90%",
+      "source": "openrouter",
+      "updated": "2026-03-28"
+    },
+    "context_length": 1000000,
+    "scores": {
+      "swe_v": {
+        "value": 80.8,
+        "measured": "2026-03",
+        "source": "scale.com/leaderboard"
+      },
+      "swe_pro": {
+        "value": 45.9,
+        "measured": "2026-03",
+        "source": "scale.com/leaderboard"
+      },
+      "gpqa": {
+        "value": 91.3,
+        "measured": "2026-03",
+        "source": "artificial-analysis.com"
+      },
+      "hle": { "value": 36.7, "measured": "2026-03", "source": "lastexam.ai" },
+      "arc_agi_2": {
+        "value": 68.8,
+        "measured": "2026-03",
+        "source": "arcprize.org"
+      },
+      "tau2": { "value": 99.3, "measured": "2026-03", "source": "tau-bench" },
+      "terminal_bench_2": { "value": 48.5, "measured": "2026-03" },
+      "gdpval": { "value": 1500, "measured": "2026-03", "notes": "~1500+" },
+      "benchlm": { "value": 76, "measured": "2026-03", "source": "benchlm.ai" },
+      "lmarena": {
+        "value": 1476,
+        "measured": "2026-03",
+        "source": "lmarena.ai"
+      }
+    },
+    "best_for": [
+      "Reasoning",
+      "tool calling",
+      "writing",
+      "medical content",
+      "code review"
+    ],
+    "license": "proprietary",
+    "openrouter_id": "anthropic/claude-opus-4-6"
+  },
+  {
+    "id": "claude-opus-4-5",
+    "name": "Claude Opus 4.5",
+    "provider": "Anthropic",
+    "tier": 1,
+    "pricing": {
+      "input": 5.0,
+      "output": 25.0,
+      "unit": "per_million_tokens",
+      "cached_input": 0.5,
+      "cache_discount": "90%",
+      "source": "openrouter",
+      "updated": "2026-03-28"
+    },
+    "context_length": 200000,
+    "scores": {
+      "swe_v": {
+        "value": 80.9,
+        "measured": "2026-03",
+        "source": "scale.com/leaderboard"
+      },
+      "swe_pro": {
+        "value": 45.9,
+        "measured": "2026-03",
+        "source": "scale.com/leaderboard"
+      },
+      "gpqa": {
+        "value": 87.0,
+        "measured": "2026-03",
+        "source": "artificial-analysis.com"
+      },
+      "hle": { "value": 28.4, "measured": "2026-03", "source": "lastexam.ai" },
+      "benchlm": { "value": 62, "measured": "2026-03", "source": "benchlm.ai" },
+      "lmarena": {
+        "value": 1345,
+        "measured": "2026-03",
+        "source": "lmarena.ai"
+      }
+    },
+    "best_for": ["Reasoning", "long-horizon tasks"],
+    "license": "proprietary",
+    "openrouter_id": "anthropic/claude-opus-4-5"
+  },
+  {
+    "id": "claude-opus-4-1",
+    "name": "Claude Opus 4.1",
+    "provider": "Anthropic",
+    "tier": 1,
+    "pricing": {
+      "input": 15.0,
+      "output": 75.0,
+      "unit": "per_million_tokens",
+      "source": "openrouter",
+      "updated": "2026-03-28"
+    },
+    "context_length": 200000,
+    "scores": {
+      "bfcl": {
+        "value": 70.4,
+        "measured": "2026-03",
+        "source": "gorilla.cs.berkeley.edu"
+      }
+    },
+    "best_for": ["Function calling"],
+    "license": "proprietary",
+    "openrouter_id": "anthropic/claude-opus-4-1"
+  },
+  {
+    "id": "gemini-3-1-pro",
+    "name": "Gemini 3.1 Pro",
+    "provider": "Google",
+    "tier": 1,
+    "pricing": {
+      "input": 2.0,
+      "output": 12.0,
+      "unit": "per_million_tokens",
+      "cached_input": 0.2,
+      "cache_discount": "90%",
+      "source": "openrouter",
+      "updated": "2026-03-28"
+    },
+    "context_length": 1000000,
+    "scores": {
+      "swe_v": {
+        "value": 80.6,
+        "measured": "2026-03",
+        "source": "scale.com/leaderboard"
+      },
+      "swe_pro": {
+        "value": 43.3,
+        "measured": "2026-03",
+        "source": "scale.com/leaderboard"
+      },
+      "gpqa": {
+        "value": 94.3,
+        "measured": "2026-03",
+        "source": "artificial-analysis.com"
+      },
+      "hle": { "value": 37.2, "measured": "2026-03", "source": "lastexam.ai" },
+      "arc_agi_2": {
+        "value": 77.1,
+        "measured": "2026-03",
+        "source": "arcprize.org"
+      },
+      "benchlm": { "value": 83, "measured": "2026-03", "source": "benchlm.ai" }
+    },
+    "best_for": [
+      "GPQA",
+      "ARC-AGI-2",
+      "medical research",
+      "vision",
+      "long documents"
+    ],
+    "license": "proprietary",
+    "openrouter_id": "google/gemini-3.1-pro"
+  },
+  {
+    "id": "gemini-3-pro",
+    "name": "Gemini 3 Pro",
+    "provider": "Google",
+    "tier": 1,
+    "pricing": {
+      "input": 2.0,
+      "output": 12.0,
+      "unit": "per_million_tokens",
+      "source": "openrouter",
+      "updated": "2026-03-28"
+    },
+    "context_length": 1000000,
+    "scores": {
+      "swe_v": {
+        "value": 76.2,
+        "measured": "2026-03",
+        "source": "scale.com/leaderboard"
+      },
+      "swe_pro": {
+        "value": 43.3,
+        "measured": "2026-03",
+        "source": "scale.com/leaderboard"
+      },
+      "gpqa": {
+        "value": 91.9,
+        "measured": "2026-03",
+        "source": "artificial-analysis.com"
+      }
+    },
+    "best_for": ["Scraper code generation", "vision"],
+    "license": "proprietary",
+    "openrouter_id": "google/gemini-3-pro"
+  },
+  {
+    "id": "gpt-5-4",
+    "name": "GPT-5.4",
+    "provider": "OpenAI",
+    "tier": 1,
+    "pricing": {
+      "input": 2.5,
+      "output": 15.0,
+      "unit": "per_million_tokens",
+      "cached_input": 0.25,
+      "cache_discount": "90%",
+      "source": "openrouter",
+      "updated": "2026-03-28"
+    },
+    "context_length": 1000000,
+    "scores": {
+      "swe_v": {
+        "value": 80,
+        "measured": "2026-03",
+        "source": "scale.com/leaderboard",
+        "notes": "~80 estimated"
+      },
+      "swe_pro": {
+        "value": 41.8,
+        "measured": "2026-03",
+        "source": "scale.com/leaderboard"
+      },
+      "gpqa": {
+        "value": 92.0,
+        "measured": "2026-03",
+        "source": "artificial-analysis.com"
+      },
+      "hle": { "value": 41.6, "measured": "2026-03", "source": "lastexam.ai" },
+      "arc_agi_2": {
+        "value": 73.3,
+        "measured": "2026-03",
+        "source": "arcprize.org"
+      },
+      "terminal_bench_2": { "value": 57.6, "measured": "2026-03" },
+      "gdpval": { "value": 1480, "measured": "2026-03", "notes": "~1480" },
+      "benchlm": { "value": 80, "measured": "2026-03", "source": "benchlm.ai" },
+      "humaneval": { "value": 97.5, "measured": "2026-03" },
+      "aime_2025": { "value": 100, "measured": "2026-03" }
+    },
+    "best_for": [
+      "Math",
+      "agentic coding",
+      "JS deobfuscation",
+      "scientific coding"
+    ],
+    "license": "proprietary",
+    "openrouter_id": "openai/gpt-5.4"
+  },
+  {
+    "id": "gpt-5-2",
+    "name": "GPT-5.2",
+    "provider": "OpenAI",
+    "tier": 1,
+    "pricing": {
+      "input": 1.75,
+      "output": 14.0,
+      "unit": "per_million_tokens",
+      "cached_input": 0.175,
+      "cache_discount": "90%",
+      "source": "openrouter",
+      "updated": "2026-03-28"
+    },
+    "context_length": 400000,
+    "scores": {
+      "swe_v": {
+        "value": 80.0,
+        "measured": "2026-03",
+        "source": "scale.com/leaderboard"
+      },
+      "swe_pro": {
+        "value": 41.0,
+        "measured": "2026-03",
+        "source": "scale.com/leaderboard"
+      },
+      "gpqa": {
+        "value": 92.4,
+        "measured": "2026-03",
+        "source": "artificial-analysis.com"
+      },
+      "hle": { "value": 35.4, "measured": "2026-03", "source": "lastexam.ai" },
+      "benchlm": { "value": 67, "measured": "2026-03", "source": "benchlm.ai" }
+    },
+    "best_for": ["GPQA", "general knowledge"],
+    "license": "proprietary",
+    "openrouter_id": "openai/gpt-5.2"
+  },
+  {
+    "id": "gpt-5-3-codex",
+    "name": "GPT-5.3 Codex",
+    "provider": "OpenAI",
+    "tier": 1,
+    "pricing": {
+      "input": 1.75,
+      "output": 14.0,
+      "unit": "per_million_tokens",
+      "source": "openrouter",
+      "updated": "2026-03-28"
+    },
+    "context_length": 400000,
+    "scores": {
+      "swe_pro": {
+        "value": 41.0,
+        "measured": "2026-03",
+        "source": "scale.com/leaderboard"
+      },
+      "gpqa": {
+        "value": 91.5,
+        "measured": "2026-03",
+        "source": "artificial-analysis.com"
+      },
+      "hle": { "value": 39.9, "measured": "2026-03", "source": "lastexam.ai" },
+      "terminal_bench_2": { "value": 53.0, "measured": "2026-03" },
+      "humaneval": { "value": 97.5, "measured": "2026-03" },
+      "benchlm": { "value": 70, "measured": "2026-03", "source": "benchlm.ai" }
+    },
+    "best_for": ["Code generation"],
+    "license": "proprietary",
+    "openrouter_id": "openai/gpt-5.3-codex"
+  },
+  {
+    "id": "claude-sonnet-4-6",
+    "name": "Claude Sonnet 4.6",
+    "provider": "Anthropic",
+    "tier": 1,
+    "pricing": {
+      "input": 3.0,
+      "output": 15.0,
+      "unit": "per_million_tokens",
+      "cached_input": 0.3,
+      "cache_discount": "90%",
+      "source": "openrouter",
+      "updated": "2026-03-28"
+    },
+    "context_length": 1000000,
+    "scores": {
+      "swe_v": {
+        "value": 79.6,
+        "measured": "2026-03",
+        "source": "scale.com/leaderboard"
+      },
+      "gpqa": {
+        "value": 89.9,
+        "measured": "2026-03",
+        "source": "artificial-analysis.com"
+      },
+      "arc_agi_2": {
+        "value": 58.3,
+        "measured": "2026-03",
+        "source": "arcprize.org"
+      },
+      "terminal_bench_2": { "value": 53.0, "measured": "2026-03" },
+      "benchlm": { "value": 76, "measured": "2026-03", "source": "benchlm.ai" },
+      "lmarena": {
+        "value": 941,
+        "measured": "2026-03",
+        "source": "lmarena.ai"
+      },
+      "scraper_code_zyte": {
+        "value": 0.835,
+        "measured": "2026-02",
+        "source": "zyte.com/blog"
+      }
+    },
+    "best_for": [
+      "Main coding",
+      "scraper code gen",
+      "browser automation",
+      "fast batch"
+    ],
+    "license": "proprietary",
+    "openrouter_id": "anthropic/claude-sonnet-4-6"
+  },
+  {
+    "id": "claude-sonnet-4-5",
+    "name": "Claude Sonnet 4.5",
+    "provider": "Anthropic",
+    "tier": 1,
+    "pricing": {
+      "input": 3.0,
+      "output": 15.0,
+      "unit": "per_million_tokens",
+      "source": "openrouter",
+      "updated": "2026-03-28"
+    },
+    "context_length": 1000000,
+    "scores": {
+      "swe_pro": {
+        "value": 43.6,
+        "measured": "2026-03",
+        "source": "scale.com/leaderboard"
+      },
+      "gaia": { "value": 74.6, "measured": "2026-03" }
+    },
+    "best_for": ["General assistant", "GAIA"],
+    "license": "proprietary",
+    "openrouter_id": "anthropic/claude-sonnet-4-5"
+  },
+  {
+    "id": "claude-haiku-4-5",
+    "name": "Claude Haiku 4.5",
+    "provider": "Anthropic",
+    "tier": 1,
+    "pricing": {
+      "input": 1.0,
+      "output": 5.0,
+      "unit": "per_million_tokens",
+      "cached_input": 0.1,
+      "cache_discount": "90%",
+      "source": "openrouter",
+      "updated": "2026-03-28"
+    },
+    "context_length": 200000,
+    "scores": {
+      "swe_pro": {
+        "value": 39.5,
+        "measured": "2026-03",
+        "source": "scale.com/leaderboard"
+      },
+      "benchlm": { "value": 61, "measured": "2026-03", "source": "benchlm.ai" }
+    },
+    "best_for": ["Budget Claude", "fast tasks"],
+    "license": "proprietary",
+    "openrouter_id": "anthropic/claude-haiku-4-5"
+  },
+  {
+    "id": "grok-4",
+    "name": "Grok 4",
+    "provider": "xAI",
+    "tier": 1,
+    "pricing": {
+      "input": 3.0,
+      "output": 15.0,
+      "unit": "per_million_tokens",
+      "cached_input": 0.3,
+      "cache_discount": "90%",
+      "source": "openrouter",
+      "updated": "2026-03-28"
+    },
+    "context_length": 256000,
+    "scores": {
+      "swe_v": {
+        "value": 75.0,
+        "measured": "2026-03",
+        "source": "scale.com/leaderboard"
+      },
+      "gpqa": {
+        "value": 87.5,
+        "measured": "2026-03",
+        "source": "artificial-analysis.com"
+      },
+      "hle": { "value": 25.4, "measured": "2026-03", "source": "lastexam.ai" },
+      "benchlm": { "value": 67, "measured": "2026-03", "source": "benchlm.ai" }
+    },
+    "best_for": ["Assembly deobfuscation", "coding"],
+    "license": "proprietary",
+    "openrouter_id": "x-ai/grok-4"
+  },
+  {
+    "id": "grok-4-20-beta",
+    "name": "Grok 4.20 Beta",
+    "provider": "xAI",
+    "tier": 1,
+    "pricing": {
+      "input": 2.0,
+      "output": 6.0,
+      "unit": "per_million_tokens",
+      "cached_input": 0.2,
+      "cache_discount": "90%",
+      "source": "openrouter",
+      "updated": "2026-03-28"
+    },
+    "context_length": 2000000,
+    "scores": {},
+    "best_for": [
+      "Hallucination resistance",
+      "fact-checking",
+      "long context 2M",
+      "consilium critical"
+    ],
+    "license": "proprietary",
+    "openrouter_id": "x-ai/grok-4.20-beta"
+  },
+  {
+    "id": "glm-5",
+    "name": "GLM-5",
+    "provider": "Z.ai",
+    "tier": 1,
+    "pricing": {
+      "input": 1.0,
+      "output": 3.2,
+      "unit": "per_million_tokens",
+      "cached_input": 0.2,
+      "cache_discount": "80%",
+      "source": "openrouter",
+      "updated": "2026-03-28"
+    },
+    "context_length": 200000,
+    "scores": {
+      "swe_v": {
+        "value": 77.8,
+        "measured": "2026-03",
+        "source": "scale.com/leaderboard"
+      },
+      "gpqa": {
+        "value": 68.2,
+        "measured": "2026-03",
+        "source": "artificial-analysis.com"
+      },
+      "hle": { "value": 30.5, "measured": "2026-03", "source": "lastexam.ai" },
+      "tau2": { "value": 98.2, "measured": "2026-03", "source": "tau-bench" },
+      "terminal_bench_2": { "value": 56.2, "measured": "2026-03" },
+      "humaneval": { "value": 90, "measured": "2026-03" },
+      "aime_2025": { "value": 84, "measured": "2026-03" },
+      "mgsm": { "value": 90, "measured": "2026-03" }
+    },
+    "best_for": [
+      "Tool calling",
+      "multilingual",
+      "long-horizon tasks",
+      "open-weight"
+    ],
+    "license": "MIT",
+    "open_weight": true,
+    "params": "744B",
+    "openrouter_id": "z-ai/glm-5"
+  },
+  {
+    "id": "glm-5-turbo",
+    "name": "GLM-5-Turbo",
+    "provider": "Z.ai",
+    "tier": 1,
+    "pricing": {
+      "input": 1.2,
+      "output": 4.0,
+      "unit": "per_million_tokens",
+      "cached_input": 0.24,
+      "cache_discount": "80%",
+      "source": "openrouter",
+      "updated": "2026-03-28"
+    },
+    "context_length": 203000,
+    "scores": {
+      "tool_error_rate": {
+        "value": 0.67,
+        "measured": "2026-03",
+        "notes": "error rate %"
+      }
+    },
+    "best_for": ["Tool reliability", "low error rate"],
+    "license": "proprietary",
+    "openrouter_id": "z-ai/glm-5-turbo"
+  },
+  {
+    "id": "gemini-2-5-pro",
+    "name": "Gemini 2.5 Pro",
+    "provider": "Google",
+    "tier": 1,
+    "pricing": {
+      "input": 1.25,
+      "output": 10.0,
+      "unit": "per_million_tokens",
+      "source": "openrouter",
+      "updated": "2026-03-28"
+    },
+    "context_length": 1000000,
+    "scores": {
+      "gpqa": {
+        "value": 86.4,
+        "measured": "2026-03",
+        "source": "artificial-analysis.com"
+      },
+      "hle": { "value": 21.6, "measured": "2026-03", "source": "lastexam.ai" },
+      "grind": { "value": 82.1, "measured": "2026-03" }
+    },
+    "best_for": ["Adaptive reasoning", "GRIND"],
+    "license": "proprietary",
+    "openrouter_id": "google/gemini-2.5-pro"
+  },
+  {
+    "id": "amazon-nova-premier",
+    "name": "Amazon Nova Premier",
+    "provider": "Amazon",
+    "tier": 1,
+    "pricing": {
+      "input": 2.5,
+      "output": 12.5,
+      "unit": "per_million_tokens",
+      "source": "openrouter",
+      "updated": "2026-03-28"
+    },
+    "context_length": 1000000,
+    "scores": {},
+    "best_for": ["AWS ecosystem"],
+    "license": "proprietary",
+    "openrouter_id": "amazon/nova-premier"
+  },
+  {
+    "id": "cohere-command-a",
+    "name": "Cohere Command-A",
+    "provider": "Cohere",
+    "tier": 1,
+    "pricing": {
+      "input": 2.5,
+      "output": 10.0,
+      "unit": "per_million_tokens",
+      "source": "openrouter",
+      "updated": "2026-03-28"
+    },
+    "context_length": 256000,
+    "scores": {},
+    "best_for": ["Enterprise"],
+    "license": "proprietary",
+    "openrouter_id": "cohere/command-a"
+  },
+  {
+    "id": "minimax-m2-5",
+    "name": "MiniMax M2.5",
+    "provider": "MiniMax",
+    "tier": 2,
+    "pricing": {
+      "input": 0.2,
+      "output": 1.17,
+      "unit": "per_million_tokens",
+      "cached_input": 0.1,
+      "cache_discount": "50%",
+      "source": "openrouter",
+      "updated": "2026-03-28"
+    },
+    "context_length": 197000,
+    "scores": {
+      "swe_v": {
+        "value": 80.2,
+        "measured": "2026-03",
+        "source": "scale.com/leaderboard"
+      },
+      "swe_pro": {
+        "value": 36.8,
+        "measured": "2026-03",
+        "source": "scale.com/leaderboard"
+      },
+      "gpqa": {
+        "value": 47,
+        "measured": "2026-03",
+        "source": "artificial-analysis.com"
+      },
+      "hle": { "value": 32, "measured": "2026-03", "source": "lastexam.ai" },
+      "browsecomp": { "value": 76.3, "measured": "2026-03" }
+    },
+    "best_for": ["Best SWE/$", "batch coding", "browser automation", "writing"],
+    "license": "proprietary",
+    "openrouter_id": "minimax/minimax-m2.5"
+  },
+  {
+    "id": "minimax-m2-7",
+    "name": "MiniMax M2.7",
+    "provider": "MiniMax",
+    "tier": 2,
+    "pricing": {
+      "input": 0.3,
+      "output": 1.2,
+      "unit": "per_million_tokens",
+      "cached_input": 0.06,
+      "cache_discount": "80%",
+      "source": "openrouter",
+      "updated": "2026-03-28"
+    },
+    "context_length": 205000,
+    "scores": {
+      "swe_pro": {
+        "value": 56.2,
+        "measured": "2026-03",
+        "source": "scale.com/leaderboard",
+        "notes": "† unverified"
+      },
+      "gdpval": { "value": 1495, "measured": "2026-03" }
+    },
+    "best_for": ["Agentic tasks", "GDPval"],
+    "license": "proprietary",
+    "openrouter_id": "minimax/minimax-m2.7"
+  },
+  {
+    "id": "kimi-k2-5",
+    "name": "Kimi K2.5",
+    "provider": "Moonshot",
+    "tier": 2,
+    "pricing": {
+      "input": 0.45,
+      "output": 2.2,
+      "unit": "per_million_tokens",
+      "cached_input": 0.22,
+      "cache_discount": "50%",
+      "source": "openrouter",
+      "updated": "2026-03-28"
+    },
+    "context_length": 262000,
+    "scores": {
+      "swe_v": {
+        "value": 76.8,
+        "measured": "2026-03",
+        "source": "scale.com/leaderboard"
+      },
+      "gpqa": {
+        "value": 87.6,
+        "measured": "2026-03",
+        "source": "artificial-analysis.com"
+      },
+      "hle": { "value": 31.5, "measured": "2026-03", "source": "lastexam.ai" },
+      "lmarena": { "value": 988, "measured": "2026-03", "source": "lmarena.ai" }
+    },
+    "best_for": ["Vision + reasoning", "budget GPQA", "writing"],
+    "license": "proprietary",
+    "openrouter_id": "moonshot/kimi-k2.5"
+  },
+  {
+    "id": "kimi-k2",
+    "name": "Kimi K2",
+    "provider": "Moonshot",
+    "tier": 2,
+    "pricing": {
+      "input": 0.4,
+      "output": 2.0,
+      "unit": "per_million_tokens",
+      "source": "openrouter",
+      "updated": "2026-03-28"
+    },
+    "context_length": 131000,
+    "scores": {
+      "swe_pro": {
+        "value": 27.7,
+        "measured": "2026-03",
+        "source": "scale.com/leaderboard"
+      }
+    },
+    "best_for": ["Budget Kimi"],
+    "license": "proprietary",
+    "openrouter_id": "moonshot/kimi-k2"
+  },
+  {
+    "id": "glm-4-7",
+    "name": "GLM-4.7",
+    "provider": "Z.ai",
+    "tier": 2,
+    "pricing": {
+      "input": 0.39,
+      "output": 1.75,
+      "unit": "per_million_tokens",
+      "source": "openrouter",
+      "updated": "2026-03-28"
+    },
+    "context_length": 203000,
+    "scores": {
+      "tau2": { "value": 95.9, "measured": "2026-03", "source": "tau-bench" }
+    },
+    "best_for": ["Tool calling budget"],
+    "license": "proprietary",
+    "openrouter_id": "z-ai/glm-4.7"
+  },
+  {
+    "id": "glm-4-6",
+    "name": "GLM-4.6",
+    "provider": "Z.ai",
+    "tier": 2,
+    "pricing": {
+      "input": 0.39,
+      "output": 1.9,
+      "unit": "per_million_tokens",
+      "source": "openrouter",
+      "updated": "2026-03-28"
+    },
+    "context_length": 205000,
+    "scores": {
+      "swe_v": {
+        "value": 68.0,
+        "measured": "2026-03",
+        "source": "scale.com/leaderboard"
+      },
+      "gpqa": {
+        "value": 81.0,
+        "measured": "2026-03",
+        "source": "artificial-analysis.com"
+      }
+    },
+    "best_for": ["General tasks"],
+    "license": "proprietary",
+    "openrouter_id": "z-ai/glm-4.6"
+  },
+  {
+    "id": "glm-4-5",
+    "name": "GLM-4.5",
+    "provider": "Z.ai",
+    "tier": 2,
+    "pricing": {
+      "input": 0.6,
+      "output": 2.2,
+      "unit": "per_million_tokens",
+      "source": "openrouter",
+      "updated": "2026-03-28"
+    },
+    "context_length": 131000,
+    "scores": {
+      "bfcl": {
+        "value": 72.0,
+        "measured": "2026-03",
+        "source": "gorilla.cs.berkeley.edu"
+      }
+    },
+    "best_for": ["Function calling #1"],
+    "license": "proprietary",
+    "openrouter_id": "z-ai/glm-4.5"
+  },
+  {
+    "id": "qwen3-5-397b",
+    "name": "Qwen3.5-397B",
+    "provider": "Alibaba",
+    "tier": 2,
+    "pricing": {
+      "input": 0.39,
+      "output": 2.34,
+      "unit": "per_million_tokens",
+      "source": "openrouter",
+      "updated": "2026-03-28"
+    },
+    "context_length": 262000,
+    "scores": {
+      "swe_v": {
+        "value": 76.4,
+        "measured": "2026-03",
+        "source": "scale.com/leaderboard"
+      },
+      "swe_pro": {
+        "value": 38.7,
+        "measured": "2026-03",
+        "source": "scale.com/leaderboard"
+      },
+      "gpqa": {
+        "value": 88.4,
+        "measured": "2026-03",
+        "source": "artificial-analysis.com"
+      },
+      "ifbench": { "value": 78.8, "measured": "2026-03" }
+    },
+    "best_for": [
+      "Vision+video+reasoning",
+      "instruction following #1",
+      "budget GPQA"
+    ],
+    "license": "proprietary",
+    "openrouter_id": "qwen/qwen3.5-397b"
+  },
+  {
+    "id": "qwen3-5-122b",
+    "name": "Qwen3.5-122B",
+    "provider": "Alibaba",
+    "tier": 2,
+    "pricing": {
+      "input": 0.26,
+      "output": 2.08,
+      "unit": "per_million_tokens",
+      "source": "openrouter",
+      "updated": "2026-03-28"
+    },
+    "context_length": 262000,
+    "scores": {
+      "swe_v": {
+        "value": 72.0,
+        "measured": "2026-03",
+        "source": "scale.com/leaderboard"
+      },
+      "gpqa": {
+        "value": 86.6,
+        "measured": "2026-03",
+        "source": "artificial-analysis.com"
+      }
+    },
+    "best_for": ["Budget reasoning"],
+    "license": "proprietary",
+    "openrouter_id": "qwen/qwen3.5-122b"
+  },
+  {
+    "id": "qwen3-5-35b",
+    "name": "Qwen3.5-35B",
+    "provider": "Alibaba",
+    "tier": 2,
+    "pricing": {
+      "input": 0.16,
+      "output": 1.3,
+      "unit": "per_million_tokens",
+      "source": "openrouter",
+      "updated": "2026-03-28"
+    },
+    "context_length": 262000,
+    "scores": {
+      "swe_v": {
+        "value": 69.2,
+        "measured": "2026-03",
+        "source": "scale.com/leaderboard"
+      },
+      "gpqa": {
+        "value": 84.2,
+        "measured": "2026-03",
+        "source": "artificial-analysis.com"
+      },
+      "mmlu_pro": { "value": 85.3, "measured": "2026-03" }
+    },
+    "best_for": ["Mid-tier reasoning"],
+    "license": "proprietary",
+    "openrouter_id": "qwen/qwen3.5-35b"
+  },
+  {
+    "id": "qwen3-coder",
+    "name": "Qwen3-Coder",
+    "provider": "Alibaba",
+    "tier": 2,
+    "pricing": {
+      "input": 0.22,
+      "output": 1.0,
+      "unit": "per_million_tokens",
+      "cached_input": 0.02,
+      "cache_discount": "90%",
+      "source": "openrouter",
+      "updated": "2026-03-28"
+    },
+    "context_length": 262000,
+    "scores": {},
+    "best_for": ["Coding"],
+    "license": "proprietary",
+    "openrouter_id": "qwen/qwen3-coder"
+  },
+  {
+    "id": "qwen3-coder-plus",
+    "name": "Qwen3-Coder-Plus",
+    "provider": "Alibaba",
+    "tier": 2,
+    "pricing": {
+      "input": 0.65,
+      "output": 3.25,
+      "unit": "per_million_tokens",
+      "cached_input": 0.13,
+      "cache_discount": "80%",
+      "source": "openrouter",
+      "updated": "2026-03-28"
+    },
+    "context_length": 1000000,
+    "scores": {},
+    "best_for": ["Long context code"],
+    "license": "proprietary",
+    "openrouter_id": "qwen/qwen3-coder-plus"
+  },
+  {
+    "id": "deepseek-v3-2",
+    "name": "DeepSeek V3.2",
+    "provider": "DeepSeek",
+    "tier": 2,
+    "pricing": {
+      "input": 0.26,
+      "output": 0.38,
+      "unit": "per_million_tokens",
+      "cached_input": 0.13,
+      "cache_discount": "50%",
+      "source": "openrouter",
+      "updated": "2026-03-28"
+    },
+    "context_length": 164000,
+    "scores": {
+      "swe_v": {
+        "value": 73,
+        "measured": "2026-03",
+        "source": "scale.com/leaderboard",
+        "notes": "~73"
+      },
+      "swe_pro": {
+        "value": 29.9,
+        "measured": "2026-03",
+        "source": "scale.com/leaderboard"
+      },
+      "hle": { "value": 25.1, "measured": "2026-03", "source": "lastexam.ai" }
+    },
+    "best_for": ["Cheapest quality", "hallucination resistance budget"],
+    "license": "proprietary",
+    "open_weight": true,
+    "params": "671B",
+    "openrouter_id": "deepseek/deepseek-v3.2"
+  },
+  {
+    "id": "deepseek-r1",
+    "name": "DeepSeek R1",
+    "provider": "DeepSeek",
+    "tier": 2,
+    "pricing": {
+      "input": 0.45,
+      "output": 2.15,
+      "unit": "per_million_tokens",
+      "source": "openrouter",
+      "updated": "2026-03-28"
+    },
+    "context_length": 164000,
+    "scores": {
+      "medqa": { "value": 92.1, "measured": "2026-03", "notes": "MedQA USMLE" }
+    },
+    "best_for": ["Deep reasoning", "medical budget king"],
+    "license": "MIT",
+    "open_weight": true,
+    "openrouter_id": "deepseek/deepseek-r1"
+  },
+  {
+    "id": "deepseek-v3-2-speciale",
+    "name": "DeepSeek V3.2 Speciale",
+    "provider": "DeepSeek",
+    "tier": 2,
+    "pricing": {
+      "input": 0.4,
+      "output": 1.2,
+      "unit": "per_million_tokens",
+      "source": "openrouter",
+      "updated": "2026-03-28"
+    },
+    "context_length": 164000,
+    "scores": {},
+    "best_for": ["Enhanced V3.2"],
+    "license": "proprietary",
+    "openrouter_id": "deepseek/deepseek-v3.2-speciale"
+  },
+  {
+    "id": "grok-4-1-fast",
+    "name": "Grok 4.1 Fast",
+    "provider": "xAI",
+    "tier": 2,
+    "pricing": {
+      "input": 0.2,
+      "output": 0.5,
+      "unit": "per_million_tokens",
+      "cached_input": 0.05,
+      "cache_discount": "75%",
+      "source": "openrouter",
+      "updated": "2026-03-28"
+    },
+    "context_length": 2000000,
+    "scores": {},
+    "best_for": ["Consilium", "2M context", "long context budget"],
+    "license": "proprietary",
+    "openrouter_id": "x-ai/grok-4.1-fast"
+  },
+  {
+    "id": "grok-4-fast",
+    "name": "Grok 4 Fast",
+    "provider": "xAI",
+    "tier": 2,
+    "pricing": {
+      "input": 0.2,
+      "output": 0.5,
+      "unit": "per_million_tokens",
+      "source": "openrouter",
+      "updated": "2026-03-28"
+    },
+    "context_length": 2000000,
+    "scores": {},
+    "best_for": ["Classification", "2M context"],
+    "license": "proprietary",
+    "openrouter_id": "x-ai/grok-4-fast"
+  },
+  {
+    "id": "grok-code-fast-1",
+    "name": "Grok Code Fast 1",
+    "provider": "xAI",
+    "tier": 2,
+    "pricing": {
+      "input": 0.2,
+      "output": 1.5,
+      "unit": "per_million_tokens",
+      "source": "openrouter",
+      "updated": "2026-03-28"
+    },
+    "context_length": 256000,
+    "scores": {},
+    "best_for": ["Code review budget"],
+    "license": "proprietary",
+    "openrouter_id": "x-ai/grok-code-fast-1"
+  },
+  {
+    "id": "gemini-3-flash",
+    "name": "Gemini 3 Flash",
+    "provider": "Google",
+    "tier": 2,
+    "pricing": {
+      "input": 0.5,
+      "output": 3.0,
+      "unit": "per_million_tokens",
+      "source": "openrouter",
+      "updated": "2026-03-28"
+    },
+    "context_length": 1000000,
+    "scores": {
+      "swe_v": {
+        "value": 78.0,
+        "measured": "2026-03",
+        "source": "scale.com/leaderboard"
+      },
+      "swe_pro": {
+        "value": 34.6,
+        "measured": "2026-03",
+        "source": "scale.com/leaderboard"
+      },
+      "gpqa": {
+        "value": 90.4,
+        "measured": "2026-03",
+        "source": "artificial-analysis.com"
+      },
+      "ifbench": { "value": 78.0, "measured": "2026-03" },
+      "scraper_code_zyte": {
+        "value": 0.817,
+        "measured": "2026-02",
+        "source": "zyte.com/blog"
+      }
+    },
+    "best_for": ["Fast + cheap Gemini", "simple scrapers"],
+    "license": "proprietary",
+    "openrouter_id": "google/gemini-3-flash"
+  },
+  {
+    "id": "gemini-2-5-flash",
+    "name": "Gemini 2.5 Flash",
+    "provider": "Google",
+    "tier": 2,
+    "pricing": {
+      "input": 0.3,
+      "output": 2.5,
+      "unit": "per_million_tokens",
+      "cached_input": 0.03,
+      "cache_discount": "90%",
+      "source": "openrouter",
+      "updated": "2026-03-28"
+    },
+    "context_length": 1000000,
+    "scores": {},
+    "best_for": ["Budget Gemini", "ultra-cheap cached"],
+    "license": "proprietary",
+    "openrouter_id": "google/gemini-2.5-flash"
+  },
+  {
+    "id": "amazon-nova-pro",
+    "name": "Amazon Nova Pro",
+    "provider": "Amazon",
+    "tier": 2,
+    "pricing": {
+      "input": 0.8,
+      "output": 3.2,
+      "unit": "per_million_tokens",
+      "source": "openrouter",
+      "updated": "2026-03-28"
+    },
+    "context_length": 300000,
+    "scores": {},
+    "best_for": ["Vision", "AWS ecosystem"],
+    "license": "proprietary",
+    "openrouter_id": "amazon/nova-pro"
+  },
+  {
+    "id": "amazon-nova-2-lite",
+    "name": "Amazon Nova 2 Lite",
+    "provider": "Amazon",
+    "tier": 2,
+    "pricing": {
+      "input": 0.3,
+      "output": 2.5,
+      "unit": "per_million_tokens",
+      "source": "openrouter",
+      "updated": "2026-03-28"
+    },
+    "context_length": 1000000,
+    "scores": {},
+    "best_for": ["Multimodal 1M context"],
+    "license": "proprietary",
+    "openrouter_id": "amazon/nova-2-lite"
+  },
+  {
+    "id": "inception-mercury-2",
+    "name": "Inception Mercury 2",
+    "provider": "Inception",
+    "tier": 2,
+    "pricing": {
+      "input": 0.25,
+      "output": 0.75,
+      "unit": "per_million_tokens",
+      "source": "openrouter",
+      "updated": "2026-03-28"
+    },
+    "context_length": 128000,
+    "scores": {
+      "throughput_tps": {
+        "value": 872,
+        "measured": "2026-03",
+        "notes": "tokens/sec"
+      }
+    },
+    "best_for": ["Speed king 872 tok/s"],
+    "license": "proprietary",
+    "openrouter_id": "inception/mercury-2"
+  },
+  {
+    "id": "inception-mercury-coder",
+    "name": "Inception Mercury Coder",
+    "provider": "Inception",
+    "tier": 2,
+    "pricing": {
+      "input": 0.25,
+      "output": 0.75,
+      "unit": "per_million_tokens",
+      "source": "openrouter",
+      "updated": "2026-03-28"
+    },
+    "context_length": 128000,
+    "scores": {},
+    "best_for": ["Fast code"],
+    "license": "proprietary",
+    "openrouter_id": "inception/mercury-coder"
+  },
+  {
+    "id": "minimax-m1",
+    "name": "MiniMax M1",
+    "provider": "MiniMax",
+    "tier": 2,
+    "pricing": {
+      "input": 0.4,
+      "output": 2.2,
+      "unit": "per_million_tokens",
+      "source": "openrouter",
+      "updated": "2026-03-28"
+    },
+    "context_length": 1000000,
+    "scores": {},
+    "best_for": ["Long context 1M"],
+    "license": "proprietary",
+    "openrouter_id": "minimax/minimax-m1"
+  },
+  {
+    "id": "minimax-01",
+    "name": "MiniMax 01",
+    "provider": "MiniMax",
+    "tier": 2,
+    "pricing": {
+      "input": 0.2,
+      "output": 1.1,
+      "unit": "per_million_tokens",
+      "source": "openrouter",
+      "updated": "2026-03-28"
+    },
+    "context_length": 1000000,
+    "scores": {},
+    "best_for": ["Vision + 1M context"],
+    "license": "proprietary",
+    "openrouter_id": "minimax/minimax-01"
+  },
+  {
+    "id": "mistral-large-2512",
+    "name": "Mistral Large 2512",
+    "provider": "Mistral",
+    "tier": 2,
+    "pricing": {
+      "input": 0.5,
+      "output": 1.5,
+      "unit": "per_million_tokens",
+      "cached_input": 0.05,
+      "cache_discount": "90%",
+      "source": "openrouter",
+      "updated": "2026-03-28"
+    },
+    "context_length": 262000,
+    "scores": {},
+    "best_for": ["EU compliance", "vision"],
+    "license": "proprietary",
+    "openrouter_id": "mistralai/mistral-large-2512"
+  },
+  {
+    "id": "mistral-medium-3-1",
+    "name": "Mistral Medium 3.1",
+    "provider": "Mistral",
+    "tier": 2,
+    "pricing": {
+      "input": 0.4,
+      "output": 2.0,
+      "unit": "per_million_tokens",
+      "source": "openrouter",
+      "updated": "2026-03-28"
+    },
+    "context_length": 131000,
+    "scores": {},
+    "best_for": ["EU compliance"],
+    "license": "proprietary",
+    "openrouter_id": "mistralai/mistral-medium-3.1"
+  },
+  {
+    "id": "codestral",
+    "name": "Codestral",
+    "provider": "Mistral",
+    "tier": 2,
+    "pricing": {
+      "input": 0.3,
+      "output": 0.9,
+      "unit": "per_million_tokens",
+      "source": "openrouter",
+      "updated": "2026-03-28"
+    },
+    "context_length": 256000,
+    "scores": {},
+    "best_for": ["Code", "JS deobfuscation budget"],
+    "license": "proprietary",
+    "openrouter_id": "mistralai/codestral"
+  },
+  {
+    "id": "devstral-medium",
+    "name": "Devstral Medium",
+    "provider": "Mistral",
+    "tier": 2,
+    "pricing": {
+      "input": 0.4,
+      "output": 2.0,
+      "unit": "per_million_tokens",
+      "source": "openrouter",
+      "updated": "2026-03-28"
+    },
+    "context_length": 131000,
+    "scores": {},
+    "best_for": ["Code agent"],
+    "license": "proprietary",
+    "openrouter_id": "mistralai/devstral-medium"
+  },
+  {
+    "id": "llama-4-maverick",
+    "name": "Llama 4 Maverick",
+    "provider": "Meta",
+    "tier": 2,
+    "pricing": {
+      "input": null,
+      "output": null,
+      "unit": "per_million_tokens",
+      "notes": "OR varies by provider",
+      "source": "openrouter",
+      "updated": "2026-03-28"
+    },
+    "context_length": 1000000,
+    "scores": {
+      "gpqa": {
+        "value": 69.8,
+        "measured": "2026-03",
+        "source": "artificial-analysis.com"
+      },
+      "mmlu_pro": { "value": 80.5, "measured": "2026-03" }
+    },
+    "best_for": ["Vision", "MMLU-Pro"],
+    "license": "Llama 4",
+    "open_weight": true,
+    "openrouter_id": "meta-llama/llama-4-maverick"
+  },
+  {
+    "id": "glm-4-6v",
+    "name": "GLM-4.6V",
+    "provider": "Z.ai",
+    "tier": 2,
+    "pricing": {
+      "input": 0.3,
+      "output": 0.9,
+      "unit": "per_million_tokens",
+      "source": "openrouter",
+      "updated": "2026-03-28"
+    },
+    "context_length": 131000,
+    "scores": {},
+    "best_for": ["Vision + VIDEO input"],
+    "license": "proprietary",
+    "openrouter_id": "z-ai/glm-4.6v"
+  },
+  {
+    "id": "glm-4-5v",
+    "name": "GLM-4.5V",
+    "provider": "Z.ai",
+    "tier": 2,
+    "pricing": {
+      "input": 0.6,
+      "output": 1.8,
+      "unit": "per_million_tokens",
+      "source": "openrouter",
+      "updated": "2026-03-28"
+    },
+    "context_length": 65000,
+    "scores": {},
+    "best_for": ["Vision"],
+    "license": "proprietary",
+    "openrouter_id": "z-ai/glm-4.5v"
+  },
+  {
+    "id": "qwen3-5-27b",
+    "name": "Qwen3.5-27B",
+    "provider": "Alibaba",
+    "tier": 3,
+    "pricing": {
+      "input": 0.2,
+      "output": 1.56,
+      "unit": "per_million_tokens",
+      "source": "openrouter",
+      "updated": "2026-03-28"
+    },
+    "context_length": 262000,
+    "scores": {},
+    "best_for": ["Vision+video"],
+    "license": "proprietary",
+    "openrouter_id": "qwen/qwen3.5-27b"
+  },
+  {
+    "id": "glm-4-5-air",
+    "name": "GLM-4.5 Air",
+    "provider": "Z.ai",
+    "tier": 3,
+    "pricing": {
+      "input": 0.13,
+      "output": 0.85,
+      "unit": "per_million_tokens",
+      "source": "openrouter",
+      "updated": "2026-03-28"
+    },
+    "context_length": 131000,
+    "scores": {},
+    "best_for": ["Budget GLM", "batch general", "classification"],
+    "license": "proprietary",
+    "openrouter_id": "z-ai/glm-4.5-air"
+  },
+  {
+    "id": "qwen-plus",
+    "name": "Qwen Plus",
+    "provider": "Alibaba",
+    "tier": 3,
+    "pricing": {
+      "input": 0.26,
+      "output": 0.78,
+      "unit": "per_million_tokens",
+      "source": "openrouter",
+      "updated": "2026-03-28"
+    },
+    "context_length": 1000000,
+    "scores": {},
+    "best_for": ["1M context budget"],
+    "license": "proprietary",
+    "openrouter_id": "qwen/qwen-plus"
+  },
+  {
+    "id": "llama-4-scout",
+    "name": "Llama 4 Scout",
+    "provider": "Meta",
+    "tier": 3,
+    "pricing": {
+      "input": 0.08,
+      "output": 0.3,
+      "unit": "per_million_tokens",
+      "source": "openrouter",
+      "updated": "2026-03-28"
+    },
+    "context_length": 10000000,
+    "scores": {
+      "gpqa": {
+        "value": 57.2,
+        "measured": "2026-03",
+        "source": "artificial-analysis.com"
+      },
+      "mmlu_pro": { "value": 74.3, "measured": "2026-03" },
+      "throughput_tps": {
+        "value": 2600,
+        "measured": "2026-03",
+        "notes": "tokens/sec — speed king"
+      }
+    },
+    "best_for": ["10M context!", "Vision", "Speed king"],
+    "license": "Llama 4",
+    "open_weight": true,
+    "openrouter_id": "meta-llama/llama-4-scout"
+  },
+  {
+    "id": "glm-4-7-flashx",
+    "name": "GLM-4.7-FlashX",
+    "provider": "Z.ai",
+    "tier": 3,
+    "pricing": {
+      "input": 0.06,
+      "output": 0.4,
+      "unit": "per_million_tokens",
+      "source": "openrouter",
+      "updated": "2026-03-28"
+    },
+    "context_length": 203000,
+    "scores": {
+      "tau2": { "value": 98.8, "measured": "2026-03", "source": "tau-bench" }
+    },
+    "best_for": ["Ultra-cheap tool calling", "Tau2 98.8%"],
+    "license": "proprietary",
+    "openrouter_id": "z-ai/glm-4.7-flashx"
+  },
+  {
+    "id": "glm-4-32b",
+    "name": "GLM-4-32B",
+    "provider": "Z.ai",
+    "tier": 3,
+    "pricing": {
+      "input": 0.1,
+      "output": 0.1,
+      "unit": "per_million_tokens",
+      "source": "openrouter",
+      "updated": "2026-03-28"
+    },
+    "context_length": 128000,
+    "scores": {},
+    "best_for": ["Open-weight 32B"],
+    "license": "proprietary",
+    "open_weight": true,
+    "params": "32B",
+    "openrouter_id": "z-ai/glm-4-32b"
+  },
+  {
+    "id": "qwen3-5-flash",
+    "name": "Qwen3.5-Flash",
+    "provider": "Alibaba",
+    "tier": 3,
+    "pricing": {
+      "input": 0.07,
+      "output": 0.26,
+      "unit": "per_million_tokens",
+      "source": "openrouter",
+      "updated": "2026-03-28"
+    },
+    "context_length": 1000000,
+    "scores": {},
+    "best_for": ["1M context ultra-budget"],
+    "license": "proprietary",
+    "openrouter_id": "qwen/qwen3.5-flash"
+  },
+  {
+    "id": "qwen3-5-9b",
+    "name": "Qwen3.5-9B",
+    "provider": "Alibaba",
+    "tier": 3,
+    "pricing": {
+      "input": 0.05,
+      "output": 0.15,
+      "unit": "per_million_tokens",
+      "source": "openrouter",
+      "updated": "2026-03-28"
+    },
+    "context_length": 256000,
+    "scores": {},
+    "best_for": ["Tiny + vision+video"],
+    "license": "proprietary",
+    "openrouter_id": "qwen/qwen3.5-9b"
+  },
+  {
+    "id": "qwen3-30b",
+    "name": "Qwen3-30B",
+    "provider": "Alibaba",
+    "tier": 3,
+    "pricing": {
+      "input": 0.08,
+      "output": 0.28,
+      "unit": "per_million_tokens",
+      "source": "openrouter",
+      "updated": "2026-03-28"
+    },
+    "context_length": 41000,
+    "scores": {},
+    "best_for": ["MoE small"],
+    "license": "proprietary",
+    "openrouter_id": "qwen/qwen3-30b"
+  },
+  {
+    "id": "qwen3-coder-30b",
+    "name": "Qwen3-Coder-30B",
+    "provider": "Alibaba",
+    "tier": 3,
+    "pricing": {
+      "input": 0.07,
+      "output": 0.27,
+      "unit": "per_million_tokens",
+      "source": "openrouter",
+      "updated": "2026-03-28"
+    },
+    "context_length": 160000,
+    "scores": {},
+    "best_for": ["Code small"],
+    "license": "proprietary",
+    "openrouter_id": "qwen/qwen3-coder-30b"
+  },
+  {
+    "id": "qwen-turbo",
+    "name": "Qwen Turbo",
+    "provider": "Alibaba",
+    "tier": 3,
+    "pricing": {
+      "input": 0.03,
+      "output": 0.13,
+      "unit": "per_million_tokens",
+      "source": "openrouter",
+      "updated": "2026-03-28"
+    },
+    "context_length": 131000,
+    "scores": {},
+    "best_for": ["Cheapest Qwen"],
+    "license": "proprietary",
+    "openrouter_id": "qwen/qwen-turbo"
+  },
+  {
+    "id": "gemini-2-5-flash-lite",
+    "name": "Gemini 2.5 Flash Lite",
+    "provider": "Google",
+    "tier": 3,
+    "pricing": {
+      "input": 0.1,
+      "output": 0.4,
+      "unit": "per_million_tokens",
+      "source": "openrouter",
+      "updated": "2026-03-28"
+    },
+    "context_length": 1000000,
+    "scores": {},
+    "best_for": ["Cheapest Gemini 1M"],
+    "license": "proprietary",
+    "openrouter_id": "google/gemini-2.5-flash-lite"
+  },
+  {
+    "id": "gemini-2-0-flash",
+    "name": "Gemini 2.0 Flash",
+    "provider": "Google",
+    "tier": 3,
+    "pricing": {
+      "input": 0.1,
+      "output": 0.4,
+      "unit": "per_million_tokens",
+      "source": "openrouter",
+      "updated": "2026-03-28"
+    },
+    "context_length": 1000000,
+    "scores": {},
+    "best_for": ["Multimodal budget"],
+    "license": "proprietary",
+    "openrouter_id": "google/gemini-2.0-flash"
+  },
+  {
+    "id": "deepseek-v3-1",
+    "name": "DeepSeek V3.1",
+    "provider": "DeepSeek",
+    "tier": 3,
+    "pricing": {
+      "input": 0.15,
+      "output": 0.75,
+      "unit": "per_million_tokens",
+      "source": "openrouter",
+      "updated": "2026-03-28"
+    },
+    "context_length": 33000,
+    "scores": {},
+    "best_for": ["Budget DeepSeek"],
+    "license": "proprietary",
+    "openrouter_id": "deepseek/deepseek-v3.1"
+  },
+  {
+    "id": "amazon-nova-micro",
+    "name": "Amazon Nova Micro",
+    "provider": "Amazon",
+    "tier": 3,
+    "pricing": {
+      "input": 0.04,
+      "output": 0.14,
+      "unit": "per_million_tokens",
+      "source": "openrouter",
+      "updated": "2026-03-28"
+    },
+    "context_length": 128000,
+    "scores": {},
+    "best_for": ["Cheapest AWS"],
+    "license": "proprietary",
+    "openrouter_id": "amazon/nova-micro"
+  },
+  {
+    "id": "amazon-nova-lite",
+    "name": "Amazon Nova Lite",
+    "provider": "Amazon",
+    "tier": 3,
+    "pricing": {
+      "input": 0.06,
+      "output": 0.24,
+      "unit": "per_million_tokens",
+      "source": "openrouter",
+      "updated": "2026-03-28"
+    },
+    "context_length": 300000,
+    "scores": {},
+    "best_for": ["Vision budget", "300K context"],
+    "license": "proprietary",
+    "openrouter_id": "amazon/nova-lite"
+  },
+  {
+    "id": "mistral-small-3-2",
+    "name": "Mistral Small 3.2",
+    "provider": "Mistral",
+    "tier": 3,
+    "pricing": {
+      "input": 0.07,
+      "output": 0.2,
+      "unit": "per_million_tokens",
+      "source": "openrouter",
+      "updated": "2026-03-28"
+    },
+    "context_length": 128000,
+    "scores": {},
+    "best_for": ["Vision tiny"],
+    "license": "proprietary",
+    "openrouter_id": "mistralai/mistral-small-3.2"
+  },
+  {
+    "id": "mistral-small-3-1",
+    "name": "Mistral Small 3.1",
+    "provider": "Mistral",
+    "tier": 3,
+    "pricing": {
+      "input": 0.03,
+      "output": 0.11,
+      "unit": "per_million_tokens",
+      "cached_input": 0.003,
+      "cache_discount": "90%",
+      "source": "openrouter",
+      "updated": "2026-03-28"
+    },
+    "context_length": 131000,
+    "scores": {},
+    "best_for": ["Vision cheapest", "EU multilingual"],
+    "license": "proprietary",
+    "openrouter_id": "mistralai/mistral-small-3.1-24b-instruct"
+  },
+  {
+    "id": "mistral-nemo",
+    "name": "Mistral Nemo",
+    "provider": "Mistral",
+    "tier": 3,
+    "pricing": {
+      "input": 0.02,
+      "output": 0.04,
+      "unit": "per_million_tokens",
+      "source": "openrouter",
+      "updated": "2026-03-28"
+    },
+    "context_length": 131000,
+    "scores": {},
+    "best_for": ["Cheapest text"],
+    "license": "proprietary",
+    "openrouter_id": "mistralai/mistral-nemo"
+  },
+  {
+    "id": "devstral-small",
+    "name": "Devstral Small",
+    "provider": "Mistral",
+    "tier": 3,
+    "pricing": {
+      "input": 0.1,
+      "output": 0.3,
+      "unit": "per_million_tokens",
+      "source": "openrouter",
+      "updated": "2026-03-28"
+    },
+    "context_length": 131000,
+    "scores": {},
+    "best_for": ["Code budget EU"],
+    "license": "proprietary",
+    "openrouter_id": "mistralai/devstral-small"
+  },
+  {
+    "id": "google-gemma-3-27b",
+    "name": "Google Gemma 3 27B",
+    "provider": "Google",
+    "tier": 3,
+    "pricing": {
+      "input": 0.08,
+      "output": 0.16,
+      "unit": "per_million_tokens",
+      "source": "openrouter",
+      "updated": "2026-03-28"
+    },
+    "context_length": 131000,
+    "scores": {},
+    "best_for": ["Open-weight vision"],
+    "license": "Gemma",
+    "open_weight": true,
+    "openrouter_id": "google/gemma-3-27b-it"
+  },
+  {
+    "id": "minimax-m2-5-free",
+    "name": "MiniMax M2.5 (Free)",
+    "provider": "MiniMax",
+    "tier": 0,
+    "channel": "openrouter_free",
+    "pricing": {
+      "input": 0,
+      "output": 0,
+      "unit": "per_million_tokens"
+    },
+    "context_length": 197000,
+    "scores": {
+      "swe_v": {
+        "value": 80.2,
+        "measured": "2026-03",
+        "source": "scale.com/leaderboard"
+      }
+    },
+    "best_for": ["Best free coder", "batch coding", "code review free"],
+    "license": "proprietary",
+    "openrouter_id": "minimax/minimax-m2.5:free"
+  },
+  {
+    "id": "qwen3-coder-480b-free",
+    "name": "Qwen3 Coder 480B (Free)",
+    "provider": "Alibaba",
+    "tier": 0,
+    "channel": "openrouter_free",
+    "pricing": {
+      "input": 0,
+      "output": 0,
+      "unit": "per_million_tokens"
+    },
+    "context_length": 262000,
+    "scores": {},
+    "best_for": ["Coding free #1", "480B MoE 35B active"],
+    "license": "proprietary",
+    "openrouter_id": "qwen/qwen3-coder:free"
+  },
+  {
+    "id": "hermes-3-405b-free",
+    "name": "Hermes 3 405B (Free)",
+    "provider": "Nous Research",
+    "tier": 0,
+    "channel": "openrouter_free",
+    "pricing": {
+      "input": 0,
+      "output": 0,
+      "unit": "per_million_tokens"
+    },
+    "context_length": 131000,
+    "scores": {},
+    "best_for": ["Reasoning free", "uncensored", "general 405B"],
+    "license": "Llama 3",
+    "open_weight": true,
+    "openrouter_id": "nousresearch/hermes-3-llama-3.1-405b:free"
+  },
+  {
+    "id": "nvidia-nemotron-3-super-free",
+    "name": "NVIDIA Nemotron 3 Super 120B (Free)",
+    "provider": "NVIDIA",
+    "tier": 0,
+    "channel": "openrouter_free",
+    "pricing": {
+      "input": 0,
+      "output": 0,
+      "unit": "per_million_tokens"
+    },
+    "context_length": 262000,
+    "scores": {},
+    "best_for": ["Long-context reasoning free", "120B MoE"],
+    "license": "Open",
+    "openrouter_id": "nvidia/nemotron-3-super-120b-a12b:free"
+  },
+  {
+    "id": "glm-4-5-air-free",
+    "name": "GLM-4.5 Air (Free)",
+    "provider": "Z.ai",
+    "tier": 0,
+    "channel": "openrouter_free",
+    "pricing": {
+      "input": 0,
+      "output": 0,
+      "unit": "per_million_tokens"
+    },
+    "context_length": 131000,
+    "scores": {},
+    "best_for": ["Batch general free", "classification", "Chinese+English"],
+    "license": "proprietary",
+    "openrouter_id": "z-ai/glm-4.5-air:free"
+  },
+  {
+    "id": "gemma-3-27b-free",
+    "name": "Gemma 3 27B (Free)",
+    "provider": "Google",
+    "tier": 0,
+    "channel": "openrouter_free",
+    "pricing": {
+      "input": 0,
+      "output": 0,
+      "unit": "per_million_tokens"
+    },
+    "context_length": 131000,
+    "scores": {},
+    "best_for": ["General free", "Google quality"],
+    "license": "Gemma",
+    "open_weight": true,
+    "openrouter_id": "google/gemma-3-27b-it:free"
+  },
+  {
+    "id": "llama-3-3-70b-free",
+    "name": "Llama 3.3 70B (Free)",
+    "provider": "Meta",
+    "tier": 0,
+    "channel": "openrouter_free",
+    "pricing": {
+      "input": 0,
+      "output": 0,
+      "unit": "per_million_tokens"
+    },
+    "context_length": 65000,
+    "scores": {},
+    "best_for": ["General purpose proven free"],
+    "license": "Llama 3",
+    "open_weight": true,
+    "openrouter_id": "meta-llama/llama-3.3-70b-instruct:free"
+  },
+  {
+    "id": "mistral-small-3-1-free",
+    "name": "Mistral Small 3.1 24B (Free)",
+    "provider": "Mistral",
+    "tier": 0,
+    "channel": "openrouter_free",
+    "pricing": {
+      "input": 0,
+      "output": 0,
+      "unit": "per_million_tokens"
+    },
+    "context_length": 128000,
+    "scores": {},
+    "best_for": ["EU compliance free", "multilingual"],
+    "license": "proprietary",
+    "openrouter_id": "mistralai/mistral-small-3.1-24b-instruct:free"
+  },
+  {
+    "id": "stepfun-step-3-5-flash-free",
+    "name": "StepFun Step 3.5 Flash (Free)",
+    "provider": "StepFun",
+    "tier": 0,
+    "channel": "openrouter_free",
+    "pricing": {
+      "input": 0,
+      "output": 0,
+      "unit": "per_million_tokens"
+    },
+    "context_length": 256000,
+    "scores": {},
+    "best_for": ["256K context free"],
+    "license": "proprietary",
+    "openrouter_id": "stepfun/step-3.5-flash:free"
+  },
+  {
+    "id": "qwen3-next-80b-free",
+    "name": "Qwen3 Next 80B (Free)",
+    "provider": "Alibaba",
+    "tier": 0,
+    "channel": "openrouter_free",
+    "pricing": {
+      "input": 0,
+      "output": 0,
+      "unit": "per_million_tokens"
+    },
+    "context_length": 262000,
+    "scores": {},
+    "best_for": ["Ultra-long ctx free", "MoE 3B active"],
+    "license": "proprietary",
+    "openrouter_id": "qwen/qwen3-next-80b-a3b-instruct:free"
+  },
+  {
+    "id": "openai-gpt-oss-120b-free",
+    "name": "OpenAI GPT-OSS 120B (Free)",
+    "provider": "OpenAI",
+    "tier": 0,
+    "channel": "openrouter_free",
+    "pricing": {
+      "input": 0,
+      "output": 0,
+      "unit": "per_million_tokens"
+    },
+    "context_length": 131000,
+    "scores": {},
+    "best_for": ["OpenAI open-source experiment"],
+    "license": "Open",
+    "open_weight": true,
+    "openrouter_id": "openai/gpt-oss-120b:free"
+  },
+  {
+    "id": "openai-gpt-oss-20b-free",
+    "name": "OpenAI GPT-OSS 20B (Free)",
+    "provider": "OpenAI",
+    "tier": 0,
+    "channel": "openrouter_free",
+    "pricing": {
+      "input": 0,
+      "output": 0,
+      "unit": "per_million_tokens"
+    },
+    "context_length": 131000,
+    "scores": {},
+    "best_for": ["Lightweight OpenAI OSS"],
+    "license": "Open",
+    "open_weight": true,
+    "openrouter_id": "openai/gpt-oss-20b:free"
+  },
+  {
+    "id": "arcee-trinity-large-free",
+    "name": "Arcee Trinity Large (Free)",
+    "provider": "Arcee AI",
+    "tier": 0,
+    "channel": "openrouter_free",
+    "pricing": {
+      "input": 0,
+      "output": 0,
+      "unit": "per_million_tokens"
+    },
+    "context_length": 131000,
+    "scores": {},
+    "best_for": ["Enterprise merge model preview"],
+    "license": "proprietary",
+    "openrouter_id": "arcee-ai/trinity-large-preview:free"
+  },
+  {
+    "id": "nvidia-nemotron-nano-12b-vl-free",
+    "name": "NVIDIA Nemotron Nano 12B VL (Free)",
+    "provider": "NVIDIA",
+    "tier": 0,
+    "channel": "openrouter_free",
+    "pricing": {
+      "input": 0,
+      "output": 0,
+      "unit": "per_million_tokens"
+    },
+    "context_length": 128000,
+    "scores": {},
+    "best_for": ["FREE vision model #1"],
+    "license": "Open",
+    "openrouter_id": "nvidia/nemotron-nano-12b-v2-vl:free"
+  },
+  {
+    "id": "nvidia-nemotron-nano-9b-free",
+    "name": "NVIDIA Nemotron Nano 9B (Free)",
+    "provider": "NVIDIA",
+    "tier": 0,
+    "channel": "openrouter_free",
+    "pricing": {
+      "input": 0,
+      "output": 0,
+      "unit": "per_million_tokens"
+    },
+    "context_length": 128000,
+    "scores": {},
+    "best_for": ["Lightweight NVIDIA free"],
+    "license": "Open",
+    "openrouter_id": "nvidia/nemotron-nano-9b-v2:free"
+  },
+  {
+    "id": "nvidia-nemotron-3-nano-30b-free",
+    "name": "NVIDIA Nemotron 3 Nano 30B (Free)",
+    "provider": "NVIDIA",
+    "tier": 0,
+    "channel": "openrouter_free",
+    "pricing": {
+      "input": 0,
+      "output": 0,
+      "unit": "per_million_tokens"
+    },
+    "context_length": 256000,
+    "scores": {},
+    "best_for": ["Long ctx 256K free MoE"],
+    "license": "Open",
+    "openrouter_id": "nvidia/nemotron-3-nano-30b-a3b:free"
+  },
+  {
+    "id": "gemma-3-12b-free",
+    "name": "Gemma 3 12B (Free)",
+    "provider": "Google",
+    "tier": 0,
+    "channel": "openrouter_free",
+    "pricing": {
+      "input": 0,
+      "output": 0,
+      "unit": "per_million_tokens"
+    },
+    "context_length": 32000,
+    "scores": {},
+    "best_for": ["Small general free"],
+    "license": "Gemma",
+    "open_weight": true,
+    "openrouter_id": "google/gemma-3-12b-it:free"
+  },
+  {
+    "id": "gemma-3-4b-free",
+    "name": "Gemma 3 4B (Free)",
+    "provider": "Google",
+    "tier": 0,
+    "channel": "openrouter_free",
+    "pricing": {
+      "input": 0,
+      "output": 0,
+      "unit": "per_million_tokens"
+    },
+    "context_length": 32000,
+    "scores": {},
+    "best_for": ["Edge", "mobile free"],
+    "license": "Gemma",
+    "open_weight": true,
+    "openrouter_id": "google/gemma-3-4b-it:free"
+  },
+  {
+    "id": "gemma-3n-4b-free",
+    "name": "Gemma 3n 4B (Free)",
+    "provider": "Google",
+    "tier": 0,
+    "channel": "openrouter_free",
+    "pricing": {
+      "input": 0,
+      "output": 0,
+      "unit": "per_million_tokens"
+    },
+    "context_length": 8000,
+    "scores": {},
+    "best_for": ["Ultra-small edge IoT"],
+    "license": "Gemma",
+    "open_weight": true,
+    "openrouter_id": "google/gemma-3n-e4b-it:free"
+  },
+  {
+    "id": "gemma-3n-2b-free",
+    "name": "Gemma 3n 2B (Free)",
+    "provider": "Google",
+    "tier": 0,
+    "channel": "openrouter_free",
+    "pricing": {
+      "input": 0,
+      "output": 0,
+      "unit": "per_million_tokens"
+    },
+    "context_length": 8000,
+    "scores": {},
+    "best_for": ["Prototype IoT minimal"],
+    "license": "Gemma",
+    "open_weight": true,
+    "openrouter_id": "google/gemma-3n-e2b-it:free"
+  },
+  {
+    "id": "qwen3-4b-free",
+    "name": "Qwen3 4B (Free)",
+    "provider": "Alibaba",
+    "tier": 0,
+    "channel": "openrouter_free",
+    "pricing": {
+      "input": 0,
+      "output": 0,
+      "unit": "per_million_tokens"
+    },
+    "context_length": 40000,
+    "scores": {},
+    "best_for": ["Lightweight tasks free"],
+    "license": "proprietary",
+    "openrouter_id": "qwen/qwen3-4b:free"
+  },
+  {
+    "id": "llama-3-2-3b-free",
+    "name": "Llama 3.2 3B (Free)",
+    "provider": "Meta",
+    "tier": 0,
+    "channel": "openrouter_free",
+    "pricing": {
+      "input": 0,
+      "output": 0,
+      "unit": "per_million_tokens"
+    },
+    "context_length": 131000,
+    "scores": {},
+    "best_for": ["Small with long ctx free"],
+    "license": "Llama 3",
+    "open_weight": true,
+    "openrouter_id": "meta-llama/llama-3.2-3b-instruct:free"
+  },
+  {
+    "id": "arcee-trinity-mini-free",
+    "name": "Arcee Trinity Mini (Free)",
+    "provider": "Arcee AI",
+    "tier": 0,
+    "channel": "openrouter_free",
+    "pricing": {
+      "input": 0,
+      "output": 0,
+      "unit": "per_million_tokens"
+    },
+    "context_length": 131000,
+    "scores": {},
+    "best_for": ["Lightweight merge free"],
+    "license": "proprietary",
+    "openrouter_id": "arcee-ai/trinity-mini:free"
+  },
+  {
+    "id": "liquid-lfm-1-2b-thinking-free",
+    "name": "Liquid LFM 1.2B Thinking (Free)",
+    "provider": "Liquid AI",
+    "tier": 0,
+    "channel": "openrouter_free",
+    "pricing": {
+      "input": 0,
+      "output": 0,
+      "unit": "per_million_tokens"
+    },
+    "context_length": 32000,
+    "scores": {},
+    "best_for": ["Thinking CoT at 1.2B free"],
+    "license": "proprietary",
+    "openrouter_id": "liquid/lfm-2.5-1.2b-thinking:free"
+  },
+  {
+    "id": "liquid-lfm-1-2b-instruct-free",
+    "name": "Liquid LFM 1.2B Instruct (Free)",
+    "provider": "Liquid AI",
+    "tier": 0,
+    "channel": "openrouter_free",
+    "pricing": {
+      "input": 0,
+      "output": 0,
+      "unit": "per_million_tokens"
+    },
+    "context_length": 32000,
+    "scores": {},
+    "best_for": ["Ultra-small instruct free"],
+    "license": "proprietary",
+    "openrouter_id": "liquid/lfm-2.5-1.2b-instruct:free"
+  },
+  {
+    "id": "venice-uncensored-free",
+    "name": "Venice Uncensored (Free)",
+    "provider": "Cognitive Computations",
+    "tier": 0,
+    "channel": "openrouter_free",
+    "pricing": {
+      "input": 0,
+      "output": 0,
+      "unit": "per_million_tokens"
+    },
+    "context_length": 32000,
+    "scores": {},
+    "best_for": ["No content filter free"],
+    "license": "proprietary",
+    "openrouter_id": "cognitivecomputations/dolphin-mistral-24b-venice-edition:free"
+  },
+  {
+    "id": "openrouter-free-router",
+    "name": "Free Models Router",
+    "provider": "OpenRouter",
+    "tier": 0,
+    "channel": "openrouter_free",
+    "pricing": {
+      "input": 0,
+      "output": 0,
+      "unit": "per_million_tokens"
+    },
+    "context_length": 200000,
+    "scores": {},
+    "best_for": ["Auto-routes to best free model"],
+    "license": "N/A",
+    "openrouter_id": "openrouter/free"
+  },
+  {
+    "id": "glm-4-7-flash-cli",
+    "name": "GLM-4.7-Flash (CLI)",
+    "provider": "Z.ai",
+    "tier": 0,
+    "channel": "z_ai_direct",
+    "pricing": {
+      "input": 0,
+      "output": 0,
+      "unit": "per_million_tokens",
+      "notes": "Free via Z.ai direct subscription"
+    },
+    "context_length": 200000,
+    "scores": {
+      "tau2": { "value": 98.8, "measured": "2026-03", "source": "tau-bench" }
+    },
+    "best_for": ["Tool calling free CLI"],
+    "license": "proprietary"
+  },
+  {
+    "id": "glm-4-5-flash-cli",
+    "name": "GLM-4.5-Flash (CLI)",
+    "provider": "Z.ai",
+    "tier": 0,
+    "channel": "z_ai_direct",
+    "pricing": {
+      "input": 0,
+      "output": 0,
+      "unit": "per_million_tokens",
+      "notes": "Free via Z.ai direct subscription"
+    },
+    "context_length": 200000,
+    "scores": {},
+    "best_for": ["Simple tasks free CLI"],
+    "license": "proprietary"
+  },
+  {
+    "id": "qwen-cli",
+    "name": "Qwen CLI (Qwen3-Coder)",
+    "provider": "Alibaba",
+    "tier": 0,
+    "channel": "cli_oauth",
+    "pricing": {
+      "input": 0,
+      "output": 0,
+      "unit": "per_million_tokens",
+      "notes": "2000 RPD free via OAuth"
+    },
+    "context_length": 1000000,
+    "scores": {},
+    "best_for": ["Classification batch 2000 RPD free"],
+    "license": "proprietary"
+  },
+  {
+    "id": "codex-cli",
+    "name": "Codex CLI (GPT Codex)",
+    "provider": "OpenAI",
+    "tier": 0,
+    "channel": "cli_free_tier",
+    "pricing": {
+      "input": 0,
+      "output": 0,
+      "unit": "per_million_tokens",
+      "notes": "Free tier via OpenAI subscription"
+    },
+    "context_length": null,
+    "scores": {},
+    "best_for": ["Code review free", "architecture review"],
+    "license": "proprietary"
+  },
+  {
+    "id": "gemini-cli",
+    "name": "Gemini CLI (gemini-2.5-pro)",
+    "provider": "Google",
+    "tier": 0,
+    "channel": "cli_oauth",
+    "pricing": {
+      "input": 0,
+      "output": 0,
+      "unit": "per_million_tokens",
+      "notes": "Free via OAuth/Google AI Ultra subscription"
+    },
+    "context_length": 2000000,
+    "scores": {},
+    "best_for": ["Research free", "PDF analysis", "visual QA", "2M context"],
+    "license": "proprietary"
+  }
+]

@@ -1,0 +1,713 @@
+{
+  "king_picks": {
+    "coding": {
+      "coding_general_swe_v": {
+        "quality_1": "Claude Opus 4.6 (80.8%)",
+        "quality_2": "Gemini 3.1 Pro (80.6%)",
+        "budget_1": "MiniMax M2.5 (80.2%, $0.20)",
+        "budget_2": "Claude Sonnet 4.6 (79.6%, $3)",
+        "free": "MiniMax M2.5 FREE"
+      },
+      "coding_uncontaminated_swe_pro": {
+        "quality_1": "Claude Opus 4.5 (45.9%)",
+        "quality_2": "Claude Sonnet 4.5 (43.6%)",
+        "budget_1": "Qwen3.5-397B (38.7%, $0.39)",
+        "budget_2": "MiniMax M2.5 (36.8%, $0.20)",
+        "free": null
+      },
+      "code_generation_humaneval": {
+        "quality_1": "GPT-5.3 Codex (97.5%)",
+        "quality_2": "GLM-5 (90%)",
+        "budget_1": "GLM-5 (90%, $1)",
+        "budget_2": "Kimi K2.5 ($0.45)",
+        "free": null
+      },
+      "scientific_coding_scicode": {
+        "quality_1": "GPT-5.4 (56.6%)",
+        "quality_2": "Gemini 3.1 Pro (56.1%)",
+        "budget_1": null,
+        "budget_2": null,
+        "free": null
+      },
+      "agentic_coding_terminal_b2": {
+        "quality_1": "GPT-5.4 (57.6%)",
+        "quality_2": "GLM-5 (56.2%)",
+        "budget_1": "MiniMax M2.7 (56.2%, $0.30)",
+        "budget_2": "GLM-5 ($1)",
+        "free": null
+      },
+      "code_review_practical": {
+        "quality_1": "Claude Opus 4.6",
+        "quality_2": "Claude Sonnet 4.6",
+        "budget_1": "Grok Code Fast 1 ($0.20)",
+        "budget_2": "MiniMax M2.5 ($0.20)",
+        "free": "Codex CLI"
+      }
+    },
+    "reasoning": {
+      "graduate_science_gpqa": {
+        "quality_1": "Gemini 3.1 Pro (94.3%)",
+        "quality_2": "GPT-5.2 (92.4%)",
+        "budget_1": "Qwen3.5-397B (88.4%, $0.39)",
+        "budget_2": "Kimi K2.5 (87.6%, $0.45)",
+        "free": null
+      },
+      "hardest_reasoning_hle": {
+        "quality_1": "GPT-5.4 (41.6%)",
+        "quality_2": "Gemini 3.1 Pro (37.2%)",
+        "budget_1": "MiniMax M2.5 (32%, $0.20)",
+        "budget_2": "Kimi K2.5 (31.5%, $0.45)",
+        "free": null
+      },
+      "abstract_reasoning_arc_agi_2": {
+        "quality_1": "Gemini 3.1 Pro (77.1%)",
+        "quality_2": "GPT-5.4 (73.3%)",
+        "budget_1": null,
+        "budget_2": null,
+        "free": null
+      },
+      "math_competition_aime_2025": {
+        "quality_1": "GPT-5.4 (100%)",
+        "quality_2": "Gemini 3.1 Pro (92%)",
+        "budget_1": "GLM-5 (84%, $1)",
+        "budget_2": "Kimi K2.5 ($0.45)",
+        "free": null
+      },
+      "adaptive_reasoning_grind": {
+        "quality_1": "Gemini 2.5 Pro (82.1%)",
+        "quality_2": "Claude Sonnet 4 (75%)",
+        "budget_1": null,
+        "budget_2": null,
+        "free": null
+      },
+      "general_knowledge_mmlu_pro": {
+        "quality_1": "GPT-5.2",
+        "quality_2": "Gemini 3.1 Pro",
+        "budget_1": "Qwen3.5-397B ($0.39)",
+        "budget_2": "GLM-5 ($1)",
+        "free": null
+      }
+    },
+    "tools_and_agents": {
+      "function_calling_bfcl": {
+        "quality_1": "GLM-4.5 (72.0%)",
+        "quality_2": "Claude Opus 4.1 (70.4%)",
+        "budget_1": "GLM-4.5 ($0.60)",
+        "budget_2": "GLM-4.7 ($0.39)",
+        "free": null
+      },
+      "multi_turn_tools_tau2": {
+        "quality_1": "Claude Opus 4.6 (99.3%)",
+        "quality_2": "GLM-5 (98.2%)",
+        "budget_1": "GLM-4.7 (95.9%, $0.39)",
+        "budget_2": "GLM-4.7-FlashX ($0.06)",
+        "free": "GLM-4.7-Flash"
+      },
+      "tool_reliability_error_rate": {
+        "quality_1": "GLM-5-Turbo (0.67% error)",
+        "quality_2": "Claude (<1% error)",
+        "budget_1": "GLM-5-Turbo ($1.20)",
+        "budget_2": "GLM-4.7 ($0.39)",
+        "free": null
+      },
+      "general_assistant_gaia": {
+        "quality_1": "Claude Sonnet 4.5 (74.6%)",
+        "quality_2": "Claude Opus 4.6",
+        "budget_1": null,
+        "budget_2": null,
+        "free": null
+      },
+      "real_world_work_gdpval": {
+        "quality_1": "Claude Opus 4.6 (~1500+)",
+        "quality_2": "MiniMax M2.7 (1495)",
+        "budget_1": "MiniMax M2.7 ($0.30)",
+        "budget_2": "GLM-5 ($1)",
+        "free": null
+      },
+      "long_horizon_vending_b2": {
+        "quality_1": "Claude Opus 4.5",
+        "quality_2": "GLM-5 (#1 OS)",
+        "budget_1": "GLM-5 ($1)",
+        "budget_2": "MiniMax M2.7 ($0.30)",
+        "free": null
+      }
+    },
+    "content_and_communication": {
+      "instruction_following_ifbench": {
+        "quality_1": "Qwen3.5-397B (78.8%)",
+        "quality_2": "Gemini 3 Flash (78.0%)",
+        "budget_1": "Qwen3.5-397B ($0.39)",
+        "budget_2": "GLM-5 (88% IFEval, $1)",
+        "free": null
+      },
+      "hallucination_resistance_simpleqa": {
+        "quality_1": "Grok 4.20 (lowest hallucination)",
+        "quality_2": "Claude Opus 4.6",
+        "budget_1": "GLM-5 (48%, $1)",
+        "budget_2": "DeepSeek V3.2 ($0.26)",
+        "free": null
+      },
+      "writing_quality_human_pref": {
+        "quality_1": "Claude Opus 4.6",
+        "quality_2": "GPT-5.4",
+        "budget_1": "Kimi K2.5 ($0.45)",
+        "budget_2": "MiniMax M2.5 ($0.20)",
+        "free": "MiniMax M2.5 FREE"
+      },
+      "chat_preference_lmarena": {
+        "quality_1": "Claude Opus 4.6 (1476 ELO)",
+        "quality_2": "Claude Opus 4.5 (1345 ELO)",
+        "budget_1": "Kimi K2.5 (988, $0.45)",
+        "budget_2": "Claude Sonnet 4.6 (941, $3)",
+        "free": null
+      },
+      "multilingual_mgsm": {
+        "quality_1": "GLM-5 (90%)",
+        "quality_2": "Gemini 3.1 Pro",
+        "budget_1": "GLM-5 ($1)",
+        "budget_2": "Qwen3.5 ($0.39)",
+        "free": null
+      }
+    },
+    "multimodal": {
+      "vision_mmmu": {
+        "quality_1": "Gemini 3.1 Pro",
+        "quality_2": "GPT-5.4",
+        "budget_1": "GLM-4.6V ($0.30)",
+        "budget_2": "Qwen3.5 ($0.39)",
+        "free": null
+      },
+      "video_input": {
+        "quality_1": "Gemini 3.1 Pro",
+        "quality_2": "GLM-4.6V ($0.30)",
+        "budget_1": "GLM-4.6V ($0.30)",
+        "budget_2": "Qwen3.5 ($0.39)",
+        "free": null
+      },
+      "web_understanding_browsecomp": {
+        "quality_1": "MiniMax M2.5 (76.3%)",
+        "quality_2": "GLM-5",
+        "budget_1": "MiniMax M2.5 ($0.20)",
+        "budget_2": "GLM-5 ($1)",
+        "free": "MiniMax M2.5 FREE"
+      }
+    },
+    "domain_and_infrastructure": {
+      "legal_finance_seal": {
+        "quality_1": "Claude Opus 4.6",
+        "quality_2": "GPT-5.4",
+        "budget_1": "Kimi K2.5 ($0.45)",
+        "budget_2": "Qwen3.5 ($0.39)",
+        "free": null
+      },
+      "long_context_over_200k": {
+        "quality_1": "Gemini 3.1 Pro (1M)",
+        "quality_2": "Grok 4.1 Fast (2M)",
+        "budget_1": "MiniMax 01 ($0.20, 1M)",
+        "budget_2": "Qwen Plus ($0.26, 1M)",
+        "free": "Gemini CLI (2M)"
+      },
+      "speed_throughput": {
+        "quality_1": "Llama 4 Scout (2600 tok/s)",
+        "quality_2": "Inception Mercury 2 (872 tok/s)",
+        "budget_1": "Mercury Lightning ($0.30)",
+        "budget_2": "GLM-4.7-FlashX ($0.06)",
+        "free": null
+      },
+      "eu_compliance": {
+        "quality_1": "Mistral Large ($0.50)",
+        "quality_2": "Mistral Medium ($0.40)",
+        "budget_1": "Mistral Small ($0.07)",
+        "budget_2": "Devstral Small ($0.10)",
+        "free": null
+      },
+      "self_host_open_weight": {
+        "quality_1": "GLM-5 (744B MIT)",
+        "quality_2": "DeepSeek V3.2 (671B)",
+        "budget_1": "Qwen3.5-397B",
+        "budget_2": "GLM-4-32B ($0.10)",
+        "free": "Qwen CLI"
+      }
+    },
+    "web_scraping": {
+      "scraper_code_gen_zyte": {
+        "quality_1": "Claude Sonnet 4.6 (0.835)",
+        "quality_2": "Gemini 3 Pro (0.833)",
+        "budget_1": "Gemini 3 Flash (0.817, $0.50)",
+        "budget_2": "MiniMax M2.5 ($0.20)",
+        "free": "MiniMax M2.5 FREE"
+      },
+      "saas_api_reverse_engineering": {
+        "quality_1": "Claude Opus 4.6",
+        "quality_2": "GPT-5.4",
+        "budget_1": "Claude Sonnet 4.6 ($3)",
+        "budget_2": "DeepSeek V3.2 ($0.26)",
+        "free": "Gemini CLI"
+      },
+      "browser_automation_browseruse": {
+        "quality_1": "Claude Sonnet 4.6",
+        "quality_2": "Claude Opus 4.6",
+        "budget_1": "MiniMax M2.5 ($0.20)",
+        "budget_2": "Gemini 3 Flash ($0.50)",
+        "free": "MiniMax M2.5 FREE"
+      },
+      "anti_bot_bypass_strategy": {
+        "quality_1": "Claude Opus 4.6",
+        "quality_2": "GPT-5.4",
+        "budget_1": "Claude Sonnet 4.6 ($3)",
+        "budget_2": "Kimi K2.5 ($0.45)",
+        "free": "Gemini CLI"
+      },
+      "websocket_interception": {
+        "quality_1": "Claude Opus 4.6",
+        "quality_2": "Claude Sonnet 4.6",
+        "budget_1": "DeepSeek V3.2 ($0.26)",
+        "budget_2": "Qwen3-Coder ($0.22)",
+        "free": "Qwen CLI"
+      },
+      "html_dom_extraction": {
+        "quality_1": "Claude Sonnet 4.6",
+        "quality_2": "Gemini 3 Pro",
+        "budget_1": "Gemini 3 Flash ($0.50)",
+        "budget_2": "MiniMax M2.5 ($0.20)",
+        "free": "MiniMax M2.5 FREE"
+      }
+    },
+    "reverse_engineering": {
+      "js_deobfuscation": {
+        "quality_1": "GPT-5.4 (exec 0.93)",
+        "quality_2": "Gemini 3.1 Pro (CASCADE prod)",
+        "budget_1": "Codestral ($0.30)",
+        "budget_2": "DeepSeek V3.2 ($0.26)",
+        "free": "Qwen CLI"
+      },
+      "assembly_deobfuscation": {
+        "quality_1": "Claude Sonnet 4.6",
+        "quality_2": "GPT-5.4",
+        "budget_1": "Grok 4 ($3)",
+        "budget_2": "DeepSeek R1 ($0.45)",
+        "free": null
+      },
+      "android_apk": {
+        "quality_1": "Claude Sonnet 4.6",
+        "quality_2": "Claude Opus 4.6",
+        "budget_1": "DeepSeek V3.2 ($0.26)",
+        "budget_2": "Qwen3-Coder ($0.22)",
+        "free": "Codex CLI"
+      },
+      "ios_ipa_macho": {
+        "quality_1": "Claude Opus 4.6",
+        "quality_2": "Claude Sonnet 4.6",
+        "budget_1": "GPT-5.2 ($1.75)",
+        "budget_2": "DeepSeek V3.2 ($0.26)",
+        "free": "Codex CLI"
+      },
+      "binary_arm_x86": {
+        "quality_1": "Claude Opus 4.6",
+        "quality_2": "GPT-5.4",
+        "budget_1": "Claude Sonnet 4.6 ($3)",
+        "budget_2": "DeepSeek R1 ($0.45)",
+        "free": null
+      },
+      "frida_scripting": {
+        "quality_1": "Claude Sonnet 4.6",
+        "quality_2": "Claude Opus 4.6",
+        "budget_1": "MiniMax M2.5 ($0.20)",
+        "budget_2": "Qwen3-Coder ($0.22)",
+        "free": "MiniMax M2.5 FREE"
+      }
+    },
+    "medical": {
+      "medical_qa_usmle": {
+        "quality_1": "GPT-5.4 (~95%)",
+        "quality_2": "Gemini 3.1 Pro (~95%)",
+        "budget_1": "DeepSeek R1 (92%, $0.45)",
+        "budget_2": "Qwen3.5-397B (~88%, $0.39)",
+        "free": "MiniMax M2.5 FREE"
+      },
+      "biomedical_literature": {
+        "quality_1": "Gemini 3.1 Pro",
+        "quality_2": "GPT-5.4",
+        "budget_1": "DeepSeek R1 ($0.45)",
+        "budget_2": "Kimi K2.5 ($0.45)",
+        "free": "Gemini CLI"
+      },
+      "health_content_writing": {
+        "quality_1": "Claude Opus 4.6",
+        "quality_2": "GPT-5.4",
+        "budget_1": "Claude Sonnet 4.6 ($3)",
+        "budget_2": "Kimi K2.5 ($0.45)",
+        "free": null
+      },
+      "immunology_research": {
+        "quality_1": "Gemini 3.1 Pro",
+        "quality_2": "Claude Opus 4.6",
+        "budget_1": "DeepSeek R1 ($0.45)",
+        "budget_2": "Qwen3.5 ($0.39)",
+        "free": "Gemini CLI"
+      },
+      "medical_fact_check": {
+        "quality_1": "Grok 4.20 (low hallucination)",
+        "quality_2": "Claude Opus 4.6",
+        "budget_1": "DeepSeek R1 ($0.45)",
+        "budget_2": "GLM-5 ($1)",
+        "free": null
+      },
+      "patient_facing_content": {
+        "quality_1": "Claude Opus 4.6 (tone)",
+        "quality_2": "Claude Sonnet 4.6",
+        "budget_1": "Kimi K2.5 ($0.45)",
+        "budget_2": "MiniMax M2.5 ($0.20)",
+        "free": "MiniMax M2.5 FREE"
+      }
+    }
+  },
+  "free_routing": {
+    "code_generation": {
+      "best_free_or": "Qwen3 Coder 480B",
+      "backup_free_or": "MiniMax M2.5",
+      "free_cli": ["Qwen CLI", "Codex CLI"],
+      "reason": "480B MoE, SWE-bench leader, 262K ctx"
+    },
+    "code_review": {
+      "best_free_or": "MiniMax M2.5 (SWE 80.2%)",
+      "backup_free_or": "Qwen3 Coder 480B",
+      "free_cli": ["Codex CLI", "Qwen CLI"],
+      "reason": "M2.5 = frontier coding quality for free"
+    },
+    "niche_classification": {
+      "best_free_or": "MiniMax M2.5",
+      "backup_free_or": "GLM-4.5 Air",
+      "free_cli": ["Qwen CLI"],
+      "reason": "Qwen CLI = 2000 RPD batch free"
+    },
+    "app_dna_categorization": {
+      "best_free_or": "GLM-4.5 Air",
+      "backup_free_or": "MiniMax M2.5",
+      "free_cli": ["Qwen CLI"],
+      "reason": "GLM stable in classification"
+    },
+    "consilium_second_opinion": {
+      "best_free_or": "Hermes 3 405B",
+      "backup_free_or": "Llama 3.3 70B",
+      "free_cli": null,
+      "reason": "405B = serious reasoning for free"
+    },
+    "reasoning_architecture": {
+      "best_free_or": "Hermes 3 405B (131K)",
+      "backup_free_or": "NVIDIA Nemotron Super (262K)",
+      "free_cli": ["Gemini CLI"],
+      "reason": "405B reasoning, Gemini for deep"
+    },
+    "long_document_analysis": {
+      "best_free_or": "NVIDIA Nemotron Super (262K)",
+      "backup_free_or": "Qwen3 Next 80B (262K)",
+      "free_cli": ["Gemini CLI (2M)"],
+      "reason": "262K ctx for free on OR"
+    },
+    "batch_general_1000_plus": {
+      "best_free_or": "GLM-4.5 Air",
+      "backup_free_or": "MiniMax M2.5",
+      "free_cli": ["Qwen CLI"],
+      "reason": "All three stable for batch"
+    },
+    "vision_screenshots": {
+      "best_free_or": "NVIDIA Nemotron Nano 12B VL",
+      "backup_free_or": null,
+      "free_cli": ["Gemini CLI"],
+      "reason": "Only FREE vision model on OR"
+    },
+    "writing_copywriting": {
+      "best_free_or": "MiniMax M2.5",
+      "backup_free_or": "Gemma 3 27B",
+      "free_cli": null,
+      "reason": "M2.5 quality text"
+    },
+    "multilingual": {
+      "best_free_or": "Mistral Small 3.1",
+      "backup_free_or": "GLM-4.5 Air",
+      "free_cli": null,
+      "reason": "Mistral = EU, GLM = Chinese"
+    },
+    "tool_calling": {
+      "best_free_or": "GLM-4.5 Air",
+      "backup_free_or": null,
+      "free_cli": ["GLM-4.7-Flash (Tau2 98.8%)"],
+      "reason": "Z.ai = king tool calling"
+    },
+    "research": {
+      "best_free_or": null,
+      "backup_free_or": null,
+      "free_cli": ["Gemini CLI (2M)"],
+      "reason": "OR free not for research, Gemini better"
+    },
+    "uncensored_no_filter": {
+      "best_free_or": "Venice Uncensored",
+      "backup_free_or": "Hermes 3 405B",
+      "free_cli": null,
+      "reason": "Venice = Dolphin, no content filter"
+    },
+    "edge_mobile_iot": {
+      "best_free_or": "Gemma 3n 2B (8K)",
+      "backup_free_or": "Liquid LFM 1.2B",
+      "free_cli": null,
+      "reason": "Sub-4B for edge"
+    },
+    "thinking_cot": {
+      "best_free_or": "Liquid LFM 1.2B Thinking",
+      "backup_free_or": null,
+      "free_cli": null,
+      "reason": "Only free thinking model on OR"
+    },
+    "embeddings": {
+      "best_free_or": "NVIDIA Nemotron-VL (131K)",
+      "backup_free_or": null,
+      "free_cli": null,
+      "reason": "FREE multimodal embedding on OR"
+    }
+  },
+  "embedding_routing": {
+    "rag_english_under_8k_chunks": {
+      "best": "text-embedding-3-small ($0.02)",
+      "budget": "Perplexity 0.6B ($0.004)",
+      "free": "NVIDIA Nemotron-VL (OR free)",
+      "reason": "Sweet spot: quality/price/simplicity. 90% of cases"
+    },
+    "rag_accuracy_critical": {
+      "best": "voyage-3-large ($0.06)",
+      "budget": "Gemini emb-001 ($0.15)",
+      "free": "Qwen3-Emb-8B (self-host)",
+      "reason": "Voyage NDCG ~69 = measurably better retrieval"
+    },
+    "rag_multilingual_russian": {
+      "best": "Qwen3-Emb-8B ($0.01 OR)",
+      "budget": "Jina-v3 ($0.02)",
+      "free": "BGE-M3 (self-host)",
+      "reason": "Qwen #1 MTEB multilingual (70.6)"
+    },
+    "code_search_codebase_rag": {
+      "best": "Codestral Embed ($0.15)",
+      "budget": "text-embedding-3-small",
+      "free": "nv-embedcode-7b (NIM free)",
+      "reason": "Codestral specialized for code"
+    },
+    "long_docs_over_8k": {
+      "best": "Qwen3-Emb-8B (32K, $0.01)",
+      "budget": "voyage-3.5-lite (32K, $0.02)",
+      "free": "Qwen3-Emb-8B (self-host)",
+      "reason": "32K ctx without chunking"
+    },
+    "ultra_long_over_32k": {
+      "best": "NVIDIA Nemotron-VL (131K, FREE OR)",
+      "budget": "Gemini emb-001 (20K)",
+      "free": "NVIDIA Nemotron-VL",
+      "reason": "131K = entire book chapter in one vector"
+    },
+    "image_text_multimodal": {
+      "best": "NVIDIA Nemotron-VL (FREE OR)",
+      "budget": null,
+      "free": "NVIDIA Nemotron-VL",
+      "reason": "Only multimodal embedding on OR. Free."
+    },
+    "bulk_indexing_100k_plus": {
+      "best": "Perplexity 0.6B ($0.004)",
+      "budget": "BGE-base ($0.005 OR)",
+      "free": "MiniLM-L6 (self-host)",
+      "reason": "Minimum price at volume"
+    },
+    "classification_clustering": {
+      "best": "Gemini emb-001 ($0.15)",
+      "budget": "text-embedding-3-large ($0.13)",
+      "free": "Qwen3-Emb-8B",
+      "reason": "High dims (3072) = better class separation"
+    },
+    "semantic_search_saas_product": {
+      "best": "text-embedding-3-small ($0.02)",
+      "budget": "Qwen3-Emb-8B ($0.01)",
+      "free": "NVIDIA Nemotron-VL",
+      "reason": "Production-ready, stable, cheap"
+    },
+    "enterprise_noisy_data": {
+      "best": "Cohere embed-v4 ($0.12)",
+      "budget": "voyage-3-large ($0.06)",
+      "free": null,
+      "reason": "Cohere trained on noisy data"
+    },
+    "edge_mobile_on_device": {
+      "best": "all-MiniLM-L6-v2 (self-host)",
+      "budget": "Nomic-v1.5",
+      "free": "MiniLM",
+      "reason": "22MB model, runs on phone"
+    },
+    "privacy_first_no_cloud": {
+      "best": "Qwen3-Emb-8B (Apache 2.0)",
+      "budget": "BGE-M3 (MIT)",
+      "free": "MiniLM (Apache)",
+      "reason": "Open-weight, self-host, zero data leakage"
+    },
+    "prototype_mvp": {
+      "best": "text-embedding-3-small ($0.02)",
+      "budget": "Perplexity 0.6B ($0.004)",
+      "free": "NVIDIA Nemotron-VL (OR)",
+      "reason": "Fast start, no self-host needed"
+    },
+    "domain_tuned_legal_medical": {
+      "best": "voyage-3-large + fine-tune",
+      "budget": "Cohere embed-v4",
+      "free": null,
+      "reason": "Voyage supports domain fine-tuning"
+    }
+  },
+  "quick_matrix": [
+    {
+      "task": "Write/review code",
+      "use": "Claude Sonnet 4.6",
+      "backup": "MiniMax M2.5",
+      "free": "MiniMax M2.5 FREE"
+    },
+    {
+      "task": "Code review (post-implement)",
+      "use": "Codex CLI ($0, subscription)",
+      "backup": "Qwen CLI",
+      "free": null
+    },
+    {
+      "task": "Spec/architecture review",
+      "use": "GPT-5.4 (OpenRouter)",
+      "backup": "Grok 4.20",
+      "free": null
+    },
+    {
+      "task": "Complex reasoning/architecture",
+      "use": "Claude Opus 4.6",
+      "backup": "Gemini 3.1 Pro",
+      "free": "Gemini CLI"
+    },
+    {
+      "task": "Consilium (second opinion)",
+      "use": "Grok 4.1 Fast",
+      "backup": "DeepSeek V3.2",
+      "free": null
+    },
+    {
+      "task": "Consilium (critical)",
+      "use": "Grok 4.20",
+      "backup": "Opus + Gemini",
+      "free": null
+    },
+    {
+      "task": "Consilium (concept/spec)",
+      "use": "GPT-5.4 + Grok 4.20",
+      "backup": "+ DeepSeek R1",
+      "free": null
+    },
+    {
+      "task": "Tool calling pipeline",
+      "use": "Claude Opus 4.6",
+      "backup": "GLM-5-Turbo",
+      "free": "GLM-4.7-Flash"
+    },
+    {
+      "task": "Batch classification",
+      "use": "Qwen CLI",
+      "backup": "MiniMax M2.5",
+      "free": "Both free"
+    },
+    {
+      "task": "Niche/gap analysis",
+      "use": "Claude Opus 4.6",
+      "backup": "+ consilium stack",
+      "free": null
+    },
+    {
+      "task": "Long document (>200K)",
+      "use": "Gemini 3.1 Pro (1M)",
+      "backup": "MiniMax 01 (1M)",
+      "free": "Gemini CLI (2M)"
+    },
+    {
+      "task": "Vision/screenshots",
+      "use": "Gemini 3.1 Pro",
+      "backup": "GLM-4.6V",
+      "free": null
+    },
+    {
+      "task": "Video analysis",
+      "use": "Gemini 3.1 Pro",
+      "backup": "GLM-4.6V ($0.30)",
+      "free": null
+    },
+    {
+      "task": "Writing/copywriting",
+      "use": "Claude Opus 4.6",
+      "backup": "GPT-5.4",
+      "free": null
+    },
+    {
+      "task": "Factual accuracy",
+      "use": "Grok 4.20",
+      "backup": "Claude Opus 4.6",
+      "free": null
+    },
+    {
+      "task": "Math/competition",
+      "use": "GPT-5.4 (AIME 100%)",
+      "backup": "Gemini 3.1 Pro",
+      "free": null
+    },
+    {
+      "task": "Cheap but quality coding",
+      "use": "MiniMax M2.5 ($0.20)",
+      "backup": "GLM-5 ($1)",
+      "free": "MiniMax M2.5 FREE"
+    },
+    {
+      "task": "Maximum quality at $0",
+      "use": "MiniMax M2.5 FREE",
+      "backup": "GLM-4.5 Air FREE",
+      "free": "Qwen CLI"
+    },
+    {
+      "task": "Speed critical",
+      "use": "MiniMax Lightning (100 tps)",
+      "backup": "Mistral Small",
+      "free": null
+    },
+    {
+      "task": "EU compliance",
+      "use": "Mistral Large",
+      "backup": "Mistral Medium",
+      "free": null
+    },
+    {
+      "task": "Research structured data",
+      "use": "Exa API",
+      "backup": "Tavily",
+      "free": "Exa (1K/mo)"
+    },
+    {
+      "task": "Research web/PDF/fresh",
+      "use": "Gemini CLI",
+      "backup": "Perplexity Sonar",
+      "free": "Gemini CLI"
+    },
+    {
+      "task": "Scraper code gen",
+      "use": "Claude Sonnet 4.6",
+      "backup": "Gemini 3 Flash ($0.50)",
+      "free": "MiniMax M2.5 FREE"
+    },
+    {
+      "task": "Medical QA/USMLE",
+      "use": "GPT-5.4 or Gemini 3.1 Pro",
+      "backup": "DeepSeek R1 ($0.45)",
+      "free": "MiniMax M2.5 FREE"
+    },
+    {
+      "task": "Function calling #1",
+      "use": "GLM-4.5 (72% BFCL)",
+      "backup": "Claude Opus 4.1",
+      "free": "GLM-4.7-Flash (Tau2 98.8%)"
+    }
+  ]
+}

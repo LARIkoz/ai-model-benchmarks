@@ -1,0 +1,199 @@
+{
+  "updated": "2026-03-28",
+  "source": "openrouter.ai/api/v1/models",
+  "cache_pricing_by_provider": [
+    {
+      "provider": "Anthropic",
+      "cache_read_discount": "90%",
+      "cache_write_multiplier": "1.25x input",
+      "mechanism": "Explicit prefix caching, min 1024 tokens"
+    },
+    {
+      "provider": "Google",
+      "cache_read_discount": "90%",
+      "cache_write_multiplier": "~0.3x input",
+      "mechanism": "Context caching API, TTL configurable"
+    },
+    {
+      "provider": "OpenAI",
+      "cache_read_discount": "75-90%",
+      "cache_write_multiplier": null,
+      "mechanism": "Automatic prompt caching"
+    },
+    {
+      "provider": "xAI (Grok)",
+      "cache_read_discount": "75-90%",
+      "cache_write_multiplier": null,
+      "mechanism": "Automatic"
+    },
+    {
+      "provider": "DeepSeek",
+      "cache_read_discount": "32-50%",
+      "cache_write_multiplier": null,
+      "mechanism": "Automatic prefix match"
+    },
+    {
+      "provider": "MiniMax",
+      "cache_read_discount": "50-88%",
+      "cache_write_multiplier": null,
+      "mechanism": "Automatic"
+    },
+    {
+      "provider": "Z.ai (GLM)",
+      "cache_read_discount": "50-82%",
+      "cache_write_multiplier": null,
+      "cache_storage": "Free (limited-time)",
+      "mechanism": "Automatic, storage free limited-time"
+    },
+    {
+      "provider": "Qwen",
+      "cache_read_discount": "50-90%",
+      "cache_write_multiplier": null,
+      "mechanism": "Automatic"
+    },
+    {
+      "provider": "Mistral",
+      "cache_read_discount": "90%",
+      "cache_write_multiplier": null,
+      "mechanism": "Automatic"
+    },
+    {
+      "provider": "Kimi (Moonshot)",
+      "cache_read_discount": "50-70%",
+      "cache_write_multiplier": null,
+      "mechanism": "Automatic"
+    }
+  ],
+  "key_models_cache_pricing": [
+    {
+      "model": "Claude Opus 4.6",
+      "input_per_m": 5.0,
+      "cached_per_m": 0.5,
+      "discount": "90%",
+      "note": "Effective $0.50 for batch with common system prompt"
+    },
+    {
+      "model": "Claude Sonnet 4.6",
+      "input_per_m": 3.0,
+      "cached_per_m": 0.3,
+      "discount": "90%",
+      "note": "Sonnet at Haiku price when cached"
+    },
+    {
+      "model": "Claude Haiku 4.5",
+      "input_per_m": 1.0,
+      "cached_per_m": 0.1,
+      "discount": "90%",
+      "note": "Cheapest Claude"
+    },
+    {
+      "model": "GPT-5.4",
+      "input_per_m": 2.5,
+      "cached_per_m": 0.25,
+      "discount": "90%",
+      "note": null
+    },
+    {
+      "model": "GPT-5.2",
+      "input_per_m": 1.75,
+      "cached_per_m": 0.175,
+      "discount": "90%",
+      "note": null
+    },
+    {
+      "model": "Gemini 3.1 Pro",
+      "input_per_m": 2.0,
+      "cached_per_m": 0.2,
+      "discount": "90%",
+      "note": null
+    },
+    {
+      "model": "Gemini 2.5 Flash",
+      "input_per_m": 0.3,
+      "cached_per_m": 0.03,
+      "discount": "90%",
+      "note": "Ultra-cheap cached"
+    },
+    {
+      "model": "GLM-5-Turbo",
+      "input_per_m": 1.2,
+      "cached_per_m": 0.24,
+      "discount": "80%",
+      "note": null
+    },
+    {
+      "model": "GLM-5 (direct)",
+      "input_per_m": 1.0,
+      "cached_per_m": 0.2,
+      "discount": "80%",
+      "note": null
+    },
+    {
+      "model": "Grok 4.20 Beta",
+      "input_per_m": 2.0,
+      "cached_per_m": 0.2,
+      "discount": "90%",
+      "note": null
+    },
+    {
+      "model": "Grok 4.1 Fast",
+      "input_per_m": 0.2,
+      "cached_per_m": 0.05,
+      "discount": "75%",
+      "note": null
+    },
+    {
+      "model": "DeepSeek V3.2",
+      "input_per_m": 0.26,
+      "cached_per_m": 0.13,
+      "discount": "50%",
+      "note": null
+    },
+    {
+      "model": "MiniMax M2.7",
+      "input_per_m": 0.3,
+      "cached_per_m": 0.06,
+      "discount": "80%",
+      "note": null
+    },
+    {
+      "model": "MiniMax M2.5",
+      "input_per_m": 0.2,
+      "cached_per_m": 0.1,
+      "discount": "50%",
+      "note": null
+    },
+    {
+      "model": "Kimi K2.5",
+      "input_per_m": 0.45,
+      "cached_per_m": 0.22,
+      "discount": "50%",
+      "note": null
+    },
+    {
+      "model": "Qwen3-Coder",
+      "input_per_m": 0.22,
+      "cached_per_m": 0.02,
+      "discount": "90%",
+      "note": "Ultra-cheap cached"
+    },
+    {
+      "model": "Qwen3-Coder-Plus",
+      "input_per_m": 0.65,
+      "cached_per_m": 0.13,
+      "discount": "80%",
+      "note": null
+    }
+  ],
+  "when_cache_is_effective": [
+    "Batch classification — one system prompt, 1000+ items → 90% savings on input",
+    "Consilium — one plan.md as prefix, different models read it → cached on all",
+    "Code review — one codebase as context, different questions → cached",
+    "Multi-turn agents — long context accumulates → automatic cache hit"
+  ],
+  "when_cache_is_useless": [
+    "Single requests without repetition",
+    "Each request is completely unique (no common prefix)",
+    "Models without cache support"
+  ]
+}
