@@ -1615,155 +1615,155 @@
           letter: "A",
           title: "Coding & Software Engineering",
           rows: [
-            {cat: "Coding general", bench: "SWE-V", q1: "Claude Opus 4.6 (80.8%)", q2: "Gemini 3.1 Pro (80.6%)", b1: "MiniMax M2.5 (80.2%, $0.2)", b2: "Claude Sonnet 4.6 (79.6%, $3.0)", free: "MiniMax M2.5 FREE"},
-            {cat: "Coding uncontaminated", bench: "SWE-Pro", q1: "Claude Opus 4.5 (45.9%)", q2: "Claude Sonnet 4.5 (43.6%)", b1: "Qwen3.5-397B (38.7%, $0.39)", b2: "MiniMax M2.5 (36.8%, $0.2)", free: "—"},
-            {cat: "Scientific coding", bench: "SciCode", q1: "GPT-5.4 (56.6%)", q2: "Gemini 3.1 Pro (56.1%)", b1: "—", b2: "—", free: "—"},
-            {cat: "Agentic coding", bench: "Terminal-B2", q1: "GPT-5.4 (57.6%)", q2: "GLM-5 (56.2%)", b1: "MiniMax M2.7 (56.2%, $0.3)", b2: "GLM-5 ($1.0)", free: "—"},
-            {cat: "Code review", bench: "practical", q1: "Claude Opus 4.6", q2: "Claude Sonnet 4.6", b1: "Grok Code Fast 1 ($0.2)", b2: "MiniMax M2.5 ($0.2)", free: "Codex CLI"},
-            {cat: "Code generation", bench: "SWE-V", q1: "GPT-5.3 Codex", q2: "GLM-5", b1: "GLM-5 ($1.0)", b2: "Kimi K2.5 ($0.45)", free: "—"},
+            {cat: "Coding general", benchKey: "swe_v", bench: "SWE-V", q1: "Claude Opus 4.6 (80.8%)", q2: "Gemini 3.1 Pro (80.6%)", b1: "MiniMax M2.5 (80.2%, $0.2)", b2: "Claude Sonnet 4.6 (79.6%, $3.0)", free: "MiniMax M2.5 FREE"},
+            {cat: "Coding uncontaminated", benchKey: "swe_pro", bench: "SWE-Pro", q1: "Claude Opus 4.5 (45.9%)", q2: "Claude Sonnet 4.5 (43.6%)", b1: "Qwen3.5-397B (38.7%, $0.39)", b2: "MiniMax M2.5 (36.8%, $0.2)", free: "—"},
+            {cat: "Scientific coding", benchKey: "scicode", bench: "SciCode", q1: "GPT-5.4 (56.6%)", q2: "Gemini 3.1 Pro (56.1%)", b1: "—", b2: "—", free: "—"},
+            {cat: "Agentic coding", benchKey: "terminal_bench_2", bench: "Terminal-B2", q1: "GPT-5.4 (57.6%)", q2: "GLM-5 (56.2%)", b1: "MiniMax M2.7 (56.2%, $0.3)", b2: "GLM-5 ($1.0)", free: "—"},
+            {cat: "Code review", benchKey: null, bench: "practical", q1: "Claude Opus 4.6", q2: "Claude Sonnet 4.6", b1: "Grok Code Fast 1 ($0.2)", b2: "MiniMax M2.5 ($0.2)", free: "Codex CLI"},
+            {cat: "Code generation", benchKey: "swe_v", bench: "SWE-V", q1: "GPT-5.3 Codex", q2: "GLM-5", b1: "GLM-5 ($1.0)", b2: "Kimi K2.5 ($0.45)", free: "—"},
           ],
         },
         {
           letter: "B",
           title: "Reasoning & Knowledge",
           rows: [
-            {cat: "Graduate science", bench: "GPQA", q1: "Gemini 3.1 Pro (94.3%)", q2: "GPT-5.2 (92.4%)", b1: "Qwen3.5-397B (88.4%, $0.39)", b2: "Kimi K2.5 (87.6%, $0.45)", free: "—"},
-            {cat: "Hardest reasoning", bench: "HLE", q1: "GPT-5.4 (41.6%)", q2: "Gemini 3.1 Pro (37.2%)", b1: "MiniMax M2.5 (32.0%, $0.2)", b2: "Kimi K2.5 (31.5%, $0.45)", free: "—"},
-            {cat: "Abstract reasoning", bench: "ARC-AGI-2", q1: "Gemini 3.1 Pro (77.1%)", q2: "GPT-5.4 (73.3%)", b1: "—", b2: "—", free: "—"},
-            {cat: "Math competition", bench: "AIME 2025", q1: "GPT-5.4 (100.0%)", q2: "Gemini 3.1 Pro (92.0%)", b1: "GLM-5 (84.0%, $1.0)", b2: "Kimi K2.5 ($0.45)", free: "—"},
-            {cat: "Adaptive reasoning", bench: "Grind", q1: "Gemini 2.5 Pro (82.1%)", q2: "Claude Sonnet 4.6 (75.0%)", b1: "—", b2: "—", free: "—"},
-            {cat: "General Knowledge Mmlu Pro", bench: "MMLU_PRO", q1: "GPT-5.2", q2: "Gemini 3.1 Pro", b1: "Qwen3.5-397B ($0.39)", b2: "GLM-5 ($1.0)", free: "—"},
+            {cat: "Graduate science", benchKey: "gpqa", bench: "GPQA", q1: "Gemini 3.1 Pro (94.3%)", q2: "GPT-5.2 (92.4%)", b1: "Qwen3.5-397B (88.4%, $0.39)", b2: "Kimi K2.5 (87.6%, $0.45)", free: "—"},
+            {cat: "Hardest reasoning", benchKey: "hle", bench: "HLE", q1: "GPT-5.4 (41.6%)", q2: "Gemini 3.1 Pro (37.2%)", b1: "MiniMax M2.5 (32.0%, $0.2)", b2: "Kimi K2.5 (31.5%, $0.45)", free: "—"},
+            {cat: "Abstract reasoning", benchKey: "arc_agi_2", bench: "ARC-AGI-2", q1: "Gemini 3.1 Pro (77.1%)", q2: "GPT-5.4 (73.3%)", b1: "—", b2: "—", free: "—"},
+            {cat: "Math competition", benchKey: "aime_2025", bench: "AIME 2025", q1: "GPT-5.4 (100.0%)", q2: "Gemini 3.1 Pro (92.0%)", b1: "GLM-5 (84.0%, $1.0)", b2: "Kimi K2.5 ($0.45)", free: "—"},
+            {cat: "Adaptive reasoning", benchKey: "grind", bench: "Grind", q1: "Gemini 2.5 Pro (82.1%)", q2: "Claude Sonnet 4.6 (75.0%)", b1: "—", b2: "—", free: "—"},
+            {cat: "General Knowledge Mmlu Pro", benchKey: "mmlu_pro", bench: "MMLU_PRO", q1: "GPT-5.2", q2: "Gemini 3.1 Pro", b1: "Qwen3.5-397B ($0.39)", b2: "GLM-5 ($1.0)", free: "—"},
           ],
         },
         {
           letter: "C",
           title: "Tools & Agents",
           rows: [
-            {cat: "Function calling", bench: "BFCL", q1: "GLM-4.5 (72.0%)", q2: "Claude Opus 4.1 (70.4%)", b1: "GLM-4.5 ($0.6)", b2: "GLM-4.7 ($0.39)", free: "—"},
-            {cat: "Multi-turn tools", bench: "TAU2", q1: "Claude Opus 4.6 (99.3%)", q2: "GLM-5 (98.2%)", b1: "GLM-4.7 (95.9%, $0.39)", b2: "GLM-4.7-FlashX ($0.06)", free: "GLM-4.7-Flash"},
-            {cat: "Tool Reliability Error Rate", bench: "TOOL_ERROR_RATE", q1: "GLM-5-Turbo (0.67%)", q2: "Claude", b1: "GLM-5-Turbo ($1.2)", b2: "GLM-4.7 ($0.39)", free: "—"},
-            {cat: "General Assistant Gaia", bench: "GAIA", q1: "Claude Sonnet 4.5 (74.6%)", q2: "Claude Opus 4.6", b1: "—", b2: "—", free: "—"},
-            {cat: "Real World Work Gdpval", bench: "GDPVAL", q1: "Claude Opus 4.6 (1500%)", q2: "MiniMax M2.7 (1495%)", b1: "MiniMax M2.7 ($0.3)", b2: "GLM-5 ($1.0)", free: "—"},
-            {cat: "Long Horizon Vending B2", bench: "VENDING_B2", q1: "Claude Opus 4.5", q2: "GLM-5", b1: "GLM-5 ($1.0)", b2: "MiniMax M2.7 ($0.3)", free: "—"},
+            {cat: "Function calling", benchKey: "bfcl", bench: "BFCL", q1: "GLM-4.5 (72.0%)", q2: "Claude Opus 4.1 (70.4%)", b1: "GLM-4.5 ($0.6)", b2: "GLM-4.7 ($0.39)", free: "—"},
+            {cat: "Multi-turn tools", benchKey: "tau2", bench: "TAU2", q1: "Claude Opus 4.6 (99.3%)", q2: "GLM-5 (98.2%)", b1: "GLM-4.7 (95.9%, $0.39)", b2: "GLM-4.7-FlashX ($0.06)", free: "GLM-4.7-Flash"},
+            {cat: "Tool Reliability Error Rate", benchKey: "tool_error_rate", bench: "TOOL_ERROR_RATE", q1: "GLM-5-Turbo (0.67%)", q2: "Claude", b1: "GLM-5-Turbo ($1.2)", b2: "GLM-4.7 ($0.39)", free: "—"},
+            {cat: "General Assistant Gaia", benchKey: "gaia", bench: "GAIA", q1: "Claude Sonnet 4.5 (74.6%)", q2: "Claude Opus 4.6", b1: "—", b2: "—", free: "—"},
+            {cat: "Real World Work Gdpval", benchKey: "gdpval", bench: "GDPVAL", q1: "Claude Opus 4.6 (1500%)", q2: "MiniMax M2.7 (1495%)", b1: "MiniMax M2.7 ($0.3)", b2: "GLM-5 ($1.0)", free: "—"},
+            {cat: "Long Horizon Vending B2", benchKey: "vending_b2", bench: "VENDING_B2", q1: "Claude Opus 4.5", q2: "GLM-5", b1: "GLM-5 ($1.0)", b2: "MiniMax M2.7 ($0.3)", free: "—"},
           ],
         },
         {
           letter: "D",
           title: "Content & Communication",
           rows: [
-            {cat: "Instruction following", bench: "IFBench", q1: "Qwen3.5-397B (78.8%)", q2: "Gemini 3 Flash (78.0%)", b1: "Qwen3.5-397B ($0.39)", b2: "GLM-5 (88.0%, $1.0)", free: "—"},
-            {cat: "Hallucination resistance", bench: "SimpleQA", q1: "Grok 4.20", q2: "Claude Opus 4.6", b1: "GLM-5 (48.0%, $1.0)", b2: "DeepSeek V3.2 ($0.26)", free: "—"},
-            {cat: "Writing Quality Human Pref", bench: "HUMAN_PREF", q1: "Claude Opus 4.6", q2: "GPT-5.4", b1: "Kimi K2.5 ($0.45)", b2: "MiniMax M2.5 ($0.2)", free: "MiniMax M2.5 FREE"},
-            {cat: "Chat Preference Lmarena", bench: "LMARENA", q1: "Claude Opus 4.6 (1476%)", q2: "Claude Opus 4.5 (1345%)", b1: "Kimi K2.5 (988%, $0.45)", b2: "Claude Sonnet 4.6 (941%, $3.0)", free: "—"},
-            {cat: "Multilingual Mgsm", bench: "MGSM", q1: "GLM-5 (90.0%)", q2: "Gemini 3.1 Pro", b1: "GLM-5 ($1.0)", b2: "Qwen3.5-397B ($0.39)", free: "—"},
+            {cat: "Instruction following", benchKey: "ifbench", bench: "IFBench", q1: "Qwen3.5-397B (78.8%)", q2: "Gemini 3 Flash (78.0%)", b1: "Qwen3.5-397B ($0.39)", b2: "GLM-5 (88.0%, $1.0)", free: "—"},
+            {cat: "Hallucination resistance", benchKey: "simpleqa", bench: "SimpleQA", q1: "Grok 4.20", q2: "Claude Opus 4.6", b1: "GLM-5 (48.0%, $1.0)", b2: "DeepSeek V3.2 ($0.26)", free: "—"},
+            {cat: "Writing Quality Human Pref", benchKey: "human_pref", bench: "HUMAN_PREF", q1: "Claude Opus 4.6", q2: "GPT-5.4", b1: "Kimi K2.5 ($0.45)", b2: "MiniMax M2.5 ($0.2)", free: "MiniMax M2.5 FREE"},
+            {cat: "Chat Preference Lmarena", benchKey: "lmarena", bench: "LMARENA", q1: "Claude Opus 4.6 (1476%)", q2: "Claude Opus 4.5 (1345%)", b1: "Kimi K2.5 (988%, $0.45)", b2: "Claude Sonnet 4.6 (941%, $3.0)", free: "—"},
+            {cat: "Multilingual Mgsm", benchKey: "mgsm", bench: "MGSM", q1: "GLM-5 (90.0%)", q2: "Gemini 3.1 Pro", b1: "GLM-5 ($1.0)", b2: "Qwen3.5-397B ($0.39)", free: "—"},
           ],
         },
         {
           letter: "E",
           title: "Multimodal",
           rows: [
-            {cat: "Vision (MMMU)", bench: "MMMU", q1: "Gemini 3.1 Pro", q2: "GPT-5.4", b1: "GLM-4.6V ($0.3)", b2: "Qwen3.5-397B ($0.39)", free: "—"},
-            {cat: "Video input", bench: "VIDEO", q1: "Gemini 3.1 Pro", q2: "GLM-4.6V ($0.3)", b1: "GLM-4.6V ($0.3)", b2: "Qwen3.5-397B ($0.39)", free: "—"},
-            {cat: "Web Understanding Browsecomp", bench: "BROWSECOMP", q1: "MiniMax M2.5 (76.3%)", q2: "GLM-5", b1: "MiniMax M2.5 ($0.2)", b2: "GLM-5 ($1.0)", free: "MiniMax M2.5 FREE"},
+            {cat: "Vision (MMMU)", benchKey: "mmmu", bench: "MMMU", q1: "Gemini 3.1 Pro", q2: "GPT-5.4", b1: "GLM-4.6V ($0.3)", b2: "Qwen3.5-397B ($0.39)", free: "—"},
+            {cat: "Video input", benchKey: "video", bench: "VIDEO", q1: "Gemini 3.1 Pro", q2: "GLM-4.6V ($0.3)", b1: "GLM-4.6V ($0.3)", b2: "Qwen3.5-397B ($0.39)", free: "—"},
+            {cat: "Web Understanding Browsecomp", benchKey: "browsecomp", bench: "BROWSECOMP", q1: "MiniMax M2.5 (76.3%)", q2: "GLM-5", b1: "MiniMax M2.5 ($0.2)", b2: "GLM-5 ($1.0)", free: "MiniMax M2.5 FREE"},
           ],
         },
         {
           letter: "F",
           title: "Domain & Infrastructure",
           rows: [
-            {cat: "Legal / finance", bench: "SCALE_SEAL", q1: "Claude Opus 4.6", q2: "GPT-5.4", b1: "Kimi K2.5 ($0.45)", b2: "Qwen3.5-397B ($0.39)", free: "—"},
-            {cat: "Long context >200K", bench: "LONG_CONTEXT", q1: "Gemini 3.1 Pro", q2: "Grok 4.1 Fast", b1: "MiniMax 01 ($0.2)", b2: "Qwen Plus ($0.26)", free: "Gemini CLI"},
-            {cat: "Speed Throughput", bench: "THROUGHPUT_TPS", q1: "Llama 4 Scout (2600%)", q2: "Inception Mercury 2 (872%)", b1: "Inception Mercury 2 ($0.3)", b2: "GLM-4.7-FlashX ($0.06)", free: "—"},
-            {cat: "Eu Compliance", bench: "practical", q1: "Mistral Large ($0.5)", q2: "Mistral Medium ($0.4)", b1: "Mistral Small ($0.07)", b2: "Devstral Small ($0.1)", free: "—"},
-            {cat: "Self Host Open Weight", bench: "practical", q1: "GLM-5", q2: "DeepSeek V3.2", b1: "Qwen3.5-397B", b2: "GLM-4-32B ($0.1)", free: "Qwen CLI"},
+            {cat: "Legal / finance", benchKey: "scale_seal", bench: "SCALE_SEAL", q1: "Claude Opus 4.6", q2: "GPT-5.4", b1: "Kimi K2.5 ($0.45)", b2: "Qwen3.5-397B ($0.39)", free: "—"},
+            {cat: "Long context >200K", benchKey: "long_context", bench: "LONG_CONTEXT", q1: "Gemini 3.1 Pro", q2: "Grok 4.1 Fast", b1: "MiniMax 01 ($0.2)", b2: "Qwen Plus ($0.26)", free: "Gemini CLI"},
+            {cat: "Speed Throughput", benchKey: "throughput_tps", bench: "THROUGHPUT_TPS", q1: "Llama 4 Scout (2600%)", q2: "Inception Mercury 2 (872%)", b1: "Inception Mercury 2 ($0.3)", b2: "GLM-4.7-FlashX ($0.06)", free: "—"},
+            {cat: "Eu Compliance", benchKey: null, bench: "practical", q1: "Mistral Large ($0.5)", q2: "Mistral Medium ($0.4)", b1: "Mistral Small ($0.07)", b2: "Devstral Small ($0.1)", free: "—"},
+            {cat: "Self Host Open Weight", benchKey: null, bench: "practical", q1: "GLM-5", q2: "DeepSeek V3.2", b1: "Qwen3.5-397B", b2: "GLM-4-32B ($0.1)", free: "Qwen CLI"},
           ],
         },
         {
           letter: "G",
           title: "Web Scraping & Data",
           rows: [
-            {cat: "Scraper code gen", bench: "SCRAPER_CODE_ZYTE", q1: "Claude Sonnet 4.6 (0.835%)", q2: "Gemini 3 Pro (0.833%)", b1: "Gemini 3 Flash (0.817%, $0.5)", b2: "MiniMax M2.5 ($0.2)", free: "MiniMax M2.5 FREE"},
-            {cat: "SaaS API RE", bench: "practical", q1: "Claude Opus 4.6", q2: "GPT-5.4", b1: "Claude Sonnet 4.6 ($3.0)", b2: "DeepSeek V3.2 ($0.26)", free: "Gemini CLI"},
-            {cat: "Browser Automation Browseruse", bench: "BROWSERUSE", q1: "Claude Sonnet 4.6", q2: "Claude Opus 4.6", b1: "MiniMax M2.5 ($0.2)", b2: "Gemini 3 Flash ($0.5)", free: "MiniMax M2.5 FREE"},
-            {cat: "Anti Bot Bypass Strategy", bench: "practical", q1: "Claude Opus 4.6", q2: "GPT-5.4", b1: "Claude Sonnet 4.6 ($3.0)", b2: "Kimi K2.5 ($0.45)", free: "Gemini CLI"},
-            {cat: "Websocket Interception", bench: "practical", q1: "Claude Opus 4.6", q2: "Claude Sonnet 4.6", b1: "DeepSeek V3.2 ($0.26)", b2: "Qwen3-Coder ($0.22)", free: "Qwen CLI"},
-            {cat: "Html Dom Extraction", bench: "practical", q1: "Claude Sonnet 4.6", q2: "Gemini 3 Pro", b1: "Gemini 3 Flash ($0.5)", b2: "MiniMax M2.5 ($0.2)", free: "MiniMax M2.5 FREE"},
+            {cat: "Scraper code gen", benchKey: "scraper_code_zyte", bench: "SCRAPER_CODE_ZYTE", q1: "Claude Sonnet 4.6 (0.835%)", q2: "Gemini 3 Pro (0.833%)", b1: "Gemini 3 Flash (0.817%, $0.5)", b2: "MiniMax M2.5 ($0.2)", free: "MiniMax M2.5 FREE"},
+            {cat: "SaaS API RE", benchKey: null, bench: "practical", q1: "Claude Opus 4.6", q2: "GPT-5.4", b1: "Claude Sonnet 4.6 ($3.0)", b2: "DeepSeek V3.2 ($0.26)", free: "Gemini CLI"},
+            {cat: "Browser Automation Browseruse", benchKey: "browseruse", bench: "BROWSERUSE", q1: "Claude Sonnet 4.6", q2: "Claude Opus 4.6", b1: "MiniMax M2.5 ($0.2)", b2: "Gemini 3 Flash ($0.5)", free: "MiniMax M2.5 FREE"},
+            {cat: "Anti Bot Bypass Strategy", benchKey: null, bench: "practical", q1: "Claude Opus 4.6", q2: "GPT-5.4", b1: "Claude Sonnet 4.6 ($3.0)", b2: "Kimi K2.5 ($0.45)", free: "Gemini CLI"},
+            {cat: "Websocket Interception", benchKey: null, bench: "practical", q1: "Claude Opus 4.6", q2: "Claude Sonnet 4.6", b1: "DeepSeek V3.2 ($0.26)", b2: "Qwen3-Coder ($0.22)", free: "Qwen CLI"},
+            {cat: "Html Dom Extraction", benchKey: null, bench: "practical", q1: "Claude Sonnet 4.6", q2: "Gemini 3 Pro", b1: "Gemini 3 Flash ($0.5)", b2: "MiniMax M2.5 ($0.2)", free: "MiniMax M2.5 FREE"},
           ],
         },
         {
           letter: "H",
           title: "Reverse Engineering",
           rows: [
-            {cat: "JS deobfuscation", bench: "JSDEOBS", q1: "GPT-5.4 (0.93%)", q2: "Gemini 3.1 Pro", b1: "Codestral ($0.3)", b2: "DeepSeek V3.2 ($0.26)", free: "Qwen CLI"},
-            {cat: "Assembly / binary RE", bench: "PROMON", q1: "Claude Sonnet 4.6", q2: "GPT-5.4", b1: "Grok 4 ($3.0)", b2: "DeepSeek R1 ($0.45)", free: "—"},
-            {cat: "Android Apk", bench: "FUZZING_LABS", q1: "Claude Sonnet 4.6", q2: "Claude Opus 4.6", b1: "DeepSeek V3.2 ($0.26)", b2: "Qwen3-Coder ($0.22)", free: "Codex CLI"},
-            {cat: "Ios Ipa Macho", bench: "practical", q1: "Claude Opus 4.6", q2: "Claude Sonnet 4.6", b1: "GPT-5.2 ($1.75)", b2: "DeepSeek V3.2 ($0.26)", free: "Codex CLI"},
-            {cat: "Binary Arm X86", bench: "practical", q1: "Claude Opus 4.6", q2: "GPT-5.4", b1: "Claude Sonnet 4.6 ($3.0)", b2: "DeepSeek R1 ($0.45)", free: "—"},
-            {cat: "Frida Scripting", bench: "practical", q1: "Claude Sonnet 4.6", q2: "Claude Opus 4.6", b1: "MiniMax M2.5 ($0.2)", b2: "Qwen3-Coder ($0.22)", free: "MiniMax M2.5 FREE"},
+            {cat: "JS deobfuscation", benchKey: "jsdeobs", bench: "JSDEOBS", q1: "GPT-5.4 (0.93%)", q2: "Gemini 3.1 Pro", b1: "Codestral ($0.3)", b2: "DeepSeek V3.2 ($0.26)", free: "Qwen CLI"},
+            {cat: "Assembly / binary RE", benchKey: "promon", bench: "PROMON", q1: "Claude Sonnet 4.6", q2: "GPT-5.4", b1: "Grok 4 ($3.0)", b2: "DeepSeek R1 ($0.45)", free: "—"},
+            {cat: "Android Apk", benchKey: "fuzzing_labs", bench: "FUZZING_LABS", q1: "Claude Sonnet 4.6", q2: "Claude Opus 4.6", b1: "DeepSeek V3.2 ($0.26)", b2: "Qwen3-Coder ($0.22)", free: "Codex CLI"},
+            {cat: "Ios Ipa Macho", benchKey: null, bench: "practical", q1: "Claude Opus 4.6", q2: "Claude Sonnet 4.6", b1: "GPT-5.2 ($1.75)", b2: "DeepSeek V3.2 ($0.26)", free: "Codex CLI"},
+            {cat: "Binary Arm X86", benchKey: null, bench: "practical", q1: "Claude Opus 4.6", q2: "GPT-5.4", b1: "Claude Sonnet 4.6 ($3.0)", b2: "DeepSeek R1 ($0.45)", free: "—"},
+            {cat: "Frida Scripting", benchKey: null, bench: "practical", q1: "Claude Sonnet 4.6", q2: "Claude Opus 4.6", b1: "MiniMax M2.5 ($0.2)", b2: "Qwen3-Coder ($0.22)", free: "MiniMax M2.5 FREE"},
           ],
         },
         {
           letter: "I",
           title: "Medical & Scientific",
           rows: [
-            {cat: "Medical QA", bench: "MEDQA", q1: "GPT-5.4 (95.0%)", q2: "Gemini 3.1 Pro (95.0%)", b1: "DeepSeek R1 (92.0%, $0.45)", b2: "Qwen3.5-397B (88.0%, $0.39)", free: "MiniMax M2.5 FREE"},
-            {cat: "Biomedical literature", bench: "practical", q1: "Gemini 3.1 Pro", q2: "GPT-5.4", b1: "DeepSeek R1 ($0.45)", b2: "Kimi K2.5 ($0.45)", free: "Gemini CLI"},
-            {cat: "Health Content Writing", bench: "practical", q1: "Claude Opus 4.6", q2: "GPT-5.4", b1: "Claude Sonnet 4.6 ($3.0)", b2: "Kimi K2.5 ($0.45)", free: "—"},
-            {cat: "Immunology Research", bench: "practical", q1: "Gemini 3.1 Pro", q2: "Claude Opus 4.6", b1: "DeepSeek R1 ($0.45)", b2: "Qwen3.5-397B ($0.39)", free: "Gemini CLI"},
-            {cat: "Medical Fact Check", bench: "SimpleQA", q1: "Grok 4.20", q2: "Claude Opus 4.6", b1: "DeepSeek R1 ($0.45)", b2: "GLM-5 ($1.0)", free: "—"},
-            {cat: "Patient Facing Content", bench: "practical", q1: "Claude Opus 4.6", q2: "Claude Sonnet 4.6", b1: "Kimi K2.5 ($0.45)", b2: "MiniMax M2.5 ($0.2)", free: "MiniMax M2.5 FREE"},
+            {cat: "Medical QA", benchKey: "medqa", bench: "MEDQA", q1: "GPT-5.4 (95.0%)", q2: "Gemini 3.1 Pro (95.0%)", b1: "DeepSeek R1 (92.0%, $0.45)", b2: "Qwen3.5-397B (88.0%, $0.39)", free: "MiniMax M2.5 FREE"},
+            {cat: "Biomedical literature", benchKey: null, bench: "practical", q1: "Gemini 3.1 Pro", q2: "GPT-5.4", b1: "DeepSeek R1 ($0.45)", b2: "Kimi K2.5 ($0.45)", free: "Gemini CLI"},
+            {cat: "Health Content Writing", benchKey: null, bench: "practical", q1: "Claude Opus 4.6", q2: "GPT-5.4", b1: "Claude Sonnet 4.6 ($3.0)", b2: "Kimi K2.5 ($0.45)", free: "—"},
+            {cat: "Immunology Research", benchKey: null, bench: "practical", q1: "Gemini 3.1 Pro", q2: "Claude Opus 4.6", b1: "DeepSeek R1 ($0.45)", b2: "Qwen3.5-397B ($0.39)", free: "Gemini CLI"},
+            {cat: "Medical Fact Check", benchKey: "simpleqa", bench: "SimpleQA", q1: "Grok 4.20", q2: "Claude Opus 4.6", b1: "DeepSeek R1 ($0.45)", b2: "GLM-5 ($1.0)", free: "—"},
+            {cat: "Patient Facing Content", benchKey: null, bench: "practical", q1: "Claude Opus 4.6", q2: "Claude Sonnet 4.6", b1: "Kimi K2.5 ($0.45)", b2: "MiniMax M2.5 ($0.2)", free: "MiniMax M2.5 FREE"},
           ],
         },
         {
           letter: "J",
           title: "Data Analysis",
           rows: [
-            {cat: "Marketing analytics", bench: "ANALYTICS_ACCURACY", q1: "Claude Opus 4.6 ($1.35)", q2: "—", b1: "MiniMax M2.5 ($0.02)", b2: "—", free: "MiniMax M2.5 FREE"},
-            {cat: "Financial analysis", bench: "ANALYTICS_ACCURACY", q1: "Claude Opus 4.6 ($1.35)", q2: "—", b1: "Kimi K2.5 ($0.02)", b2: "—", free: "—"},
-            {cat: "Product Sales Analytics", bench: "ANALYTICS_ACCURACY", q1: "GPT-5.4", q2: "—", b1: "MiniMax M2.5 ($0.02)", b2: "—", free: "—"},
-            {cat: "Web App Analytics", bench: "ANALYTICS_ACCURACY", q1: "Claude Opus 4.6 ($1.35)", q2: "—", b1: "Grok 4.1 Fast ($0.03)", b2: "—", free: "—"},
-            {cat: "Large Dataset Csv", bench: "ANALYTICS_ACCURACY", q1: "Gemini 3.1 Pro", q2: "—", b1: "Gemini 3 Flash", b2: "—", free: "—"},
+            {cat: "Marketing analytics", benchKey: "analytics_accuracy", bench: "ANALYTICS_ACCURACY", q1: "Claude Opus 4.6 ($1.35)", q2: "—", b1: "MiniMax M2.5 ($0.02)", b2: "—", free: "MiniMax M2.5 FREE"},
+            {cat: "Financial analysis", benchKey: "analytics_accuracy", bench: "ANALYTICS_ACCURACY", q1: "Claude Opus 4.6 ($1.35)", q2: "—", b1: "Kimi K2.5 ($0.02)", b2: "—", free: "—"},
+            {cat: "Product Sales Analytics", benchKey: "analytics_accuracy", bench: "ANALYTICS_ACCURACY", q1: "GPT-5.4", q2: "—", b1: "MiniMax M2.5 ($0.02)", b2: "—", free: "—"},
+            {cat: "Web App Analytics", benchKey: "analytics_accuracy", bench: "ANALYTICS_ACCURACY", q1: "Claude Opus 4.6 ($1.35)", q2: "—", b1: "Grok 4.1 Fast ($0.03)", b2: "—", free: "—"},
+            {cat: "Large Dataset Csv", benchKey: "analytics_accuracy", bench: "ANALYTICS_ACCURACY", q1: "Gemini 3.1 Pro", q2: "—", b1: "Gemini 3 Flash", b2: "—", free: "—"},
           ],
         },
         {
           letter: "K",
           title: "Writing & Naturalness",
           rows: [
-            {cat: "Natural copywriting", bench: "practical", q1: "Claude Opus 4.6", q2: "Claude Sonnet 4.6", b1: "DeepSeek V3.2 ($0.27)", b2: "—", free: "—"},
-            {cat: "Academic writing", bench: "practical", q1: "Claude Opus 4.6", q2: "GPT-5.4", b1: "—", b2: "—", free: "—"},
-            {cat: "Social Media Content", bench: "practical", q1: "Claude Sonnet 4.6", q2: "—", b1: "Gemini 3 Flash", b2: "—", free: "—"},
-            {cat: "Low Ai Detection", bench: "practical", q1: "Claude Sonnet 4.6", q2: "—", b1: "DeepSeek V3.2 ($0.27)", b2: "—", free: "Hermes 3 405B"},
+            {cat: "Natural copywriting", benchKey: null, bench: "practical", q1: "Claude Opus 4.6", q2: "Claude Sonnet 4.6", b1: "DeepSeek V3.2 ($0.27)", b2: "—", free: "—"},
+            {cat: "Academic writing", benchKey: null, bench: "practical", q1: "Claude Opus 4.6", q2: "GPT-5.4", b1: "—", b2: "—", free: "—"},
+            {cat: "Social Media Content", benchKey: null, bench: "practical", q1: "Claude Sonnet 4.6", q2: "—", b1: "Gemini 3 Flash", b2: "—", free: "—"},
+            {cat: "Low Ai Detection", benchKey: null, bench: "practical", q1: "Claude Sonnet 4.6", q2: "—", b1: "DeepSeek V3.2 ($0.27)", b2: "—", free: "Hermes 3 405B"},
           ],
         },
         {
           letter: "L",
           title: "Local / Self-Hosted",
           rows: [
-            {cat: "Local 16GB+", bench: "practical", q1: "Llama 3.3 70B Q4", q2: "Qwen3.5-72B Q4", b1: "—", b2: "—", free: "—"},
-            {cat: "Local 8GB", bench: "practical", q1: "Gemma 3 27B Q4", q2: "Mistral Small 3.1 24B Q4", b1: "—", b2: "—", free: "—"},
-            {cat: "Local 4Gb Cpu", bench: "practical", q1: "Llama 3.2 8B Q4", q2: "Gemma 3 4B Q4", b1: "—", b2: "—", free: "—"},
-            {cat: "Local Mac Optimized", bench: "practical", q1: "Llama 3.3 70B (MLX)", q2: "Gemma 3 27B (MLX)", b1: "—", b2: "—", free: "—"},
+            {cat: "Local 16GB+", benchKey: null, bench: "practical", q1: "Llama 3.3 70B Q4", q2: "Qwen3.5-72B Q4", b1: "—", b2: "—", free: "—"},
+            {cat: "Local 8GB", benchKey: null, bench: "practical", q1: "Gemma 3 27B Q4", q2: "Mistral Small 3.1 24B Q4", b1: "—", b2: "—", free: "—"},
+            {cat: "Local 4Gb Cpu", benchKey: null, bench: "practical", q1: "Llama 3.2 8B Q4", q2: "Gemma 3 4B Q4", b1: "—", b2: "—", free: "—"},
+            {cat: "Local Mac Optimized", benchKey: null, bench: "practical", q1: "Llama 3.3 70B (MLX)", q2: "Gemma 3 27B (MLX)", b1: "—", b2: "—", free: "—"},
           ],
         },
         {
           letter: "M",
           title: "Audio & Speech",
           rows: [
-            {cat: "Transcription accuracy", bench: "WER_CLEAN", q1: "Soniox (3.2%, $0.0017)", q2: "Deepgram Nova-3 (3.5%, $0.0043)", b1: "Groq Whisper (4.2%, $0.006)", b2: "—", free: "Whisper large-v3 (self-host) (4.2%)"},
-            {cat: "Speaker diarization", bench: "DIARIZATION_DER", q1: "Soniox ($0.0017)", q2: "AssemblyAI Universal-2 ($0.0065)", b1: "pyannote (self-host)", b2: "—", free: "—"},
-            {cat: "Realtime Transcription", bench: "WER_CLEAN", q1: "Deepgram Nova-3 (3.5%, $0.0043)", q2: "Google Chirp 2 (4.0%)", b1: "—", b2: "—", free: "—"},
-            {cat: "Multilingual Asr", bench: "WER_CLEAN", q1: "Whisper large-v3 (4.2%, $0.006)", q2: "Google Chirp 2 (4.0%)", b1: "—", b2: "—", free: "Whisper large-v3 (self-host) (4.2%)"},
-            {cat: "Speed Critical Asr", bench: "WER_CLEAN", q1: "Groq Whisper (4.2%, $0.006)", q2: "Deepgram Nova-3 (3.5%, $0.0043)", b1: "—", b2: "—", free: "—"},
+            {cat: "Transcription accuracy", benchKey: "wer_clean", bench: "WER_CLEAN", q1: "Soniox (3.2%, $0.0017)", q2: "Deepgram Nova-3 (3.5%, $0.0043)", b1: "Groq Whisper (4.2%, $0.006)", b2: "—", free: "Whisper large-v3 (self-host) (4.2%)"},
+            {cat: "Speaker diarization", benchKey: "diarization_der", bench: "DIARIZATION_DER", q1: "Soniox ($0.0017)", q2: "AssemblyAI Universal-2 ($0.0065)", b1: "pyannote (self-host)", b2: "—", free: "—"},
+            {cat: "Realtime Transcription", benchKey: "wer_clean", bench: "WER_CLEAN", q1: "Deepgram Nova-3 (3.5%, $0.0043)", q2: "Google Chirp 2 (4.0%)", b1: "—", b2: "—", free: "—"},
+            {cat: "Multilingual Asr", benchKey: "wer_clean", bench: "WER_CLEAN", q1: "Whisper large-v3 (4.2%, $0.006)", q2: "Google Chirp 2 (4.0%)", b1: "—", b2: "—", free: "Whisper large-v3 (self-host) (4.2%)"},
+            {cat: "Speed Critical Asr", benchKey: "wer_clean", bench: "WER_CLEAN", q1: "Groq Whisper (4.2%, $0.006)", q2: "Deepgram Nova-3 (3.5%, $0.0043)", b1: "—", b2: "—", free: "—"},
           ],
         },
         {
           letter: "N",
           title: "Video Understanding",
           rows: [
-            {cat: "Video content recognition", bench: "Video-MME", q1: "Gemini 3.1 Pro", q2: "GPT-5.4", b1: "—", b2: "—", free: "—"},
-            {cat: "Video QA", bench: "Video-MME", q1: "Gemini 3.1 Pro", q2: "Claude Opus 4.6", b1: "—", b2: "—", free: "—"},
-            {cat: "Video Transcription Visual", bench: "Video-MME", q1: "Gemini 3.1 Pro", q2: "—", b1: "GLM-4.6V ($0.3)", b2: "—", free: "—"},
-            {cat: "Frame Analysis", bench: "Video-MME", q1: "Gemini 3.1 Pro", q2: "GPT-5.4", b1: "GLM-4.6V ($0.3)", b2: "—", free: "—"},
+            {cat: "Video content recognition", benchKey: "video_mme", bench: "Video-MME", q1: "Gemini 3.1 Pro", q2: "GPT-5.4", b1: "—", b2: "—", free: "—"},
+            {cat: "Video QA", benchKey: "video_mme", bench: "Video-MME", q1: "Gemini 3.1 Pro", q2: "Claude Opus 4.6", b1: "—", b2: "—", free: "—"},
+            {cat: "Video Transcription Visual", benchKey: "video_mme", bench: "Video-MME", q1: "Gemini 3.1 Pro", q2: "—", b1: "GLM-4.6V ($0.3)", b2: "—", free: "—"},
+            {cat: "Frame Analysis", benchKey: "video_mme", bench: "Video-MME", q1: "Gemini 3.1 Pro", q2: "GPT-5.4", b1: "GLM-4.6V ($0.3)", b2: "—", free: "—"},
           ],
         },
       ];
@@ -2170,7 +2170,7 @@
         },
         swe_pro: {
           name: "SWE-Bench Pro",
-          desc: "Harder coding tasks. Less contamination risk than SWE-V.",
+          desc: "Harder coding tasks from real repos. Less contamination risk.",
           url: "https://scale.com/leaderboard",
         },
         gpqa: {
@@ -2179,11 +2179,16 @@
           url: "https://artificial-analysis.com",
         },
         hle: {
-          name: "Humanity's Last Exam",
-          desc: "Hardest known reasoning benchmark. Expert questions no model aces.",
+          name: "HLE",
+          desc: "Humanity's Last Exam. Hardest known reasoning benchmark.",
           url: "https://lastexam.ai",
         },
         arc: {
+          name: "ARC-AGI-2",
+          desc: "Abstract reasoning puzzles. Tests generalization, not memorization.",
+          url: "https://arcprize.org",
+        },
+        arc_agi_2: {
           name: "ARC-AGI-2",
           desc: "Abstract reasoning puzzles. Tests generalization, not memorization.",
           url: "https://arcprize.org",
@@ -2195,8 +2200,163 @@
         },
         benchlm: {
           name: "BenchLM",
-          desc: "Aggregate benchmark across practical tasks.",
+          desc: "Aggregate benchmark across practical coding and reasoning tasks.",
           url: "https://benchlm.ai",
+        },
+        scicode: {
+          name: "SciCode",
+          desc: "Scientific coding problems requiring domain knowledge.",
+          url: "https://scicode-bench.github.io",
+        },
+        terminal_bench_2: {
+          name: "Terminal-Bench 2",
+          desc: "Agentic terminal coding. Real shell interactions.",
+          url: "https://github.com/Terminal-Bench/Terminal-Bench",
+        },
+        grind: {
+          name: "GRIND",
+          desc: "Adaptive reasoning with adjustable difficulty.",
+          url: "https://arxiv.org/abs/2501.06751",
+        },
+        aime_2025: {
+          name: "AIME 2025",
+          desc: "Math competition problems. American Invitational Mathematics Exam.",
+          url: "https://artofproblemsolving.com/wiki/index.php/AIME",
+        },
+        bfcl: {
+          name: "BFCL V4",
+          desc: "Berkeley Function Calling Leaderboard. Tests tool/function calling accuracy.",
+          url: "https://gorilla.cs.berkeley.edu/leaderboard.html",
+        },
+        ifbench: {
+          name: "IFBench",
+          desc: "Instruction following benchmark. Tests compliance with complex instructions.",
+          url: "https://arxiv.org/abs/2502.09980",
+        },
+        simpleqa: {
+          name: "SimpleQA",
+          desc: "Hallucination resistance. Tests factual accuracy on simple questions.",
+          url: "https://openai.com/index/simpleqa",
+        },
+        mmmu: {
+          name: "MMMU",
+          desc: "Massive Multi-discipline Multimodal Understanding. Vision + reasoning.",
+          url: "https://mmmu-benchmark.github.io",
+        },
+        video_mme: {
+          name: "Video-MME",
+          desc: "Video understanding benchmark. Multi-modal evaluation.",
+          url: "https://video-mme.github.io",
+        },
+        scale_seal: {
+          name: "Scale SEAL",
+          desc: "Legal and finance domain evaluation by Scale AI.",
+          url: "https://scale.com",
+        },
+        scraper_code_zyte: {
+          name: "Zyte Scraper Code",
+          desc: "Web scraper code generation quality (ROUGE-1).",
+          url: "https://zyte.com/blog",
+        },
+        promon: {
+          name: "ProMon",
+          desc: "Assembly deobfuscation. Binary reverse engineering.",
+          url: "https://promon.co/resources/reports/",
+        },
+        jsdeobs: {
+          name: "JS Deobfuscation",
+          desc: "JavaScript deobfuscation benchmark.",
+          url: "",
+        },
+        fuzzing_labs: {
+          name: "Fuzzing Labs",
+          desc: "Android APK reverse engineering.",
+          url: "https://fuzzing-labs.com",
+        },
+        medqa: {
+          name: "MedQA (USMLE)",
+          desc: "Medical board exam questions. Tests clinical reasoning.",
+          url: "https://arxiv.org/abs/2009.13081",
+        },
+        lmarena: {
+          name: "LM Arena ELO",
+          desc: "Human preference ranking. Crowdsourced blind model comparisons.",
+          url: "https://lmarena.ai",
+        },
+        human_pref: {
+          name: "Human Preference",
+          desc: "Writing naturalness rated by humans.",
+          url: "https://lmarena.ai",
+        },
+        mmlu_pro: {
+          name: "MMLU-Pro",
+          desc: "Professional-level multi-task knowledge. Harder than original MMLU.",
+          url: "https://arxiv.org/abs/2406.01574",
+        },
+        long_context: {
+          name: "Long Context",
+          desc: "Performance with >200K token inputs.",
+          url: "",
+        },
+        mgsm: {
+          name: "MGSM",
+          desc: "Multilingual grade school math. Tests reasoning across languages.",
+          url: "",
+        },
+        browsecomp: {
+          name: "BrowseComp",
+          desc: "Web browsing comprehension by OpenAI.",
+          url: "https://openai.com/index/browsecomp/",
+        },
+        browseruse: {
+          name: "BrowserUse",
+          desc: "Automated browser interaction benchmark.",
+          url: "https://browser-use.com",
+        },
+        gaia: {
+          name: "GAIA",
+          desc: "General AI Assistant benchmark. Real-world multi-step tasks.",
+          url: "https://huggingface.co/gaia-benchmark",
+        },
+        gdpval: {
+          name: "GDPval",
+          desc: "Artificial Analysis quality index.",
+          url: "https://gdpval.github.io",
+        },
+        tool_error_rate: {
+          name: "Tool Error Rate",
+          desc: "Rate of errors in tool/function calls.",
+          url: "https://gorilla.cs.berkeley.edu/leaderboard",
+        },
+        vending_b2: {
+          name: "VendingBench 2",
+          desc: "E-commerce agent benchmark. Multi-turn purchasing tasks.",
+          url: "https://github.com/sierra-research/tau-bench",
+        },
+        throughput_tps: {
+          name: "Throughput",
+          desc: "Tokens per second. Speed benchmark.",
+          url: "https://artificial-analysis.com",
+        },
+        analytics_accuracy: {
+          name: "Analytics Accuracy",
+          desc: "Data analysis and interpretation accuracy.",
+          url: "https://anamaps.com",
+        },
+        wer_clean: {
+          name: "WER Clean",
+          desc: "Word Error Rate on clean speech. Transcription accuracy.",
+          url: "https://openai.com/research/whisper",
+        },
+        diarization_der: {
+          name: "DER",
+          desc: "Diarization Error Rate. Speaker identification accuracy.",
+          url: "https://github.com/pyannote/pyannote-audio",
+        },
+        video: {
+          name: "Video Understanding",
+          desc: "General video content recognition.",
+          url: "",
         },
       };
 
@@ -2223,6 +2383,52 @@
           html += `<a class="score-popup-link" href="${src}" target="_blank" rel="noopener">View source ↗</a>`;
         if (meta.url && meta.url !== src)
           html += `<a class="score-popup-link" href="${meta.url}" target="_blank" rel="noopener">Leaderboard ↗</a>`;
+
+        popup.innerHTML = html;
+        document.body.appendChild(popup);
+
+        const rect = event.target.getBoundingClientRect();
+        popup.style.top = rect.bottom + window.scrollY + 8 + "px";
+        popup.style.left = Math.min(rect.left, window.innerWidth - 280) + "px";
+
+        setTimeout(() => {
+          document.addEventListener("click", function handler(e) {
+            if (!popup.contains(e.target)) {
+              popup.remove();
+              document.removeEventListener("click", handler);
+            }
+          });
+        }, 10);
+      }
+
+      function showBenchInfo(benchKey, event) {
+        event.stopPropagation();
+        const old = document.getElementById("scorePopup");
+        if (old) old.remove();
+
+        // Нормализуем ключ: приводим к lower_case snake_case для lookup
+        const key = benchKey
+          ? benchKey.toLowerCase().replace(/[^a-z0-9]/g, "_")
+          : null;
+        const meta = (key && BENCH_META[key]) ||
+          (benchKey && BENCH_META[benchKey]) || {
+            name: benchKey || "—",
+            desc: "",
+            url: "",
+          };
+
+        const popup = document.createElement("div");
+        popup.id = "scorePopup";
+        popup.className = "score-popup";
+
+        let html = `<div class="score-popup-header">
+          <span class="score-popup-title">${meta.name}</span>
+          <span class="score-popup-close" onclick="this.parentElement.parentElement.remove()">✕</span>
+        </div>`;
+        if (meta.desc)
+          html += `<div class="score-popup-desc">${meta.desc}</div>`;
+        if (meta.url)
+          html += `<a class="score-popup-link" href="${meta.url}" target="_blank" rel="noopener">View leaderboard ↗</a>`;
 
         popup.innerHTML = html;
         document.body.appendChild(popup);
@@ -2412,7 +2618,7 @@
           group.rows.forEach((row) => {
             html += `<tr>
         <td><span class="cat-name">${row.cat}</span></td>
-        <td><span class="cat-bench">${row.bench}</span></td>
+        <td><span class="cat-bench score-ref" style="cursor:pointer" onclick="showBenchInfo('${row.benchKey || row.bench}', event)">${row.bench}</span></td>
         <td class="q1">${row.q1}</td>
         <td class="q2">${row.q2}</td>
         <td class="b1">${row.b1}</td>
@@ -2521,10 +2727,10 @@
         grid.innerHTML = LIVE_BENCHMARKS.map(
           (b) => `
     <div class="bench-item${b.saturation === "slight" ? "" : ""}">
-      <div class="bench-item-name">${b.name}${b.saturation === "slight" ? ' <span style="font-size:0.65rem;color:var(--amber);">~slight</span>' : ""}</div>
+      <div class="bench-item-name">${b.url && b.url !== "—" ? `<a href="${b.url}" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;border-bottom:1px dotted var(--text-muted)">${b.name}</a>` : b.name}${b.saturation === "slight" ? ' <span style="font-size:0.65rem;color:var(--amber);">~slight</span>' : ""}</div>
       <div class="bench-item-cat">${b.cat}</div>
       <div class="bench-item-desc">${b.desc}</div>
-      ${b.url !== "—" ? `<div style="font-size:0.7rem;color:var(--text-muted);margin-top:6px;">${b.url}</div>` : ""}
+      ${b.url && b.url !== "—" ? `<a href="${b.url}" target="_blank" rel="noopener" style="font-size:0.7rem;color:var(--cyan);text-decoration:none;margin-top:6px;display:block">Source ↗</a>` : ""}
     </div>
   `,
         ).join("");

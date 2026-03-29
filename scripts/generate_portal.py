@@ -271,6 +271,7 @@ def gen_king_groups(king_picks: dict) -> str:
             rows.append(
                 "            {"
                 f"cat: {fmt_str(cat_label)}, "
+                f"benchKey: {fmt_str(bench) if bench else 'null'}, "
                 f"bench: {bench_label(bench)}, "
                 f"q1: {pick_label(q1)}, "
                 f"q2: {pick_label(q2)}, "

@@ -151,7 +151,7 @@
     "url": "https://lmarena.ai",
     "max_score": null,
     "lifecycle": "active",
-    "notes": "ELO score. Volatile — sensitive to style and verbosity, not just quality."
+    "notes": "ELO score. Volatile \u2014 sensitive to style and verbosity, not just quality."
   },
   {
     "id": "simpleqa",
@@ -162,7 +162,7 @@
     "contamination_risk": "low",
     "volatility": "low",
     "update_frequency": "quarterly",
-    "url": null,
+    "url": "https://openai.com/index/simpleqa",
     "max_score": 100,
     "lifecycle": "planned",
     "notes": "Benchmark tracked, scores not yet collected."
@@ -176,7 +176,7 @@
     "contamination_risk": "medium",
     "volatility": "low",
     "update_frequency": "quarterly",
-    "url": null,
+    "url": "https://mmmu-benchmark.github.io",
     "max_score": 100,
     "lifecycle": "planned",
     "notes": "Benchmark tracked, scores not yet collected."
@@ -190,7 +190,7 @@
     "contamination_risk": "low",
     "volatility": "low",
     "update_frequency": "quarterly",
-    "url": null,
+    "url": "https://scicode-bench.github.io",
     "max_score": 100,
     "lifecycle": "planned",
     "notes": "Benchmark tracked, scores not yet collected."
@@ -274,7 +274,7 @@
     "contamination_risk": "high",
     "volatility": "low",
     "update_frequency": "N/A",
-    "url": null,
+    "url": "https://github.com/openai/human-eval",
     "max_score": 100,
     "lifecycle": "dead",
     "notes": "All frontier models 90%+. No separation. Replaced by SWE-Bench."
@@ -288,7 +288,7 @@
     "contamination_risk": "high",
     "volatility": "low",
     "update_frequency": "N/A",
-    "url": null,
+    "url": "https://arxiv.org/abs/2009.03300",
     "max_score": 100,
     "lifecycle": "dead",
     "notes": "All models 85%+. Saturated. Use MMLU-Pro instead."
@@ -316,7 +316,7 @@
     "contamination_risk": "high",
     "volatility": "low",
     "update_frequency": "N/A",
-    "url": null,
+    "url": "https://arxiv.org/abs/2110.14168",
     "max_score": 100,
     "lifecycle": "dead",
     "notes": "All frontier models 95%+. Use AIME 2025 instead."
@@ -344,7 +344,7 @@
     "contamination_risk": "high",
     "volatility": "low",
     "update_frequency": "N/A",
-    "url": null,
+    "url": "https://arxiv.org/abs/1905.07830",
     "max_score": 100,
     "lifecycle": "dead",
     "notes": "All models 90%+. No meaningful separation."
@@ -358,7 +358,7 @@
     "contamination_risk": "high",
     "volatility": "low",
     "update_frequency": "N/A",
-    "url": null,
+    "url": "https://arxiv.org/abs/2210.09261",
     "max_score": 100,
     "lifecycle": "dead",
     "notes": "All frontier models 90%+. Saturated."
@@ -372,7 +372,7 @@
     "contamination_risk": "high",
     "volatility": "low",
     "update_frequency": "N/A",
-    "url": null,
+    "url": "https://arxiv.org/abs/2103.03874",
     "max_score": 100,
     "lifecycle": "dead",
     "notes": "All frontier models 90%+. Use AIME or HLE for math separation."
@@ -386,7 +386,7 @@
     "contamination_risk": "high",
     "volatility": "low",
     "update_frequency": "N/A",
-    "url": null,
+    "url": "https://arxiv.org/abs/1903.00161",
     "max_score": 100,
     "lifecycle": "dead",
     "notes": "Saturated."
@@ -400,7 +400,7 @@
     "contamination_risk": "high",
     "volatility": "low",
     "update_frequency": "N/A",
-    "url": null,
+    "url": "https://arxiv.org/abs/2210.03057",
     "max_score": 100,
     "lifecycle": "dead",
     "notes": "Saturated at frontier. GLM-5 leads at 90% but no separation."
@@ -428,7 +428,7 @@
     "contamination_risk": "medium",
     "volatility": "low",
     "update_frequency": "annual",
-    "url": null,
+    "url": "https://arxiv.org/abs/1909.06146",
     "max_score": 100,
     "lifecycle": "planned",
     "notes": "Benchmark tracked, scores not yet collected."
@@ -526,7 +526,7 @@
     "contamination_risk": "low",
     "volatility": "medium",
     "update_frequency": "quarterly",
-    "url": null,
+    "url": "https://video-mme.github.io",
     "max_score": 100,
     "lifecycle": "planned",
     "notes": "Benchmark tracked, scores not yet collected."
@@ -540,7 +540,7 @@
     "contamination_risk": "low",
     "volatility": "low",
     "update_frequency": "quarterly",
-    "url": null,
+    "url": "https://arxiv.org/abs/2404.06654",
     "max_score": null,
     "lifecycle": "planned",
     "notes": "Benchmark tracked, scores not yet collected."
@@ -568,7 +568,7 @@
     "contamination_risk": "low",
     "volatility": "low",
     "update_frequency": "annual",
-    "url": null,
+    "url": "https://dl.acm.org/doi/abs/10.1145/3658644.3690226",
     "max_score": 1.0,
     "lifecycle": "planned",
     "notes": "Benchmark tracked, scores not yet collected."
