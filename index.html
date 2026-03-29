@@ -1,0 +1,5039 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="robots"
+      content="noindex, nofollow, noarchive, nosnippet, noimageindex"
+    />
+    <meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet" />
+    <meta name="bingbot" content="noindex, nofollow" />
+    <meta http-equiv="X-Robots-Tag" content="noindex, nofollow, noarchive" />
+    <title>AI Model Benchmarks 2026</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #0f172a;
+        --bg2: #1e293b;
+        --bg3: #0f172a;
+        --glass: rgba(255, 255, 255, 0.05);
+        --glass-border: rgba(255, 255, 255, 0.1);
+        --text: #e2e8f0;
+        --text-muted: #94a3b8;
+        --cyan: #00d2ff;
+        --purple: #7c3aed;
+        --amber: #f59e0b;
+        --green: #10b981;
+        --red: #ef4444;
+        --blue: #3b82f6;
+        --pink: #ec4899;
+        --nav-h: 64px;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: "Inter", system-ui, sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.6;
+        overflow-x: hidden;
+      }
+
+      /* NAV */
+      nav {
+        position: sticky;
+        top: 0;
+        z-index: 999;
+        height: var(--nav-h);
+        background: rgba(15, 23, 42, 0.92);
+        backdrop-filter: blur(20px);
+        border-bottom: 1px solid var(--glass-border);
+        display: flex;
+        align-items: center;
+        padding: 0 24px;
+        gap: 6px;
+        overflow-x: auto;
+      }
+      nav::-webkit-scrollbar {
+        display: none;
+      }
+      .nav-logo {
+        font-weight: 800;
+        font-size: 0.9rem;
+        background: linear-gradient(135deg, var(--cyan), var(--purple));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        white-space: nowrap;
+        margin-right: 12px;
+        flex-shrink: 0;
+      }
+      .nav-link {
+        color: var(--text-muted);
+        text-decoration: none;
+        font-size: 0.78rem;
+        font-weight: 500;
+        padding: 5px 10px;
+        border-radius: 6px;
+        white-space: nowrap;
+        transition: all 0.2s;
+        flex-shrink: 0;
+      }
+      .nav-link:hover,
+      .nav-link.active {
+        color: var(--cyan);
+        background: rgba(0, 210, 255, 0.1);
+      }
+
+      /* LAYOUT */
+      section {
+        padding: 80px 24px;
+        max-width: 1400px;
+        margin: 0 auto;
+      }
+      .section-tag {
+        display: inline-block;
+        font-size: 0.7rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--cyan);
+        background: rgba(0, 210, 255, 0.1);
+        border: 1px solid rgba(0, 210, 255, 0.2);
+        border-radius: 4px;
+        padding: 4px 10px;
+        margin-bottom: 16px;
+      }
+      h2.section-title {
+        font-size: clamp(1.6rem, 3vw, 2.2rem);
+        font-weight: 800;
+        margin-bottom: 8px;
+        color: #f1f5f9;
+      }
+      .section-sub {
+        color: var(--text-muted);
+        font-size: 0.95rem;
+        margin-bottom: 40px;
+        max-width: 700px;
+      }
+
+      /* GLASS CARD */
+      .card {
+        background: var(--glass);
+        backdrop-filter: blur(10px);
+        border: 1px solid var(--glass-border);
+        border-radius: 16px;
+        padding: 24px;
+      }
+      .card-sm {
+        background: var(--glass);
+        backdrop-filter: blur(10px);
+        border: 1px solid var(--glass-border);
+        border-radius: 12px;
+        padding: 16px 20px;
+      }
+
+      /* HERO BG */
+      .hero-bg {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background:
+          radial-gradient(
+            ellipse 80% 50% at 20% 30%,
+            rgba(0, 210, 255, 0.07) 0%,
+            transparent 60%
+          ),
+          radial-gradient(
+            ellipse 60% 60% at 80% 70%,
+            rgba(124, 58, 237, 0.07) 0%,
+            transparent 60%
+          );
+        pointer-events: none;
+        z-index: 0;
+      }
+
+      /* HERO */
+      #hero {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 80px 24px 60px;
+        max-width: 1400px;
+        margin: 0 auto;
+        position: relative;
+      }
+      #hero > * {
+        position: relative;
+        z-index: 1;
+      }
+      .hero-eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: var(--cyan);
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        margin-bottom: 20px;
+      }
+      .hero-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: var(--cyan);
+        animation: pulse 2s ease-in-out infinite;
+      }
+      @keyframes pulse {
+        0%,
+        100% {
+          opacity: 1;
+          transform: scale(1);
+        }
+        50% {
+          opacity: 0.4;
+          transform: scale(0.7);
+        }
+      }
+      h1.hero-title {
+        font-size: clamp(2.4rem, 6vw, 4.5rem);
+        font-weight: 900;
+        line-height: 1.08;
+        margin-bottom: 20px;
+        background: linear-gradient(
+          135deg,
+          #f1f5f9 0%,
+          var(--cyan) 50%,
+          var(--purple) 100%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      .hero-subtitle {
+        font-size: clamp(1rem, 2vw, 1.2rem);
+        color: var(--text-muted);
+        font-weight: 400;
+        max-width: 720px;
+        margin-bottom: 40px;
+        line-height: 1.6;
+      }
+      .hero-stats {
+        display: flex;
+        gap: 32px;
+        flex-wrap: wrap;
+        margin-bottom: 48px;
+      }
+      .hero-stat {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+      }
+      .hero-stat-num {
+        font-size: 2rem;
+        font-weight: 800;
+        background: linear-gradient(135deg, var(--cyan), var(--purple));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .hero-stat-label {
+        font-size: 0.8rem;
+        color: var(--text-muted);
+        font-weight: 500;
+      }
+
+      /* FADE IN */
+      .fade-in {
+        opacity: 0;
+        transform: translateY(24px);
+        transition:
+          opacity 0.6s ease,
+          transform 0.6s ease;
+      }
+      .fade-in.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* MEGA TABLE */
+      .table-controls {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+      .tier-btn {
+        padding: 6px 14px;
+        border-radius: 6px;
+        font-size: 0.78rem;
+        font-weight: 600;
+        cursor: pointer;
+        border: 1px solid;
+        transition: all 0.2s;
+        background: transparent;
+        font-family: inherit;
+      }
+      .tier-btn[data-tier="1"] {
+        color: var(--purple);
+        border-color: var(--purple);
+      }
+      .tier-btn[data-tier="2"] {
+        color: var(--cyan);
+        border-color: var(--cyan);
+      }
+      .tier-btn[data-tier="3"] {
+        color: var(--amber);
+        border-color: var(--amber);
+      }
+      .tier-btn[data-tier="free"] {
+        color: var(--green);
+        border-color: var(--green);
+      }
+      .tier-btn.active[data-tier="1"] {
+        background: rgba(124, 58, 237, 0.2);
+      }
+      .tier-btn.active[data-tier="2"] {
+        background: rgba(0, 210, 255, 0.15);
+      }
+      .tier-btn.active[data-tier="3"] {
+        background: rgba(245, 158, 11, 0.15);
+      }
+      .tier-btn.active[data-tier="free"] {
+        background: rgba(16, 185, 129, 0.15);
+      }
+      .tier-btn.hidden-btn {
+        opacity: 0.4;
+      }
+      .search-box {
+        padding: 7px 14px;
+        background: var(--glass);
+        border: 1px solid var(--glass-border);
+        border-radius: 8px;
+        color: var(--text);
+        font-size: 0.85rem;
+        font-family: inherit;
+        outline: none;
+        min-width: 200px;
+        transition: border-color 0.2s;
+      }
+      .search-box:focus {
+        border-color: var(--cyan);
+      }
+      .search-box::placeholder {
+        color: var(--text-muted);
+      }
+      .table-wrap {
+        overflow-x: auto;
+        border-radius: 12px;
+        border: 1px solid var(--glass-border);
+      }
+      table.bench-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.8rem;
+      }
+      table.bench-table th {
+        background: rgba(255, 255, 255, 0.05);
+        padding: 10px 12px;
+        text-align: left;
+        color: var(--text-muted);
+        font-weight: 600;
+        font-size: 0.75rem;
+        white-space: nowrap;
+        border-bottom: 1px solid var(--glass-border);
+        cursor: pointer;
+        user-select: none;
+        position: sticky;
+        top: 0;
+        z-index: 2;
+      }
+      table.bench-table th:hover {
+        color: var(--cyan);
+      }
+      table.bench-table th.sorted-asc::after {
+        content: " ↑";
+        color: var(--cyan);
+      }
+      table.bench-table th.sorted-desc::after {
+        content: " ↓";
+        color: var(--cyan);
+      }
+      table.bench-table td {
+        padding: 9px 12px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+        white-space: nowrap;
+        transition: background 0.1s;
+      }
+      table.bench-table tr:hover td {
+        background: rgba(255, 255, 255, 0.03);
+      }
+      table.bench-table tr.hidden {
+        display: none;
+      }
+      .tier-badge {
+        display: inline-block;
+        font-size: 0.65rem;
+        font-weight: 700;
+        padding: 2px 6px;
+        border-radius: 4px;
+        margin-left: 6px;
+        vertical-align: middle;
+      }
+      .tier-1 .tier-badge {
+        background: rgba(124, 58, 237, 0.25);
+        color: #a78bfa;
+      }
+      .tier-2 .tier-badge {
+        background: rgba(0, 210, 255, 0.15);
+        color: var(--cyan);
+      }
+      .tier-3 .tier-badge {
+        background: rgba(245, 158, 11, 0.15);
+        color: var(--amber);
+      }
+      .tier-free .tier-badge {
+        background: rgba(16, 185, 129, 0.15);
+        color: var(--green);
+      }
+      .tier-1 td:first-child {
+        border-left: 2px solid rgba(124, 58, 237, 0.5);
+      }
+      .tier-2 td:first-child {
+        border-left: 2px solid rgba(0, 210, 255, 0.4);
+      }
+      .tier-3 td:first-child {
+        border-left: 2px solid rgba(245, 158, 11, 0.4);
+      }
+      .tier-free td:first-child {
+        border-left: 2px solid rgba(16, 185, 129, 0.4);
+      }
+      .score-cell {
+        text-align: right;
+        font-family: monospace;
+        font-size: 0.8rem;
+      }
+      .score-high {
+        color: #4ade80;
+      }
+      .score-mid {
+        color: var(--amber);
+      }
+      .score-low {
+        color: #f87171;
+      }
+      .score-dash {
+        color: var(--text-muted);
+        opacity: 0.4;
+      }
+      .price-cell {
+        font-family: monospace;
+        font-size: 0.77rem;
+        color: var(--text-muted);
+      }
+      .ctx-cell {
+        font-size: 0.75rem;
+        color: var(--text-muted);
+      }
+      .model-name {
+        font-weight: 600;
+        color: var(--text);
+      }
+      .best-for-cell {
+        font-size: 0.75rem;
+        color: var(--cyan);
+        max-width: 160px;
+        white-space: normal;
+      }
+
+      /* KING SECTION */
+      .king-groups {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+      }
+      .king-group-title {
+        font-size: 0.9rem;
+        font-weight: 700;
+        color: var(--amber);
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        margin-bottom: 12px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .king-group-title::after {
+        content: "";
+        flex: 1;
+        height: 1px;
+        background: linear-gradient(
+          to right,
+          rgba(245, 158, 11, 0.3),
+          transparent
+        );
+      }
+      .king-table-wrap {
+        overflow-x: auto;
+        border-radius: 10px;
+        border: 1px solid var(--glass-border);
+      }
+      table.king-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.8rem;
+      }
+      table.king-table th {
+        background: rgba(255, 255, 255, 0.04);
+        padding: 8px 14px;
+        text-align: left;
+        color: var(--text-muted);
+        font-weight: 600;
+        font-size: 0.72rem;
+        border-bottom: 1px solid var(--glass-border);
+        white-space: nowrap;
+      }
+      table.king-table td {
+        padding: 8px 14px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+        font-size: 0.8rem;
+      }
+      table.king-table tr:hover td {
+        background: rgba(255, 255, 255, 0.02);
+      }
+      .cat-name {
+        font-weight: 600;
+        color: var(--text);
+      }
+      .cat-bench {
+        font-size: 0.72rem;
+        color: var(--text-muted);
+      }
+      .q1 {
+        color: #c084fc;
+        font-weight: 600;
+      }
+      .q2 {
+        color: #a78bfa;
+      }
+      .b1 {
+        color: #22d3ee;
+        font-weight: 600;
+      }
+      .b2 {
+        color: #67e8f9;
+      }
+      .f1 {
+        color: #4ade80;
+        font-weight: 600;
+      }
+
+      /* PIPELINE ROUTING */
+      .routing-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      }
+      .routing-card {
+        background: var(--glass);
+        border: 1px solid var(--glass-border);
+        border-radius: 12px;
+        overflow: hidden;
+      }
+      .routing-card-header {
+        padding: 14px 18px;
+        font-weight: 700;
+        font-size: 0.85rem;
+        background: rgba(255, 255, 255, 0.04);
+        border-bottom: 1px solid var(--glass-border);
+      }
+      table.routing-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.8rem;
+      }
+      table.routing-table td {
+        padding: 8px 18px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+        vertical-align: top;
+      }
+      table.routing-table tr:last-child td {
+        border-bottom: none;
+      }
+      .task-name {
+        color: var(--text-muted);
+        font-size: 0.78rem;
+      }
+      .model-pick {
+        color: var(--cyan);
+        font-weight: 600;
+      }
+      .why-note {
+        font-size: 0.72rem;
+        color: var(--text-muted);
+        margin-top: 2px;
+      }
+
+      /* CACHE PRICING */
+      .cache-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+      }
+      table.cache-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.82rem;
+      }
+      table.cache-table th {
+        padding: 9px 14px;
+        text-align: left;
+        background: rgba(255, 255, 255, 0.04);
+        color: var(--text-muted);
+        font-size: 0.73rem;
+        font-weight: 600;
+        border-bottom: 1px solid var(--glass-border);
+        white-space: nowrap;
+      }
+      table.cache-table td {
+        padding: 8px 14px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+      }
+      table.cache-table tr:hover td {
+        background: rgba(255, 255, 255, 0.02);
+      }
+      .discount-bar {
+        display: inline-block;
+        height: 6px;
+        border-radius: 3px;
+        background: linear-gradient(to right, var(--green), var(--cyan));
+        vertical-align: middle;
+        margin-left: 6px;
+      }
+      .discount-label {
+        font-weight: 700;
+        font-family: monospace;
+      }
+      .cached-price {
+        color: var(--green);
+        font-family: monospace;
+        font-weight: 600;
+      }
+      .regular-price {
+        font-family: monospace;
+        color: var(--text-muted);
+      }
+      .cache-tip {
+        margin-top: 10px;
+        padding: 12px 16px;
+        background: rgba(16, 185, 129, 0.08);
+        border: 1px solid rgba(16, 185, 129, 0.2);
+        border-radius: 8px;
+        font-size: 0.8rem;
+        color: #6ee7b7;
+      }
+
+      /* QUICK MATRIX */
+      table.matrix-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.82rem;
+      }
+      table.matrix-table th {
+        padding: 10px 16px;
+        text-align: left;
+        background: rgba(255, 255, 255, 0.05);
+        color: var(--text-muted);
+        font-weight: 600;
+        font-size: 0.73rem;
+        border-bottom: 1px solid var(--glass-border);
+        white-space: nowrap;
+      }
+      table.matrix-table td {
+        padding: 8px 16px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+        vertical-align: middle;
+      }
+      table.matrix-table tr:hover td {
+        background: rgba(255, 255, 255, 0.02);
+      }
+      .task-label {
+        color: var(--text);
+        font-size: 0.82rem;
+      }
+      .pick-main {
+        color: var(--cyan);
+        font-weight: 700;
+        font-size: 0.85rem;
+      }
+      .pick-backup {
+        color: var(--text-muted);
+        font-size: 0.78rem;
+      }
+      .pick-free {
+        color: var(--green);
+        font-size: 0.78rem;
+      }
+      .search-matrix {
+        max-width: 260px;
+        margin-bottom: 16px;
+      }
+
+      /* BENCHMARKS */
+      .bench-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+      }
+      .bench-item {
+        background: var(--glass);
+        border: 1px solid var(--glass-border);
+        border-radius: 10px;
+        padding: 14px 16px;
+      }
+      .bench-item-name {
+        font-weight: 700;
+        font-size: 0.85rem;
+        color: var(--text);
+        margin-bottom: 4px;
+      }
+      .bench-item-cat {
+        font-size: 0.72rem;
+        color: var(--cyan);
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        margin-bottom: 6px;
+      }
+      .bench-item-desc {
+        font-size: 0.78rem;
+        color: var(--text-muted);
+      }
+      .saturated {
+        opacity: 0.45;
+      }
+      .saturated .bench-item-name {
+        text-decoration: line-through;
+      }
+      .saturated-label {
+        font-size: 0.7rem;
+        color: var(--red);
+        margin-top: 4px;
+      }
+
+      /* INSIGHTS */
+      .insight-list {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+      .insight-item {
+        background: var(--glass);
+        border: 1px solid var(--glass-border);
+        border-radius: 10px;
+        padding: 14px 18px;
+        display: flex;
+        gap: 12px;
+        align-items: flex-start;
+      }
+      .insight-icon {
+        font-size: 1.1rem;
+        flex-shrink: 0;
+        margin-top: 2px;
+      }
+      .insight-text {
+        font-size: 0.85rem;
+        line-height: 1.6;
+      }
+      .insight-text strong {
+        color: var(--cyan);
+      }
+
+      /* RESPONSIVE */
+      .routing-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .cache-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .bench-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      @media (max-width: 1100px) {
+        .routing-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+      @media (max-width: 800px) {
+        .routing-grid,
+        .cache-grid,
+        .bench-grid {
+          grid-template-columns: 1fr;
+        }
+        section {
+          padding: 60px 16px;
+        }
+        .hero-stats {
+          gap: 20px;
+        }
+      }
+
+      /* TAGS */
+      .tag {
+        display: inline-block;
+        font-size: 0.68rem;
+        font-weight: 600;
+        padding: 2px 7px;
+        border-radius: 4px;
+        margin-right: 4px;
+      }
+      .tag-cyan {
+        background: rgba(0, 210, 255, 0.12);
+        color: var(--cyan);
+      }
+      .tag-purple {
+        background: rgba(124, 58, 237, 0.15);
+        color: #a78bfa;
+      }
+      .tag-amber {
+        background: rgba(245, 158, 11, 0.12);
+        color: var(--amber);
+      }
+      .tag-green {
+        background: rgba(16, 185, 129, 0.12);
+        color: var(--green);
+      }
+      .tag-red {
+        background: rgba(239, 68, 68, 0.12);
+        color: #f87171;
+      }
+      .verified-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 0.78rem;
+        color: var(--green);
+        background: rgba(16, 185, 129, 0.1);
+        border: 1px solid rgba(16, 185, 129, 0.2);
+        border-radius: 6px;
+        padding: 4px 10px;
+        margin-top: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="hero-bg"></div>
+
+    <nav>
+      <div class="nav-logo">MODEL BENCHMARKS</div>
+      <a href="#hero" class="nav-link">Home</a>
+      <a href="#mega-table" class="nav-link">Mega-Table</a>
+      <a href="#king" class="nav-link">King by Category</a>
+      <a href="#king" class="nav-link">G. Scraping</a>
+      <a href="#king" class="nav-link">H. Reverse Eng.</a>
+      <a href="#embeddings" class="nav-link">K. Embeddings</a>
+      <a href="#emb-routing" class="nav-link">Emb Routing</a>
+      <a href="#free-routing" class="nav-link">FREE Routing</a>
+      <a href="#routing" class="nav-link">Pipeline Routing</a>
+      <a href="#cache" class="nav-link">Cache Pricing</a>
+      <a href="#matrix" class="nav-link">Quick Matrix</a>
+      <a href="#live-benchmarks" class="nav-link">Benchmarks</a>
+    </nav>
+
+    <!-- HERO -->
+    <section id="hero">
+      <div class="hero-eyebrow">
+        <div class="hero-dot"></div>
+        Definitive Reference — March 2026
+      </div>
+      <h1 class="hero-title">AI Model Benchmarks<br />2026</h1>
+      <p class="hero-subtitle">
+        Definitive reference for AI model selection. 119 models × 55+ categories
+        × 48 benchmarks. Sources: LM Council, Artificial Analysis, Scale AI
+        SEAL, BFCL V4, BenchLM.ai, MTEB, Zyte, Speko.
+      </p>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <span class="hero-stat-num">119</span>
+          <span class="hero-stat-label">models</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-num">55+</span>
+          <span class="hero-stat-label">categories</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-num">48</span>
+          <span class="hero-stat-label">benchmarks</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-num">5</span>
+          <span class="hero-stat-label">pricing tiers</span>
+        </div>
+      </div>
+      <div class="verified-badge">
+        ✓ Verified 2026-03-29 (v3) · Next update: 2026-04-05
+      </div>
+    </section>
+
+    <!-- MEGA TABLE -->
+    <section id="mega-table" class="fade-in">
+      <div class="section-tag">MEGA-TABLE</div>
+      <h2 class="section-title">All Models × All Parameters</h2>
+      <p class="section-sub">
+        Click header to sort. Filter by tier or search by name.
+      </p>
+      <div class="table-controls">
+        <button class="tier-btn active" data-tier="1">Tier 1: Frontier</button>
+        <button class="tier-btn active" data-tier="2">Tier 2: Mid-range</button>
+        <button class="tier-btn active" data-tier="3">Tier 3: Budget</button>
+        <button class="tier-btn active" data-tier="free">Free tier</button>
+        <input
+          type="text"
+          class="search-box"
+          id="modelSearch"
+          placeholder="Search model..."
+        />
+      </div>
+      <div class="table-wrap">
+        <table class="bench-table" id="megaTable">
+          <thead>
+            <tr>
+              <th data-col="name">Model</th>
+              <th data-col="price">$/M in→out</th>
+              <th data-col="ctx">Ctx</th>
+              <th data-col="swe_v">SWE-V%</th>
+              <th data-col="swe_pro">SWE-Pro%</th>
+              <th data-col="gpqa">GPQA%</th>
+              <th data-col="hle">HLE%</th>
+              <th data-col="arc">ARC-AGI-2%</th>
+              <th data-col="tau2">Tau2%</th>
+              <th data-col="benchtlm">BenchLM</th>
+              <th data-col="best">Best for</th>
+            </tr>
+          </thead>
+          <tbody id="megaBody"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- KING BY CATEGORY -->
+    <section id="king" class="fade-in">
+      <div class="section-tag">47 categories</div>
+      <h2 class="section-title">King by Category</h2>
+      <p class="section-sub">
+        Quality #1/#2 — best by benchmark. Budget #1/#2 — best under $1/M input.
+        Free — $0.
+      </p>
+      <div class="king-groups" id="kingGroups"></div>
+    </section>
+
+    <!-- EMBEDDINGS -->
+    <div class="bg-alt">
+      <section id="embeddings" class="fade-in">
+        <div class="section-tag">K. Embeddings</div>
+        <h2 class="section-title">Embedding Models Comparison</h2>
+        <p class="section-sub">
+          25 models. MTEB scores, pricing, OpenRouter IDs. For RAG use Retrieval
+          NDCG@10, not average MTEB.
+        </p>
+
+        <div class="card" style="overflow-x: auto; margin-bottom: 24px">
+          <table class="tier-table" style="font-size: 0.78rem">
+            <thead>
+              <tr>
+                <th>Model</th>
+                <th>OR model ID</th>
+                <th>MTEB</th>
+                <th>Dims</th>
+                <th>Context</th>
+                <th>$/M tokens</th>
+                <th>Best for</th>
+              </tr>
+            </thead>
+            <tbody id="embeddingTable"></tbody>
+          </table>
+        </div>
+
+        <div
+          style="
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 24px;
+          "
+        >
+          <div class="card" style="border-left: 3px solid var(--cyan)">
+            <div
+              style="font-weight: 700; color: var(--cyan); margin-bottom: 8px"
+            >
+              Decision Tree
+            </div>
+            <div
+              style="
+                font-size: 0.82rem;
+                color: var(--text-muted);
+                line-height: 1.8;
+              "
+            >
+              <div>1. Already indexed? → <strong>don't change</strong></div>
+              <div>2. $0 + GPU? → <strong>Qwen3-Emb-8B</strong></div>
+              <div>
+                3. $0 without GPU? → <strong>Gemini emb-001</strong> or
+                <strong>BGE-M3</strong>
+              </div>
+              <div>
+                4. General RAG? → <strong>text-emb-3-small</strong> ($0.02)
+              </div>
+              <div>
+                5. Accuracy critical? → <strong>voyage-3-large</strong> ($0.06)
+              </div>
+              <div>6. Long docs? → <strong>Qwen3-Emb-8B</strong> (32K)</div>
+              <div>7. Code search? → <strong>Codestral Embed</strong></div>
+              <div>8. Multilingual? → <strong>NVIDIA Nemotron</strong></div>
+            </div>
+          </div>
+          <div class="card" style="border-left: 3px solid var(--amber)">
+            <div
+              style="font-weight: 700; color: var(--amber); margin-bottom: 8px"
+            >
+              Key Insights
+            </div>
+            <div
+              style="
+                font-size: 0.82rem;
+                color: var(--text-muted);
+                line-height: 1.8;
+              "
+            >
+              <div>
+                ⭐ <strong>Gemini emb-001</strong> = #1 English MTEB (68.3), 20K
+                ctx
+              </div>
+              <div>
+                ⭐ <strong>Qwen3-Emb-8B</strong> = #1 multilingual (70.6),
+                Apache 2.0, 32K
+              </div>
+              <div>
+                ⭐ <strong>NVIDIA VL</strong> = FREE on OR, 131K ctx, multimodal
+              </div>
+              <div>
+                ⭐ <strong>text-emb-3-small</strong> = sweet spot ($0.02, 62.3
+                MTEB)
+              </div>
+              <div>⚠️ Re-embedding = re-index entire corpus</div>
+              <div>⚠️ MTEB overall ≠ retrieval quality (NDCG@10)</div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- EMBEDDING USE-CASE ROUTING -->
+    <section id="emb-routing" class="fade-in">
+      <h2 class="section-title">Embedding Use-Case Routing</h2>
+      <p
+        style="
+          text-align: center;
+          color: var(--text-muted);
+          margin-bottom: 32px;
+          max-width: 700px;
+          margin-left: auto;
+          margin-right: auto;
+        "
+      >
+        Which embedding model for which use case? Best → Budget → Free.
+      </p>
+      <div style="overflow-x: auto; max-width: 1200px; margin: 0 auto">
+        <table class="king-table">
+          <thead>
+            <tr>
+              <th>Use Case</th>
+              <th>Best Model</th>
+              <th>Budget Alt</th>
+              <th>Free Alt</th>
+            </tr>
+          </thead>
+          <tbody id="embRoutingBody"></tbody>
+        </table>
+      </div>
+      <div
+        style="
+          max-width: 800px;
+          margin: 32px auto 0;
+          padding: 20px;
+          background: var(--glass);
+          border: 1px solid var(--glass-border);
+          border-radius: 12px;
+          font-size: 0.85rem;
+          line-height: 1.8;
+        "
+      >
+        <div style="font-weight: 700; color: var(--cyan); margin-bottom: 8px">
+          Decision Tree
+        </div>
+        <div>1. Multimodal (image+text)? → NVIDIA Nemotron-VL (FREE)</div>
+        <div>2. Privacy / self-host? → Qwen3-Emb-8B (Apache 2.0, 32K)</div>
+        <div>3. Docs > 32K? → NVIDIA VL (131K) or chunk + Qwen3 (32K)</div>
+        <div>4. Accuracy-critical RAG? → voyage-3-large ($0.06)</div>
+        <div>5. Multilingual? → Qwen3-Emb-8B ($0.01)</div>
+        <div>6. Code? → Codestral Embed ($0.15) or nv-embedcode (free NIM)</div>
+        <div>7. Everything else → text-emb-3-small ($0.02) — default pick</div>
+      </div>
+    </section>
+
+    <!-- FREE TASK ROUTING -->
+    <section id="free-routing" class="fade-in">
+      <h2 class="section-title">FREE Task Routing</h2>
+      <p
+        style="
+          text-align: center;
+          color: var(--text-muted);
+          margin-bottom: 32px;
+          max-width: 700px;
+          margin-left: auto;
+          margin-right: auto;
+        "
+      >
+        27 free models on OpenRouter + 5 CLI tools. Which one to use for which
+        task?
+      </p>
+      <div style="overflow-x: auto; max-width: 1200px; margin: 0 auto">
+        <table class="king-table">
+          <thead>
+            <tr>
+              <th>Task</th>
+              <th>Best FREE (OR)</th>
+              <th>Backup FREE (OR)</th>
+              <th>FREE CLI</th>
+            </tr>
+          </thead>
+          <tbody id="freeRoutingBody"></tbody>
+        </table>
+      </div>
+      <div
+        style="
+          max-width: 800px;
+          margin: 32px auto 0;
+          padding: 20px;
+          background: var(--glass);
+          border: 1px solid var(--glass-border);
+          border-radius: 12px;
+          font-size: 0.85rem;
+          line-height: 1.8;
+        "
+      >
+        <div style="font-weight: 700; color: var(--green); margin-bottom: 8px">
+          Decision: FREE FIRST → paid only when free doesn't cut it
+        </div>
+        <div>
+          • <strong>Coding:</strong> M2.5 / Qwen3 Coder → paid only for
+          Opus-level reasoning
+        </div>
+        <div>
+          • <strong>Classification:</strong> Qwen CLI (2000 RPD) → OR free for
+          parallel batches
+        </div>
+        <div>
+          • <strong>Research:</strong> Gemini CLI → Exa structured → paid OR
+          rarely needed
+        </div>
+        <div>
+          • <strong>Vision:</strong> NVIDIA Nano 12B VL → Gemini CLI → paid for
+          quality
+        </div>
+      </div>
+    </section>
+
+    <!-- PIPELINE ROUTING -->
+    <section id="routing" class="fade-in">
+      <div class="section-tag">Pipeline routing</div>
+      <h2 class="section-title">Task Routing</h2>
+      <p class="section-sub">Which model to use for each pipeline phase.</p>
+      <div class="routing-grid" id="routingGrid"></div>
+    </section>
+
+    <!-- CACHE PRICING -->
+    <section id="cache" class="fade-in">
+      <div class="section-tag">Cache pricing</div>
+      <h2 class="section-title">Cache Pricing (OpenRouter, March 2026)</h2>
+      <p class="section-sub">
+        Cache = real savings. Batch tasks with repeated system prompts reduce
+        input cost by 50–90%.
+      </p>
+      <div class="cache-grid">
+        <div class="card">
+          <div
+            style="
+              font-weight: 700;
+              font-size: 0.85rem;
+              margin-bottom: 14px;
+              color: var(--text);
+            "
+          >
+            Discount by provider
+          </div>
+          <div class="table-wrap">
+            <table class="cache-table" id="cacheProviderTable"></table>
+          </div>
+        </div>
+        <div class="card">
+          <div
+            style="
+              font-weight: 700;
+              font-size: 0.85rem;
+              margin-bottom: 14px;
+              color: var(--text);
+            "
+          >
+            Key models: input vs cached
+          </div>
+          <div class="table-wrap" style="max-height: 360px; overflow-y: auto">
+            <table class="cache-table" id="cacheModelTable"></table>
+          </div>
+          <div class="cache-tip">
+            Batch classification: 1 system prompt × 1000+ items → up to 90%
+            input savings. Always consider for batch model selection.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUICK DECISION MATRIX -->
+    <section id="matrix" class="fade-in">
+      <div class="section-tag">Quick Decision Matrix</div>
+      <h2 class="section-title">I need a model for X → use Y</h2>
+      <p class="section-sub">Fastest lookup. Verified 2026-03-29.</p>
+      <input
+        type="text"
+        class="search-box search-matrix"
+        id="matrixSearch"
+        placeholder="Filter by task..."
+      />
+      <div class="table-wrap">
+        <table class="matrix-table" id="matrixTable"></table>
+      </div>
+      <div style="margin-top: 24px" class="card-sm">
+        <div
+          style="
+            font-weight: 700;
+            font-size: 0.85rem;
+            color: var(--amber);
+            margin-bottom: 10px;
+          "
+        >
+          Practical insights (2026-03-29)
+        </div>
+        <div class="insight-list" id="insightList"></div>
+      </div>
+    </section>
+
+    <!-- LIVE BENCHMARKS -->
+    <section id="live-benchmarks" class="fade-in">
+      <div class="section-tag">Live Benchmarks</div>
+      <h2 class="section-title">What to watch in 2026</h2>
+      <p class="section-sub">
+        Only unsaturated benchmarks with real model differentiation.
+      </p>
+      <div style="margin-bottom: 32px">
+        <div
+          style="
+            font-weight: 700;
+            font-size: 0.85rem;
+            color: var(--green);
+            margin-bottom: 12px;
+          "
+        >
+          ✓ Active (not saturated)
+        </div>
+        <div class="bench-grid" id="liveBenchGrid"></div>
+      </div>
+      <div>
+        <div
+          style="
+            font-weight: 700;
+            font-size: 0.85rem;
+            color: var(--red);
+            margin-bottom: 12px;
+          "
+        >
+          ✕ Dead (ignore)
+        </div>
+        <div
+          class="card-sm"
+          style="color: var(--text-muted); font-size: 0.83rem; line-height: 1.8"
+        >
+          MMLU · HumanEval · BBH · DROP · MGSM · GSM8K · MATH (base) · HellaSwag
+          <div
+            style="
+              font-size: 0.75rem;
+              margin-top: 6px;
+              color: var(--red);
+              opacity: 0.7;
+            "
+          >
+            All models 90%+ — no separation
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- OTHER PORTALS -->
+    <!-- Other portal links removed for standalone deployment -->
+
+    <div style="height: 40px"></div>
+
+    <script>
+      // ============================================================
+      // DATA — update here (quarterly)
+      // ============================================================
+
+      const VERIFIED = "2026-03-28";
+      const NEXT_UPDATE = "2026-03-31";
+
+      // MEGA-TABLE rows
+      const MODELS = [
+        // tier, name, priceIn, priceOut, ctx, swe_v, swe_pro, gpqa, hle, arc, tau2, benchlm, bestFor
+        // TIER 1
+        {
+          tier: "1",
+          name: "Claude Opus 4.6",
+          priceIn: 5,
+          priceOut: 25,
+          ctx: "1M",
+          swe_v: 80.8,
+          swe_pro: 45.9,
+          gpqa: 91.3,
+          hle: 36.7,
+          arc: 68.8,
+          tau2: 99.3,
+          benchlm: 76,
+          best: "Reasoning, tool calling, writing",
+        },
+        {
+          tier: "1",
+          name: "Claude Opus 4.5",
+          priceIn: 5,
+          priceOut: 25,
+          ctx: "200K",
+          swe_v: 80.9,
+          swe_pro: 45.9,
+          gpqa: 87.0,
+          hle: 28.4,
+          arc: null,
+          tau2: null,
+          benchlm: 62,
+          best: "SWE coding",
+        },
+        {
+          tier: "1",
+          name: "Claude Opus 4.1",
+          priceIn: 15,
+          priceOut: 75,
+          ctx: "200K",
+          swe_v: null,
+          swe_pro: null,
+          gpqa: null,
+          hle: null,
+          arc: null,
+          tau2: null,
+          benchlm: null,
+          best: "BFCL 70.4%",
+        },
+        {
+          tier: "1",
+          name: "Gemini 3.1 Pro",
+          priceIn: 2,
+          priceOut: 12,
+          ctx: "1M",
+          swe_v: 80.6,
+          swe_pro: 43.3,
+          gpqa: 94.3,
+          hle: 37.2,
+          arc: 77.1,
+          tau2: null,
+          benchlm: 83,
+          best: "GPQA #1, ARC-AGI-2 #1",
+        },
+        {
+          tier: "1",
+          name: "Gemini 3 Pro",
+          priceIn: 2,
+          priceOut: 12,
+          ctx: "1M",
+          swe_v: 76.2,
+          swe_pro: 43.3,
+          gpqa: 91.9,
+          hle: null,
+          arc: null,
+          tau2: null,
+          benchlm: null,
+          best: "Gemini value",
+        },
+        {
+          tier: "1",
+          name: "GPT-5.4",
+          priceIn: 2.5,
+          priceOut: 15,
+          ctx: "1M",
+          swe_v: 80,
+          swe_pro: 41.8,
+          gpqa: 92.0,
+          hle: 41.6,
+          arc: 73.3,
+          tau2: null,
+          benchlm: 80,
+          best: "AIME 100%, HLE #1, SciCode #1",
+        },
+        {
+          tier: "1",
+          name: "GPT-5.2",
+          priceIn: 1.75,
+          priceOut: 14,
+          ctx: "400K",
+          swe_v: 80.0,
+          swe_pro: 41.0,
+          gpqa: 92.4,
+          hle: 35.4,
+          arc: null,
+          tau2: null,
+          benchlm: 67,
+          best: "GPQA #2, MMLU-Pro top",
+        },
+        {
+          tier: "1",
+          name: "GPT-5.3 Codex",
+          priceIn: 1.75,
+          priceOut: 14,
+          ctx: "400K",
+          swe_v: null,
+          swe_pro: 41.0,
+          gpqa: 91.5,
+          hle: 39.9,
+          arc: null,
+          tau2: null,
+          benchlm: 70,
+          best: "SWE-Pro 41%, SciCode",
+        },
+        {
+          tier: "1",
+          name: "Claude Sonnet 4.6",
+          priceIn: 3,
+          priceOut: 15,
+          ctx: "1M",
+          swe_v: 79.6,
+          swe_pro: null,
+          gpqa: 89.9,
+          hle: null,
+          arc: 58.3,
+          tau2: null,
+          benchlm: 76,
+          best: "Main coding, fast",
+        },
+        {
+          tier: "1",
+          name: "Claude Sonnet 4.5",
+          priceIn: 3,
+          priceOut: 15,
+          ctx: "1M",
+          swe_v: null,
+          swe_pro: 43.6,
+          gpqa: null,
+          hle: null,
+          arc: null,
+          tau2: null,
+          benchlm: null,
+          best: "GAIA 74.6% #1",
+        },
+        {
+          tier: "1",
+          name: "Claude Haiku 4.5",
+          priceIn: 1,
+          priceOut: 5,
+          ctx: "200K",
+          swe_v: null,
+          swe_pro: 39.5,
+          gpqa: null,
+          hle: null,
+          arc: null,
+          tau2: null,
+          benchlm: 61,
+          best: "Cheapest Claude",
+        },
+        {
+          tier: "1",
+          name: "Grok 4",
+          priceIn: 3,
+          priceOut: 15,
+          ctx: "256K",
+          swe_v: 75.0,
+          swe_pro: null,
+          gpqa: 87.5,
+          hle: 25.4,
+          arc: null,
+          tau2: null,
+          benchlm: 67,
+          best: "Hallucination resistant",
+        },
+        {
+          tier: "1",
+          name: "Grok 4.20 Beta",
+          priceIn: 2,
+          priceOut: 6,
+          ctx: "2M",
+          swe_v: null,
+          swe_pro: null,
+          gpqa: null,
+          hle: null,
+          arc: null,
+          tau2: null,
+          benchlm: null,
+          best: "Lowest hallucination, 2M ctx",
+        },
+        {
+          tier: "1",
+          name: "GLM-5",
+          priceIn: 1,
+          priceOut: 3.2,
+          ctx: "200K",
+          swe_v: 77.8,
+          swe_pro: null,
+          gpqa: 68.2,
+          hle: 30.5,
+          arc: null,
+          tau2: 98.2,
+          benchlm: null,
+          best: "Tool #1 OS, multilingual 90%",
+        },
+        {
+          tier: "1",
+          name: "GLM-5-Turbo",
+          priceIn: 1.2,
+          priceOut: 4,
+          ctx: "203K",
+          swe_v: null,
+          swe_pro: null,
+          gpqa: null,
+          hle: null,
+          arc: null,
+          tau2: null,
+          benchlm: null,
+          best: "Tool err 0.67%, lowest",
+        },
+        {
+          tier: "1",
+          name: "Gemini 2.5 Pro",
+          priceIn: 1.25,
+          priceOut: 10,
+          ctx: "1M",
+          swe_v: null,
+          swe_pro: null,
+          gpqa: 86.4,
+          hle: 21.6,
+          arc: null,
+          tau2: null,
+          benchlm: null,
+          best: "GRIND 82.1%",
+        },
+        {
+          tier: "1",
+          name: "Amazon Nova Premier",
+          priceIn: 2.5,
+          priceOut: 12.5,
+          ctx: "1M",
+          swe_v: null,
+          swe_pro: null,
+          gpqa: null,
+          hle: null,
+          arc: null,
+          tau2: null,
+          benchlm: null,
+          best: "AWS enterprise",
+        },
+        {
+          tier: "1",
+          name: "Cohere Command-A",
+          priceIn: 2.5,
+          priceOut: 10,
+          ctx: "256K",
+          swe_v: null,
+          swe_pro: null,
+          gpqa: null,
+          hle: null,
+          arc: null,
+          tau2: null,
+          benchlm: null,
+          best: "Enterprise RAG",
+        },
+        // TIER 2
+        {
+          tier: "2",
+          name: "MiniMax M2.5",
+          priceIn: 0.2,
+          priceOut: 1.17,
+          ctx: "197K",
+          swe_v: 80.2,
+          swe_pro: 36.8,
+          gpqa: 47,
+          hle: 32,
+          arc: null,
+          tau2: null,
+          benchlm: null,
+          best: "⭐ Best SWE/$, BrowseComp 76.3%",
+        },
+        {
+          tier: "2",
+          name: "MiniMax M2.7",
+          priceIn: 0.3,
+          priceOut: 1.2,
+          ctx: "205K",
+          swe_v: null,
+          swe_pro: 56.2,
+          gpqa: null,
+          hle: null,
+          arc: null,
+          tau2: null,
+          benchlm: null,
+          best: "Agentic GDPval 1495",
+        },
+        {
+          tier: "2",
+          name: "Kimi K2.5",
+          priceIn: 0.45,
+          priceOut: 2.2,
+          ctx: "262K",
+          swe_v: 76.8,
+          swe_pro: null,
+          gpqa: 87.6,
+          hle: 31.5,
+          arc: null,
+          tau2: null,
+          benchlm: null,
+          best: "Vision + reasoning",
+        },
+        {
+          tier: "2",
+          name: "Kimi K2",
+          priceIn: 0.4,
+          priceOut: 2,
+          ctx: "131K",
+          swe_v: null,
+          swe_pro: 27.7,
+          gpqa: null,
+          hle: null,
+          arc: null,
+          tau2: null,
+          benchlm: null,
+          best: "Budget Kimi",
+        },
+        {
+          tier: "2",
+          name: "GLM-4.7",
+          priceIn: 0.39,
+          priceOut: 1.75,
+          ctx: "203K",
+          swe_v: null,
+          swe_pro: null,
+          gpqa: null,
+          hle: null,
+          arc: null,
+          tau2: 95.9,
+          benchlm: null,
+          best: "Tool calling #2",
+        },
+        {
+          tier: "2",
+          name: "GLM-4.6",
+          priceIn: 0.39,
+          priceOut: 1.9,
+          ctx: "205K",
+          swe_v: 68.0,
+          swe_pro: null,
+          gpqa: 81.0,
+          hle: null,
+          arc: null,
+          tau2: null,
+          benchlm: null,
+          best: "Vision+video input",
+        },
+        {
+          tier: "2",
+          name: "GLM-4.5",
+          priceIn: 0.6,
+          priceOut: 2.2,
+          ctx: "131K",
+          swe_v: null,
+          swe_pro: null,
+          gpqa: null,
+          hle: null,
+          arc: null,
+          tau2: null,
+          benchlm: null,
+          best: "BFCL 72%, function calling",
+        },
+        {
+          tier: "2",
+          name: "Qwen3.5-397B",
+          priceIn: 0.39,
+          priceOut: 2.34,
+          ctx: "262K",
+          swe_v: 76.4,
+          swe_pro: 38.7,
+          gpqa: 88.4,
+          hle: null,
+          arc: null,
+          tau2: null,
+          benchlm: null,
+          best: "IFBench 78.8%, instruction #1",
+        },
+        {
+          tier: "2",
+          name: "Qwen3.5-122B",
+          priceIn: 0.26,
+          priceOut: 2.08,
+          ctx: "262K",
+          swe_v: 72.0,
+          swe_pro: null,
+          gpqa: 86.6,
+          hle: null,
+          arc: null,
+          tau2: null,
+          benchlm: null,
+          best: "Budget reasoning",
+        },
+        {
+          tier: "2",
+          name: "Qwen3.5-35B",
+          priceIn: 0.16,
+          priceOut: 1.3,
+          ctx: "262K",
+          swe_v: 69.2,
+          swe_pro: null,
+          gpqa: 84.2,
+          hle: null,
+          arc: null,
+          tau2: null,
+          benchlm: null,
+          best: "MMLU-Pro 85.3",
+        },
+        {
+          tier: "2",
+          name: "Qwen3-Coder",
+          priceIn: 0.22,
+          priceOut: 1,
+          ctx: "262K",
+          swe_v: null,
+          swe_pro: null,
+          gpqa: null,
+          hle: null,
+          arc: null,
+          tau2: null,
+          benchlm: null,
+          best: "Coding, 90% cache disc.",
+        },
+        {
+          tier: "2",
+          name: "Qwen3-Coder-Plus",
+          priceIn: 0.65,
+          priceOut: 3.25,
+          ctx: "1M",
+          swe_v: null,
+          swe_pro: null,
+          gpqa: null,
+          hle: null,
+          arc: null,
+          tau2: null,
+          benchlm: null,
+          best: "Long ctx code",
+        },
+        {
+          tier: "2",
+          name: "DeepSeek V3.2",
+          priceIn: 0.26,
+          priceOut: 0.38,
+          ctx: "164K",
+          swe_v: 73,
+          swe_pro: 29.9,
+          gpqa: null,
+          hle: 25.1,
+          arc: null,
+          tau2: null,
+          benchlm: null,
+          best: "Cheapest quality, consilium",
+        },
+        {
+          tier: "2",
+          name: "DeepSeek R1",
+          priceIn: 0.45,
+          priceOut: 2.15,
+          ctx: "164K",
+          swe_v: null,
+          swe_pro: null,
+          gpqa: null,
+          hle: null,
+          arc: null,
+          tau2: null,
+          benchlm: null,
+          best: "Deep reasoning",
+        },
+        {
+          tier: "2",
+          name: "Grok 4.1 Fast",
+          priceIn: 0.2,
+          priceOut: 0.5,
+          ctx: "2M",
+          swe_v: null,
+          swe_pro: null,
+          gpqa: null,
+          hle: null,
+          arc: null,
+          tau2: null,
+          benchlm: null,
+          best: "Consilium, 2M ctx",
+        },
+        {
+          tier: "2",
+          name: "Grok 4 Fast",
+          priceIn: 0.2,
+          priceOut: 0.5,
+          ctx: "2M",
+          swe_v: null,
+          swe_pro: null,
+          gpqa: null,
+          hle: null,
+          arc: null,
+          tau2: null,
+          benchlm: null,
+          best: "Classification",
+        },
+        {
+          tier: "2",
+          name: "Grok Code Fast 1",
+          priceIn: 0.2,
+          priceOut: 1.5,
+          ctx: "256K",
+          swe_v: null,
+          swe_pro: null,
+          gpqa: null,
+          hle: null,
+          arc: null,
+          tau2: null,
+          benchlm: null,
+          best: "Code review budget",
+        },
+        {
+          tier: "2",
+          name: "Gemini 3 Flash",
+          priceIn: 0.5,
+          priceOut: 3,
+          ctx: "1M",
+          swe_v: 78.0,
+          swe_pro: 34.6,
+          gpqa: 90.4,
+          hle: null,
+          arc: null,
+          tau2: null,
+          benchlm: null,
+          best: "Fast + cheap Gemini",
+        },
+        {
+          tier: "2",
+          name: "Gemini 2.5 Flash",
+          priceIn: 0.3,
+          priceOut: 2.5,
+          ctx: "1M",
+          swe_v: null,
+          swe_pro: null,
+          gpqa: null,
+          hle: null,
+          arc: null,
+          tau2: null,
+          benchlm: null,
+          best: "Budget Gemini",
+        },
+        {
+          tier: "2",
+          name: "Amazon Nova Pro",
+          priceIn: 0.8,
+          priceOut: 3.2,
+          ctx: "300K",
+          swe_v: null,
+          swe_pro: null,
+          gpqa: null,
+          hle: null,
+          arc: null,
+          tau2: null,
+          benchlm: null,
+          best: "Vision, AWS",
+        },
+        {
+          tier: "2",
+          name: "MiniMax M1",
+          priceIn: 0.4,
+          priceOut: 2.2,
+          ctx: "1M",
+          swe_v: null,
+          swe_pro: null,
+          gpqa: null,
+          hle: null,
+          arc: null,
+          tau2: null,
+          benchlm: null,
+          best: "Long context",
+        },
+        {
+          tier: "2",
+          name: "MiniMax 01",
+          priceIn: 0.2,
+          priceOut: 1.1,
+          ctx: "1M",
+          swe_v: null,
+          swe_pro: null,
+          gpqa: null,
+          hle: null,
+          arc: null,
+          tau2: null,
+          benchlm: null,
+          best: "Vision + 1M",
+        },
+        {
+          tier: "2",
+          name: "Mistral Large 2512",
+          priceIn: 0.5,
+          priceOut: 1.5,
+          ctx: "262K",
+          swe_v: null,
+          swe_pro: null,
+          gpqa: null,
+          hle: null,
+          arc: null,
+          tau2: null,
+          benchlm: null,
+          best: "EU, vision",
+        },
+        {
+          tier: "2",
+          name: "Codestral",
+          priceIn: 0.3,
+          priceOut: 0.9,
+          ctx: "256K",
+          swe_v: null,
+          swe_pro: null,
+          gpqa: null,
+          hle: null,
+          arc: null,
+          tau2: null,
+          benchlm: null,
+          best: "Code EU",
+        },
+        {
+          tier: "2",
+          name: "Devstral Medium",
+          priceIn: 0.4,
+          priceOut: 2,
+          ctx: "131K",
+          swe_v: null,
+          swe_pro: null,
+          gpqa: null,
+          hle: null,
+          arc: null,
+          tau2: null,
+          benchlm: null,
+          best: "Code agent EU",
+        },
+        {
+          tier: "2",
+          name: "Llama 4 Maverick",
+          priceIn: null,
+          priceOut: null,
+          ctx: "1M",
+          swe_v: null,
+          swe_pro: null,
+          gpqa: 69.8,
+          hle: null,
+          arc: null,
+          tau2: null,
+          benchlm: null,
+          best: "MMLU-Pro 80.5, vision",
+        },
+        {
+          tier: "2",
+          name: "GLM-4.6V",
+          priceIn: 0.3,
+          priceOut: 0.9,
+          ctx: "131K",
+          swe_v: null,
+          swe_pro: null,
+          gpqa: null,
+          hle: null,
+          arc: null,
+          tau2: null,
+          benchlm: null,
+          best: "Vision+VIDEO input",
+        },
+        // TIER 3
+        {
+          tier: "3",
+          name: "Qwen3.5-27B",
+          priceIn: 0.2,
+          priceOut: 1.56,
+          ctx: "262K",
+          swe_v: null,
+          swe_pro: null,
+          gpqa: null,
+          hle: null,
+          arc: null,
+          tau2: null,
+          benchlm: null,
+          best: "Vision+video",
+        },
+        {
+          tier: "3",
+          name: "GLM-4.5 Air",
+          priceIn: 0.13,
+          priceOut: 0.85,
+          ctx: "131K",
+          swe_v: null,
+          swe_pro: null,
+          gpqa: null,
+          hle: null,
+          arc: null,
+          tau2: null,
+          benchlm: null,
+          best: "Budget GLM",
+        },
+        {
+          tier: "3",
+          name: "Qwen Plus",
+          priceIn: 0.26,
+          priceOut: 0.78,
+          ctx: "1M",
+          swe_v: null,
+          swe_pro: null,
+          gpqa: null,
+          hle: null,
+          arc: null,
+          tau2: null,
+          benchlm: null,
+          best: "1M context",
+        },
+        {
+          tier: "3",
+          name: "Llama 4 Scout",
+          priceIn: 0.08,
+          priceOut: 0.3,
+          ctx: "10M",
+          swe_v: null,
+          swe_pro: null,
+          gpqa: 57.2,
+          hle: null,
+          arc: null,
+          tau2: null,
+          benchlm: null,
+          best: "10M ctx! MMLU-Pro 74.3",
+        },
+        {
+          tier: "3",
+          name: "GLM-4.7-FlashX",
+          priceIn: 0.06,
+          priceOut: 0.4,
+          ctx: "203K",
+          swe_v: null,
+          swe_pro: null,
+          gpqa: null,
+          hle: null,
+          arc: null,
+          tau2: 98.8,
+          benchlm: null,
+          best: "Tau2 98.8%, ultra-cheap tools",
+        },
+        {
+          tier: "3",
+          name: "GLM-4-32B",
+          priceIn: 0.1,
+          priceOut: 0.1,
+          ctx: "128K",
+          swe_v: null,
+          swe_pro: null,
+          gpqa: null,
+          hle: null,
+          arc: null,
+          tau2: null,
+          benchlm: null,
+          best: "Open-weight 32B",
+        },
+        {
+          tier: "3",
+          name: "Qwen3.5-Flash",
+          priceIn: 0.07,
+          priceOut: 0.26,
+          ctx: "1M",
+          swe_v: null,
+          swe_pro: null,
+          gpqa: null,
+          hle: null,
+          arc: null,
+          tau2: null,
+          benchlm: null,
+          best: "1M context!",
+        },
+        {
+          tier: "3",
+          name: "Qwen3.5-9B",
+          priceIn: 0.05,
+          priceOut: 0.15,
+          ctx: "256K",
+          swe_v: null,
+          swe_pro: null,
+          gpqa: null,
+          hle: null,
+          arc: null,
+          tau2: null,
+          benchlm: null,
+          best: "Tiny + vision+video",
+        },
+        {
+          tier: "3",
+          name: "Qwen Turbo",
+          priceIn: 0.03,
+          priceOut: 0.13,
+          ctx: "131K",
+          swe_v: null,
+          swe_pro: null,
+          gpqa: null,
+          hle: null,
+          arc: null,
+          tau2: null,
+          benchlm: null,
+          best: "Cheapest Qwen",
+        },
+        {
+          tier: "3",
+          name: "Gemini 2.5 Flash Lite",
+          priceIn: 0.1,
+          priceOut: 0.4,
+          ctx: "1M",
+          swe_v: null,
+          swe_pro: null,
+          gpqa: null,
+          hle: null,
+          arc: null,
+          tau2: null,
+          benchlm: null,
+          best: "Cheapest Gemini, 1M",
+        },
+        {
+          tier: "3",
+          name: "Gemini 2.0 Flash",
+          priceIn: 0.1,
+          priceOut: 0.4,
+          ctx: "1M",
+          swe_v: null,
+          swe_pro: null,
+          gpqa: null,
+          hle: null,
+          arc: null,
+          tau2: null,
+          benchlm: null,
+          best: "Multimodal",
+        },
+        {
+          tier: "3",
+          name: "DeepSeek V3.1",
+          priceIn: 0.15,
+          priceOut: 0.75,
+          ctx: "33K",
+          swe_v: null,
+          swe_pro: null,
+          gpqa: null,
+          hle: null,
+          arc: null,
+          tau2: null,
+          benchlm: null,
+          best: "Budget DeepSeek",
+        },
+        {
+          tier: "3",
+          name: "Amazon Nova Micro",
+          priceIn: 0.04,
+          priceOut: 0.14,
+          ctx: "128K",
+          swe_v: null,
+          swe_pro: null,
+          gpqa: null,
+          hle: null,
+          arc: null,
+          tau2: null,
+          benchlm: null,
+          best: "Cheapest AWS",
+        },
+        {
+          tier: "3",
+          name: "Amazon Nova Lite",
+          priceIn: 0.06,
+          priceOut: 0.24,
+          ctx: "300K",
+          swe_v: null,
+          swe_pro: null,
+          gpqa: null,
+          hle: null,
+          arc: null,
+          tau2: null,
+          benchlm: null,
+          best: "Vision, 300K",
+        },
+        {
+          tier: "3",
+          name: "Mistral Small 3.2",
+          priceIn: 0.07,
+          priceOut: 0.2,
+          ctx: "128K",
+          swe_v: null,
+          swe_pro: null,
+          gpqa: null,
+          hle: null,
+          arc: null,
+          tau2: null,
+          benchlm: null,
+          best: "Vision, tiny EU",
+        },
+        {
+          tier: "3",
+          name: "Mistral Small 3.1",
+          priceIn: 0.03,
+          priceOut: 0.11,
+          ctx: "131K",
+          swe_v: null,
+          swe_pro: null,
+          gpqa: null,
+          hle: null,
+          arc: null,
+          tau2: null,
+          benchlm: null,
+          best: "Vision, cheapest EU",
+        },
+        {
+          tier: "3",
+          name: "Mistral Nemo",
+          priceIn: 0.02,
+          priceOut: 0.04,
+          ctx: "131K",
+          swe_v: null,
+          swe_pro: null,
+          gpqa: null,
+          hle: null,
+          arc: null,
+          tau2: null,
+          benchlm: null,
+          best: "Cheapest text EU",
+        },
+        {
+          tier: "3",
+          name: "Devstral Small",
+          priceIn: 0.1,
+          priceOut: 0.3,
+          ctx: "131K",
+          swe_v: null,
+          swe_pro: null,
+          gpqa: null,
+          hle: null,
+          arc: null,
+          tau2: null,
+          benchlm: null,
+          best: "Code budget EU",
+        },
+        {
+          tier: "3",
+          name: "Google Gemma 3 27B",
+          priceIn: 0.08,
+          priceOut: 0.16,
+          ctx: "131K",
+          swe_v: null,
+          swe_pro: null,
+          gpqa: null,
+          hle: null,
+          arc: null,
+          tau2: null,
+          benchlm: null,
+          best: "Open, vision",
+        },
+        // FREE-A: Frontier-class
+        {
+          tier: "free",
+          name: "MiniMax M2.5 FREE",
+          priceIn: 0,
+          priceOut: 0,
+          ctx: "197K",
+          swe_v: 80.2,
+          swe_pro: null,
+          gpqa: null,
+          hle: null,
+          arc: null,
+          tau2: null,
+          benchlm: null,
+          best: "⭐ Batch coding, SWE 80.2%",
+        },
+        {
+          tier: "free",
+          name: "Qwen3 Coder 480B",
+          priceIn: 0,
+          priceOut: 0,
+          ctx: "262K",
+          swe_v: null,
+          swe_pro: null,
+          gpqa: null,
+          hle: null,
+          arc: null,
+          tau2: null,
+          benchlm: null,
+          best: "⭐ Coding, 480B MoE",
+        },
+        {
+          tier: "free",
+          name: "Hermes 3 405B",
+          priceIn: 0,
+          priceOut: 0,
+          ctx: "131K",
+          swe_v: null,
+          swe_pro: null,
+          gpqa: null,
+          hle: null,
+          arc: null,
+          tau2: null,
+          benchlm: null,
+          best: "Reasoning, uncensored, 405B",
+        },
+        {
+          tier: "free",
+          name: "NVIDIA Nemotron 3 Super",
+          priceIn: 0,
+          priceOut: 0,
+          ctx: "262K",
+          swe_v: null,
+          swe_pro: null,
+          gpqa: null,
+          hle: null,
+          arc: null,
+          tau2: null,
+          benchlm: null,
+          best: "Long-context reasoning, 120B MoE",
+        },
+        // FREE-B: Strong mid-tier
+        {
+          tier: "free",
+          name: "GLM-4.5 Air FREE",
+          priceIn: 0,
+          priceOut: 0,
+          ctx: "131K",
+          swe_v: null,
+          swe_pro: null,
+          gpqa: null,
+          hle: null,
+          arc: null,
+          tau2: null,
+          benchlm: null,
+          best: "Batch general, Chinese+English",
+        },
+        {
+          tier: "free",
+          name: "Gemma 3 27B",
+          priceIn: 0,
+          priceOut: 0,
+          ctx: "131K",
+          swe_v: null,
+          swe_pro: null,
+          gpqa: null,
+          hle: null,
+          arc: null,
+          tau2: null,
+          benchlm: null,
+          best: "General, Google quality",
+        },
+        {
+          tier: "free",
+          name: "Llama 3.3 70B",
+          priceIn: 0,
+          priceOut: 0,
+          ctx: "65K",
+          swe_v: null,
+          swe_pro: null,
+          gpqa: null,
+          hle: null,
+          arc: null,
+          tau2: null,
+          benchlm: null,
+          best: "General purpose, proven",
+        },
+        {
+          tier: "free",
+          name: "Mistral Small 3.1 24B",
+          priceIn: 0,
+          priceOut: 0,
+          ctx: "128K",
+          swe_v: null,
+          swe_pro: null,
+          gpqa: null,
+          hle: null,
+          arc: null,
+          tau2: null,
+          benchlm: null,
+          best: "EU compliance, multilingual",
+        },
+        {
+          tier: "free",
+          name: "StepFun Step 3.5 Flash",
+          priceIn: 0,
+          priceOut: 0,
+          ctx: "256K",
+          swe_v: null,
+          swe_pro: null,
+          gpqa: null,
+          hle: null,
+          arc: null,
+          tau2: null,
+          benchlm: null,
+          best: "Chinese, 256K ctx",
+        },
+        {
+          tier: "free",
+          name: "Qwen3 Next 80B",
+          priceIn: 0,
+          priceOut: 0,
+          ctx: "262K",
+          swe_v: null,
+          swe_pro: null,
+          gpqa: null,
+          hle: null,
+          arc: null,
+          tau2: null,
+          benchlm: null,
+          best: "Ultra-long ctx, 3B active",
+        },
+        {
+          tier: "free",
+          name: "OpenAI gpt-oss-120B",
+          priceIn: 0,
+          priceOut: 0,
+          ctx: "131K",
+          swe_v: null,
+          swe_pro: null,
+          gpqa: null,
+          hle: null,
+          arc: null,
+          tau2: null,
+          benchlm: null,
+          best: "OpenAI open-source experiment",
+        },
+        {
+          tier: "free",
+          name: "OpenAI gpt-oss-20B",
+          priceIn: 0,
+          priceOut: 0,
+          ctx: "131K",
+          swe_v: null,
+          swe_pro: null,
+          gpqa: null,
+          hle: null,
+          arc: null,
+          tau2: null,
+          benchlm: null,
+          best: "Lightweight OpenAI OSS",
+        },
+        {
+          tier: "free",
+          name: "Arcee Trinity Large",
+          priceIn: 0,
+          priceOut: 0,
+          ctx: "131K",
+          swe_v: null,
+          swe_pro: null,
+          gpqa: null,
+          hle: null,
+          arc: null,
+          tau2: null,
+          benchlm: null,
+          best: "Enterprise merge model",
+        },
+        // FREE-C: Small / edge / specialized
+        {
+          tier: "free",
+          name: "NVIDIA Nemotron Nano 12B VL",
+          priceIn: 0,
+          priceOut: 0,
+          ctx: "128K",
+          swe_v: null,
+          swe_pro: null,
+          gpqa: null,
+          hle: null,
+          arc: null,
+          tau2: null,
+          benchlm: null,
+          best: "⭐ FREE vision model",
+        },
+        {
+          tier: "free",
+          name: "NVIDIA Nemotron Nano 9B",
+          priceIn: 0,
+          priceOut: 0,
+          ctx: "128K",
+          swe_v: null,
+          swe_pro: null,
+          gpqa: null,
+          hle: null,
+          arc: null,
+          tau2: null,
+          benchlm: null,
+          best: "Lightweight NVIDIA",
+        },
+        {
+          tier: "free",
+          name: "NVIDIA Nemotron 3 Nano 30B",
+          priceIn: 0,
+          priceOut: 0,
+          ctx: "256K",
+          swe_v: null,
+          swe_pro: null,
+          gpqa: null,
+          hle: null,
+          arc: null,
+          tau2: null,
+          benchlm: null,
+          best: "MoE 3B active, 256K ctx",
+        },
+        {
+          tier: "free",
+          name: "Gemma 3 12B",
+          priceIn: 0,
+          priceOut: 0,
+          ctx: "32K",
+          swe_v: null,
+          swe_pro: null,
+          gpqa: null,
+          hle: null,
+          arc: null,
+          tau2: null,
+          benchlm: null,
+          best: "Small general",
+        },
+        {
+          tier: "free",
+          name: "Gemma 3 4B",
+          priceIn: 0,
+          priceOut: 0,
+          ctx: "32K",
+          swe_v: null,
+          swe_pro: null,
+          gpqa: null,
+          hle: null,
+          arc: null,
+          tau2: null,
+          benchlm: null,
+          best: "Edge, mobile",
+        },
+        {
+          tier: "free",
+          name: "Gemma 3n 4B",
+          priceIn: 0,
+          priceOut: 0,
+          ctx: "8K",
+          swe_v: null,
+          swe_pro: null,
+          gpqa: null,
+          hle: null,
+          arc: null,
+          tau2: null,
+          benchlm: null,
+          best: "Ultra-small, edge",
+        },
+        {
+          tier: "free",
+          name: "Gemma 3n 2B",
+          priceIn: 0,
+          priceOut: 0,
+          ctx: "8K",
+          swe_v: null,
+          swe_pro: null,
+          gpqa: null,
+          hle: null,
+          arc: null,
+          tau2: null,
+          benchlm: null,
+          best: "Prototype, IoT",
+        },
+        {
+          tier: "free",
+          name: "Qwen3 4B",
+          priceIn: 0,
+          priceOut: 0,
+          ctx: "40K",
+          swe_v: null,
+          swe_pro: null,
+          gpqa: null,
+          hle: null,
+          arc: null,
+          tau2: null,
+          benchlm: null,
+          best: "Lightweight tasks",
+        },
+        {
+          tier: "free",
+          name: "Llama 3.2 3B",
+          priceIn: 0,
+          priceOut: 0,
+          ctx: "131K",
+          swe_v: null,
+          swe_pro: null,
+          gpqa: null,
+          hle: null,
+          arc: null,
+          tau2: null,
+          benchlm: null,
+          best: "Small with long ctx",
+        },
+        {
+          tier: "free",
+          name: "Arcee Trinity Mini",
+          priceIn: 0,
+          priceOut: 0,
+          ctx: "131K",
+          swe_v: null,
+          swe_pro: null,
+          gpqa: null,
+          hle: null,
+          arc: null,
+          tau2: null,
+          benchlm: null,
+          best: "Lightweight merge",
+        },
+        {
+          tier: "free",
+          name: "Liquid LFM 1.2B Thinking",
+          priceIn: 0,
+          priceOut: 0,
+          ctx: "32K",
+          swe_v: null,
+          swe_pro: null,
+          gpqa: null,
+          hle: null,
+          arc: null,
+          tau2: null,
+          benchlm: null,
+          best: "⭐ Thinking at 1.2B!",
+        },
+        {
+          tier: "free",
+          name: "Liquid LFM 1.2B Instruct",
+          priceIn: 0,
+          priceOut: 0,
+          ctx: "32K",
+          swe_v: null,
+          swe_pro: null,
+          gpqa: null,
+          hle: null,
+          arc: null,
+          tau2: null,
+          benchlm: null,
+          best: "Ultra-small instruct",
+        },
+        {
+          tier: "free",
+          name: "Venice Uncensored",
+          priceIn: 0,
+          priceOut: 0,
+          ctx: "32K",
+          swe_v: null,
+          swe_pro: null,
+          gpqa: null,
+          hle: null,
+          arc: null,
+          tau2: null,
+          benchlm: null,
+          best: "No content filter",
+        },
+        // FREE-R: Router
+        {
+          tier: "free",
+          name: "Free Models Router",
+          priceIn: 0,
+          priceOut: 0,
+          ctx: "200K",
+          swe_v: null,
+          swe_pro: null,
+          gpqa: null,
+          hle: null,
+          arc: null,
+          tau2: null,
+          benchlm: null,
+          best: "Auto-routes to best free",
+        },
+        // FREE-CLI: Subscription-powered
+        {
+          tier: "free",
+          name: "GLM-4.7-Flash (Z.ai)",
+          priceIn: 0,
+          priceOut: 0,
+          ctx: "200K",
+          swe_v: null,
+          swe_pro: null,
+          gpqa: null,
+          hle: null,
+          arc: null,
+          tau2: 98.8,
+          benchlm: null,
+          best: "⭐ Tool calling free",
+        },
+        {
+          tier: "free",
+          name: "GLM-4.5-Flash (Z.ai)",
+          priceIn: 0,
+          priceOut: 0,
+          ctx: null,
+          swe_v: null,
+          swe_pro: null,
+          gpqa: null,
+          hle: null,
+          arc: null,
+          tau2: null,
+          benchlm: null,
+          best: "Simple tasks",
+        },
+        {
+          tier: "free",
+          name: "Qwen CLI",
+          priceIn: 0,
+          priceOut: 0,
+          ctx: "1M",
+          swe_v: null,
+          swe_pro: null,
+          gpqa: null,
+          hle: null,
+          arc: null,
+          tau2: null,
+          benchlm: null,
+          best: "⭐ Classification, 2000RPD",
+        },
+        {
+          tier: "free",
+          name: "Codex CLI",
+          priceIn: 0,
+          priceOut: 0,
+          ctx: null,
+          swe_v: null,
+          swe_pro: null,
+          gpqa: null,
+          hle: null,
+          arc: null,
+          tau2: null,
+          benchlm: null,
+          best: "Code review free",
+        },
+        {
+          tier: "free",
+          name: "Gemini CLI",
+          priceIn: 0,
+          priceOut: 0,
+          ctx: "2M",
+          swe_v: null,
+          swe_pro: null,
+          gpqa: null,
+          hle: null,
+          arc: null,
+          tau2: null,
+          benchlm: null,
+          best: "⭐ Research free, 2M ctx",
+        },
+      ];
+
+      // Column max values for colorization
+      const COL_MAX = {
+        swe_v: 81,
+        swe_pro: 57,
+        gpqa: 95,
+        hle: 42,
+        arc: 78,
+        tau2: 100,
+        benchlm: 85,
+      };
+
+      // KING by category data
+      const KING_GROUPS = [
+        {
+          letter: "A",
+          title: "Coding & Software Engineering",
+          rows: [
+            {
+              cat: "Coding general",
+              bench: "SWE-V",
+              q1: "Opus 4.6 (80.8%)",
+              q2: "Gemini 3.1 (80.6%)",
+              b1: "MiniMax M2.5 (80.2%, $0.20)",
+              b2: "Sonnet 4.6 (79.6%, $3)",
+              free: "M2.5 FREE",
+            },
+            {
+              cat: "Coding uncontaminated",
+              bench: "SWE-Pro",
+              q1: "Opus 4.5 (45.9%)",
+              q2: "Sonnet 4.5 (43.6%)",
+              b1: "Qwen3.5-397B (38.7%, $0.39)",
+              b2: "MiniMax M2.5 (36.8%)",
+              free: "—",
+            },
+            {
+              cat: "Code generation",
+              bench: "SWE-Bench",
+              q1: "GPT-5.3 Codex",
+              q2: "GLM-5",
+              b1: "GLM-5 ($1)",
+              b2: "Kimi K2.5 ($0.45)",
+              free: "—",
+            },
+            {
+              cat: "Scientific coding",
+              bench: "SciCode",
+              q1: "GPT-5.4 (56.6%)",
+              q2: "Gemini 3.1 (56.1%)",
+              b1: "—",
+              b2: "—",
+              free: "—",
+            },
+            {
+              cat: "Agentic coding",
+              bench: "Terminal-B2",
+              q1: "GPT-5.4 (57.6%)",
+              q2: "GLM-5 (56.2%)",
+              b1: "MiniMax M2.7 (56.2%, $0.30)",
+              b2: "GLM-5 ($1)",
+              free: "—",
+            },
+            {
+              cat: "Code review",
+              bench: "practical",
+              q1: "Opus 4.6",
+              q2: "Sonnet 4.6",
+              b1: "Grok Code Fast 1 ($0.20)",
+              b2: "MiniMax M2.5 ($0.20)",
+              free: "Codex CLI",
+            },
+          ],
+        },
+        {
+          letter: "B",
+          title: "Reasoning & Knowledge",
+          rows: [
+            {
+              cat: "Graduate science",
+              bench: "GPQA",
+              q1: "Gemini 3.1 (94.3%)",
+              q2: "GPT-5.2 (92.4%)",
+              b1: "Qwen3.5-397B (88.4%, $0.39)",
+              b2: "Kimi K2.5 (87.6%, $0.45)",
+              free: "—",
+            },
+            {
+              cat: "Hardest reasoning",
+              bench: "HLE",
+              q1: "GPT-5.4 (41.6%)",
+              q2: "Gemini 3.1 (37.2%)",
+              b1: "MiniMax M2.5 (32%, $0.20)",
+              b2: "Kimi K2.5 (31.5%, $0.45)",
+              free: "—",
+            },
+            {
+              cat: "Abstract reasoning",
+              bench: "ARC-AGI-2",
+              q1: "Gemini 3.1 (77.1%)",
+              q2: "GPT-5.4 (73.3%)",
+              b1: "—",
+              b2: "—",
+              free: "—",
+            },
+            {
+              cat: "Math competition",
+              bench: "AIME 2025",
+              q1: "GPT-5.4 (100%)",
+              q2: "Gemini 3.1 (92%)",
+              b1: "GLM-5 (84%, $1)",
+              b2: "Kimi K2.5 ($0.45)",
+              free: "—",
+            },
+            {
+              cat: "Adaptive reasoning",
+              bench: "GRIND",
+              q1: "Gemini 2.5 Pro (82.1%)",
+              q2: "Sonnet 4 (75%)",
+              b1: "—",
+              b2: "—",
+              free: "—",
+            },
+            {
+              cat: "General knowledge",
+              bench: "MMLU-Pro",
+              q1: "GPT-5.2",
+              q2: "Gemini 3.1",
+              b1: "Qwen3.5-397B ($0.39)",
+              b2: "GLM-5 ($1)",
+              free: "—",
+            },
+          ],
+        },
+        {
+          letter: "C",
+          title: "Tool Calling & Agents",
+          rows: [
+            {
+              cat: "Function calling",
+              bench: "BFCL",
+              q1: "GLM-4.5 (72.0%)",
+              q2: "Opus 4.1 (70.4%)",
+              b1: "GLM-4.5 ($0.60)",
+              b2: "GLM-4.7 ($0.39)",
+              free: "—",
+            },
+            {
+              cat: "Multi-turn tools",
+              bench: "Tau2",
+              q1: "Opus 4.6 (99.3%)",
+              q2: "GLM-5 (98.2%)",
+              b1: "GLM-4.7 (95.9%, $0.39)",
+              b2: "GLM-4.7-FlashX ($0.06)",
+              free: "GLM-4.7-Flash",
+            },
+            {
+              cat: "Tool reliability",
+              bench: "err rate",
+              q1: "GLM-5-Turbo (0.67%)",
+              q2: "Claude (<1%)",
+              b1: "GLM-5-Turbo ($1.20)",
+              b2: "GLM-4.7 ($0.39)",
+              free: "—",
+            },
+            {
+              cat: "General assistant",
+              bench: "GAIA",
+              q1: "Sonnet 4.5 (74.6%)",
+              q2: "Opus 4.6",
+              b1: "—",
+              b2: "—",
+              free: "—",
+            },
+            {
+              cat: "Real-world work",
+              bench: "GDPval",
+              q1: "Opus 4.6 (~1500+)",
+              q2: "MiniMax M2.7 (1495)",
+              b1: "MiniMax M2.7 ($0.30)",
+              b2: "GLM-5 ($1)",
+              free: "—",
+            },
+            {
+              cat: "Long-horizon",
+              bench: "Vending B2",
+              q1: "Opus 4.5",
+              q2: "GLM-5 (#1 OS)",
+              b1: "GLM-5 ($1)",
+              b2: "MiniMax M2.7 ($0.30)",
+              free: "—",
+            },
+          ],
+        },
+        {
+          letter: "D",
+          title: "Content & Communication",
+          rows: [
+            {
+              cat: "Instruction follow",
+              bench: "IFBench",
+              q1: "Qwen3.5-397B (78.8%)",
+              q2: "Gemini 3 Flash (78.0%)",
+              b1: "Qwen3.5-397B ($0.39)",
+              b2: "GLM-5 (88% IFEval, $1)",
+              free: "—",
+            },
+            {
+              cat: "Hallucination resist",
+              bench: "SimpleQA",
+              q1: "Grok 4.20 (lowest)",
+              q2: "Opus 4.6",
+              b1: "GLM-5 (48%, $1)",
+              b2: "DeepSeek V3.2 ($0.26)",
+              free: "—",
+            },
+            {
+              cat: "Writing quality",
+              bench: "human pref",
+              q1: "Opus 4.6",
+              q2: "GPT-5.4",
+              b1: "Kimi K2.5 ($0.45)",
+              b2: "MiniMax M2.5 ($0.20)",
+              free: "M2.5 FREE",
+            },
+            {
+              cat: "Chat preference",
+              bench: "LMArena",
+              q1: "Opus 4.6 (1476)",
+              q2: "Opus 4.5 (1345)",
+              b1: "Kimi K2.5 (988, $0.45)",
+              b2: "Sonnet 4.6 (941, $3)",
+              free: "—",
+            },
+            {
+              cat: "Multilingual",
+              bench: "MGSM",
+              q1: "GLM-5 (90%)",
+              q2: "Gemini 3.1",
+              b1: "GLM-5 ($1)",
+              b2: "Qwen3.5 ($0.39)",
+              free: "—",
+            },
+          ],
+        },
+        {
+          letter: "E",
+          title: "Multimodal",
+          rows: [
+            {
+              cat: "Vision",
+              bench: "MMMU",
+              q1: "Gemini 3.1 Pro",
+              q2: "GPT-5.4",
+              b1: "GLM-4.6V ($0.30)",
+              b2: "Qwen3.5 ($0.39)",
+              free: "—",
+            },
+            {
+              cat: "Video input",
+              bench: "video",
+              q1: "Gemini 3.1 Pro",
+              q2: "GLM-4.6V ($0.30)",
+              b1: "GLM-4.6V ($0.30)",
+              b2: "Qwen3.5 ($0.39)",
+              free: "—",
+            },
+            {
+              cat: "Web understanding",
+              bench: "BrowseComp",
+              q1: "MiniMax M2.5 (76.3%)",
+              q2: "GLM-5",
+              b1: "MiniMax M2.5 ($0.20)",
+              b2: "GLM-5 ($1)",
+              free: "M2.5 FREE",
+            },
+          ],
+        },
+        {
+          letter: "F",
+          title: "Domain & Infrastructure",
+          rows: [
+            {
+              cat: "Legal/Finance",
+              bench: "Scale SEAL",
+              q1: "Opus 4.6",
+              q2: "GPT-5.4",
+              b1: "Kimi K2.5 ($0.45)",
+              b2: "Qwen3.5 ($0.39)",
+              free: "—",
+            },
+            {
+              cat: "Long context (>200K)",
+              bench: ">200K ctx",
+              q1: "Gemini 3.1 (1M)",
+              q2: "Grok 4.1 Fast (2M)",
+              b1: "minimax-01 ($0.20, 1M)",
+              b2: "Qwen Plus ($0.26, 1M)",
+              free: "Gemini CLI (2M)",
+            },
+            {
+              cat: "Speed (tok/s)",
+              bench: "tok/s",
+              q1: "Llama 4 Scout (2600)",
+              q2: "M2.5 Lightning (100)",
+              b1: "M2.5 Lightning ($0.30)",
+              b2: "GLM-4.7-FlashX ($0.06)",
+              free: "—",
+            },
+            {
+              cat: "EU compliance",
+              bench: "GDPR",
+              q1: "Mistral Large ($0.50)",
+              q2: "Mistral Medium ($0.40)",
+              b1: "Mistral Small ($0.07)",
+              b2: "Devstral Small ($0.10)",
+              free: "—",
+            },
+            {
+              cat: "Self-host / open-weight",
+              bench: "open",
+              q1: "GLM-5 (744B MIT)",
+              q2: "DeepSeek V3.2 (671B)",
+              b1: "Qwen3.5-397B",
+              b2: "GLM-4-32B ($0.10)",
+              free: "Qwen CLI",
+            },
+          ],
+        },
+        {
+          letter: "G",
+          title: "Web Scraping & Data Extraction",
+          rows: [
+            {
+              cat: "Scraper code gen",
+              bench: "Zyte",
+              q1: "Sonnet 4.6 (0.835)",
+              q2: "Gemini 3 Pro (0.833)",
+              b1: "Gemini 3 Flash (0.817, $0.50)",
+              b2: "MiniMax M2.5 ($0.20)",
+              free: "M2.5 FREE",
+            },
+            {
+              cat: "SaaS API reverse eng.",
+              bench: "practical",
+              q1: "Opus 4.6",
+              q2: "GPT-5.4",
+              b1: "Sonnet 4.6 ($3)",
+              b2: "DeepSeek V3.2 ($0.26)",
+              free: "Gemini CLI",
+            },
+            {
+              cat: "Browser automation",
+              bench: "BrowserUse",
+              q1: "Sonnet 4.6",
+              q2: "Opus 4.6",
+              b1: "MiniMax M2.5 ($0.20)",
+              b2: "Gemini 3 Flash ($0.50)",
+              free: "M2.5 FREE",
+            },
+            {
+              cat: "Anti-bot bypass",
+              bench: "practical",
+              q1: "Opus 4.6",
+              q2: "GPT-5.4",
+              b1: "Sonnet 4.6 ($3)",
+              b2: "Kimi K2.5 ($0.45)",
+              free: "Gemini CLI",
+            },
+            {
+              cat: "WebSocket interception",
+              bench: "practical",
+              q1: "Opus 4.6",
+              q2: "Sonnet 4.6",
+              b1: "DeepSeek V3.2 ($0.26)",
+              b2: "Qwen3-Coder ($0.22)",
+              free: "Qwen CLI",
+            },
+            {
+              cat: "HTML/DOM extraction",
+              bench: "practical",
+              q1: "Sonnet 4.6",
+              q2: "Gemini 3 Pro",
+              b1: "Gemini 3 Flash ($0.50)",
+              b2: "MiniMax M2.5 ($0.20)",
+              free: "M2.5 FREE",
+            },
+          ],
+        },
+        {
+          letter: "H",
+          title: "Reverse Engineering",
+          rows: [
+            {
+              cat: "JS deobfuscation",
+              bench: "JsDeObsBench",
+              q1: "GPT-5.4 (exec 0.93†)",
+              q2: "Gemini 3.1 (CASCADE)",
+              b1: "Codestral ($0.30)",
+              b2: "DeepSeek V3.2 ($0.26)",
+              free: "Qwen CLI",
+            },
+            {
+              cat: "Assembly deobfuscation",
+              bench: "Promon",
+              q1: "Sonnet 4.6 (Level 0†)",
+              q2: "GPT-5.4",
+              b1: "Grok 4 ($3)",
+              b2: "DeepSeek R1 ($0.45)",
+              free: "—",
+            },
+            {
+              cat: "Android APK",
+              bench: "FuzzingLabs",
+              q1: "Sonnet 4.6 (#1†)",
+              q2: "Opus 4.6",
+              b1: "DeepSeek V3.2 ($0.26)",
+              b2: "Qwen3-Coder ($0.22)",
+              free: "Codex CLI",
+            },
+            {
+              cat: "iOS IPA/Mach-O",
+              bench: "practical",
+              q1: "Opus 4.6",
+              q2: "Sonnet 4.6",
+              b1: "GPT-5.2 ($1.75)",
+              b2: "DeepSeek V3.2 ($0.26)",
+              free: "Codex CLI",
+            },
+            {
+              cat: "Binary/ARM/x86",
+              bench: "Ghidra/IDA",
+              q1: "Opus 4.6",
+              q2: "GPT-5.4",
+              b1: "Sonnet 4.6 ($3)",
+              b2: "DeepSeek R1 ($0.45)",
+              free: "—",
+            },
+            {
+              cat: "Network protocol RE",
+              bench: "practical",
+              q1: "Opus 4.6",
+              q2: "GPT-5.4",
+              b1: "Sonnet 4.6 ($3)",
+              b2: "DeepSeek V3.2 ($0.26)",
+              free: "Gemini CLI",
+            },
+            {
+              cat: "Frida scripting",
+              bench: "practical",
+              q1: "Sonnet 4.6",
+              q2: "Opus 4.6",
+              b1: "MiniMax M2.5 ($0.20)",
+              b2: "Qwen3-Coder ($0.22)",
+              free: "M2.5 FREE",
+            },
+          ],
+        },
+        {
+          letter: "I",
+          title: "AI Search & Research Tools",
+          rows: [
+            {
+              cat: "Structured research",
+              bench: "semantic",
+              q1: "Exa (JSON Schema + async)",
+              q2: "Tavily ($0.001)",
+              b1: "Tavily ($0.001)",
+              b2: "Brave ($0.003)",
+              free: "Exa (1K/mo)",
+            },
+            {
+              cat: "WebFetch 403 fallback",
+              bench: "extraction",
+              q1: "Exa /contents ($0.001)",
+              q2: "Brave",
+              b1: "Exa /contents",
+              b2: "Brave",
+              free: "—",
+            },
+            {
+              cat: "Deep autonomous research",
+              bench: "async agent",
+              q1: "Exa /research",
+              q2: "Perplexity Sonar (OR)",
+              b1: "Perplexity Sonar",
+              b2: "—",
+              free: "—",
+            },
+            {
+              cat: "Traditional SERP",
+              bench: "keyword",
+              q1: "SerpAPI (multi-engine)",
+              q2: "Serper ($0.001)",
+              b1: "Serper ($0.001)",
+              b2: "Brave ($0.003)",
+              free: "Brave (2K/mo)",
+            },
+            {
+              cat: "Find similar sites/apps",
+              bench: "semantic",
+              q1: "Exa /findSimilar",
+              q2: "—",
+              b1: "Exa /findSimilar",
+              b2: "—",
+              free: "Exa (1K/mo)",
+            },
+            {
+              cat: "Fact-check with citations",
+              bench: "grounded",
+              q1: "Exa /answer",
+              q2: "Perplexity Sonar (OR)",
+              b1: "Perplexity Sonar",
+              b2: "—",
+              free: "—",
+            },
+          ],
+        },
+        {
+          letter: "J",
+          title: "Medical / Health / Immunology",
+          rows: [
+            {
+              cat: "Medical QA (USMLE)",
+              bench: "MedQA",
+              q1: "GPT-5.4 (~95%)",
+              q2: "Gemini 3.1 (~95%)",
+              b1: "DeepSeek R1 (92%, $0.45)",
+              b2: "Qwen3.5-397B (~88%, $0.39)",
+              free: "MiniMax M2.5",
+            },
+            {
+              cat: "Biomedical literature",
+              bench: "PubMedQA",
+              q1: "Gemini 3.1 ⭐",
+              q2: "GPT-5.4",
+              b1: "DeepSeek R1 ($0.45)",
+              b2: "Kimi K2.5 ($0.45)",
+              free: "Gemini CLI",
+            },
+            {
+              cat: "Health content writing",
+              bench: "human pref",
+              q1: "Opus 4.6",
+              q2: "GPT-5.4",
+              b1: "Sonnet 4.6 ($3)",
+              b2: "Kimi K2.5 ($0.45)",
+              free: "—",
+            },
+            {
+              cat: "Immunology research",
+              bench: "scientific",
+              q1: "Gemini 3.1 ⭐",
+              q2: "Opus 4.6",
+              b1: "DeepSeek R1 ($0.45)",
+              b2: "Qwen3.5 ($0.39)",
+              free: "Gemini CLI",
+            },
+            {
+              cat: "Medical fact-check",
+              bench: "SimpleQA",
+              q1: "Grok 4.20 (low halluc.)",
+              q2: "Opus 4.6",
+              b1: "DeepSeek R1 ($0.45)",
+              b2: "GLM-5 ($1)",
+              free: "—",
+            },
+            {
+              cat: "Drug interactions",
+              bench: "MedQA",
+              q1: "GPT-5.4",
+              q2: "Gemini 3.1",
+              b1: "DeepSeek R1 ($0.45)",
+              b2: "—",
+              free: "—",
+            },
+            {
+              cat: "Patient-facing content",
+              bench: "human pref",
+              q1: "Opus 4.6 (tone)",
+              q2: "Sonnet 4.6",
+              b1: "Kimi K2.5 ($0.45)",
+              b2: "MiniMax M2.5 ($0.20)",
+              free: "M2.5 FREE",
+            },
+          ],
+        },
+        {
+          letter: "K",
+          title: "Embeddings",
+          rows: [
+            {
+              cat: "RAG / retrieval",
+              bench: "MTEB NDCG@10",
+              q1: "voyage-3-large (NDCG ~69)",
+              q2: "Gemini emb-001 (68.3)",
+              b1: "text-emb-3-small ($0.02)",
+              b2: "Mistral Embed ($0.01)",
+              free: "Qwen3-Emb-8B",
+            },
+            {
+              cat: "Multilingual",
+              bench: "MTEB multi",
+              q1: "NVIDIA Nemotron-8B (#1)",
+              q2: "Gemini emb-001",
+              b1: "Jina-v3 ($0.02)",
+              b2: "text-emb-3-small ($0.02)",
+              free: "BGE-M3",
+            },
+            {
+              cat: "Long context (>8K)",
+              bench: "ctx length",
+              q1: "Qwen3-Emb-8B (32K)",
+              q2: "voyage-3-large (32K)",
+              b1: "voyage-3.5-lite ($0.02, 32K)",
+              b2: "Gemini emb-001 (20K)",
+              free: "Qwen3-Emb-8B",
+            },
+            {
+              cat: "Code retrieval",
+              bench: "code MTEB",
+              q1: "Codestral Embed (Mistral)",
+              q2: "voyage-code-3",
+              b1: "text-emb-3-small",
+              b2: "nv-embedcode-7b",
+              free: "nv-embedcode-7b (NIM)",
+            },
+            {
+              cat: "Budget commercial (OR)",
+              bench: "$/quality",
+              q1: "text-emb-3-small ($0.02)",
+              q2: "Qwen3-Emb-8B ($0.01)",
+              b1: "Perplexity 0.6B ($0.004)",
+              b2: "BGE-base ($0.005)",
+              free: "NVIDIA VL (FREE OR)",
+            },
+            {
+              cat: "Ultra-long (>32K)",
+              bench: "ctx length",
+              q1: "NVIDIA Nemotron-VL (131K, FREE)",
+              q2: "Qwen3-Emb-8B (32K)",
+              b1: "Gemini emb-001 (20K)",
+              b2: "—",
+              free: "NVIDIA VL (FREE OR)",
+            },
+            {
+              cat: "Multimodal (text+image)",
+              bench: "—",
+              q1: "NVIDIA Nemotron-VL (FREE OR)",
+              q2: "—",
+              b1: "—",
+              b2: "—",
+              free: "NVIDIA VL (FREE OR)",
+            },
+            {
+              cat: "Self-host / privacy",
+              bench: "license",
+              q1: "Qwen3-Emb-8B (Apache 2.0)",
+              q2: "BGE-M3 (MIT)",
+              b1: "all-MiniLM-L6-v2",
+              b2: "Nomic-v1.5",
+              free: "All free",
+            },
+            {
+              cat: "Enterprise (noisy data)",
+              bench: "robustness",
+              q1: "Cohere embed-v4",
+              q2: "voyage-3-large",
+              b1: "text-emb-3-large ($0.13)",
+              b2: "—",
+              free: "—",
+            },
+            {
+              cat: "Overall quality",
+              bench: "MTEB avg",
+              q1: "Gemini emb-001 (68.3)",
+              q2: "Qwen3-Emb-8B (70.6 multi)",
+              b1: "text-emb-3-small ($0.02)",
+              b2: "Mistral Embed ($0.01)",
+              free: "Gemini free tier",
+            },
+          ],
+        },
+        {
+          letter: "L",
+          title: "Data Analysis",
+          rows: [
+            {
+              cat: "Marketing analytics",
+              bench: "analytics_accuracy",
+              q1: "Claude Opus 4.6",
+              q2: "—",
+              b1: "MiniMax M2.5 ($0.02)",
+              b2: "—",
+              free: "M2.5 FREE",
+            },
+            {
+              cat: "Financial analysis",
+              bench: "analytics_accuracy",
+              q1: "Claude Opus 4.6",
+              q2: "—",
+              b1: "Kimi K2.5 ($0.02)",
+              b2: "—",
+              free: "—",
+            },
+            {
+              cat: "Product & sales analytics",
+              bench: "analytics_accuracy",
+              q1: "GPT-5.4",
+              q2: "—",
+              b1: "MiniMax M2.5 ($0.02)",
+              b2: "—",
+              free: "—",
+            },
+            {
+              cat: "Web / app analytics",
+              bench: "analytics_accuracy",
+              q1: "Claude Opus 4.6",
+              q2: "—",
+              b1: "Grok 4.1 Fast ($0.03)",
+              b2: "—",
+              free: "—",
+            },
+            {
+              cat: "Large dataset / CSV",
+              bench: "analytics_accuracy",
+              q1: "Gemini 3.1 Pro (1M ctx)",
+              q2: "—",
+              b1: "Gemini 3 Flash",
+              b2: "—",
+              free: "Gemini CLI (2M)",
+            },
+          ],
+        },
+        {
+          letter: "M",
+          title: "Writing Naturalness",
+          rows: [
+            {
+              cat: "Natural copywriting",
+              bench: "—",
+              q1: "Claude Opus 4.6",
+              q2: "Claude Sonnet 4.6",
+              b1: "DeepSeek V3.2 ($0.27)",
+              b2: "—",
+              free: "—",
+            },
+            {
+              cat: "Academic writing",
+              bench: "—",
+              q1: "Claude Opus 4.6",
+              q2: "GPT-5.4",
+              b1: "—",
+              b2: "—",
+              free: "—",
+            },
+            {
+              cat: "Social media content",
+              bench: "—",
+              q1: "Claude Sonnet 4.6",
+              q2: "—",
+              b1: "Gemini 3 Flash",
+              b2: "—",
+              free: "Gemini CLI",
+            },
+            {
+              cat: "Low AI detection",
+              bench: "—",
+              q1: "Claude Sonnet 4.6",
+              q2: "—",
+              b1: "DeepSeek V3.2 ($0.27)",
+              b2: "—",
+              free: "Hermes 3 405B",
+            },
+          ],
+        },
+        {
+          letter: "N",
+          title: "Local Models",
+          rows: [
+            {
+              cat: "Local 16GB+ VRAM",
+              bench: "—",
+              q1: "Llama 3.3 70B Q4",
+              q2: "Qwen3.5-72B Q4",
+              b1: "—",
+              b2: "—",
+              free: "Both free",
+            },
+            {
+              cat: "Local 8GB VRAM",
+              bench: "—",
+              q1: "Gemma 3 27B Q4",
+              q2: "Mistral Small 3.1 24B Q4",
+              b1: "—",
+              b2: "—",
+              free: "Both free",
+            },
+            {
+              cat: "Local 4GB / CPU",
+              bench: "—",
+              q1: "Llama 3.2 8B Q4",
+              q2: "Gemma 3 4B Q4",
+              b1: "—",
+              b2: "—",
+              free: "Both free",
+            },
+            {
+              cat: "Mac optimized (MLX)",
+              bench: "—",
+              q1: "Llama 3.3 70B (MLX)",
+              q2: "Gemma 3 27B (MLX)",
+              b1: "—",
+              b2: "—",
+              free: "Both free",
+            },
+          ],
+        },
+        {
+          letter: "O",
+          title: "Audio / Speech",
+          rows: [
+            {
+              cat: "Transcription accuracy",
+              bench: "WER clean",
+              q1: "Soniox (WER 3.2%)",
+              q2: "Deepgram Nova-3 (3.5%)",
+              b1: "Groq Whisper ($0.006)",
+              b2: "—",
+              free: "Whisper large-v3 (self-host)",
+            },
+            {
+              cat: "Speaker diarization",
+              bench: "DER",
+              q1: "Soniox",
+              q2: "AssemblyAI Universal-2",
+              b1: "pyannote (self-host)",
+              b2: "—",
+              free: "pyannote (self-host)",
+            },
+            {
+              cat: "Realtime transcription",
+              bench: "WER clean",
+              q1: "Deepgram Nova-3",
+              q2: "Google Chirp 2",
+              b1: "—",
+              b2: "—",
+              free: "—",
+            },
+            {
+              cat: "Multilingual ASR",
+              bench: "WER clean",
+              q1: "Whisper large-v3",
+              q2: "Google Chirp 2",
+              b1: "—",
+              b2: "—",
+              free: "Whisper large-v3 (self-host)",
+            },
+            {
+              cat: "Speed-critical ASR",
+              bench: "WER + latency",
+              q1: "Groq Whisper (62x speed)",
+              q2: "Deepgram Nova-3",
+              b1: "—",
+              b2: "—",
+              free: "—",
+            },
+          ],
+        },
+        {
+          letter: "P",
+          title: "Video Understanding",
+          rows: [
+            {
+              cat: "Video content recognition",
+              bench: "Video-MME",
+              q1: "Gemini 3.1 Pro",
+              q2: "GPT-5.4",
+              b1: "—",
+              b2: "—",
+              free: "Gemini CLI",
+            },
+            {
+              cat: "Video Q&A",
+              bench: "Video-MME",
+              q1: "Gemini 3.1 Pro",
+              q2: "Claude Opus 4.6",
+              b1: "—",
+              b2: "—",
+              free: "Gemini CLI",
+            },
+            {
+              cat: "Video transcription + visual",
+              bench: "Video-MME",
+              q1: "Gemini 3.1 Pro",
+              q2: "—",
+              b1: "GLM-4.6V ($0.30)",
+              b2: "—",
+              free: "Gemini CLI",
+            },
+            {
+              cat: "Frame analysis",
+              bench: "Video-MME",
+              q1: "Gemini 3.1 Pro",
+              q2: "GPT-5.4",
+              b1: "GLM-4.6V ($0.30)",
+              b2: "—",
+              free: "Gemini CLI",
+            },
+          ],
+        },
+      ];
+
+      // Pipeline routing
+      const ROUTING = [
+        {
+          title: "Consilium / arbitration",
+          sub: "niches, sub-niches, gap pipeline",
+          rows: [
+            {
+              task: "Standard",
+              model: "Opus + Grok 4.1 Fast + DeepSeek V3.2",
+              why: "~$0.02/20K — 3 different training sets",
+            },
+            {
+              task: "Enhanced",
+              model: "+ GLM-5 or MiniMax M2.7",
+              why: "~$0.05 — +2 Chinese-trained models",
+            },
+            {
+              task: "Critical",
+              model: "+ Grok 4.20 + Gemini 3.1 Pro",
+              why: "~$0.15 — Max diversity, min hallucination",
+            },
+          ],
+        },
+        {
+          title: "Business logic",
+          sub: "pipeline check, revenue analysis",
+          rows: [
+            {
+              task: "Pipeline review",
+              model: "Opus 4.6",
+              why: "Best reasoning + instruction combo",
+            },
+            {
+              task: "Revenue/market analysis",
+              model: "Grok 4.20 Beta",
+              why: "Lowest hallucination, real-time X data",
+            },
+            {
+              task: "Data quality check",
+              model: "Opus + Codex CLI",
+              why: "Two independent reviews",
+            },
+            {
+              task: "Batch classification",
+              model: "Qwen CLI / M2.5 FREE",
+              why: "Free, high throughput",
+            },
+            {
+              task: "Evidence classification",
+              model: "Opus inline",
+              why: "Nuanced semantic judgment",
+            },
+          ],
+        },
+        {
+          title: "Coding",
+          sub: "implementation phase",
+          rows: [
+            {
+              task: "Main coding",
+              model: "Sonnet 4.6",
+              why: "Fast, SWE 79.6%, good value",
+            },
+            {
+              task: "Code review",
+              model: "Codex CLI (bg)",
+              why: "Free, independent check",
+            },
+            {
+              task: "Architecture review",
+              model: "Codex CLI (xhigh)",
+              why: "codex.toml: reasoning_effort=xhigh. Deep thinking, free",
+            },
+            {
+              task: "Quick fix review",
+              model: "Codex CLI (medium)",
+              why: "codex.toml: reasoning_effort=medium. Fast single-file edits",
+            },
+            {
+              task: "Post-impl review",
+              model: "Codex CLI + Qwen CLI",
+              why: "Two free reviewers",
+            },
+            {
+              task: "Visual QA",
+              model: "Gemini CLI (bg)",
+              why: "Vision, free",
+            },
+          ],
+        },
+      ];
+
+      // Cache pricing
+      const CACHE_PROVIDERS = [
+        {
+          provider: "Anthropic",
+          disc: "90%",
+          write: "1.25x input",
+          mech: "Explicit prefix, min 1024 tok",
+        },
+        {
+          provider: "Google",
+          disc: "90%",
+          write: "~0.3x input",
+          mech: "Context caching API, TTL",
+        },
+        {
+          provider: "OpenAI",
+          disc: "75–90%",
+          write: "—",
+          mech: "Automatic prompt caching",
+        },
+        {
+          provider: "xAI (Grok)",
+          disc: "75–90%",
+          write: "—",
+          mech: "Automatic",
+        },
+        {
+          provider: "DeepSeek",
+          disc: "32–50%",
+          write: "—",
+          mech: "Automatic prefix match",
+        },
+        { provider: "MiniMax", disc: "50–88%", write: "—", mech: "Automatic" },
+        {
+          provider: "Z.ai (GLM)",
+          disc: "50–82%",
+          write: "free storage",
+          mech: "Automatic, storage free",
+        },
+        { provider: "Qwen", disc: "50–90%", write: "—", mech: "Automatic" },
+        { provider: "Mistral", disc: "90%", write: "—", mech: "Automatic" },
+        { provider: "Kimi", disc: "50–70%", write: "—", mech: "Automatic" },
+      ];
+
+      const CACHE_MODELS = [
+        {
+          model: "Claude Opus 4.6",
+          input: 5.0,
+          cached: 0.5,
+          disc: "90%",
+          note: "⭐ $0.50 effective",
+        },
+        {
+          model: "Claude Sonnet 4.6",
+          input: 3.0,
+          cached: 0.3,
+          disc: "90%",
+          note: "⭐ Sonnet at Haiku price",
+        },
+        {
+          model: "Claude Haiku 4.5",
+          input: 1.0,
+          cached: 0.1,
+          disc: "90%",
+          note: "Cheapest Claude",
+        },
+        { model: "GPT-5.4", input: 2.5, cached: 0.25, disc: "90%", note: "" },
+        { model: "GPT-5.2", input: 1.75, cached: 0.17, disc: "90%", note: "" },
+        {
+          model: "Gemini 3.1 Pro",
+          input: 2.0,
+          cached: 0.2,
+          disc: "90%",
+          note: "",
+        },
+        {
+          model: "Gemini 2.5 Flash",
+          input: 0.3,
+          cached: 0.03,
+          disc: "90%",
+          note: "Ultra-cheap cached",
+        },
+        {
+          model: "GLM-5-Turbo",
+          input: 1.2,
+          cached: 0.24,
+          disc: "80%",
+          note: "",
+        },
+        {
+          model: "Grok 4.20 Beta",
+          input: 2.0,
+          cached: 0.2,
+          disc: "90%",
+          note: "",
+        },
+        {
+          model: "Grok 4.1 Fast",
+          input: 0.2,
+          cached: 0.05,
+          disc: "75%",
+          note: "",
+        },
+        {
+          model: "DeepSeek V3.2",
+          input: 0.26,
+          cached: 0.13,
+          disc: "50%",
+          note: "",
+        },
+        {
+          model: "MiniMax M2.7",
+          input: 0.3,
+          cached: 0.06,
+          disc: "80%",
+          note: "",
+        },
+        {
+          model: "MiniMax M2.5",
+          input: 0.2,
+          cached: 0.1,
+          disc: "50%",
+          note: "",
+        },
+        {
+          model: "Kimi K2.5",
+          input: 0.45,
+          cached: 0.22,
+          disc: "50%",
+          note: "",
+        },
+        {
+          model: "Qwen3-Coder",
+          input: 0.22,
+          cached: 0.02,
+          disc: "90%",
+          note: "⭐ Ultra-cheap cached",
+        },
+      ];
+
+      // Quick Decision Matrix
+      const MATRIX = [
+        {
+          task: "Write/review code",
+          pick: "Sonnet 4.6",
+          backup: "MiniMax M2.5",
+          free: "M2.5 FREE",
+        },
+        {
+          task: "Code review (post-implement)",
+          pick: "Codex CLI ($0, subscription)",
+          backup: "Qwen CLI",
+          free: "—",
+        },
+        {
+          task: "Spec/architecture review",
+          pick: "GPT-5.4 (OpenRouter)",
+          backup: "Grok 4.20",
+          free: "—",
+        },
+        {
+          task: "Complex reasoning/architecture",
+          pick: "Opus 4.6",
+          backup: "Gemini 3.1 Pro",
+          free: "Gemini CLI",
+        },
+        {
+          task: "Consilium (2nd opinion)",
+          pick: "Grok 4.1 Fast",
+          backup: "DeepSeek V3.2",
+          free: "—",
+        },
+        {
+          task: "Consilium (critical)",
+          pick: "Grok 4.20",
+          backup: "Opus + Gemini",
+          free: "—",
+        },
+        {
+          task: "Consilium (concept/spec)",
+          pick: "GPT-5.4 + Grok 4.20",
+          backup: "+ DeepSeek R1",
+          free: "—",
+        },
+        {
+          task: "Tool calling pipeline",
+          pick: "Opus 4.6",
+          backup: "GLM-5-Turbo",
+          free: "GLM-4.7-Flash",
+        },
+        {
+          task: "Batch classification",
+          pick: "Qwen CLI",
+          backup: "MiniMax M2.5",
+          free: "Both free",
+        },
+        {
+          task: "Niche/gap analysis",
+          pick: "Opus 4.6",
+          backup: "+ consilium stack",
+          free: "—",
+        },
+        {
+          task: "Long document (>200K)",
+          pick: "Gemini 3.1 (1M)",
+          backup: "minimax-01 (1M)",
+          free: "Gemini CLI (2M)",
+        },
+        {
+          task: "Vision/screenshots",
+          pick: "Gemini 3.1",
+          backup: "GLM-4.6V",
+          free: "—",
+        },
+        {
+          task: "Video analysis",
+          pick: "Gemini 3.1",
+          backup: "GLM-4.6V ($0.30)",
+          free: "—",
+        },
+        {
+          task: "Writing/copywriting",
+          pick: "Opus 4.6",
+          backup: "GPT-5.4",
+          free: "—",
+        },
+        {
+          task: "Factual accuracy",
+          pick: "Grok 4.20",
+          backup: "Opus 4.6",
+          free: "—",
+        },
+        {
+          task: "Math/competition",
+          pick: "GPT-5.4 (AIME 100%)",
+          backup: "Gemini 3.1",
+          free: "—",
+        },
+        {
+          task: "Cheap but quality coding",
+          pick: "MiniMax M2.5 ($0.20)",
+          backup: "GLM-5 ($1)",
+          free: "M2.5 FREE",
+        },
+        {
+          task: "Maximum at $0",
+          pick: "MiniMax M2.5 FREE",
+          backup: "GLM-4.5 Air FREE",
+          free: "Qwen CLI",
+        },
+        {
+          task: "Speed critical",
+          pick: "MiniMax Lightning (100tps)",
+          backup: "Mistral Small",
+          free: "—",
+        },
+        {
+          task: "EU compliance",
+          pick: "Mistral Large",
+          backup: "Mistral Medium",
+          free: "—",
+        },
+        {
+          task: "Self-host / open-weight",
+          pick: "GLM-5 (744B MIT)",
+          backup: "DeepSeek V3.2",
+          free: "Qwen3.5",
+        },
+        {
+          task: "Write a scraper",
+          pick: "Sonnet 4.6 (Zyte 0.835)",
+          backup: "Gemini 3 Flash ($0.95)",
+          free: "M2.5 FREE",
+        },
+        {
+          task: "SaaS API reverse eng.",
+          pick: "Opus 4.6",
+          backup: "Sonnet 4.6",
+          free: "Gemini CLI",
+        },
+        {
+          task: "Browser automation",
+          pick: "Sonnet 4.6",
+          backup: "MiniMax M2.5",
+          free: "M2.5 FREE",
+        },
+        {
+          task: "Anti-bot bypass",
+          pick: "Opus 4.6",
+          backup: "Sonnet 4.6",
+          free: "Gemini CLI",
+        },
+        {
+          task: "JS deobfuscation",
+          pick: "GPT-5.4",
+          backup: "Codestral ($0.30)",
+          free: "Qwen CLI",
+        },
+        {
+          task: "Assembly/binary RE",
+          pick: "Sonnet 4.6 (Level 0†)",
+          backup: "Opus 4.6",
+          free: "—",
+        },
+        {
+          task: "Android APK RE",
+          pick: "Sonnet 4.6",
+          backup: "DeepSeek V3.2",
+          free: "Codex CLI",
+        },
+        {
+          task: "iOS IPA/Mach-O RE",
+          pick: "Opus 4.6",
+          backup: "Sonnet 4.6",
+          free: "Codex CLI",
+        },
+        {
+          task: "Frida scripting",
+          pick: "Sonnet 4.6",
+          backup: "MiniMax M2.5",
+          free: "M2.5 FREE",
+        },
+        {
+          task: "Network protocol RE",
+          pick: "Opus 4.6",
+          backup: "GPT-5.4",
+          free: "Gemini CLI",
+        },
+        {
+          task: "AI search (structured)",
+          pick: "Exa (JSON Schema)",
+          backup: "Tavily",
+          free: "Exa (1K/mo)",
+        },
+        {
+          task: "AI search (budget SERP)",
+          pick: "SerpAPI",
+          backup: "Serper ($0.001)",
+          free: "Brave (2K/mo)",
+        },
+        {
+          task: "WebFetch 403 fallback",
+          pick: "Exa /contents",
+          backup: "Brave",
+          free: "—",
+        },
+        {
+          task: "Deep autonomous research",
+          pick: "Exa /research",
+          backup: "Perplexity Sonar",
+          free: "—",
+        },
+        {
+          task: "Medical research",
+          pick: "Gemini 3.1 (scientific)",
+          backup: "Opus 4.6",
+          free: "Gemini CLI",
+        },
+        {
+          task: "Medical QA (USMLE)",
+          pick: "GPT-5.4 (~95%)",
+          backup: "Gemini 3.1",
+          free: "DeepSeek R1 ($0.45)",
+        },
+        {
+          task: "Health content writing",
+          pick: "Opus 4.6 (tone)",
+          backup: "Sonnet 4.6",
+          free: "—",
+        },
+        {
+          task: "Medical fact-check",
+          pick: "Grok 4.20 (low halluc.)",
+          backup: "Opus 4.6",
+          free: "—",
+        },
+        {
+          task: "Embedding (RAG general)",
+          pick: "text-emb-3-small ($0.02)",
+          backup: "Gemini emb-001",
+          free: "Gemini free tier",
+        },
+        {
+          task: "Embedding (best quality)",
+          pick: "voyage-3-large (NDCG ~69)",
+          backup: "Gemini emb-001 (68.3)",
+          free: "Qwen3-Emb-8B",
+        },
+        {
+          task: "Embedding (multilingual)",
+          pick: "NVIDIA Nemotron-8B",
+          backup: "Qwen3-Emb-8B",
+          free: "Both free",
+        },
+        {
+          task: "Embedding (long docs >8K)",
+          pick: "Qwen3-Emb-8B (32K)",
+          backup: "voyage-3-large (32K)",
+          free: "Qwen3-Emb-8B",
+        },
+        {
+          task: "Embedding (code)",
+          pick: "Codestral Embed ($0.15)",
+          backup: "nv-embedcode-7b",
+          free: "nv-embedcode-7b (NIM)",
+        },
+        {
+          task: "Embedding (self-host)",
+          pick: "Qwen3-Emb-8B (Apache)",
+          backup: "BGE-M3 (MIT)",
+          free: "Both free",
+        },
+        {
+          task: "Embedding (cheapest)",
+          pick: "Perplexity 0.6B ($0.004)",
+          backup: "BGE-base ($0.005)",
+          free: "NVIDIA VL (FREE OR)",
+        },
+      ];
+
+      const FREE_ROUTING = [
+        {
+          task: "Code generation",
+          best: "Qwen3 Coder 480B",
+          backup: "MiniMax M2.5",
+          cli: "Qwen CLI, Codex CLI",
+        },
+        {
+          task: "Code review",
+          best: "MiniMax M2.5 (SWE 80.2%)",
+          backup: "Qwen3 Coder 480B",
+          cli: "Codex CLI, Qwen CLI",
+        },
+        {
+          task: "Niche classification",
+          best: "MiniMax M2.5",
+          backup: "GLM-4.5 Air",
+          cli: "Qwen CLI ⭐",
+        },
+        {
+          task: "App DNA / categorization",
+          best: "GLM-4.5 Air",
+          backup: "MiniMax M2.5",
+          cli: "Qwen CLI",
+        },
+        {
+          task: "Consilium (2nd opinion)",
+          best: "Hermes 3 405B",
+          backup: "Llama 3.3 70B",
+          cli: "—",
+        },
+        {
+          task: "Reasoning / architecture",
+          best: "Hermes 3 405B (131K)",
+          backup: "NVIDIA Nemotron Super (262K)",
+          cli: "Gemini CLI ⭐",
+        },
+        {
+          task: "Long document analysis",
+          best: "NVIDIA Nemotron Super (262K)",
+          backup: "Qwen3 Next 80B (262K)",
+          cli: "Gemini CLI (2M)",
+        },
+        {
+          task: "Batch general (1000+ items)",
+          best: "GLM-4.5 Air",
+          backup: "MiniMax M2.5",
+          cli: "Qwen CLI ⭐",
+        },
+        {
+          task: "Vision / screenshots",
+          best: "NVIDIA Nemotron Nano 12B VL",
+          backup: "—",
+          cli: "Gemini CLI",
+        },
+        {
+          task: "Writing / copywriting",
+          best: "MiniMax M2.5",
+          backup: "Gemma 3 27B",
+          cli: "—",
+        },
+        {
+          task: "Multilingual",
+          best: "Mistral Small 3.1",
+          backup: "GLM-4.5 Air",
+          cli: "—",
+        },
+        {
+          task: "Tool calling",
+          best: "GLM-4.5 Air",
+          backup: "—",
+          cli: "GLM-4.7-Flash ⭐ (Tau2 98.8%)",
+        },
+        { task: "Research", best: "—", backup: "—", cli: "Gemini CLI ⭐ (2M)" },
+        {
+          task: "Uncensored / no filter",
+          best: "Venice Uncensored",
+          backup: "Hermes 3 405B",
+          cli: "—",
+        },
+        {
+          task: "Edge / mobile / IoT",
+          best: "Gemma 3n 2B (8K)",
+          backup: "Liquid LFM 1.2B",
+          cli: "—",
+        },
+        {
+          task: "Thinking / CoT",
+          best: "Liquid LFM 1.2B Thinking",
+          backup: "—",
+          cli: "—",
+        },
+        {
+          task: "Embeddings",
+          best: "NVIDIA Nemotron-VL (131K)",
+          backup: "—",
+          cli: "—",
+        },
+      ];
+
+      const EMB_USE_CASES = [
+        {
+          task: "RAG (English, <8K chunks)",
+          best: "text-emb-3-small ($0.02)",
+          budget: "Perplexity 0.6B ($0.004)",
+          free: "NVIDIA VL (OR free)",
+        },
+        {
+          task: "RAG (accuracy-critical)",
+          best: "voyage-3-large ($0.06)",
+          budget: "Gemini emb-001 ($0.15)",
+          free: "Qwen3-Emb-8B (self-host)",
+        },
+        {
+          task: "RAG (multilingual / Russian)",
+          best: "Qwen3-Emb-8B ($0.01)",
+          budget: "Jina-v3 ($0.02)",
+          free: "BGE-M3 (self-host)",
+        },
+        {
+          task: "Code search / codebase RAG",
+          best: "Codestral Embed ($0.15)",
+          budget: "text-emb-3-small",
+          free: "nv-embedcode-7b (NIM)",
+        },
+        {
+          task: "Long docs (>8K tokens)",
+          best: "Qwen3-Emb-8B (32K, $0.01)",
+          budget: "voyage-3.5-lite (32K, $0.02)",
+          free: "Qwen3-Emb-8B (self-host)",
+        },
+        {
+          task: "Ultra-long (>32K, books)",
+          best: "NVIDIA Nemotron-VL (131K, FREE)",
+          budget: "Gemini emb-001 (20K)",
+          free: "NVIDIA VL",
+        },
+        {
+          task: "Image+text (multimodal)",
+          best: "NVIDIA Nemotron-VL (FREE)",
+          budget: "—",
+          free: "NVIDIA VL",
+        },
+        {
+          task: "Bulk indexing (100K+ docs)",
+          best: "Perplexity 0.6B ($0.004)",
+          budget: "BGE-base ($0.005)",
+          free: "MiniLM-L6 (self-host)",
+        },
+        {
+          task: "Classification / clustering",
+          best: "Gemini emb-001 ($0.15)",
+          budget: "text-emb-3-large ($0.13)",
+          free: "Qwen3-Emb-8B",
+        },
+        {
+          task: "Semantic search (SaaS)",
+          best: "text-emb-3-small ($0.02)",
+          budget: "Qwen3-Emb-8B ($0.01)",
+          free: "NVIDIA VL",
+        },
+        {
+          task: "Enterprise (noisy OCR)",
+          best: "Cohere embed-v4 ($0.12)",
+          budget: "voyage-3-large ($0.06)",
+          free: "—",
+        },
+        {
+          task: "Edge / mobile (on-device)",
+          best: "all-MiniLM-L6-v2 (self-host)",
+          budget: "Nomic-v1.5",
+          free: "MiniLM",
+        },
+        {
+          task: "Privacy-first (no cloud)",
+          best: "Qwen3-Emb-8B (Apache 2.0)",
+          budget: "BGE-M3 (MIT)",
+          free: "MiniLM (Apache)",
+        },
+        {
+          task: "Prototype / MVP",
+          best: "text-emb-3-small ($0.02)",
+          budget: "Perplexity 0.6B ($0.004)",
+          free: "NVIDIA VL (OR)",
+        },
+        {
+          task: "Domain-tuned (legal/medical)",
+          best: "voyage-3-large + fine-tune",
+          budget: "Cohere embed-v4",
+          free: "—",
+        },
+      ];
+
+      // Insights from practice
+      const INSIGHTS = [
+        {
+          icon: "💡",
+          text: "<strong>Code review vs Spec review</strong> — different tasks, different models. Code review → Codex CLI ($0) + Qwen CLI ($0). Spec/architecture review → OpenRouter required (Codex CLI can't do this).",
+        },
+        {
+          icon: "📋",
+          text: "<strong>Concept-aware review</strong> — provide the FULL concept, not a summary. Short concept = missing ~40% of findings. Full concept gave +24 new findings vs short.",
+        },
+        {
+          icon: "📊",
+          text: "<strong>Consilium results (session 9):</strong> Code review: Codex (12 findings, 4 CRITICAL) > GPT-5.4 (50, verbose) > Grok Code Fast 1 (22). Spec review (full): GPT-5.4 (30+ issues, 360 lines) > Grok 4.20 (8 structural).",
+        },
+        {
+          icon: "⚠️",
+          text: "<strong>Qwen = non-thinking.</strong> Do not give reasoning/architecture/trade-off tasks. Classification, code review, pattern matching only. Context ceiling 130K (not 1M).",
+        },
+      ];
+
+      // Live benchmarks
+      const LIVE_BENCHMARKS = [
+        {
+          name: "SWE-Bench Pro",
+          cat: "Coding",
+          desc: "Real issues, multi-lang, uncontaminated",
+          saturation: false,
+          url: "scale.com/leaderboard",
+        },
+        {
+          name: "HLE",
+          cat: "Reasoning",
+          desc: "Hardest academic questions",
+          saturation: false,
+          url: "lastexam.ai",
+        },
+        {
+          name: "ARC-AGI-2",
+          cat: "Reasoning",
+          desc: "Abstract, pure LLMs=0%",
+          saturation: false,
+          url: "arcprize.org",
+        },
+        {
+          name: "LiveBench",
+          cat: "General",
+          desc: "Monthly fresh, objective",
+          saturation: false,
+          url: "livebench.ai",
+        },
+        {
+          name: "Tau2-Bench",
+          cat: "Tools",
+          desc: "Multi-turn tool use",
+          saturation: "slight",
+          url: "—",
+        },
+        {
+          name: "Terminal-Bench 2",
+          cat: "Agentic",
+          desc: "CLI problem solving",
+          saturation: false,
+          url: "—",
+        },
+        {
+          name: "GDPval-AA",
+          cat: "Agentic",
+          desc: "Real-world work value",
+          saturation: false,
+          url: "—",
+        },
+        {
+          name: "GAIA",
+          cat: "Agentic",
+          desc: "Multi-step assistant",
+          saturation: "slight",
+          url: "—",
+        },
+        {
+          name: "BFCL V4",
+          cat: "Tools",
+          desc: "Function calling accuracy",
+          saturation: "slight",
+          url: "gorilla.cs.berkeley.edu",
+        },
+        {
+          name: "SimpleQA",
+          cat: "Trust",
+          desc: "Factual/hallucination",
+          saturation: false,
+          url: "—",
+        },
+        {
+          name: "MMMU",
+          cat: "Vision",
+          desc: "Multimodal understanding",
+          saturation: false,
+          url: "—",
+        },
+        {
+          name: "SciCode",
+          cat: "Science",
+          desc: "Scientific coding",
+          saturation: false,
+          url: "—",
+        },
+        {
+          name: "Scale SEAL",
+          cat: "Domain",
+          desc: "Legal, finance",
+          saturation: false,
+          url: "scale.com",
+        },
+        {
+          name: "LMArena",
+          cat: "Preference",
+          desc: "Human pref w/ style control",
+          saturation: false,
+          url: "lmarena.ai",
+        },
+        {
+          name: "BrowseComp",
+          cat: "Web",
+          desc: "Web understanding",
+          saturation: false,
+          url: "—",
+        },
+        {
+          name: "IFBench",
+          cat: "Instruction",
+          desc: "Format/constraint following",
+          saturation: false,
+          url: "—",
+        },
+        {
+          name: "GRIND",
+          cat: "Reasoning",
+          desc: "Adaptive reasoning",
+          saturation: false,
+          url: "—",
+        },
+      ];
+
+      // ============================================================
+      // RENDER
+      // ============================================================
+
+      function scoreColor(val, col) {
+        if (val === null || val === undefined)
+          return '<span class="score-dash">—</span>';
+        const max = COL_MAX[col] || 100;
+        const pct = val / max;
+        const cls =
+          pct >= 0.85 ? "score-high" : pct >= 0.6 ? "score-mid" : "score-low";
+        return `<span class="${cls}">${val}</span>`;
+      }
+
+      function priceStr(m) {
+        if (m.tier === "free")
+          return '<span style="color:var(--green);font-weight:700;">FREE</span>';
+        if (m.priceIn === null) return '<span class="score-dash">varies</span>';
+        return `<span class="price-cell">$${m.priceIn}→$${m.priceOut}</span>`;
+      }
+
+      function tierLabel(tier) {
+        const labels = { 1: "T1", 2: "T2", 3: "T3", free: "FREE" };
+        return labels[tier];
+      }
+
+      // Build mega table
+      function buildMegaTable() {
+        const tbody = document.getElementById("megaBody");
+        let html = "";
+        MODELS.forEach((m, i) => {
+          html += `<tr class="tier-${m.tier}" data-tier="${m.tier}" data-name="${m.name.toLowerCase()}">
+      <td class="model-name">${m.name}<span class="tier-badge">${tierLabel(m.tier)}</span></td>
+      <td>${priceStr(m)}</td>
+      <td class="ctx-cell">${m.ctx || "—"}</td>
+      <td class="score-cell">${scoreColor(m.swe_v, "swe_v")}</td>
+      <td class="score-cell">${scoreColor(m.swe_pro, "swe_pro")}</td>
+      <td class="score-cell">${scoreColor(m.gpqa, "gpqa")}</td>
+      <td class="score-cell">${scoreColor(m.hle, "hle")}</td>
+      <td class="score-cell">${scoreColor(m.arc, "arc")}</td>
+      <td class="score-cell">${scoreColor(m.tau2, "tau2")}</td>
+      <td class="score-cell">${scoreColor(m.benchlm, "benchlm")}</td>
+      <td class="best-for-cell">${m.best}</td>
+    </tr>`;
+        });
+        tbody.innerHTML = html;
+      }
+
+      // Tier filter
+      const activeTiers = new Set(["1", "2", "3", "free"]);
+
+      document.querySelectorAll(".tier-btn").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const tier = btn.dataset.tier;
+          if (activeTiers.has(tier)) {
+            activeTiers.delete(tier);
+            btn.classList.remove("active");
+            btn.classList.add("hidden-btn");
+          } else {
+            activeTiers.add(tier);
+            btn.classList.add("active");
+            btn.classList.remove("hidden-btn");
+          }
+          applyFilters();
+        });
+      });
+
+      function applyFilters() {
+        const query = document
+          .getElementById("modelSearch")
+          .value.toLowerCase();
+        document.querySelectorAll("#megaBody tr").forEach((row) => {
+          const tier = row.dataset.tier;
+          const name = row.dataset.name;
+          const tierOk = activeTiers.has(tier);
+          const nameOk = !query || name.includes(query);
+          row.classList.toggle("hidden", !(tierOk && nameOk));
+        });
+      }
+
+      document
+        .getElementById("modelSearch")
+        .addEventListener("input", applyFilters);
+
+      // Sort mega table
+      let sortCol = null,
+        sortDir = 1;
+      const COL_INDEX = {
+        name: 0,
+        price: 1,
+        ctx: 2,
+        swe_v: 3,
+        swe_pro: 4,
+        gpqa: 5,
+        hle: 6,
+        arc: 7,
+        tau2: 8,
+        benchlm: 9,
+        best: 10,
+      };
+
+      document.querySelectorAll("table.bench-table th").forEach((th) => {
+        th.addEventListener("click", () => {
+          const col = th.dataset.col;
+          if (!col) return;
+          document
+            .querySelectorAll("table.bench-table th")
+            .forEach((h) => h.classList.remove("sorted-asc", "sorted-desc"));
+          if (sortCol === col) sortDir = -sortDir;
+          else {
+            sortCol = col;
+            sortDir = -1;
+          }
+          th.classList.add(sortDir === -1 ? "sorted-desc" : "sorted-asc");
+          sortMegaTable(col, sortDir);
+        });
+      });
+
+      function getRowVal(row, col) {
+        const idx = COL_INDEX[col];
+        if (idx === undefined) return "";
+        const cell = row.cells[idx];
+        const span = cell.querySelector("span");
+        const text = span ? span.textContent.trim() : cell.textContent.trim();
+        if (col === "price") {
+          const m = text.match(/\$([\d.]+)/);
+          return m ? parseFloat(m[1]) : text === "FREE" ? -1 : Infinity;
+        }
+        const num = parseFloat(text);
+        return isNaN(num) ? text.replace("—", "") : num;
+      }
+
+      function sortMegaTable(col, dir) {
+        const tbody = document.getElementById("megaBody");
+        const rows = Array.from(tbody.querySelectorAll("tr"));
+        rows.sort((a, b) => {
+          const av = getRowVal(a, col);
+          const bv = getRowVal(b, col);
+          if (av === bv) return 0;
+          if (av === "" || av === Infinity) return 1;
+          if (bv === "" || bv === Infinity) return -1;
+          if (typeof av === "number" && typeof bv === "number")
+            return (av - bv) * dir;
+          return String(av).localeCompare(String(bv)) * dir;
+        });
+        rows.forEach((r) => tbody.appendChild(r));
+      }
+
+      // Build KING groups
+      function buildKing() {
+        const container = document.getElementById("kingGroups");
+        let html = "";
+        KING_GROUPS.forEach((group) => {
+          html += `<div>
+      <div class="king-group-title">${group.letter}. ${group.title}</div>
+      <div class="king-table-wrap">
+        <table class="king-table">
+          <thead>
+            <tr>
+              <th>Category</th>
+              <th>Benchmark</th>
+              <th class="q1">Quality #1</th>
+              <th class="q2">Quality #2</th>
+              <th class="b1">Budget #1</th>
+              <th class="b2">Budget #2</th>
+              <th class="f1">Free</th>
+            </tr>
+          </thead>
+          <tbody>`;
+          group.rows.forEach((row) => {
+            html += `<tr>
+        <td><span class="cat-name">${row.cat}</span></td>
+        <td><span class="cat-bench">${row.bench}</span></td>
+        <td class="q1">${row.q1}</td>
+        <td class="q2">${row.q2}</td>
+        <td class="b1">${row.b1}</td>
+        <td class="b2">${row.b2}</td>
+        <td class="f1">${row.free}</td>
+      </tr>`;
+          });
+          html += `</tbody></table></div></div>`;
+        });
+        container.innerHTML = html;
+      }
+
+      // Build routing
+      function buildRouting() {
+        const grid = document.getElementById("routingGrid");
+        let html = "";
+        ROUTING.forEach((section) => {
+          html += `<div class="routing-card">
+      <div class="routing-card-header">${section.title} <span style="color:var(--text-muted);font-weight:400;font-size:0.75rem;">${section.sub}</span></div>
+      <table class="routing-table">`;
+          section.rows.forEach((row) => {
+            html += `<tr>
+        <td><div class="task-name">${row.task}</div></td>
+        <td><div class="model-pick">${row.model}</div><div class="why-note">${row.why}</div></td>
+      </tr>`;
+          });
+          html += `</table></div>`;
+        });
+        grid.innerHTML = html;
+      }
+
+      // Build cache tables
+      function buildCache() {
+        // Provider table
+        const pt = document.getElementById("cacheProviderTable");
+        let html = `<thead><tr><th>Provider</th><th>Cache Read</th><th>Cache Write</th><th>Mechanism</th></tr></thead><tbody>`;
+        CACHE_PROVIDERS.forEach((p) => {
+          const discNum = parseInt(p.disc);
+          const barW = Math.round((discNum / 100) * 60);
+          html += `<tr>
+      <td style="font-weight:600;">${p.provider}</td>
+      <td><span class="discount-label" style="color:var(--green);">${p.disc}</span><span class="discount-bar" style="width:${barW}px;"></span></td>
+      <td style="font-size:0.75rem;color:var(--text-muted);">${p.write}</td>
+      <td style="font-size:0.74rem;color:var(--text-muted);">${p.mech}</td>
+    </tr>`;
+        });
+        html += "</tbody>";
+        pt.innerHTML = html;
+
+        // Model table
+        const mt = document.getElementById("cacheModelTable");
+        let html2 = `<thead><tr><th>Model</th><th>Input $/M</th><th>Cached $/M</th><th>Disc.</th><th>Note</th></tr></thead><tbody>`;
+        CACHE_MODELS.forEach((m) => {
+          html2 += `<tr>
+      <td style="font-weight:600;font-size:0.79rem;">${m.model}</td>
+      <td class="regular-price">$${m.input.toFixed(2)}</td>
+      <td class="cached-price">$${m.cached.toFixed(2)}</td>
+      <td><span class="discount-label" style="color:var(--amber);">${m.disc}</span></td>
+      <td style="font-size:0.72rem;color:var(--cyan);">${m.note}</td>
+    </tr>`;
+        });
+        html2 += "</tbody>";
+        mt.innerHTML = html2;
+      }
+
+      // Build matrix
+      function buildMatrix() {
+        const table = document.getElementById("matrixTable");
+        let html = `<thead><tr><th>If task...</th><th>Pick</th><th>Backup</th><th>Free</th></tr></thead><tbody>`;
+        MATRIX.forEach((row) => {
+          html += `<tr data-task="${row.task.toLowerCase()}">
+      <td class="task-label">${row.task}</td>
+      <td><span class="pick-main">${row.pick}</span></td>
+      <td><span class="pick-backup">${row.backup}</span></td>
+      <td><span class="pick-free">${row.free}</span></td>
+    </tr>`;
+        });
+        html += "</tbody>";
+        table.innerHTML = html;
+      }
+
+      document
+        .getElementById("matrixSearch")
+        .addEventListener("input", function () {
+          const q = this.value.toLowerCase();
+          document.querySelectorAll("#matrixTable tbody tr").forEach((row) => {
+            row.classList.toggle(
+              "hidden",
+              !!q && !row.dataset.task.includes(q),
+            );
+          });
+        });
+
+      // Build insights
+      function buildInsights() {
+        const list = document.getElementById("insightList");
+        list.innerHTML = INSIGHTS.map(
+          (i) =>
+            `<div class="insight-item"><div class="insight-icon">${i.icon}</div><div class="insight-text">${i.text}</div></div>`,
+        ).join("");
+      }
+
+      // Build live benchmarks
+      function buildLiveBenchmarks() {
+        const grid = document.getElementById("liveBenchGrid");
+        grid.innerHTML = LIVE_BENCHMARKS.map(
+          (b) => `
+    <div class="bench-item${b.saturation === "slight" ? "" : ""}">
+      <div class="bench-item-name">${b.name}${b.saturation === "slight" ? ' <span style="font-size:0.65rem;color:var(--amber);">~slight</span>' : ""}</div>
+      <div class="bench-item-cat">${b.cat}</div>
+      <div class="bench-item-desc">${b.desc}</div>
+      ${b.url !== "—" ? `<div style="font-size:0.7rem;color:var(--text-muted);margin-top:6px;">${b.url}</div>` : ""}
+    </div>
+  `,
+        ).join("");
+      }
+
+      // Active nav highlighting
+      function updateNav() {
+        const sections = document.querySelectorAll("section[id]");
+        const links = document.querySelectorAll(".nav-link");
+        let current = "";
+        sections.forEach((s) => {
+          const top = s.getBoundingClientRect().top;
+          if (top <= 80) current = s.id;
+        });
+        links.forEach((l) => {
+          const href = l.getAttribute("href").slice(1);
+          l.classList.toggle("active", href === current);
+        });
+      }
+
+      // Fade-in on scroll
+      function checkFade() {
+        document.querySelectorAll(".fade-in").forEach((el) => {
+          if (el.getBoundingClientRect().top < window.innerHeight - 60) {
+            el.classList.add("visible");
+          }
+        });
+      }
+
+      const EMBEDDING_MODELS = [
+        {
+          name: "Gemini embedding-001",
+          or: "google/gemini-embedding-001",
+          mteb: "68.3",
+          dims: "3072",
+          ctx: "20K",
+          price: "$0.15",
+          best: "⭐ #1 English, long ctx",
+        },
+        {
+          name: "Qwen3-Embedding-8B",
+          or: "qwen/qwen3-embedding-8b",
+          mteb: "70.6 (multi)",
+          dims: "7168",
+          ctx: "32K",
+          price: "$0.01",
+          best: "⭐ Best open-source",
+        },
+        {
+          name: "NVIDIA Nemotron-VL-1B",
+          or: "nvidia/llama-nemotron-embed-vl-1b-v2:free",
+          mteb: "—",
+          dims: "—",
+          ctx: "131K",
+          price: "FREE",
+          best: "⭐ FREE multimodal",
+        },
+        {
+          name: "Perplexity Embed 4B",
+          or: "perplexity/pplx-embed-v1-4b",
+          mteb: "—",
+          dims: "—",
+          ctx: "32K",
+          price: "$0.03",
+          best: "Web-scale retrieval",
+        },
+        {
+          name: "Perplexity Embed 0.6B",
+          or: "perplexity/pplx-embed-v1-0.6b",
+          mteb: "—",
+          dims: "—",
+          ctx: "32K",
+          price: "$0.004",
+          best: "⭐ Ultra-cheap",
+        },
+        {
+          name: "Codestral Embed 2505",
+          or: "mistralai/codestral-embed-2505",
+          mteb: "—",
+          dims: "—",
+          ctx: "8K",
+          price: "$0.15",
+          best: "⭐ Code embedding",
+        },
+        {
+          name: "text-embedding-3-large",
+          or: "openai/text-embedding-3-large",
+          mteb: "64.6",
+          dims: "3072",
+          ctx: "8K",
+          price: "$0.13",
+          best: "General purpose, MRL",
+        },
+        {
+          name: "text-embedding-3-small",
+          or: "openai/text-embedding-3-small",
+          mteb: "62.3",
+          dims: "1536",
+          ctx: "8K",
+          price: "$0.02",
+          best: "⭐ Budget sweet spot",
+        },
+        {
+          name: "Qwen3-Embedding-4B",
+          or: "qwen/qwen3-embedding-4b",
+          mteb: "—",
+          dims: "—",
+          ctx: "32K",
+          price: "$0.02",
+          best: "Lighter Qwen",
+        },
+        {
+          name: "voyage-3-large",
+          or: "— (direct)",
+          mteb: "~67",
+          dims: "2048",
+          ctx: "32K",
+          price: "$0.06",
+          best: "Best retrieval NDCG",
+        },
+        {
+          name: "voyage-3.5",
+          or: "— (direct)",
+          mteb: "~67",
+          dims: "1024",
+          ctx: "32K",
+          price: "$0.06",
+          best: "Strong retrieval",
+        },
+        {
+          name: "Cohere embed-v4",
+          or: "— (direct)",
+          mteb: "65.2",
+          dims: "1024",
+          ctx: "512",
+          price: "$0.12",
+          best: "Enterprise, noisy data",
+        },
+        {
+          name: "BGE-large-en-v1.5",
+          or: "baai/bge-large-en-v1.5",
+          mteb: "~64",
+          dims: "1024",
+          ctx: "512",
+          price: "$0.01",
+          best: "Budget on OR",
+        },
+        {
+          name: "BGE-base-en-v1.5",
+          or: "baai/bge-base-en-v1.5",
+          mteb: "~63",
+          dims: "768",
+          ctx: "512",
+          price: "$0.005",
+          best: "Ultra-budget on OR",
+        },
+        {
+          name: "all-MiniLM-L6-v2",
+          or: "sentence-transformers/all-minilm-l6-v2",
+          mteb: "56.3",
+          dims: "384",
+          ctx: "512",
+          price: "$0.005",
+          best: "Prototyping, edge",
+        },
+        {
+          name: "Jina-embeddings-v3",
+          or: "— (direct)",
+          mteb: "~65",
+          dims: "1024",
+          ctx: "8K",
+          price: "$0.02",
+          best: "Multilingual, task-specific",
+        },
+      ];
+
+      function buildEmbeddingTable() {
+        const tbody = document.getElementById("embeddingTable");
+        if (!tbody) return;
+        tbody.innerHTML = EMBEDDING_MODELS.map(
+          (m) => `<tr>
+          <td style="font-weight:600;white-space:nowrap">${m.name}</td>
+          <td style="font-size:0.7rem;color:var(--text-muted);max-width:200px;overflow:hidden;text-overflow:ellipsis">${m.or}</td>
+          <td style="text-align:center;font-weight:600;color:${m.mteb.includes("68") || m.mteb.includes("70") ? "var(--green)" : m.mteb === "—" ? "var(--text-muted)" : "var(--text)"}">${m.mteb}</td>
+          <td style="text-align:center">${m.dims}</td>
+          <td style="text-align:center;color:${m.ctx.includes("131") ? "var(--green)" : m.ctx.includes("32") ? "var(--cyan)" : "var(--text-muted)"}">${m.ctx}</td>
+          <td style="text-align:center;font-weight:600;color:${m.price === "FREE" ? "var(--green)" : parseFloat(m.price.replace("$", "")) <= 0.02 ? "var(--cyan)" : "var(--text-muted)"}">${m.price}</td>
+          <td style="font-size:0.75rem">${m.best}</td>
+        </tr>`,
+        ).join("");
+      }
+
+      // Init
+      buildMegaTable();
+      buildKing();
+      buildEmbeddingTable();
+      buildRouting();
+      buildCache();
+      buildMatrix();
+      buildInsights();
+      buildLiveBenchmarks();
+
+      // Render FREE routing
+      (() => {
+        const tbody = document.getElementById("freeRoutingBody");
+        if (!tbody) return;
+        FREE_ROUTING.forEach((r) => {
+          const tr = document.createElement("tr");
+          tr.innerHTML = `<td style="font-weight:600;white-space:nowrap">${r.task}</td><td>${r.best}</td><td>${r.backup}</td><td>${r.cli}</td>`;
+          tbody.appendChild(tr);
+        });
+      })();
+
+      // Render Embedding use-case routing
+      (() => {
+        const tbody = document.getElementById("embRoutingBody");
+        if (!tbody) return;
+        EMB_USE_CASES.forEach((r) => {
+          const tr = document.createElement("tr");
+          tr.innerHTML = `<td style="font-weight:600;white-space:nowrap">${r.task}</td><td>${r.best}</td><td>${r.budget}</td><td>${r.free}</td>`;
+          tbody.appendChild(tr);
+        });
+      })();
+
+      window.addEventListener(
+        "scroll",
+        () => {
+          updateNav();
+          checkFade();
+        },
+        { passive: true },
+      );
+      checkFade();
+    </script>
+  </body>
+</html>

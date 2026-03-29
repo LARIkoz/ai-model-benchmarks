@@ -1,0 +1,48 @@
+name: Add New Model
+description: Request adding a new AI model to the benchmark database
+title: "[Model] "
+labels: ["new-model"]
+body:
+  - type: input
+    id: model-name
+    attributes:
+      label: Model Name
+      placeholder: "e.g., Claude Opus 4.6"
+    validations:
+      required: true
+  - type: input
+    id: provider
+    attributes:
+      label: Provider
+      placeholder: "e.g., Anthropic, OpenAI, Google"
+    validations:
+      required: true
+  - type: input
+    id: openrouter-id
+    attributes:
+      label: OpenRouter Model ID
+      placeholder: "e.g., anthropic/claude-opus-4-6 (leave blank if not on OpenRouter)"
+  - type: dropdown
+    id: tier
+    attributes:
+      label: Pricing Tier
+      options:
+        - "Tier 1: Frontier (>$1/M input)"
+        - "Tier 2: Mid-range ($0.20-$1/M)"
+        - "Tier 3: Budget (<$0.20/M)"
+        - "FREE ($0)"
+    validations:
+      required: true
+  - type: textarea
+    id: scores
+    attributes:
+      label: Benchmark Scores
+      description: "Include source URLs for each score"
+      placeholder: |
+        SWE-Bench Verified: 80.8% (source: https://scale.com/leaderboard)
+        GPQA: 91.3% (source: https://artificial-analysis.com)
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional Context
+      placeholder: "Pricing, context window, best use cases, etc."

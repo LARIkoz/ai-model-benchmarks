@@ -1,0 +1,38 @@
+name: Report Data Error
+description: Report incorrect data (wrong score, outdated price, broken link)
+title: "[Error] "
+labels: ["bug", "data-error"]
+body:
+  - type: dropdown
+    id: error-type
+    attributes:
+      label: Error Type
+      options:
+        - Wrong benchmark score
+        - Outdated pricing
+        - Broken source URL
+        - Missing model
+        - Incorrect model metadata
+        - Routing recommendation issue
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: location
+    attributes:
+      label: Where is the error?
+      placeholder: "e.g., data/models.json, claude-opus-4-6, swe_v score"
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: What's wrong?
+      description: "Describe the error and provide the correct value if known"
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Source for correct value
+      placeholder: "https://..."

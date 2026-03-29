@@ -1,0 +1,46 @@
+name: Update Benchmark Score
+description: Report a new or corrected benchmark score for an existing model
+title: "[Score] "
+labels: ["score-update"]
+body:
+  - type: input
+    id: model
+    attributes:
+      label: Model
+      placeholder: "e.g., claude-opus-4-6"
+    validations:
+      required: true
+  - type: input
+    id: benchmark
+    attributes:
+      label: Benchmark
+      placeholder: "e.g., swe_v, gpqa, hle"
+    validations:
+      required: true
+  - type: input
+    id: score
+    attributes:
+      label: New Score Value
+      placeholder: "e.g., 80.8"
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Source URL
+      description: "Direct link to the leaderboard or paper"
+      placeholder: "https://..."
+    validations:
+      required: true
+  - type: input
+    id: measured
+    attributes:
+      label: Date Measured
+      placeholder: "YYYY-MM-DD or YYYY-MM"
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
+      placeholder: "Any context about methodology, version, etc."
