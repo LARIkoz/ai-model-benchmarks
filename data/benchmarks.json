@@ -526,9 +526,9 @@
     "contamination_risk": "low",
     "volatility": "medium",
     "update_frequency": "quarterly",
-    "url": "https://arxiv.org/abs/2504.00000",
+    "url": null,
     "max_score": 100,
-    "lifecycle": "active",
+    "lifecycle": "planned",
     "notes": "Gemini 3.1 Pro leads for video input."
   },
   {
@@ -540,9 +540,9 @@
     "contamination_risk": "low",
     "volatility": "low",
     "update_frequency": "quarterly",
-    "url": "https://arxiv.org/abs/2502.00000",
+    "url": null,
     "max_score": null,
-    "lifecycle": "active",
+    "lifecycle": "planned",
     "notes": "Practical benchmark for long-doc tasks. Gemini 3.1 Pro (1M ctx) leads."
   },
   {
@@ -568,9 +568,9 @@
     "contamination_risk": "low",
     "volatility": "low",
     "update_frequency": "annual",
-    "url": "https://arxiv.org/abs/2506.12345",
+    "url": null,
     "max_score": 1.0,
-    "lifecycle": "active",
+    "lifecycle": "planned",
     "notes": "ROUGE/accuracy metric. GPT-5.4 leads at 0.93."
   },
   {

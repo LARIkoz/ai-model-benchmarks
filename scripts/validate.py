@@ -73,6 +73,13 @@ def validate_benchmarks(benchmarks: list[dict]):
                 f"benchmarks.json: {bid} invalid lifecycle '{lifecycle}', must be one of {VALID_LIFECYCLES}"
             )
 
+        # URL check for active benchmarks
+        url = b.get("url")
+        if lifecycle == "active" and not url:
+            warn(f"benchmarks.json: {bid} is active but has no URL")
+        elif url and not url.startswith("https://"):
+            warn(f"benchmarks.json: {bid} url is not https: '{url}'")
+
     KNOWN_BENCHMARK_IDS = seen_ids
     print(f"  benchmarks.json: {len(benchmarks)} entries, {len(seen_ids)} unique IDs")
 
