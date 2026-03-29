@@ -9,6 +9,8 @@
 [![Embeddings](https://img.shields.io/badge/embeddings-26-purple)](data/embeddings.json)
 [![License](https://img.shields.io/badge/license-MIT-orange)](LICENSE)
 
+[🇷🇺 Русская версия](README_ru.md)
+
 **119 models · 48 benchmarks · 26 embeddings · 97 capability profiles · auto-updated daily**
 
 [Browse the portal](https://larikoz.github.io/ai-model-benchmarks/) · [View the data](data/) · [Methodology](docs/METHODOLOGY.md)
