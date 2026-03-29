@@ -1027,7 +1027,7 @@
       </div>
       <h1 class="hero-title">AI Model Benchmarks<br />2026</h1>
       <p class="hero-subtitle">
-        Definitive reference for AI model selection. 119 models × 55+ categories × 48 benchmarks. Sources: LM Council, Artificial Analysis, Scale AI
+        Definitive reference for AI model selection. 119 models × 55+ categories × 55 benchmarks. Sources: LM Council, Artificial Analysis, Scale AI
         SEAL, BFCL V4, BenchLM.ai, MTEB, Zyte, Speko.
       </p>
       <div class="hero-stats">
@@ -1040,7 +1040,7 @@
           <span class="hero-stat-label">categories</span>
         </div>
         <div class="hero-stat">
-          <span class="hero-stat-num">48</span>
+          <span class="hero-stat-num">55</span>
           <span class="hero-stat-label">benchmarks</span>
         </div>
         <div class="hero-stat">
@@ -1604,7 +1604,7 @@
             {cat: "Coding uncontaminated", benchKey: "swe_pro", bench: "SWE-Pro", q1: "Claude Opus 4.5 (45.9%)", q2: "Claude Sonnet 4.5 (43.6%)", b1: "Qwen3.5-397B (38.7%, $0.39)", b2: "MiniMax M2.5 (36.8%, $0.2)", free: "—"},
             {cat: "Scientific coding", benchKey: "scicode", bench: "SciCode", q1: "GPT-5.4 (56.6%)", q2: "Gemini 3.1 Pro (56.1%)", b1: "—", b2: "—", free: "—"},
             {cat: "Agentic coding", benchKey: "terminal_bench_2", bench: "Terminal-B2", q1: "GPT-5.4 (57.6%)", q2: "GLM-5 (56.2%)", b1: "MiniMax M2.7 (56.2%, $0.3)", b2: "GLM-5 ($1.0)", free: "—"},
-            {cat: "Code review", benchKey: null, bench: "expert eval", q1: "Claude Opus 4.6", q2: "Claude Sonnet 4.6", b1: "Grok Code Fast 1 ($0.2)", b2: "MiniMax M2.5 ($0.2)", free: "Codex CLI"},
+            {cat: "Code review", benchKey: "code_review_bench", bench: "CODE_REVIEW_BENCH", q1: "Claude Opus 4.6", q2: "Claude Sonnet 4.6", b1: "Grok Code Fast 1 ($0.2)", b2: "MiniMax M2.5 ($0.2)", free: "Codex CLI"},
             {cat: "Code generation", benchKey: "swe_v", bench: "SWE-V", q1: "GPT-5.3 Codex", q2: "GLM-5", b1: "GLM-5 ($1.0)", b2: "Kimi K2.5 ($0.45)", free: "—"},
           ],
         },
@@ -1683,7 +1683,7 @@
             {cat: "Assembly / binary RE", benchKey: "promon", bench: "PROMON", q1: "Claude Sonnet 4.6", q2: "GPT-5.4", b1: "Grok 4 ($3.0)", b2: "DeepSeek R1 ($0.45)", free: "—"},
             {cat: "Android Apk", benchKey: "fuzzing_labs", bench: "FUZZING_LABS", q1: "Claude Sonnet 4.6", q2: "Claude Opus 4.6", b1: "DeepSeek V3.2 ($0.26)", b2: "Qwen3-Coder ($0.22)", free: "Codex CLI"},
             {cat: "Ios Ipa Macho", benchKey: null, bench: "expert eval", q1: "Claude Opus 4.6", q2: "Claude Sonnet 4.6", b1: "GPT-5.2 ($1.75)", b2: "DeepSeek V3.2 ($0.26)", free: "Codex CLI"},
-            {cat: "Binary Arm X86", benchKey: null, bench: "expert eval", q1: "Claude Opus 4.6", q2: "GPT-5.4", b1: "Claude Sonnet 4.6 ($3.0)", b2: "DeepSeek R1 ($0.45)", free: "—"},
+            {cat: "Binary Arm X86", benchKey: "bin_metric", bench: "BIN_METRIC", q1: "Claude Opus 4.6", q2: "GPT-5.4", b1: "Claude Sonnet 4.6 ($3.0)", b2: "DeepSeek R1 ($0.45)", free: "—"},
             {cat: "Frida Scripting", benchKey: null, bench: "expert eval", q1: "Claude Sonnet 4.6", q2: "Claude Opus 4.6", b1: "MiniMax M2.5 ($0.2)", b2: "Qwen3-Coder ($0.22)", free: "MiniMax M2.5 FREE"},
           ],
         },
@@ -1692,11 +1692,11 @@
           title: "Medical & Scientific",
           rows: [
             {cat: "Medical QA", benchKey: "medqa", bench: "MEDQA", q1: "GPT-5.4 (95.0%)", q2: "Gemini 3.1 Pro (95.0%)", b1: "DeepSeek R1 (92.0%, $0.45)", b2: "Qwen3.5-397B (88.0%, $0.39)", free: "MiniMax M2.5 FREE"},
-            {cat: "Biomedical literature", benchKey: null, bench: "expert eval", q1: "Gemini 3.1 Pro", q2: "GPT-5.4", b1: "DeepSeek R1 ($0.45)", b2: "Kimi K2.5 ($0.45)", free: "Gemini CLI"},
+            {cat: "Biomedical literature", benchKey: "pubmedqa", bench: "PUBMEDQA", q1: "Gemini 3.1 Pro", q2: "GPT-5.4", b1: "DeepSeek R1 ($0.45)", b2: "Kimi K2.5 ($0.45)", free: "Gemini CLI"},
             {cat: "Health Content Writing", benchKey: null, bench: "expert eval", q1: "Claude Opus 4.6", q2: "GPT-5.4", b1: "Claude Sonnet 4.6 ($3.0)", b2: "Kimi K2.5 ($0.45)", free: "—"},
             {cat: "Immunology Research", benchKey: null, bench: "expert eval", q1: "Gemini 3.1 Pro", q2: "Claude Opus 4.6", b1: "DeepSeek R1 ($0.45)", b2: "Qwen3.5-397B ($0.39)", free: "Gemini CLI"},
             {cat: "Medical Fact Check", benchKey: "simpleqa", bench: "SimpleQA", q1: "Grok 4.20", q2: "Claude Opus 4.6", b1: "DeepSeek R1 ($0.45)", b2: "GLM-5 ($1.0)", free: "—"},
-            {cat: "Patient Facing Content", benchKey: null, bench: "expert eval", q1: "Claude Opus 4.6", q2: "Claude Sonnet 4.6", b1: "Kimi K2.5 ($0.45)", b2: "MiniMax M2.5 ($0.2)", free: "MiniMax M2.5 FREE"},
+            {cat: "Patient Facing Content", benchKey: "pmc_patients", bench: "PMC_PATIENTS", q1: "Claude Opus 4.6", q2: "Claude Sonnet 4.6", b1: "Kimi K2.5 ($0.45)", b2: "MiniMax M2.5 ($0.2)", free: "MiniMax M2.5 FREE"},
           ],
         },
         {
@@ -1714,10 +1714,10 @@
           letter: "K",
           title: "Writing & Naturalness",
           rows: [
-            {cat: "Natural copywriting", benchKey: null, bench: "expert eval", q1: "Claude Opus 4.6", q2: "Claude Sonnet 4.6", b1: "DeepSeek V3.2 ($0.27)", b2: "—", free: "—"},
-            {cat: "Academic writing", benchKey: null, bench: "expert eval", q1: "Claude Opus 4.6", q2: "GPT-5.4", b1: "—", b2: "—", free: "—"},
-            {cat: "Social Media Content", benchKey: null, bench: "expert eval", q1: "Claude Sonnet 4.6", q2: "—", b1: "Gemini 3 Flash", b2: "—", free: "—"},
-            {cat: "Low Ai Detection", benchKey: null, bench: "expert eval", q1: "Claude Sonnet 4.6", q2: "—", b1: "DeepSeek V3.2 ($0.27)", b2: "—", free: "Hermes 3 405B"},
+            {cat: "Natural copywriting", benchKey: "turing_bench", bench: "TURING_BENCH", q1: "Claude Opus 4.6", q2: "Claude Sonnet 4.6", b1: "DeepSeek V3.2 ($0.27)", b2: "—", free: "—"},
+            {cat: "Academic writing", benchKey: "writing_bench", bench: "WRITING_BENCH", q1: "Claude Opus 4.6", q2: "GPT-5.4", b1: "—", b2: "—", free: "—"},
+            {cat: "Social Media Content", benchKey: "some_bench", bench: "SOME_BENCH", q1: "Claude Sonnet 4.6", q2: "—", b1: "Gemini 3 Flash", b2: "—", free: "—"},
+            {cat: "Low Ai Detection", benchKey: "turing_bench", bench: "TURING_BENCH", q1: "Claude Sonnet 4.6", q2: "—", b1: "DeepSeek V3.2 ($0.27)", b2: "—", free: "Hermes 3 405B"},
           ],
         },
         {
@@ -1727,7 +1727,7 @@
             {cat: "Local 16GB+", benchKey: null, bench: "expert eval", q1: "Llama 3.3 70B Q4", q2: "Qwen3.5-72B Q4", b1: "—", b2: "—", free: "—"},
             {cat: "Local 8GB", benchKey: null, bench: "expert eval", q1: "Gemma 3 27B Q4", q2: "Mistral Small 3.1 24B Q4", b1: "—", b2: "—", free: "—"},
             {cat: "Local 4Gb Cpu", benchKey: null, bench: "expert eval", q1: "Llama 3.2 8B Q4", q2: "Gemma 3 4B Q4", b1: "—", b2: "—", free: "—"},
-            {cat: "Local Mac Optimized", benchKey: null, bench: "expert eval", q1: "Llama 3.3 70B (MLX)", q2: "Gemma 3 27B (MLX)", b1: "—", b2: "—", free: "—"},
+            {cat: "Local Mac Optimized", benchKey: "mlx_bench", bench: "MLX_BENCH", q1: "Llama 3.3 70B (MLX)", q2: "Gemma 3 27B (MLX)", b1: "—", b2: "—", free: "—"},
           ],
         },
         {
@@ -2004,6 +2004,13 @@
         {name: "WER Clean Speech", cat: "AUDIO", desc: "Word Error Rate on clean speech. Transcription accuracy.", saturation: false, url: "https://github.com/openai/whisper", lifecycle: "active"},
         {name: "Video-MME", cat: "MULTIMODAL", desc: "Video understanding. Multi-modal evaluation across video content.", saturation: false, url: "https://video-mme.github.io", lifecycle: "active"},
         {name: "Fuzzing Labs (APK RE)", cat: "SECURITY", desc: "Android APK reverse engineering and analysis.", saturation: false, url: "https://github.com/nickcano/llm-apk-analysis", lifecycle: "active"},
+        {name: "CodeReviewBench", cat: "CODING", desc: "How well LLMs identify bugs, security issues, and style problems in real code review.", saturation: false, url: "https://codereviewbench.com/", lifecycle: "active"},
+        {name: "WritingBench", cat: "WRITING", desc: "Academic and professional writing quality evaluation.", saturation: false, url: "https://arxiv.org/abs/2503.05244v3", lifecycle: "active"},
+        {name: "SoMe", cat: "WRITING", desc: "Social media content generation quality and AI detectability.", saturation: false, url: "https://arxiv.org/html/2512.14720v1", lifecycle: "active"},
+        {name: "TuringBench", cat: "WRITING", desc: "Human vs AI text detection. Measures writing naturalness.", saturation: false, url: "https://turingbench.ist.psu.edu/", lifecycle: "active"},
+        {name: "PMC-Patients", cat: "MEDICAL", desc: "Patient-facing content quality. Clinical-to-patient text translation.", saturation: false, url: "https://pmc-patients.github.io/", lifecycle: "active"},
+        {name: "BinMetric", cat: "SECURITY", desc: "Assembly understanding, function recognition, vulnerability detection.", saturation: false, url: "https://arxiv.org/html/2505.07360v1", lifecycle: "active"},
+        {name: "MLX On-Device Bench", cat: "LOCAL", desc: "LLM inference speed and efficiency on Apple Silicon with MLX.", saturation: false, url: "https://arxiv.org/abs/2510.18921", lifecycle: "active"},
       ];
 
       // ============================================================

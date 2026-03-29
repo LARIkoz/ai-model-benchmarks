@@ -114,7 +114,7 @@
       },
       "code_review_practical": {
         "cat": "coding",
-        "bench": null,
+        "bench": "code_review_bench",
         "quality_1": {
           "name": "Claude Opus 4.6",
           "id": "claude-opus-4-6",
@@ -1246,7 +1246,7 @@
       },
       "binary_arm_x86": {
         "cat": "reverse_engineering",
-        "bench": null,
+        "bench": "bin_metric",
         "quality_1": {
           "name": "Claude Opus 4.6",
           "id": "claude-opus-4-6",
@@ -1345,7 +1345,7 @@
       },
       "biomedical_literature": {
         "cat": "medical",
-        "bench": null,
+        "bench": "pubmedqa",
         "quality_1": {
           "name": "Gemini 3.1 Pro",
           "id": "gemini-3-1-pro",
@@ -1471,7 +1471,7 @@
       },
       "patient_facing_content": {
         "cat": "medical",
-        "bench": null,
+        "bench": "pmc_patients",
         "quality_1": {
           "name": "Claude Opus 4.6",
           "id": "claude-opus-4-6",
@@ -1599,7 +1599,7 @@
     "writing_naturalness": {
       "natural_copywriting": {
         "cat": "writing_naturalness",
-        "bench": null,
+        "bench": "turing_bench",
         "quality_1": {
           "name": "Claude Opus 4.6",
           "id": "claude-opus-4-6",
@@ -1622,7 +1622,7 @@
       },
       "academic_writing": {
         "cat": "writing_naturalness",
-        "bench": null,
+        "bench": "writing_bench",
         "quality_1": {
           "name": "Claude Opus 4.6",
           "id": "claude-opus-4-6",
@@ -1640,7 +1640,7 @@
       },
       "social_media_content": {
         "cat": "writing_naturalness",
-        "bench": null,
+        "bench": "some_bench",
         "quality_1": {
           "name": "Claude Sonnet 4.6",
           "id": "claude-sonnet-4-6",
@@ -1657,7 +1657,7 @@
       },
       "low_ai_detection": {
         "cat": "writing_naturalness",
-        "bench": null,
+        "bench": "turing_bench",
         "quality_1": {
           "name": "Claude Sonnet 4.6",
           "id": "claude-sonnet-4-6",
@@ -1732,7 +1732,7 @@
       },
       "local_mac_optimized": {
         "cat": "local_models",
-        "bench": null,
+        "bench": "mlx_bench",
         "quality_1": {
           "name": "Llama 3.3 70B (MLX)",
           "id": "llama-3-3-70b-q4",

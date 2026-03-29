@@ -718,5 +718,75 @@
     "lifecycle": "active",
     "notes": "Android binary analysis. Claude Sonnet 4.6 leads.",
     "description": "Android APK reverse engineering and analysis."
+  },
+  {
+    "id": "code_review_bench",
+    "name": "CodeReviewBench",
+    "category": "coding",
+    "lifecycle": "active",
+    "volatility": "medium",
+    "contamination_risk": "low",
+    "url": "https://codereviewbench.com/",
+    "description": "How well LLMs identify bugs, security issues, and style problems in real code review."
+  },
+  {
+    "id": "writing_bench",
+    "name": "WritingBench",
+    "category": "writing",
+    "lifecycle": "active",
+    "volatility": "medium",
+    "contamination_risk": "low",
+    "url": "https://arxiv.org/abs/2503.05244v3",
+    "description": "Academic and professional writing quality evaluation."
+  },
+  {
+    "id": "some_bench",
+    "name": "SoMe",
+    "category": "writing",
+    "lifecycle": "active",
+    "volatility": "medium",
+    "contamination_risk": "low",
+    "url": "https://arxiv.org/html/2512.14720v1",
+    "description": "Social media content generation quality and AI detectability."
+  },
+  {
+    "id": "turing_bench",
+    "name": "TuringBench",
+    "category": "writing",
+    "lifecycle": "active",
+    "volatility": "medium",
+    "contamination_risk": "low",
+    "url": "https://turingbench.ist.psu.edu/",
+    "description": "Human vs AI text detection. Measures writing naturalness."
+  },
+  {
+    "id": "pmc_patients",
+    "name": "PMC-Patients",
+    "category": "medical",
+    "lifecycle": "active",
+    "volatility": "low",
+    "contamination_risk": "low",
+    "url": "https://pmc-patients.github.io/",
+    "description": "Patient-facing content quality. Clinical-to-patient text translation."
+  },
+  {
+    "id": "bin_metric",
+    "name": "BinMetric",
+    "category": "reverse_engineering",
+    "lifecycle": "active",
+    "volatility": "low",
+    "contamination_risk": "low",
+    "url": "https://arxiv.org/html/2505.07360v1",
+    "description": "Assembly understanding, function recognition, vulnerability detection."
+  },
+  {
+    "id": "mlx_bench",
+    "name": "MLX On-Device Bench",
+    "category": "local",
+    "lifecycle": "active",
+    "volatility": "medium",
+    "contamination_risk": "low",
+    "url": "https://arxiv.org/abs/2510.18921",
+    "description": "LLM inference speed and efficiency on Apple Silicon with MLX."
   }
 ]
