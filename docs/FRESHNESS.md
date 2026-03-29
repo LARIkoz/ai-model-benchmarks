@@ -51,16 +51,16 @@ In `data/models.json`, each score has a `measured` field. Warning thresholds:
 
 Prices in `data/pricing.json` have a top-level `updated` date. If that's >7 days ago, run `scripts/fetch_openrouter_prices.py` to refresh.
 
-## Auto-update pipeline
+## Auto-update pipeline (planned)
 
-The GitHub Action in `.github/workflows/daily-prices.yml`:
+The GitHub Action in `.github/workflows/daily-prices.yml` is not yet deployed. Until then, run `scripts/fetch_openrouter_prices.py` manually to refresh pricing. When deployed, it will:
 
-1. Runs at 06:00 UTC daily
-2. Calls `scripts/fetch_openrouter_prices.py`
-3. Fetches `https://openrouter.ai/api/v1/models`
-4. Compares against current `data/pricing.json`
-5. If prices changed: updates file, commits, pushes
-6. If new models detected: opens a GitHub issue for manual review
+1. Run at 06:00 UTC daily
+2. Call `scripts/fetch_openrouter_prices.py`
+3. Fetch `https://openrouter.ai/api/v1/models`
+4. Compare against current `data/pricing.json`
+5. If prices changed: update file, commit, push
+6. If new models detected: open a GitHub issue for manual review
 
 Score updates are intentionally manual — automated score ingestion would silently accept bad data from contaminated leaderboards. A human reviews each score update.
 

@@ -12,7 +12,7 @@
 Most benchmark tables show one score per model, measured at some unknown date. This repo tracks:
 
 - **Per-score freshness dates** — every benchmark value has a `measured` field showing when it was collected
-- **Auto-updated pricing** — daily GitHub Action fetches current prices from OpenRouter API
+- **Auto-updated pricing** — script fetches current prices from OpenRouter API (daily GitHub Action planned)
 - **Task routing recommendations** — not just "best model" but "best model for your specific task at your budget"
 - **Benchmark lifecycle** — active vs saturated vs dead benchmarks, contamination risk, volatility
 
@@ -30,7 +30,7 @@ data/
   embeddings.json   — 26 embedding models with MTEB scores and use-case routing
   benchmarks.json   — Registry of all tracked benchmarks with lifecycle status
   routing.json      — Task routing: KING picks, FREE routing, quick decision matrix
-  pricing.json      — Cache pricing by provider (auto-updated daily)
+  pricing.json      — Cache pricing by provider (updated via script)
 
 docs/
   METHODOLOGY.md    — Sources, freshness policy, benchmark lifecycle
@@ -66,7 +66,7 @@ python scripts/generate_md.py > MODEL_BENCHMARKS.md
 
 ### Stay current on pricing
 
-Pricing auto-updates daily via GitHub Actions. To run manually:
+Pricing is updated by running the fetch script:
 
 ```bash
 python scripts/fetch_openrouter_prices.py
@@ -89,13 +89,13 @@ Pull requests welcome. Requirements:
 
 See `docs/CONTRIBUTING.md` for full guidelines.
 
-## Auto-update schedule
+## Planned update schedule
 
-- **Daily (06:00 UTC):** Prices fetched from OpenRouter API, `data/pricing.json` updated
+- **Daily (planned — 06:00 UTC):** Prices fetched from OpenRouter API via GitHub Action, `data/pricing.json` updated
 - **Weekly (manual):** Benchmark scores reviewed against leaderboards, freshness dates updated
-- **On PR:** Schema validation runs automatically
+- **On PR (planned):** Schema validation via GitHub Action
 
-> **Note:** GitHub Actions workflows for daily price updates and PR validation are planned but not yet deployed. Until CI is active, run `python scripts/fetch_openrouter_prices.py` and `python scripts/validate.py` manually before submitting a PR.
+> **Note:** GitHub Actions workflows for daily price updates and PR validation are not yet deployed. Until CI is active, run `python scripts/fetch_openrouter_prices.py` and `python scripts/validate.py` manually before submitting a PR.
 
 ## Sources
 

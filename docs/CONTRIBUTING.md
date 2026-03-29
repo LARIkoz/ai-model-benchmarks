@@ -56,7 +56,7 @@ Include the date you checked — scores on leaderboards change retroactively.
 
 ## Review process
 
-1. Automated validation runs on every PR (see `.github/workflows/validate.yml`)
+1. Automated validation on every PR is planned (see `.github/workflows/validate.yml`) — until CI is deployed, run `python scripts/validate.py` manually before opening a PR
 2. A maintainer checks the source URL is valid and points to the claimed score
 3. If the score differs from what the source shows: PR is rejected
 4. If score is marked `notes: "estimated"`, it's accepted only if clearly labeled and plausible

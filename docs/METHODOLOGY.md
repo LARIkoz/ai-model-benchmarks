@@ -95,7 +95,7 @@ Scores for a model are omitted if not available (never `null` in scores object â
 
 Update schedule:
 
-- **Daily (automated):** prices via GitHub Action
+- **Daily (manual, automation planned):** prices via fetch script
 - **Weekly (manual):** check major leaderboards for score changes
 - **On model release:** add to appropriate tier within 48 hours
 

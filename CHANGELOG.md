@@ -14,5 +14,5 @@
 - **Quick Decision Matrix** — one-line lookups: "I need X → use Y"
 - **Cache pricing table** — per-provider cache discounts (Anthropic 90%, Google 90%, OpenAI 75-90%, etc.)
 - **Benchmark lifecycle registry** — active vs saturated vs dead benchmarks with contamination risk ratings
-- **GitHub Actions** — daily price updates, PR validation
+- **GitHub Actions** — daily price updates, PR validation (planned, not yet deployed)
 - **Scripts** — fetch prices, validate schema, generate markdown

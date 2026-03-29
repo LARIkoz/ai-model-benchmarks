@@ -30,16 +30,37 @@
         "measured": "2026-03",
         "source": "artificial-analysis.com"
       },
-      "hle": { "value": 36.7, "measured": "2026-03", "source": "lastexam.ai" },
+      "hle": {
+        "value": 36.7,
+        "measured": "2026-03",
+        "source": "lastexam.ai"
+      },
       "arc_agi_2": {
         "value": 68.8,
         "measured": "2026-03",
         "source": "arcprize.org"
       },
-      "tau2": { "value": 99.3, "measured": "2026-03", "source": "tau-bench" },
-      "terminal_bench_2": { "value": 48.5, "measured": "2026-03" },
-      "gdpval": { "value": 1500, "measured": "2026-03", "notes": "~1500+" },
-      "benchlm": { "value": 76, "measured": "2026-03", "source": "benchlm.ai" },
+      "tau2": {
+        "value": 99.3,
+        "measured": "2026-03",
+        "source": "tau-bench"
+      },
+      "terminal_bench_2": {
+        "value": 48.5,
+        "measured": "2026-03",
+        "source": "https://github.com/Terminal-Bench/Terminal-Bench"
+      },
+      "gdpval": {
+        "value": 1500,
+        "measured": "2026-03",
+        "notes": "~1500+",
+        "source": "https://gdpval.github.io"
+      },
+      "benchlm": {
+        "value": 76,
+        "measured": "2026-03",
+        "source": "benchlm.ai"
+      },
       "lmarena": {
         "value": 1476,
         "measured": "2026-03",
@@ -87,15 +108,26 @@
         "measured": "2026-03",
         "source": "artificial-analysis.com"
       },
-      "hle": { "value": 28.4, "measured": "2026-03", "source": "lastexam.ai" },
-      "benchlm": { "value": 62, "measured": "2026-03", "source": "benchlm.ai" },
+      "hle": {
+        "value": 28.4,
+        "measured": "2026-03",
+        "source": "lastexam.ai"
+      },
+      "benchlm": {
+        "value": 62,
+        "measured": "2026-03",
+        "source": "benchlm.ai"
+      },
       "lmarena": {
         "value": 1345,
         "measured": "2026-03",
         "source": "lmarena.ai"
       }
     },
-    "best_for": ["Reasoning", "long-horizon tasks"],
+    "best_for": [
+      "Reasoning",
+      "long-horizon tasks"
+    ],
     "license": "proprietary",
     "openrouter_id": "anthropic/claude-opus-4-5"
   },
@@ -119,7 +151,9 @@
         "source": "gorilla.cs.berkeley.edu"
       }
     },
-    "best_for": ["Function calling"],
+    "best_for": [
+      "Function calling"
+    ],
     "license": "proprietary",
     "openrouter_id": "anthropic/claude-opus-4-1"
   },
@@ -154,13 +188,21 @@
         "measured": "2026-03",
         "source": "artificial-analysis.com"
       },
-      "hle": { "value": 37.2, "measured": "2026-03", "source": "lastexam.ai" },
+      "hle": {
+        "value": 37.2,
+        "measured": "2026-03",
+        "source": "lastexam.ai"
+      },
       "arc_agi_2": {
         "value": 77.1,
         "measured": "2026-03",
         "source": "arcprize.org"
       },
-      "benchlm": { "value": 83, "measured": "2026-03", "source": "benchlm.ai" }
+      "benchlm": {
+        "value": 83,
+        "measured": "2026-03",
+        "source": "benchlm.ai"
+      }
     },
     "best_for": [
       "GPQA",
@@ -202,7 +244,10 @@
         "source": "artificial-analysis.com"
       }
     },
-    "best_for": ["Scraper code generation", "vision"],
+    "best_for": [
+      "Scraper code generation",
+      "vision"
+    ],
     "license": "proprietary",
     "openrouter_id": "google/gemini-3-pro"
   },
@@ -238,17 +283,42 @@
         "measured": "2026-03",
         "source": "artificial-analysis.com"
       },
-      "hle": { "value": 41.6, "measured": "2026-03", "source": "lastexam.ai" },
+      "hle": {
+        "value": 41.6,
+        "measured": "2026-03",
+        "source": "lastexam.ai"
+      },
       "arc_agi_2": {
         "value": 73.3,
         "measured": "2026-03",
         "source": "arcprize.org"
       },
-      "terminal_bench_2": { "value": 57.6, "measured": "2026-03" },
-      "gdpval": { "value": 1480, "measured": "2026-03", "notes": "~1480" },
-      "benchlm": { "value": 80, "measured": "2026-03", "source": "benchlm.ai" },
-      "humaneval": { "value": 97.5, "measured": "2026-03" },
-      "aime_2025": { "value": 100, "measured": "2026-03" }
+      "terminal_bench_2": {
+        "value": 57.6,
+        "measured": "2026-03",
+        "source": "https://github.com/Terminal-Bench/Terminal-Bench"
+      },
+      "gdpval": {
+        "value": 1480,
+        "measured": "2026-03",
+        "notes": "~1480",
+        "source": "https://gdpval.github.io"
+      },
+      "benchlm": {
+        "value": 80,
+        "measured": "2026-03",
+        "source": "benchlm.ai"
+      },
+      "humaneval": {
+        "value": 97.5,
+        "measured": "2026-03",
+        "source": "https://arxiv.org/abs/2107.03374"
+      },
+      "aime_2025": {
+        "value": 100,
+        "measured": "2026-03",
+        "source": "https://arxiv.org/abs/2406.05442"
+      }
     },
     "best_for": [
       "Math",
@@ -290,10 +360,21 @@
         "measured": "2026-03",
         "source": "artificial-analysis.com"
       },
-      "hle": { "value": 35.4, "measured": "2026-03", "source": "lastexam.ai" },
-      "benchlm": { "value": 67, "measured": "2026-03", "source": "benchlm.ai" }
+      "hle": {
+        "value": 35.4,
+        "measured": "2026-03",
+        "source": "lastexam.ai"
+      },
+      "benchlm": {
+        "value": 67,
+        "measured": "2026-03",
+        "source": "benchlm.ai"
+      }
     },
-    "best_for": ["GPQA", "general knowledge"],
+    "best_for": [
+      "GPQA",
+      "general knowledge"
+    ],
     "license": "proprietary",
     "openrouter_id": "openai/gpt-5.2"
   },
@@ -321,12 +402,30 @@
         "measured": "2026-03",
         "source": "artificial-analysis.com"
       },
-      "hle": { "value": 39.9, "measured": "2026-03", "source": "lastexam.ai" },
-      "terminal_bench_2": { "value": 53.0, "measured": "2026-03" },
-      "humaneval": { "value": 97.5, "measured": "2026-03" },
-      "benchlm": { "value": 70, "measured": "2026-03", "source": "benchlm.ai" }
+      "hle": {
+        "value": 39.9,
+        "measured": "2026-03",
+        "source": "lastexam.ai"
+      },
+      "terminal_bench_2": {
+        "value": 53.0,
+        "measured": "2026-03",
+        "source": "https://github.com/Terminal-Bench/Terminal-Bench"
+      },
+      "humaneval": {
+        "value": 97.5,
+        "measured": "2026-03",
+        "source": "https://arxiv.org/abs/2107.03374"
+      },
+      "benchlm": {
+        "value": 70,
+        "measured": "2026-03",
+        "source": "benchlm.ai"
+      }
     },
-    "best_for": ["Code generation"],
+    "best_for": [
+      "Code generation"
+    ],
     "license": "proprietary",
     "openrouter_id": "openai/gpt-5.3-codex"
   },
@@ -361,8 +460,16 @@
         "measured": "2026-03",
         "source": "arcprize.org"
       },
-      "terminal_bench_2": { "value": 53.0, "measured": "2026-03" },
-      "benchlm": { "value": 76, "measured": "2026-03", "source": "benchlm.ai" },
+      "terminal_bench_2": {
+        "value": 53.0,
+        "measured": "2026-03",
+        "source": "https://github.com/Terminal-Bench/Terminal-Bench"
+      },
+      "benchlm": {
+        "value": 76,
+        "measured": "2026-03",
+        "source": "benchlm.ai"
+      },
       "lmarena": {
         "value": 941,
         "measured": "2026-03",
@@ -402,9 +509,16 @@
         "measured": "2026-03",
         "source": "scale.com/leaderboard"
       },
-      "gaia": { "value": 74.6, "measured": "2026-03" }
+      "gaia": {
+        "value": 74.6,
+        "measured": "2026-03",
+        "source": "https://huggingface.co/spaces/gaia-benchmark/leaderboard"
+      }
     },
-    "best_for": ["General assistant", "GAIA"],
+    "best_for": [
+      "General assistant",
+      "GAIA"
+    ],
     "license": "proprietary",
     "openrouter_id": "anthropic/claude-sonnet-4-5"
   },
@@ -429,9 +543,16 @@
         "measured": "2026-03",
         "source": "scale.com/leaderboard"
       },
-      "benchlm": { "value": 61, "measured": "2026-03", "source": "benchlm.ai" }
+      "benchlm": {
+        "value": 61,
+        "measured": "2026-03",
+        "source": "benchlm.ai"
+      }
     },
-    "best_for": ["Budget Claude", "fast tasks"],
+    "best_for": [
+      "Budget Claude",
+      "fast tasks"
+    ],
     "license": "proprietary",
     "openrouter_id": "anthropic/claude-haiku-4-5"
   },
@@ -461,10 +582,21 @@
         "measured": "2026-03",
         "source": "artificial-analysis.com"
       },
-      "hle": { "value": 25.4, "measured": "2026-03", "source": "lastexam.ai" },
-      "benchlm": { "value": 67, "measured": "2026-03", "source": "benchlm.ai" }
+      "hle": {
+        "value": 25.4,
+        "measured": "2026-03",
+        "source": "lastexam.ai"
+      },
+      "benchlm": {
+        "value": 67,
+        "measured": "2026-03",
+        "source": "benchlm.ai"
+      }
     },
-    "best_for": ["Assembly deobfuscation", "coding"],
+    "best_for": [
+      "Assembly deobfuscation",
+      "coding"
+    ],
     "license": "proprietary",
     "openrouter_id": "x-ai/grok-4"
   },
@@ -519,12 +651,36 @@
         "measured": "2026-03",
         "source": "artificial-analysis.com"
       },
-      "hle": { "value": 30.5, "measured": "2026-03", "source": "lastexam.ai" },
-      "tau2": { "value": 98.2, "measured": "2026-03", "source": "tau-bench" },
-      "terminal_bench_2": { "value": 56.2, "measured": "2026-03" },
-      "humaneval": { "value": 90, "measured": "2026-03" },
-      "aime_2025": { "value": 84, "measured": "2026-03" },
-      "mgsm": { "value": 90, "measured": "2026-03" }
+      "hle": {
+        "value": 30.5,
+        "measured": "2026-03",
+        "source": "lastexam.ai"
+      },
+      "tau2": {
+        "value": 98.2,
+        "measured": "2026-03",
+        "source": "tau-bench"
+      },
+      "terminal_bench_2": {
+        "value": 56.2,
+        "measured": "2026-03",
+        "source": "https://github.com/Terminal-Bench/Terminal-Bench"
+      },
+      "humaneval": {
+        "value": 90,
+        "measured": "2026-03",
+        "source": "https://arxiv.org/abs/2107.03374"
+      },
+      "aime_2025": {
+        "value": 84,
+        "measured": "2026-03",
+        "source": "https://arxiv.org/abs/2406.05442"
+      },
+      "mgsm": {
+        "value": 90,
+        "measured": "2026-03",
+        "source": "https://arxiv.org/abs/2210.01848"
+      }
     },
     "best_for": [
       "Tool calling",
@@ -556,10 +712,14 @@
       "tool_error_rate": {
         "value": 0.67,
         "measured": "2026-03",
-        "notes": "error rate %"
+        "notes": "error rate %",
+        "source": "https://tau-bench.github.io"
       }
     },
-    "best_for": ["Tool reliability", "low error rate"],
+    "best_for": [
+      "Tool reliability",
+      "low error rate"
+    ],
     "license": "proprietary",
     "openrouter_id": "z-ai/glm-5-turbo"
   },
@@ -582,10 +742,21 @@
         "measured": "2026-03",
         "source": "artificial-analysis.com"
       },
-      "hle": { "value": 21.6, "measured": "2026-03", "source": "lastexam.ai" },
-      "grind": { "value": 82.1, "measured": "2026-03" }
+      "hle": {
+        "value": 21.6,
+        "measured": "2026-03",
+        "source": "lastexam.ai"
+      },
+      "grind": {
+        "value": 82.1,
+        "measured": "2026-03",
+        "source": "https://arxiv.org/abs/2501.10957"
+      }
     },
-    "best_for": ["Adaptive reasoning", "GRIND"],
+    "best_for": [
+      "Adaptive reasoning",
+      "GRIND"
+    ],
     "license": "proprietary",
     "openrouter_id": "google/gemini-2.5-pro"
   },
@@ -603,7 +774,9 @@
     },
     "context_length": 1000000,
     "scores": {},
-    "best_for": ["AWS ecosystem"],
+    "best_for": [
+      "AWS ecosystem"
+    ],
     "license": "proprietary",
     "openrouter_id": "amazon/nova-premier"
   },
@@ -621,7 +794,9 @@
     },
     "context_length": 256000,
     "scores": {},
-    "best_for": ["Enterprise"],
+    "best_for": [
+      "Enterprise"
+    ],
     "license": "proprietary",
     "openrouter_id": "cohere/command-a"
   },
@@ -656,10 +831,23 @@
         "measured": "2026-03",
         "source": "artificial-analysis.com"
       },
-      "hle": { "value": 32, "measured": "2026-03", "source": "lastexam.ai" },
-      "browsecomp": { "value": 76.3, "measured": "2026-03" }
+      "hle": {
+        "value": 32,
+        "measured": "2026-03",
+        "source": "lastexam.ai"
+      },
+      "browsecomp": {
+        "value": 76.3,
+        "measured": "2026-03",
+        "source": "https://openai.com/research/browsecomp"
+      }
     },
-    "best_for": ["Best SWE/$", "batch coding", "browser automation", "writing"],
+    "best_for": [
+      "Best SWE/$",
+      "batch coding",
+      "browser automation",
+      "writing"
+    ],
     "license": "proprietary",
     "openrouter_id": "minimax/minimax-m2.5"
   },
@@ -685,9 +873,16 @@
         "source": "scale.com/leaderboard",
         "notes": "† unverified"
       },
-      "gdpval": { "value": 1495, "measured": "2026-03" }
+      "gdpval": {
+        "value": 1495,
+        "measured": "2026-03",
+        "source": "https://gdpval.github.io"
+      }
     },
-    "best_for": ["Agentic tasks", "GDPval"],
+    "best_for": [
+      "Agentic tasks",
+      "GDPval"
+    ],
     "license": "proprietary",
     "openrouter_id": "minimax/minimax-m2.7"
   },
@@ -717,10 +912,22 @@
         "measured": "2026-03",
         "source": "artificial-analysis.com"
       },
-      "hle": { "value": 31.5, "measured": "2026-03", "source": "lastexam.ai" },
-      "lmarena": { "value": 988, "measured": "2026-03", "source": "lmarena.ai" }
+      "hle": {
+        "value": 31.5,
+        "measured": "2026-03",
+        "source": "lastexam.ai"
+      },
+      "lmarena": {
+        "value": 988,
+        "measured": "2026-03",
+        "source": "lmarena.ai"
+      }
     },
-    "best_for": ["Vision + reasoning", "budget GPQA", "writing"],
+    "best_for": [
+      "Vision + reasoning",
+      "budget GPQA",
+      "writing"
+    ],
     "license": "proprietary",
     "openrouter_id": "moonshot/kimi-k2.5"
   },
@@ -744,7 +951,9 @@
         "source": "scale.com/leaderboard"
       }
     },
-    "best_for": ["Budget Kimi"],
+    "best_for": [
+      "Budget Kimi"
+    ],
     "license": "proprietary",
     "openrouter_id": "moonshot/kimi-k2"
   },
@@ -762,9 +971,15 @@
     },
     "context_length": 203000,
     "scores": {
-      "tau2": { "value": 95.9, "measured": "2026-03", "source": "tau-bench" }
+      "tau2": {
+        "value": 95.9,
+        "measured": "2026-03",
+        "source": "tau-bench"
+      }
     },
-    "best_for": ["Tool calling budget"],
+    "best_for": [
+      "Tool calling budget"
+    ],
     "license": "proprietary",
     "openrouter_id": "z-ai/glm-4.7"
   },
@@ -793,7 +1008,9 @@
         "source": "artificial-analysis.com"
       }
     },
-    "best_for": ["General tasks"],
+    "best_for": [
+      "General tasks"
+    ],
     "license": "proprietary",
     "openrouter_id": "z-ai/glm-4.6"
   },
@@ -817,7 +1034,9 @@
         "source": "gorilla.cs.berkeley.edu"
       }
     },
-    "best_for": ["Function calling #1"],
+    "best_for": [
+      "Function calling #1"
+    ],
     "license": "proprietary",
     "openrouter_id": "z-ai/glm-4.5"
   },
@@ -850,7 +1069,11 @@
         "measured": "2026-03",
         "source": "artificial-analysis.com"
       },
-      "ifbench": { "value": 78.8, "measured": "2026-03" }
+      "ifbench": {
+        "value": 78.8,
+        "measured": "2026-03",
+        "source": "https://huggingface.co/spaces/IFEval/IFBench"
+      }
     },
     "best_for": [
       "Vision+video+reasoning",
@@ -885,7 +1108,9 @@
         "source": "artificial-analysis.com"
       }
     },
-    "best_for": ["Budget reasoning"],
+    "best_for": [
+      "Budget reasoning"
+    ],
     "license": "proprietary",
     "openrouter_id": "qwen/qwen3.5-122b"
   },
@@ -913,9 +1138,15 @@
         "measured": "2026-03",
         "source": "artificial-analysis.com"
       },
-      "mmlu_pro": { "value": 85.3, "measured": "2026-03" }
+      "mmlu_pro": {
+        "value": 85.3,
+        "measured": "2026-03",
+        "source": "https://arxiv.org/abs/2406.01574"
+      }
     },
-    "best_for": ["Mid-tier reasoning"],
+    "best_for": [
+      "Mid-tier reasoning"
+    ],
     "license": "proprietary",
     "openrouter_id": "qwen/qwen3.5-35b"
   },
@@ -935,7 +1166,9 @@
     },
     "context_length": 262000,
     "scores": {},
-    "best_for": ["Coding"],
+    "best_for": [
+      "Coding"
+    ],
     "license": "proprietary",
     "openrouter_id": "qwen/qwen3-coder"
   },
@@ -955,7 +1188,9 @@
     },
     "context_length": 1000000,
     "scores": {},
-    "best_for": ["Long context code"],
+    "best_for": [
+      "Long context code"
+    ],
     "license": "proprietary",
     "openrouter_id": "qwen/qwen3-coder-plus"
   },
@@ -986,9 +1221,16 @@
         "measured": "2026-03",
         "source": "scale.com/leaderboard"
       },
-      "hle": { "value": 25.1, "measured": "2026-03", "source": "lastexam.ai" }
+      "hle": {
+        "value": 25.1,
+        "measured": "2026-03",
+        "source": "lastexam.ai"
+      }
     },
-    "best_for": ["Cheapest quality", "hallucination resistance budget"],
+    "best_for": [
+      "Cheapest quality",
+      "hallucination resistance budget"
+    ],
     "license": "proprietary",
     "open_weight": true,
     "params": "671B",
@@ -1008,9 +1250,17 @@
     },
     "context_length": 164000,
     "scores": {
-      "medqa": { "value": 92.1, "measured": "2026-03", "notes": "MedQA USMLE" }
+      "medqa": {
+        "value": 92.1,
+        "measured": "2026-03",
+        "notes": "MedQA USMLE",
+        "source": "https://arxiv.org/abs/2009.13081"
+      }
     },
-    "best_for": ["Deep reasoning", "medical budget king"],
+    "best_for": [
+      "Deep reasoning",
+      "medical budget king"
+    ],
     "license": "MIT",
     "open_weight": true,
     "openrouter_id": "deepseek/deepseek-r1"
@@ -1029,7 +1279,9 @@
     },
     "context_length": 164000,
     "scores": {},
-    "best_for": ["Enhanced V3.2"],
+    "best_for": [
+      "Enhanced V3.2"
+    ],
     "license": "proprietary",
     "openrouter_id": "deepseek/deepseek-v3.2-speciale"
   },
@@ -1049,7 +1301,11 @@
     },
     "context_length": 2000000,
     "scores": {},
-    "best_for": ["Consilium", "2M context", "long context budget"],
+    "best_for": [
+      "Consilium",
+      "2M context",
+      "long context budget"
+    ],
     "license": "proprietary",
     "openrouter_id": "x-ai/grok-4.1-fast"
   },
@@ -1067,7 +1323,10 @@
     },
     "context_length": 2000000,
     "scores": {},
-    "best_for": ["Classification", "2M context"],
+    "best_for": [
+      "Classification",
+      "2M context"
+    ],
     "license": "proprietary",
     "openrouter_id": "x-ai/grok-4-fast"
   },
@@ -1085,7 +1344,9 @@
     },
     "context_length": 256000,
     "scores": {},
-    "best_for": ["Code review budget"],
+    "best_for": [
+      "Code review budget"
+    ],
     "license": "proprietary",
     "openrouter_id": "x-ai/grok-code-fast-1"
   },
@@ -1118,14 +1379,21 @@
         "measured": "2026-03",
         "source": "artificial-analysis.com"
       },
-      "ifbench": { "value": 78.0, "measured": "2026-03" },
+      "ifbench": {
+        "value": 78.0,
+        "measured": "2026-03",
+        "source": "https://huggingface.co/spaces/IFEval/IFBench"
+      },
       "scraper_code_zyte": {
         "value": 0.817,
         "measured": "2026-02",
         "source": "zyte.com/blog"
       }
     },
-    "best_for": ["Fast + cheap Gemini", "simple scrapers"],
+    "best_for": [
+      "Fast + cheap Gemini",
+      "simple scrapers"
+    ],
     "license": "proprietary",
     "openrouter_id": "google/gemini-3-flash"
   },
@@ -1145,7 +1413,10 @@
     },
     "context_length": 1000000,
     "scores": {},
-    "best_for": ["Budget Gemini", "ultra-cheap cached"],
+    "best_for": [
+      "Budget Gemini",
+      "ultra-cheap cached"
+    ],
     "license": "proprietary",
     "openrouter_id": "google/gemini-2.5-flash"
   },
@@ -1163,7 +1434,10 @@
     },
     "context_length": 300000,
     "scores": {},
-    "best_for": ["Vision", "AWS ecosystem"],
+    "best_for": [
+      "Vision",
+      "AWS ecosystem"
+    ],
     "license": "proprietary",
     "openrouter_id": "amazon/nova-pro"
   },
@@ -1181,7 +1455,9 @@
     },
     "context_length": 1000000,
     "scores": {},
-    "best_for": ["Multimodal 1M context"],
+    "best_for": [
+      "Multimodal 1M context"
+    ],
     "license": "proprietary",
     "openrouter_id": "amazon/nova-2-lite"
   },
@@ -1202,10 +1478,13 @@
       "throughput_tps": {
         "value": 872,
         "measured": "2026-03",
-        "notes": "tokens/sec"
+        "notes": "tokens/sec",
+        "source": "https://artificial-analysis.com"
       }
     },
-    "best_for": ["Speed king 872 tok/s"],
+    "best_for": [
+      "Speed king 872 tok/s"
+    ],
     "license": "proprietary",
     "openrouter_id": "inception/mercury-2"
   },
@@ -1223,7 +1502,9 @@
     },
     "context_length": 128000,
     "scores": {},
-    "best_for": ["Fast code"],
+    "best_for": [
+      "Fast code"
+    ],
     "license": "proprietary",
     "openrouter_id": "inception/mercury-coder"
   },
@@ -1241,7 +1522,9 @@
     },
     "context_length": 1000000,
     "scores": {},
-    "best_for": ["Long context 1M"],
+    "best_for": [
+      "Long context 1M"
+    ],
     "license": "proprietary",
     "openrouter_id": "minimax/minimax-m1"
   },
@@ -1259,7 +1542,9 @@
     },
     "context_length": 1000000,
     "scores": {},
-    "best_for": ["Vision + 1M context"],
+    "best_for": [
+      "Vision + 1M context"
+    ],
     "license": "proprietary",
     "openrouter_id": "minimax/minimax-01"
   },
@@ -1279,7 +1564,10 @@
     },
     "context_length": 262000,
     "scores": {},
-    "best_for": ["EU compliance", "vision"],
+    "best_for": [
+      "EU compliance",
+      "vision"
+    ],
     "license": "proprietary",
     "openrouter_id": "mistralai/mistral-large-2512"
   },
@@ -1297,7 +1585,9 @@
     },
     "context_length": 131000,
     "scores": {},
-    "best_for": ["EU compliance"],
+    "best_for": [
+      "EU compliance"
+    ],
     "license": "proprietary",
     "openrouter_id": "mistralai/mistral-medium-3.1"
   },
@@ -1315,7 +1605,10 @@
     },
     "context_length": 256000,
     "scores": {},
-    "best_for": ["Code", "JS deobfuscation budget"],
+    "best_for": [
+      "Code",
+      "JS deobfuscation budget"
+    ],
     "license": "proprietary",
     "openrouter_id": "mistralai/codestral"
   },
@@ -1333,7 +1626,9 @@
     },
     "context_length": 131000,
     "scores": {},
-    "best_for": ["Code agent"],
+    "best_for": [
+      "Code agent"
+    ],
     "license": "proprietary",
     "openrouter_id": "mistralai/devstral-medium"
   },
@@ -1357,9 +1652,16 @@
         "measured": "2026-03",
         "source": "artificial-analysis.com"
       },
-      "mmlu_pro": { "value": 80.5, "measured": "2026-03" }
+      "mmlu_pro": {
+        "value": 80.5,
+        "measured": "2026-03",
+        "source": "https://arxiv.org/abs/2406.01574"
+      }
     },
-    "best_for": ["Vision", "MMLU-Pro"],
+    "best_for": [
+      "Vision",
+      "MMLU-Pro"
+    ],
     "license": "Llama 4",
     "open_weight": true,
     "openrouter_id": "meta-llama/llama-4-maverick"
@@ -1378,7 +1680,9 @@
     },
     "context_length": 131000,
     "scores": {},
-    "best_for": ["Vision + VIDEO input"],
+    "best_for": [
+      "Vision + VIDEO input"
+    ],
     "license": "proprietary",
     "openrouter_id": "z-ai/glm-4.6v"
   },
@@ -1396,7 +1700,9 @@
     },
     "context_length": 65000,
     "scores": {},
-    "best_for": ["Vision"],
+    "best_for": [
+      "Vision"
+    ],
     "license": "proprietary",
     "openrouter_id": "z-ai/glm-4.5v"
   },
@@ -1414,7 +1720,9 @@
     },
     "context_length": 262000,
     "scores": {},
-    "best_for": ["Vision+video"],
+    "best_for": [
+      "Vision+video"
+    ],
     "license": "proprietary",
     "openrouter_id": "qwen/qwen3.5-27b"
   },
@@ -1432,7 +1740,11 @@
     },
     "context_length": 131000,
     "scores": {},
-    "best_for": ["Budget GLM", "batch general", "classification"],
+    "best_for": [
+      "Budget GLM",
+      "batch general",
+      "classification"
+    ],
     "license": "proprietary",
     "openrouter_id": "z-ai/glm-4.5-air"
   },
@@ -1450,7 +1762,9 @@
     },
     "context_length": 1000000,
     "scores": {},
-    "best_for": ["1M context budget"],
+    "best_for": [
+      "1M context budget"
+    ],
     "license": "proprietary",
     "openrouter_id": "qwen/qwen-plus"
   },
@@ -1473,14 +1787,23 @@
         "measured": "2026-03",
         "source": "artificial-analysis.com"
       },
-      "mmlu_pro": { "value": 74.3, "measured": "2026-03" },
+      "mmlu_pro": {
+        "value": 74.3,
+        "measured": "2026-03",
+        "source": "https://arxiv.org/abs/2406.01574"
+      },
       "throughput_tps": {
         "value": 2600,
         "measured": "2026-03",
-        "notes": "tokens/sec — speed king"
+        "notes": "tokens/sec — speed king",
+        "source": "https://artificial-analysis.com"
       }
     },
-    "best_for": ["10M context!", "Vision", "Speed king"],
+    "best_for": [
+      "10M context!",
+      "Vision",
+      "Speed king"
+    ],
     "license": "Llama 4",
     "open_weight": true,
     "openrouter_id": "meta-llama/llama-4-scout"
@@ -1499,9 +1822,16 @@
     },
     "context_length": 203000,
     "scores": {
-      "tau2": { "value": 98.8, "measured": "2026-03", "source": "tau-bench" }
+      "tau2": {
+        "value": 98.8,
+        "measured": "2026-03",
+        "source": "tau-bench"
+      }
     },
-    "best_for": ["Ultra-cheap tool calling", "Tau2 98.8%"],
+    "best_for": [
+      "Ultra-cheap tool calling",
+      "Tau2 98.8%"
+    ],
     "license": "proprietary",
     "openrouter_id": "z-ai/glm-4.7-flashx"
   },
@@ -1519,7 +1849,9 @@
     },
     "context_length": 128000,
     "scores": {},
-    "best_for": ["Open-weight 32B"],
+    "best_for": [
+      "Open-weight 32B"
+    ],
     "license": "proprietary",
     "open_weight": true,
     "params": "32B",
@@ -1539,7 +1871,9 @@
     },
     "context_length": 1000000,
     "scores": {},
-    "best_for": ["1M context ultra-budget"],
+    "best_for": [
+      "1M context ultra-budget"
+    ],
     "license": "proprietary",
     "openrouter_id": "qwen/qwen3.5-flash"
   },
@@ -1557,7 +1891,9 @@
     },
     "context_length": 256000,
     "scores": {},
-    "best_for": ["Tiny + vision+video"],
+    "best_for": [
+      "Tiny + vision+video"
+    ],
     "license": "proprietary",
     "openrouter_id": "qwen/qwen3.5-9b"
   },
@@ -1575,7 +1911,9 @@
     },
     "context_length": 41000,
     "scores": {},
-    "best_for": ["MoE small"],
+    "best_for": [
+      "MoE small"
+    ],
     "license": "proprietary",
     "openrouter_id": "qwen/qwen3-30b"
   },
@@ -1593,7 +1931,9 @@
     },
     "context_length": 160000,
     "scores": {},
-    "best_for": ["Code small"],
+    "best_for": [
+      "Code small"
+    ],
     "license": "proprietary",
     "openrouter_id": "qwen/qwen3-coder-30b"
   },
@@ -1611,7 +1951,9 @@
     },
     "context_length": 131000,
     "scores": {},
-    "best_for": ["Cheapest Qwen"],
+    "best_for": [
+      "Cheapest Qwen"
+    ],
     "license": "proprietary",
     "openrouter_id": "qwen/qwen-turbo"
   },
@@ -1629,7 +1971,9 @@
     },
     "context_length": 1000000,
     "scores": {},
-    "best_for": ["Cheapest Gemini 1M"],
+    "best_for": [
+      "Cheapest Gemini 1M"
+    ],
     "license": "proprietary",
     "openrouter_id": "google/gemini-2.5-flash-lite"
   },
@@ -1647,7 +1991,9 @@
     },
     "context_length": 1000000,
     "scores": {},
-    "best_for": ["Multimodal budget"],
+    "best_for": [
+      "Multimodal budget"
+    ],
     "license": "proprietary",
     "openrouter_id": "google/gemini-2.0-flash"
   },
@@ -1665,7 +2011,9 @@
     },
     "context_length": 33000,
     "scores": {},
-    "best_for": ["Budget DeepSeek"],
+    "best_for": [
+      "Budget DeepSeek"
+    ],
     "license": "proprietary",
     "openrouter_id": "deepseek/deepseek-v3.1"
   },
@@ -1683,7 +2031,9 @@
     },
     "context_length": 128000,
     "scores": {},
-    "best_for": ["Cheapest AWS"],
+    "best_for": [
+      "Cheapest AWS"
+    ],
     "license": "proprietary",
     "openrouter_id": "amazon/nova-micro"
   },
@@ -1701,7 +2051,10 @@
     },
     "context_length": 300000,
     "scores": {},
-    "best_for": ["Vision budget", "300K context"],
+    "best_for": [
+      "Vision budget",
+      "300K context"
+    ],
     "license": "proprietary",
     "openrouter_id": "amazon/nova-lite"
   },
@@ -1719,7 +2072,9 @@
     },
     "context_length": 128000,
     "scores": {},
-    "best_for": ["Vision tiny"],
+    "best_for": [
+      "Vision tiny"
+    ],
     "license": "proprietary",
     "openrouter_id": "mistralai/mistral-small-3.2"
   },
@@ -1739,7 +2094,10 @@
     },
     "context_length": 131000,
     "scores": {},
-    "best_for": ["Vision cheapest", "EU multilingual"],
+    "best_for": [
+      "Vision cheapest",
+      "EU multilingual"
+    ],
     "license": "proprietary",
     "openrouter_id": "mistralai/mistral-small-3.1-24b-instruct"
   },
@@ -1757,7 +2115,9 @@
     },
     "context_length": 131000,
     "scores": {},
-    "best_for": ["Cheapest text"],
+    "best_for": [
+      "Cheapest text"
+    ],
     "license": "proprietary",
     "openrouter_id": "mistralai/mistral-nemo"
   },
@@ -1775,7 +2135,9 @@
     },
     "context_length": 131000,
     "scores": {},
-    "best_for": ["Code budget EU"],
+    "best_for": [
+      "Code budget EU"
+    ],
     "license": "proprietary",
     "openrouter_id": "mistralai/devstral-small"
   },
@@ -1793,7 +2155,9 @@
     },
     "context_length": 131000,
     "scores": {},
-    "best_for": ["Open-weight vision"],
+    "best_for": [
+      "Open-weight vision"
+    ],
     "license": "Gemma",
     "open_weight": true,
     "openrouter_id": "google/gemma-3-27b-it"
@@ -1817,7 +2181,11 @@
         "source": "scale.com/leaderboard"
       }
     },
-    "best_for": ["Best free coder", "batch coding", "code review free"],
+    "best_for": [
+      "Best free coder",
+      "batch coding",
+      "code review free"
+    ],
     "license": "proprietary",
     "openrouter_id": "minimax/minimax-m2.5:free"
   },
@@ -1834,7 +2202,10 @@
     },
     "context_length": 262000,
     "scores": {},
-    "best_for": ["Coding free #1", "480B MoE 35B active"],
+    "best_for": [
+      "Coding free #1",
+      "480B MoE 35B active"
+    ],
     "license": "proprietary",
     "openrouter_id": "qwen/qwen3-coder:free"
   },
@@ -1851,7 +2222,11 @@
     },
     "context_length": 131000,
     "scores": {},
-    "best_for": ["Reasoning free", "uncensored", "general 405B"],
+    "best_for": [
+      "Reasoning free",
+      "uncensored",
+      "general 405B"
+    ],
     "license": "Llama 3",
     "open_weight": true,
     "openrouter_id": "nousresearch/hermes-3-llama-3.1-405b:free"
@@ -1869,7 +2244,10 @@
     },
     "context_length": 262000,
     "scores": {},
-    "best_for": ["Long-context reasoning free", "120B MoE"],
+    "best_for": [
+      "Long-context reasoning free",
+      "120B MoE"
+    ],
     "license": "Open",
     "openrouter_id": "nvidia/nemotron-3-super-120b-a12b:free"
   },
@@ -1886,7 +2264,11 @@
     },
     "context_length": 131000,
     "scores": {},
-    "best_for": ["Batch general free", "classification", "Chinese+English"],
+    "best_for": [
+      "Batch general free",
+      "classification",
+      "Chinese+English"
+    ],
     "license": "proprietary",
     "openrouter_id": "z-ai/glm-4.5-air:free"
   },
@@ -1903,7 +2285,10 @@
     },
     "context_length": 131000,
     "scores": {},
-    "best_for": ["General free", "Google quality"],
+    "best_for": [
+      "General free",
+      "Google quality"
+    ],
     "license": "Gemma",
     "open_weight": true,
     "openrouter_id": "google/gemma-3-27b-it:free"
@@ -1921,7 +2306,9 @@
     },
     "context_length": 65000,
     "scores": {},
-    "best_for": ["General purpose proven free"],
+    "best_for": [
+      "General purpose proven free"
+    ],
     "license": "Llama 3",
     "open_weight": true,
     "openrouter_id": "meta-llama/llama-3.3-70b-instruct:free"
@@ -1939,7 +2326,10 @@
     },
     "context_length": 128000,
     "scores": {},
-    "best_for": ["EU compliance free", "multilingual"],
+    "best_for": [
+      "EU compliance free",
+      "multilingual"
+    ],
     "license": "proprietary",
     "openrouter_id": "mistralai/mistral-small-3.1-24b-instruct:free"
   },
@@ -1956,7 +2346,9 @@
     },
     "context_length": 256000,
     "scores": {},
-    "best_for": ["256K context free"],
+    "best_for": [
+      "256K context free"
+    ],
     "license": "proprietary",
     "openrouter_id": "stepfun/step-3.5-flash:free"
   },
@@ -1973,7 +2365,10 @@
     },
     "context_length": 262000,
     "scores": {},
-    "best_for": ["Ultra-long ctx free", "MoE 3B active"],
+    "best_for": [
+      "Ultra-long ctx free",
+      "MoE 3B active"
+    ],
     "license": "proprietary",
     "openrouter_id": "qwen/qwen3-next-80b-a3b-instruct:free"
   },
@@ -1990,7 +2385,9 @@
     },
     "context_length": 131000,
     "scores": {},
-    "best_for": ["OpenAI open-source experiment"],
+    "best_for": [
+      "OpenAI open-source experiment"
+    ],
     "license": "Open",
     "open_weight": true,
     "openrouter_id": "openai/gpt-oss-120b:free"
@@ -2008,7 +2405,9 @@
     },
     "context_length": 131000,
     "scores": {},
-    "best_for": ["Lightweight OpenAI OSS"],
+    "best_for": [
+      "Lightweight OpenAI OSS"
+    ],
     "license": "Open",
     "open_weight": true,
     "openrouter_id": "openai/gpt-oss-20b:free"
@@ -2026,7 +2425,9 @@
     },
     "context_length": 131000,
     "scores": {},
-    "best_for": ["Enterprise merge model preview"],
+    "best_for": [
+      "Enterprise merge model preview"
+    ],
     "license": "proprietary",
     "openrouter_id": "arcee-ai/trinity-large-preview:free"
   },
@@ -2043,7 +2444,9 @@
     },
     "context_length": 128000,
     "scores": {},
-    "best_for": ["FREE vision model #1"],
+    "best_for": [
+      "FREE vision model #1"
+    ],
     "license": "Open",
     "openrouter_id": "nvidia/nemotron-nano-12b-v2-vl:free"
   },
@@ -2060,7 +2463,9 @@
     },
     "context_length": 128000,
     "scores": {},
-    "best_for": ["Lightweight NVIDIA free"],
+    "best_for": [
+      "Lightweight NVIDIA free"
+    ],
     "license": "Open",
     "openrouter_id": "nvidia/nemotron-nano-9b-v2:free"
   },
@@ -2077,7 +2482,9 @@
     },
     "context_length": 256000,
     "scores": {},
-    "best_for": ["Long ctx 256K free MoE"],
+    "best_for": [
+      "Long ctx 256K free MoE"
+    ],
     "license": "Open",
     "openrouter_id": "nvidia/nemotron-3-nano-30b-a3b:free"
   },
@@ -2094,7 +2501,9 @@
     },
     "context_length": 32000,
     "scores": {},
-    "best_for": ["Small general free"],
+    "best_for": [
+      "Small general free"
+    ],
     "license": "Gemma",
     "open_weight": true,
     "openrouter_id": "google/gemma-3-12b-it:free"
@@ -2112,7 +2521,10 @@
     },
     "context_length": 32000,
     "scores": {},
-    "best_for": ["Edge", "mobile free"],
+    "best_for": [
+      "Edge",
+      "mobile free"
+    ],
     "license": "Gemma",
     "open_weight": true,
     "openrouter_id": "google/gemma-3-4b-it:free"
@@ -2130,7 +2542,9 @@
     },
     "context_length": 8000,
     "scores": {},
-    "best_for": ["Ultra-small edge IoT"],
+    "best_for": [
+      "Ultra-small edge IoT"
+    ],
     "license": "Gemma",
     "open_weight": true,
     "openrouter_id": "google/gemma-3n-e4b-it:free"
@@ -2148,7 +2562,9 @@
     },
     "context_length": 8000,
     "scores": {},
-    "best_for": ["Prototype IoT minimal"],
+    "best_for": [
+      "Prototype IoT minimal"
+    ],
     "license": "Gemma",
     "open_weight": true,
     "openrouter_id": "google/gemma-3n-e2b-it:free"
@@ -2166,7 +2582,9 @@
     },
     "context_length": 40000,
     "scores": {},
-    "best_for": ["Lightweight tasks free"],
+    "best_for": [
+      "Lightweight tasks free"
+    ],
     "license": "proprietary",
     "openrouter_id": "qwen/qwen3-4b:free"
   },
@@ -2183,7 +2601,9 @@
     },
     "context_length": 131000,
     "scores": {},
-    "best_for": ["Small with long ctx free"],
+    "best_for": [
+      "Small with long ctx free"
+    ],
     "license": "Llama 3",
     "open_weight": true,
     "openrouter_id": "meta-llama/llama-3.2-3b-instruct:free"
@@ -2201,7 +2621,9 @@
     },
     "context_length": 131000,
     "scores": {},
-    "best_for": ["Lightweight merge free"],
+    "best_for": [
+      "Lightweight merge free"
+    ],
     "license": "proprietary",
     "openrouter_id": "arcee-ai/trinity-mini:free"
   },
@@ -2218,7 +2640,9 @@
     },
     "context_length": 32000,
     "scores": {},
-    "best_for": ["Thinking CoT at 1.2B free"],
+    "best_for": [
+      "Thinking CoT at 1.2B free"
+    ],
     "license": "proprietary",
     "openrouter_id": "liquid/lfm-2.5-1.2b-thinking:free"
   },
@@ -2235,7 +2659,9 @@
     },
     "context_length": 32000,
     "scores": {},
-    "best_for": ["Ultra-small instruct free"],
+    "best_for": [
+      "Ultra-small instruct free"
+    ],
     "license": "proprietary",
     "openrouter_id": "liquid/lfm-2.5-1.2b-instruct:free"
   },
@@ -2252,7 +2678,9 @@
     },
     "context_length": 32000,
     "scores": {},
-    "best_for": ["No content filter free"],
+    "best_for": [
+      "No content filter free"
+    ],
     "license": "proprietary",
     "openrouter_id": "cognitivecomputations/dolphin-mistral-24b-venice-edition:free"
   },
@@ -2269,7 +2697,9 @@
     },
     "context_length": 200000,
     "scores": {},
-    "best_for": ["Auto-routes to best free model"],
+    "best_for": [
+      "Auto-routes to best free model"
+    ],
     "license": "N/A",
     "openrouter_id": "openrouter/free"
   },
@@ -2287,9 +2717,15 @@
     },
     "context_length": 200000,
     "scores": {
-      "tau2": { "value": 98.8, "measured": "2026-03", "source": "tau-bench" }
+      "tau2": {
+        "value": 98.8,
+        "measured": "2026-03",
+        "source": "tau-bench"
+      }
     },
-    "best_for": ["Tool calling free CLI"],
+    "best_for": [
+      "Tool calling free CLI"
+    ],
     "license": "proprietary"
   },
   {
@@ -2306,7 +2742,9 @@
     },
     "context_length": 200000,
     "scores": {},
-    "best_for": ["Simple tasks free CLI"],
+    "best_for": [
+      "Simple tasks free CLI"
+    ],
     "license": "proprietary"
   },
   {
@@ -2323,7 +2761,9 @@
     },
     "context_length": 1000000,
     "scores": {},
-    "best_for": ["Classification batch 2000 RPD free"],
+    "best_for": [
+      "Classification batch 2000 RPD free"
+    ],
     "license": "proprietary"
   },
   {
@@ -2340,7 +2780,10 @@
     },
     "context_length": null,
     "scores": {},
-    "best_for": ["Code review free", "architecture review"],
+    "best_for": [
+      "Code review free",
+      "architecture review"
+    ],
     "license": "proprietary"
   },
   {
@@ -2357,7 +2800,12 @@
     },
     "context_length": 2000000,
     "scores": {},
-    "best_for": ["Research free", "PDF analysis", "visual QA", "2M context"],
+    "best_for": [
+      "Research free",
+      "PDF analysis",
+      "visual QA",
+      "2M context"
+    ],
     "license": "proprietary"
   }
 ]
