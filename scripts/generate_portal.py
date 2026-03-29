@@ -122,6 +122,26 @@ def gen_models(models: list) -> str:
         best = m.get("best_for", [])
         best_str = ", ".join(best) if best else ""
 
+        # Capability flags
+        caps = m.get("capabilities", {})
+        cap_flags = []
+        if caps.get("vision"):
+            cap_flags.append("V")
+        if caps.get("tool_calling"):
+            cap_flags.append("T")
+        if caps.get("reasoning"):
+            cap_flags.append("R")
+        if caps.get("structured_output"):
+            cap_flags.append("S")
+        if caps.get("audio_input"):
+            cap_flags.append("A")
+        if caps.get("image_output"):
+            cap_flags.append("I")
+        cap_str = "".join(cap_flags)
+
+        max_out = m.get("max_output_tokens")
+        max_out_str = fmt_ctx(max_out) if max_out else ""
+
         lines.append(
             "        {"
             f'tier: "{tier_str(m["tier"])}", '
@@ -129,6 +149,8 @@ def gen_models(models: list) -> str:
             f"priceIn: {fmt_num(m.get('pricing', {}).get('input'))}, "
             f"priceOut: {fmt_num(m.get('pricing', {}).get('output'))}, "
             f'ctx: "{fmt_ctx(m.get("context_length"))}", '
+            f'maxOut: "{max_out_str}", '
+            f'caps: "{cap_str}", '
             f"swe_v: {fmt_score(sc('swe_v'))}, "
             f"swe_pro: {fmt_score(sc('swe_pro'))}, "
             f"gpqa: {fmt_score(sc('gpqa'))}, "
@@ -462,10 +484,9 @@ def replace_js_block(
 def replace_string_const(html: str, var_name: str, value: str) -> str:
     """Заменяет const VAR = "...";"""
     pattern = re.compile(rf'(const {re.escape(var_name)} = )"[^"]*"')
-    new = pattern.sub(rf'\g<1>"{value}"', html)
-    if new == html:
+    if not pattern.search(html):
         raise ValueError(f"Паттерн const {var_name} не найден")
-    return new
+    return pattern.sub(rf'\g<1>"{value}"', html)
 
 
 def replace_hero_stat(html: str, old_val: str, label: str, new_val: str) -> str:

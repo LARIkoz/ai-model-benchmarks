@@ -33,22 +33,25 @@ jobs:
           echo "exit_code=$?" >> $GITHUB_OUTPUT
         continue-on-error: true
 
+      - name: Regenerate portal from data
+        run: python scripts/generate_portal.py
+
       - name: Check for changes
         id: changes
         run: |
-          if git diff --quiet data/; then
+          if git diff --quiet data/ index.html; then
             echo "changed=false" >> $GITHUB_OUTPUT
           else
             echo "changed=true" >> $GITHUB_OUTPUT
           fi
 
-      - name: Commit price updates
+      - name: Commit updates
         if: steps.changes.outputs.changed == 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/pricing.json data/models.json
-          git diff --staged --quiet || git commit -m "chore: update prices $(date -u +%Y-%m-%d)"
+          git add data/pricing.json data/models.json index.html
+          git diff --staged --quiet || git commit -m "chore: daily sync $(date -u +%Y-%m-%d)"
           git push
 
       - name: Create issue for new models
