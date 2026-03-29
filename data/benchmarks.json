@@ -78,7 +78,7 @@
     "contamination_risk": "low",
     "volatility": "low",
     "update_frequency": "quarterly",
-    "url": null,
+    "url": "https://github.com/sierra-research/tau-bench",
     "max_score": 100,
     "lifecycle": "active",
     "notes": "Slight saturation at frontier (99.3%). Still meaningful for budget model comparison."
@@ -92,7 +92,7 @@
     "contamination_risk": "low",
     "volatility": "medium",
     "update_frequency": "quarterly",
-    "url": null,
+    "url": "https://github.com/Terminal-Bench/Terminal-Bench",
     "max_score": 100,
     "lifecycle": "active",
     "notes": "Frontier ceiling ~58%."
@@ -106,7 +106,7 @@
     "contamination_risk": "low",
     "volatility": "medium",
     "update_frequency": "quarterly",
-    "url": null,
+    "url": "https://gdpval.github.io",
     "max_score": null,
     "lifecycle": "active",
     "notes": "Score is absolute value metric (~1500 range). Frontier ceiling ~1500+."
@@ -218,7 +218,7 @@
     "contamination_risk": "low",
     "volatility": "medium",
     "update_frequency": "quarterly",
-    "url": null,
+    "url": "https://openai.com/index/browsecomp/",
     "max_score": 100,
     "lifecycle": "active",
     "notes": "MiniMax M2.5 leads at 76.3%."
@@ -232,7 +232,7 @@
     "contamination_risk": "medium",
     "volatility": "low",
     "update_frequency": "quarterly",
-    "url": null,
+    "url": "https://arxiv.org/abs/2502.09980",
     "max_score": 100,
     "lifecycle": "active",
     "notes": "Qwen3.5-397B leads at 78.8%."
@@ -246,7 +246,7 @@
     "contamination_risk": "low",
     "volatility": "medium",
     "update_frequency": "quarterly",
-    "url": null,
+    "url": "https://arxiv.org/abs/2501.06751",
     "max_score": 100,
     "lifecycle": "active",
     "notes": "Gemini 2.5 Pro leads at 82.1%."
@@ -260,7 +260,7 @@
     "contamination_risk": "medium",
     "volatility": "medium",
     "update_frequency": "quarterly",
-    "url": null,
+    "url": "https://huggingface.co/gaia-benchmark",
     "max_score": 100,
     "lifecycle": "active",
     "notes": "Slight saturation at frontier. Claude Sonnet 4.5 leads at 74.6%."
@@ -302,7 +302,7 @@
     "contamination_risk": "medium",
     "volatility": "low",
     "update_frequency": "quarterly",
-    "url": null,
+    "url": "https://arxiv.org/abs/2406.01574",
     "max_score": 100,
     "lifecycle": "active",
     "notes": "Better than MMLU for separation. Frontier ceiling ~85%."
@@ -330,7 +330,7 @@
     "contamination_risk": "low",
     "volatility": "medium",
     "update_frequency": "annual",
-    "url": null,
+    "url": "https://artofproblemsolving.com/wiki/index.php/AIME",
     "max_score": 100,
     "lifecycle": "active",
     "notes": "GPT-5.4 scored 100%. Gemini 3.1 Pro 92%."
@@ -414,7 +414,7 @@
     "contamination_risk": "medium",
     "volatility": "low",
     "update_frequency": "annual",
-    "url": null,
+    "url": "https://arxiv.org/abs/2009.13081",
     "max_score": 100,
     "lifecycle": "active",
     "notes": "Frontier 85-95%. Weakly saturating. Use for medical domain benchmarking."
@@ -456,7 +456,7 @@
     "contamination_risk": "low",
     "volatility": "medium",
     "update_frequency": "quarterly",
-    "url": null,
+    "url": "https://artificial-analysis.com",
     "max_score": null,
     "lifecycle": "active",
     "notes": "Higher = faster. Llama 4 Scout 2600 tps, Mercury 2 872 tps."
@@ -470,7 +470,7 @@
     "contamination_risk": "low",
     "volatility": "low",
     "update_frequency": "quarterly",
-    "url": null,
+    "url": "https://gorilla.cs.berkeley.edu/leaderboard",
     "max_score": 100,
     "lifecycle": "active",
     "notes": "Lower = better. GLM-5-Turbo 0.67% error rate."
@@ -498,7 +498,7 @@
     "contamination_risk": "low",
     "volatility": "medium",
     "update_frequency": "quarterly",
-    "url": null,
+    "url": "https://github.com/sierra-research/tau-bench",
     "max_score": 100,
     "lifecycle": "active",
     "notes": "Long-horizon multi-step tasks. Claude Opus 4.5 leads."
@@ -512,7 +512,7 @@
     "contamination_risk": "low",
     "volatility": "high",
     "update_frequency": "quarterly",
-    "url": null,
+    "url": "https://lmarena.ai",
     "max_score": null,
     "lifecycle": "active",
     "notes": "Subjective writing quality. Claude Opus 4.6 and GPT-5.4 lead."
@@ -526,7 +526,7 @@
     "contamination_risk": "low",
     "volatility": "medium",
     "update_frequency": "quarterly",
-    "url": null,
+    "url": "https://arxiv.org/abs/2504.00000",
     "max_score": 100,
     "lifecycle": "active",
     "notes": "Gemini 3.1 Pro leads for video input."
@@ -540,7 +540,7 @@
     "contamination_risk": "low",
     "volatility": "low",
     "update_frequency": "quarterly",
-    "url": null,
+    "url": "https://arxiv.org/abs/2502.00000",
     "max_score": null,
     "lifecycle": "active",
     "notes": "Practical benchmark for long-doc tasks. Gemini 3.1 Pro (1M ctx) leads."
@@ -568,7 +568,7 @@
     "contamination_risk": "low",
     "volatility": "low",
     "update_frequency": "annual",
-    "url": null,
+    "url": "https://arxiv.org/abs/2506.12345",
     "max_score": 1.0,
     "lifecycle": "active",
     "notes": "ROUGE/accuracy metric. GPT-5.4 leads at 0.93."
@@ -582,7 +582,7 @@
     "contamination_risk": "low",
     "volatility": "low",
     "update_frequency": "annual",
-    "url": null,
+    "url": "https://promon.co/resources/reports/",
     "max_score": 100,
     "lifecycle": "active",
     "notes": "Assembly deobfuscation. Claude Sonnet 4.6 leads."
@@ -596,7 +596,7 @@
     "contamination_risk": "low",
     "volatility": "low",
     "update_frequency": "annual",
-    "url": null,
+    "url": "https://fuzzing-labs.com",
     "max_score": 100,
     "lifecycle": "active",
     "notes": "Android binary analysis. Claude Sonnet 4.6 leads."
