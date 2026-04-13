@@ -1,5 +1,5 @@
 # AI Model Benchmarks 2026 — Full Data for AI Agents
-# Updated: 2026-04-12
+# Updated: 2026-04-13
 
 This file contains the complete routing table and model summary.
 For full JSON data, fetch these URLs directly:
@@ -60,12 +60,12 @@ For full JSON data, fetch these URLs directly:
 | Amazon Nova Premier | Amazon | T1 | 1M | 32K | 2.5 | 12.5 | VT | AWS ecosystem |
 | Cohere Command-A | Cohere | T1 | 256K | 8K | 2.5 | 10.0 | S | Enterprise |
 | MiniMax M2.5 | MiniMax | T2 | 196K | 65K | 0.118 | 0.99 | TRS | Best SWE/$, batch coding, browser automation, w... |
-| MiniMax M2.7 | MiniMax | T2 | 204K | 131K | 0.3 | 1.2 | TR | Agentic tasks, GDPval |
+| MiniMax M2.7 | MiniMax | T2 | 196K | 131K | 0.3 | 1.2 | TRS | Agentic tasks, GDPval |
 | Kimi K2.5 | Moonshot | T2 | 262K | — | 0.45 | 2.2 | — | Vision + reasoning, budget GPQA, writing |
 | Kimi K2 | Moonshot | T2 | 131K | — | 0.4 | 2.0 | — | Budget Kimi |
 | GLM-4.7 | Z.ai | T2 | 202K | 65K | 0.39 | 1.75 | TRS | Tool calling budget |
 | GLM-4.6 | Z.ai | T2 | 204K | 204K | 0.39 | 1.9 | TRS | General tasks |
-| GLM-4.5 | Z.ai | T2 | 131K | 98K | 0.6 | 2.2 | TRS | Function calling #1 |
+| GLM-4.5 | Z.ai | T2 | 131K | 98K | 0.6 | 2.2 | TR | Function calling #1 |
 | Qwen3.5-397B | Alibaba | T2 | 262K | 65K | 0.39 | 2.34 | VTRS | Vision+video+reasoning, instruction following #... |
 | Qwen3.5-122B | Alibaba | T2 | 262K | 65K | 0.26 | 2.08 | VTRS | Budget reasoning |
 | Qwen3.5-35B | Alibaba | T2 | 262K | 65K | 0.1625 | 1.3 | VTRS | Mid-tier reasoning |
@@ -113,7 +113,7 @@ For full JSON data, fetch these URLs directly:
 | Mistral Nemo | Mistral | T3 | 131K | 16K | 0.02 | 0.04 | TS | Cheapest text |
 | Devstral Small | Mistral | T3 | 131K | — | 0.1 | 0.3 | TS | Code budget EU |
 | Google Gemma 3 27B | Google | T3 | 131K | 16K | 0.08 | 0.16 | VS | Open-weight vision |
-| MiniMax M2.5 (Free) | MiniMax | FREE | 196K | 196K | 0 | 0 | TR | Best free coder, batch coding, code review free |
+| MiniMax M2.5 (Free) | MiniMax | FREE | 196K | 8K | 0 | 0 | TR | Best free coder, batch coding, code review free |
 | Qwen3 Coder 480B (Free) | Alibaba | FREE | 262K | 262K | 0 | 0 | T | Coding free #1, 480B MoE 35B active |
 | Hermes 3 405B (Free) | Nous Research | FREE | 131K | — | 0 | 0 | — | Reasoning free, uncensored, general 405B |
 | NVIDIA Nemotron 3 Super 120B (Free) | NVIDIA | FREE | 262K | 262K | 0 | 0 | TRS | Long-context reasoning free, 120B MoE |
@@ -124,7 +124,7 @@ For full JSON data, fetch these URLs directly:
 | StepFun Step 3.5 Flash (Free) | StepFun | FREE | 256K | 256K | 0 | 0 | TR | 256K context free |
 | Qwen3 Next 80B (Free) | Alibaba | FREE | 262K | — | 0 | 0 | TS | Ultra-long ctx free, MoE 3B active |
 | OpenAI GPT-OSS 120B (Free) | OpenAI | FREE | 131K | 131K | 0 | 0 | TR | OpenAI open-source experiment |
-| OpenAI GPT-OSS 20B (Free) | OpenAI | FREE | 131K | 131K | 0 | 0 | TR | Lightweight OpenAI OSS |
+| OpenAI GPT-OSS 20B (Free) | OpenAI | FREE | 131K | 8K | 0 | 0 | TR | Lightweight OpenAI OSS |
 | Arcee Trinity Large (Free) | Arcee AI | FREE | 131K | — | 0 | 0 | TS | Enterprise merge model preview |
 | NVIDIA Nemotron Nano 12B VL (Free) | NVIDIA | FREE | 128K | 128K | 0 | 0 | VTR | FREE vision model #1 |
 | NVIDIA Nemotron Nano 9B (Free) | NVIDIA | FREE | 128K | — | 0 | 0 | TRS | Lightweight NVIDIA free |
