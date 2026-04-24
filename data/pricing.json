@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-22",
+  "updated": "2026-04-24",
   "source": "openrouter.ai/api/v1/models",
   "cache_pricing_by_provider": [
     {
@@ -196,5 +196,5 @@
     "Each request is completely unique (no common prefix)",
     "Models without cache support"
   ],
-  "checked_at": "2026-04-23"
+  "checked_at": "2026-04-24"
 }
