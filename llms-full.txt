@@ -1,5 +1,5 @@
 # AI Model Benchmarks 2026 — Full Data for AI Agents
-# Updated: 2026-04-24
+# Updated: 2026-04-25
 
 This file contains the complete routing table and model summary.
 For full JSON data, fetch these URLs directly:
@@ -54,12 +54,12 @@ For full JSON data, fetch these URLs directly:
 | Claude Haiku 4.5 | Anthropic | T1 | 200K | 64K | 1.0 | 5.0 | VTRS | Budget Claude, fast tasks |
 | Grok 4 | xAI | T1 | 256K | — | 3.0 | 15.0 | VTRS | Assembly deobfuscation, coding |
 | Grok 4.20 Beta | xAI | T1 | 2M | — | 2.0 | 6.0 | VTRS | Hallucination resistance, fact-checking, long c... |
-| GLM-5 | Z.ai | T1 | 202K | 131K | 0.6 | 2.08 | TRS | Tool calling, multilingual, long-horizon tasks,... |
+| GLM-5 | Z.ai | T1 | 202K | 16K | 0.6 | 2.08 | TRS | Tool calling, multilingual, long-horizon tasks,... |
 | GLM-5-Turbo | Z.ai | T1 | 202K | 131K | 1.2 | 4.0 | TR | Tool reliability, low error rate |
 | Gemini 2.5 Pro | Google | T1 | 1M | 65K | 1.25 | 10.0 | VTRS | Adaptive reasoning, GRIND |
 | Amazon Nova Premier | Amazon | T1 | 1M | 32K | 2.5 | 12.5 | VT | AWS ecosystem |
 | Cohere Command-A | Cohere | T1 | 256K | 8K | 2.5 | 10.0 | S | Enterprise |
-| MiniMax M2.5 | MiniMax | T2 | 196K | 65K | 0.15 | 1.15 | TRS | Best SWE/$, batch coding, browser automation, w... |
+| MiniMax M2.5 | MiniMax | T2 | 196K | 131K | 0.15 | 1.15 | TRS | Best SWE/$, batch coding, browser automation, w... |
 | MiniMax M2.7 | MiniMax | T2 | 196K | 131K | 0.3 | 1.2 | TRS | Agentic tasks, GDPval |
 | Kimi K2.5 | Moonshot | T2 | 262K | — | 0.45 | 2.2 | — | Vision + reasoning, budget GPQA, writing |
 | Kimi K2 | Moonshot | T2 | 131K | — | 0.4 | 2.0 | — | Budget Kimi |
@@ -69,7 +69,7 @@ For full JSON data, fetch these URLs directly:
 | Qwen3.5-397B | Alibaba | T2 | 262K | 65K | 0.39 | 2.34 | VTRS | Vision+video+reasoning, instruction following #... |
 | Qwen3.5-122B | Alibaba | T2 | 262K | 65K | 0.26 | 2.08 | VTRS | Budget reasoning |
 | Qwen3.5-35B | Alibaba | T2 | 262K | 65K | 0.1625 | 1.3 | VTRS | Mid-tier reasoning |
-| Qwen3-Coder | Alibaba | T2 | 262K | — | 0.22 | 1.0 | TS | Coding |
+| Qwen3-Coder | Alibaba | T2 | 262K | 65K | 0.22 | 1.0 | TS | Coding |
 | Qwen3-Coder-Plus | Alibaba | T2 | 1M | 65K | 0.65 | 3.25 | TS | Long context code |
 | DeepSeek V3.2 | DeepSeek | T2 | 131K | 65K | 0.252 | 0.378 | TRS | Cheapest quality, hallucination resistance budget |
 | DeepSeek R1 | DeepSeek | T2 | 64K | 16K | 0.7 | 2.5 | TR | Deep reasoning, medical budget king |
@@ -90,17 +90,17 @@ For full JSON data, fetch these URLs directly:
 | Codestral | Mistral | T2 | 256K | — | 0.3 | 0.9 | TS | Code, JS deobfuscation budget |
 | Devstral Medium | Mistral | T2 | 131K | — | 0.4 | 2.0 | TS | Code agent |
 | Llama 4 Maverick | Meta | T2 | 1M | 16K | None | None | VS | Vision, MMLU-Pro |
-| GLM-4.6V | Z.ai | T2 | 131K | 131K | 0.3 | 0.9 | VTR | Vision + VIDEO input |
+| GLM-4.6V | Z.ai | T2 | 131K | 24K | 0.3 | 0.9 | VTR | Vision + VIDEO input |
 | GLM-4.5V | Z.ai | T2 | 65K | 16K | 0.6 | 1.8 | VTR | Vision |
 | Qwen3.5-27B | Alibaba | T3 | 262K | 65K | 0.195 | 1.56 | VTRS | Vision+video |
 | GLM-4.5 Air | Z.ai | T3 | 131K | 98K | 0.13 | 0.85 | TR | Budget GLM, batch general, classification |
 | Qwen Plus | Alibaba | T3 | 1M | 32K | 0.26 | 0.78 | T | 1M context budget |
 | Llama 4 Scout | Meta | T3 | 327K | 16K | 0.08 | 0.3 | VTS | 10M context!, Vision, Speed king |
-| GLM-4.7-FlashX | Z.ai | T3 | 202K | — | 0.06 | 0.4 | TRS | Ultra-cheap tool calling, Tau2 98.8% |
+| GLM-4.7-FlashX | Z.ai | T3 | 202K | 16K | 0.06 | 0.4 | TRS | Ultra-cheap tool calling, Tau2 98.8% |
 | GLM-4-32B | Z.ai | T3 | 128K | — | 0.1 | 0.1 | T | Open-weight 32B |
 | Qwen3.5-Flash | Alibaba | T3 | 1M | 65K | 0.065 | 0.26 | VTRS | 1M context ultra-budget |
 | Qwen3.5-9B | Alibaba | T3 | 262K | 32K | 0.1 | 0.15 | VTRS | Tiny + vision+video |
-| Qwen3-30B | Alibaba | T3 | 40K | 40K | 0.08 | 0.28 | TRS | MoE small |
+| Qwen3-30B | Alibaba | T3 | 40K | 16K | 0.08 | 0.28 | TRS | MoE small |
 | Qwen3-Coder-30B | Alibaba | T3 | 160K | 32K | 0.07 | 0.27 | TS | Code small |
 | Qwen Turbo | Alibaba | T3 | 131K | 8K | 0.0325 | 0.13 | T | Cheapest Qwen |
 | Gemini 2.5 Flash Lite | Google | T3 | 1M | 65K | 0.1 | 0.4 | VTRS | Cheapest Gemini 1M |
@@ -108,11 +108,11 @@ For full JSON data, fetch these URLs directly:
 | DeepSeek V3.1 | DeepSeek | T3 | 32K | 7K | 0.15 | 0.75 | TRS | Budget DeepSeek |
 | Amazon Nova Micro | Amazon | T3 | 128K | 5K | 0.035 | 0.14 | T | Cheapest AWS |
 | Amazon Nova Lite | Amazon | T3 | 300K | 5K | 0.06 | 0.24 | VT | Vision budget, 300K context |
-| Mistral Small 3.2 | Mistral | T3 | 128K | — | 0.075 | 0.2 | VTS | Vision tiny |
+| Mistral Small 3.2 | Mistral | T3 | 128K | 16K | 0.075 | 0.2 | VTS | Vision tiny |
 | Mistral Small 3.1 | Mistral | T3 | 128K | 131K | 0.35 | 0.56 | V | Vision cheapest, EU multilingual |
 | Mistral Nemo | Mistral | T3 | 131K | 16K | 0.01 | 0.03 | TS | Cheapest text |
 | Devstral Small | Mistral | T3 | 131K | — | 0.1 | 0.3 | TS | Code budget EU |
-| Google Gemma 3 27B | Google | T3 | 131K | 16K | 0.08 | 0.16 | VS | Open-weight vision |
+| Google Gemma 3 27B | Google | T3 | 131K | 16K | 0.08 | 0.16 | VTS | Open-weight vision |
 | MiniMax M2.5 (Free) | MiniMax | FREE | 196K | 8K | 0 | 0 | TR | Best free coder, batch coding, code review free |
 | Qwen3 Coder 480B (Free) | Alibaba | FREE | 262K | 262K | 0 | 0 | T | Coding free #1, 480B MoE 35B active |
 | Hermes 3 405B (Free) | Nous Research | FREE | 131K | — | 0 | 0 | — | Reasoning free, uncensored, general 405B |
