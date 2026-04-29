@@ -1,5 +1,5 @@
 # AI Model Benchmarks 2026 — Full Data for AI Agents
-# Updated: 2026-04-28
+# Updated: 2026-04-29
 
 This file contains the complete routing table and model summary.
 For full JSON data, fetch these URLs directly:
@@ -110,7 +110,7 @@ For full JSON data, fetch these URLs directly:
 | Amazon Nova Lite | Amazon | T3 | 300K | 5K | 0.06 | 0.24 | VT | Vision budget, 300K context |
 | Mistral Small 3.2 | Mistral | T3 | 128K | 16K | 0.075 | 0.2 | VTS | Vision tiny |
 | Mistral Small 3.1 | Mistral | T3 | 128K | 131K | 0.35 | 0.56 | V | Vision cheapest, EU multilingual |
-| Mistral Nemo | Mistral | T3 | 131K | 16K | 0.02 | 0.04 | TS | Cheapest text |
+| Mistral Nemo | Mistral | T3 | 131K | 16K | 0.02 | 0.03 | TS | Cheapest text |
 | Devstral Small | Mistral | T3 | 131K | — | 0.1 | 0.3 | TS | Code budget EU |
 | Google Gemma 3 27B | Google | T3 | 131K | 16K | 0.08 | 0.16 | VTS | Open-weight vision |
 | MiniMax M2.5 (Free) | MiniMax | FREE | 196K | 8K | 0 | 0 | TR | Best free coder, batch coding, code review free |
