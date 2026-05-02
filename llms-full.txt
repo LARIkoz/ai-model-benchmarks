@@ -1,5 +1,5 @@
 # AI Model Benchmarks 2026 — Full Data for AI Agents
-# Updated: 2026-05-01
+# Updated: 2026-05-02
 
 This file contains the complete routing table and model summary.
 For full JSON data, fetch these URLs directly:
