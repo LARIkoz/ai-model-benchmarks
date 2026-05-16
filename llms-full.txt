@@ -1,5 +1,5 @@
 # AI Model Benchmarks 2026 — Full Data for AI Agents
-# Updated: 2026-05-15
+# Updated: 2026-05-16
 
 This file contains the complete routing table and model summary.
 For full JSON data, fetch these URLs directly:
@@ -72,7 +72,7 @@ For full JSON data, fetch these URLs directly:
 | Qwen3-Coder | Alibaba | T2 | 262K | 65K | 0.22 | 1.8 | TS | Coding |
 | Qwen3-Coder-Plus | Alibaba | T2 | 1M | 65K | 0.65 | 3.25 | TS | Long context code |
 | DeepSeek V3.2 | DeepSeek | T2 | 131K | 65K | 0.252 | 0.378 | TRS | Cheapest quality, hallucination resistance budget |
-| DeepSeek R1 | DeepSeek | T2 | 64K | 16K | 0.7 | 2.5 | TR | Deep reasoning, medical budget king |
+| DeepSeek R1 | DeepSeek | T2 | 64K | 16K | 0.7 | 2.5 | TRS | Deep reasoning, medical budget king |
 | DeepSeek V3.2 Speciale | DeepSeek | T2 | 163K | 163K | 0.287 | 0.431 | RS | Enhanced V3.2 |
 | Grok 4.1 Fast | xAI | T2 | 2M | 30K | 0.2 | 0.5 | VTRS | Consilium, 2M context, long context budget |
 | Grok 4 Fast | xAI | T2 | 2M | 30K | 0.2 | 0.5 | VTRS | Classification, 2M context |
