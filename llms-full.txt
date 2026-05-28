@@ -1,5 +1,5 @@
 # AI Model Benchmarks 2026 — Full Data for AI Agents
-# Updated: 2026-05-27
+# Updated: 2026-05-28
 
 This file contains the complete routing table and model summary.
 For full JSON data, fetch these URLs directly:
@@ -113,7 +113,7 @@ For full JSON data, fetch these URLs directly:
 | Mistral Nemo | Mistral | T3 | 131K | 16K | 0.02 | 0.03 | TS | Cheapest text |
 | Devstral Small | Mistral | T3 | 131K | — | 0.1 | 0.3 | TS | Code budget EU |
 | Google Gemma 3 27B | Google | T3 | 131K | 16K | 0.08 | 0.16 | VTS | Open-weight vision |
-| MiniMax M2.5 (Free) | MiniMax | FREE | 196K | 8K | 0 | 0 | TR | Best free coder, batch coding, code review free |
+| MiniMax M2.5 (Free) | MiniMax | FREE | 262K | 8K | 0 | 0 | TR | Best free coder, batch coding, code review free |
 | Qwen3 Coder 480B (Free) | Alibaba | FREE | 262K | 262K | 0 | 0 | T | Coding free #1, 480B MoE 35B active |
 | Hermes 3 405B (Free) | Nous Research | FREE | 131K | — | 0 | 0 | — | Reasoning free, uncensored, general 405B |
 | NVIDIA Nemotron 3 Super 120B (Free) | NVIDIA | FREE | 262K | 262K | 0 | 0 | TRS | Long-context reasoning free, 120B MoE |
