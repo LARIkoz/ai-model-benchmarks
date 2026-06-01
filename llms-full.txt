@@ -1,5 +1,5 @@
 # AI Model Benchmarks 2026 — Full Data for AI Agents
-# Updated: 2026-05-31
+# Updated: 2026-06-01
 
 This file contains the complete routing table and model summary.
 For full JSON data, fetch these URLs directly:
@@ -54,7 +54,7 @@ For full JSON data, fetch these URLs directly:
 | Claude Haiku 4.5 | Anthropic | T1 | 200K | 64K | 1.0 | 5.0 | VTRS | Budget Claude, fast tasks |
 | Grok 4 | xAI | T1 | 256K | — | 3.0 | 15.0 | VTRS | Assembly deobfuscation, coding |
 | Grok 4.20 Beta | xAI | T1 | 2M | — | 2.0 | 6.0 | VTRS | Hallucination resistance, fact-checking, long c... |
-| GLM-5 | Z.ai | T1 | 202K | 16K | 0.6 | 1.92 | TRS | Tool calling, multilingual, long-horizon tasks,... |
+| GLM-5 | Z.ai | T1 | 202K | 16K | 0.6 | 2.08 | TRS | Tool calling, multilingual, long-horizon tasks,... |
 | GLM-5-Turbo | Z.ai | T1 | 202K | 131K | 1.2 | 4.0 | TR | Tool reliability, low error rate |
 | Gemini 2.5 Pro | Google | T1 | 1M | 65K | 1.25 | 10.0 | VTRS | Adaptive reasoning, GRIND |
 | Amazon Nova Premier | Amazon | T1 | 1M | 32K | 2.5 | 12.5 | VT | AWS ecosystem |
