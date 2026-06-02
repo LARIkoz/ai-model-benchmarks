@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-01",
+  "updated": "2026-06-02",
   "source": "openrouter.ai/api/v1/models",
   "cache_pricing_by_provider": [
     {
@@ -144,15 +144,15 @@
     },
     {
       "model": "DeepSeek V3.2",
-      "input_per_m": 0.252,
-      "cached_per_m": 0.126,
+      "input_per_m": 0.2288,
+      "cached_per_m": 0.1144,
       "discount": "50%",
       "note": null
     },
     {
       "model": "MiniMax M2.7",
-      "input_per_m": 0.26,
-      "cached_per_m": 0.052,
+      "input_per_m": 0.279,
+      "cached_per_m": 0.0558,
       "discount": "80%",
       "note": null
     },
@@ -196,5 +196,5 @@
     "Each request is completely unique (no common prefix)",
     "Models without cache support"
   ],
-  "checked_at": "2026-06-01"
+  "checked_at": "2026-06-02"
 }
