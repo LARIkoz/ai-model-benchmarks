@@ -1,5 +1,5 @@
 # AI Model Benchmarks 2026 — Full Data for AI Agents
-# Updated: 2026-06-09
+# Updated: 2026-06-10
 
 This file contains the complete routing table and model summary.
 For full JSON data, fetch these URLs directly:
@@ -55,12 +55,12 @@ For full JSON data, fetch these URLs directly:
 | Grok 4 | xAI | T1 | 256K | — | 3.0 | 15.0 | VTRS | Assembly deobfuscation, coding |
 | Grok 4.20 Beta | xAI | T1 | 2M | — | 2.0 | 6.0 | VTRS | Hallucination resistance, fact-checking, long c... |
 | GLM-5 | Z.ai | T1 | 202K | 16K | 0.6 | 1.92 | TRS | Tool calling, multilingual, long-horizon tasks,... |
-| GLM-5-Turbo | Z.ai | T1 | 202K | 131K | 1.2 | 4.0 | TR | Tool reliability, low error rate |
+| GLM-5-Turbo | Z.ai | T1 | 262K | 131K | 1.2 | 4.0 | TR | Tool reliability, low error rate |
 | Gemini 2.5 Pro | Google | T1 | 1M | 65K | 1.25 | 10.0 | VTRS | Adaptive reasoning, GRIND |
 | Amazon Nova Premier | Amazon | T1 | 1M | 32K | 2.5 | 12.5 | VT | AWS ecosystem |
 | Cohere Command-A | Cohere | T1 | 256K | 8K | 2.5 | 10.0 | S | Enterprise |
-| MiniMax M2.5 | MiniMax | T2 | 196K | 196K | 0.15 | 1.15 | TRS | Best SWE/$, batch coding, browser automation, w... |
-| MiniMax M2.7 | MiniMax | T2 | 196K | 196K | 0.279 | 1.2 | TRS | Agentic tasks, GDPval |
+| MiniMax M2.5 | MiniMax | T2 | 196K | 196K | 0.15 | 0.9 | TRS | Best SWE/$, batch coding, browser automation, w... |
+| MiniMax M2.7 | MiniMax | T2 | 204K | 131K | 0.27 | 1.08 | TRS | Agentic tasks, GDPval |
 | Kimi K2.5 | Moonshot | T2 | 262K | — | 0.45 | 2.2 | — | Vision + reasoning, budget GPQA, writing |
 | Kimi K2 | Moonshot | T2 | 131K | — | 0.4 | 2.0 | — | Budget Kimi |
 | GLM-4.7 | Z.ai | T2 | 202K | 131K | 0.4 | 1.75 | TRS | Tool calling budget |
@@ -90,7 +90,7 @@ For full JSON data, fetch these URLs directly:
 | Codestral | Mistral | T2 | 256K | — | 0.3 | 0.9 | TS | Code, JS deobfuscation budget |
 | Devstral Medium | Mistral | T2 | 131K | — | 0.4 | 2.0 | TS | Code agent |
 | Llama 4 Maverick | Meta | T2 | 1M | 16K | None | None | VTS | Vision, MMLU-Pro |
-| GLM-4.6V | Z.ai | T2 | 131K | 24K | 0.3 | 0.9 | VTR | Vision + VIDEO input |
+| GLM-4.6V | Z.ai | T2 | 131K | 32K | 0.3 | 0.9 | VTR | Vision + VIDEO input |
 | GLM-4.5V | Z.ai | T2 | 65K | 16K | 0.6 | 1.8 | VTR | Vision |
 | Qwen3.5-27B | Alibaba | T3 | 262K | 65K | 0.195 | 1.56 | VTRS | Vision+video |
 | GLM-4.5 Air | Z.ai | T3 | 131K | 131K | 0.125 | 0.85 | TR | Budget GLM, batch general, classification |
