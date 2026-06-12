@@ -1,5 +1,5 @@
 # AI Model Benchmarks 2026 — Full Data for AI Agents
-# Updated: 2026-06-11
+# Updated: 2026-06-12
 
 This file contains the complete routing table and model summary.
 For full JSON data, fetch these URLs directly:
@@ -60,7 +60,7 @@ For full JSON data, fetch these URLs directly:
 | Amazon Nova Premier | Amazon | T1 | 1M | 32K | 2.5 | 12.5 | VT | AWS ecosystem |
 | Cohere Command-A | Cohere | T1 | 256K | 8K | 2.5 | 10.0 | S | Enterprise |
 | MiniMax M2.5 | MiniMax | T2 | 196K | 196K | 0.15 | 0.9 | TRS | Best SWE/$, batch coding, browser automation, w... |
-| MiniMax M2.7 | MiniMax | T2 | 204K | 131K | 0.27 | 1.08 | TRS | Agentic tasks, GDPval |
+| MiniMax M2.7 | MiniMax | T2 | 196K | 131K | 0.25 | 1.0 | TRS | Agentic tasks, GDPval |
 | Kimi K2.5 | Moonshot | T2 | 262K | — | 0.45 | 2.2 | — | Vision + reasoning, budget GPQA, writing |
 | Kimi K2 | Moonshot | T2 | 131K | — | 0.4 | 2.0 | — | Budget Kimi |
 | GLM-4.7 | Z.ai | T2 | 202K | 131K | 0.4 | 1.75 | TRS | Tool calling budget |
@@ -93,7 +93,7 @@ For full JSON data, fetch these URLs directly:
 | GLM-4.6V | Z.ai | T2 | 131K | 32K | 0.3 | 0.9 | VTR | Vision + VIDEO input |
 | GLM-4.5V | Z.ai | T2 | 65K | 16K | 0.6 | 1.8 | VTR | Vision |
 | Qwen3.5-27B | Alibaba | T3 | 262K | 65K | 0.195 | 1.56 | VTRS | Vision+video |
-| GLM-4.5 Air | Z.ai | T3 | 131K | 131K | 0.125 | 0.85 | TR | Budget GLM, batch general, classification |
+| GLM-4.5 Air | Z.ai | T3 | 131K | 131K | 0.125 | 0.85 | TRS | Budget GLM, batch general, classification |
 | Qwen Plus | Alibaba | T3 | 1M | 32K | 0.26 | 0.78 | T | 1M context budget |
 | Llama 4 Scout | Meta | T3 | 327K | 16K | 0.1 | 0.3 | VTS | 10M context!, Vision, Speed king |
 | GLM-4.7-FlashX | Z.ai | T3 | 202K | 16K | 0.06 | 0.4 | TRS | Ultra-cheap tool calling, Tau2 98.8% |
