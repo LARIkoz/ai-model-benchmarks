@@ -1,5 +1,5 @@
 # AI Model Benchmarks 2026 — Full Data for AI Agents
-# Updated: 2026-06-23
+# Updated: 2026-06-24
 
 This file contains the complete routing table and model summary.
 For full JSON data, fetch these URLs directly:
@@ -60,7 +60,7 @@ For full JSON data, fetch these URLs directly:
 | Amazon Nova Premier | Amazon | T1 | 1M | 32K | 2.5 | 12.5 | VT | AWS ecosystem |
 | Cohere Command-A | Cohere | T1 | 256K | 8K | 2.5 | 10.0 | S | Enterprise |
 | MiniMax M2.5 | MiniMax | T2 | 196K | 196K | 0.15 | 0.9 | TRS | Best SWE/$, batch coding, browser automation, w... |
-| MiniMax M2.7 | MiniMax | T2 | 196K | 131K | 0.25 | 1.0 | TRS | Agentic tasks, GDPval |
+| MiniMax M2.7 | MiniMax | T2 | 196K | 196K | 0.24 | 0.96 | TRS | Agentic tasks, GDPval |
 | Kimi K2.5 | Moonshot | T2 | 262K | — | 0.45 | 2.2 | — | Vision + reasoning, budget GPQA, writing |
 | Kimi K2 | Moonshot | T2 | 131K | — | 0.4 | 2.0 | — | Budget Kimi |
 | GLM-4.7 | Z.ai | T2 | 202K | 131K | 0.4 | 1.75 | TRS | Tool calling budget |
@@ -68,7 +68,7 @@ For full JSON data, fetch these URLs directly:
 | GLM-4.5 | Z.ai | T2 | 131K | 98K | 0.6 | 2.2 | TR | Function calling #1 |
 | Qwen3.5-397B | Alibaba | T2 | 131K | 65K | 0.385 | 2.45 | VTRS | Vision+video+reasoning, instruction following #... |
 | Qwen3.5-122B | Alibaba | T2 | 262K | 262K | 0.26 | 2.08 | VTRS | Budget reasoning |
-| Qwen3.5-35B | Alibaba | T2 | 262K | 262K | 0.14 | 1.0 | VTRS | Mid-tier reasoning |
+| Qwen3.5-35B | Alibaba | T2 | 262K | 81K | 0.14 | 1.0 | VTRS | Mid-tier reasoning |
 | Qwen3-Coder | Alibaba | T2 | 262K | 65K | 0.22 | 1.8 | TS | Coding |
 | Qwen3-Coder-Plus | Alibaba | T2 | 1M | 65K | 0.65 | 3.25 | TS | Long context code |
 | DeepSeek V3.2 | DeepSeek | T2 | 128K | 64K | 0.2288 | 0.3432 | TRS | Cheapest quality, hallucination resistance budget |
