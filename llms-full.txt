@@ -1,5 +1,5 @@
 # AI Model Benchmarks 2026 — Full Data for AI Agents
-# Updated: 2026-07-14
+# Updated: 2026-07-15
 
 This file contains the complete routing table and model summary.
 For full JSON data, fetch these URLs directly:
@@ -54,24 +54,24 @@ For full JSON data, fetch these URLs directly:
 | Claude Haiku 4.5 | Anthropic | T1 | 200K | 64K | 1.0 | 5.0 | VTRS | Budget Claude, fast tasks |
 | Grok 4 | xAI | T1 | 256K | — | 3.0 | 15.0 | VTRS | Assembly deobfuscation, coding |
 | Grok 4.20 Beta | xAI | T1 | 2M | — | 2.0 | 6.0 | VTRS | Hallucination resistance, fact-checking, long c... |
-| GLM-5 | Z.ai | T1 | 198K | 128K | 0.6 | 1.92 | TRS | Tool calling, multilingual, long-horizon tasks,... |
-| GLM-5-Turbo | Z.ai | T1 | 262K | 131K | 1.2 | 4.0 | TR | Tool reliability, low error rate |
+| GLM-5 | Z.ai | T1 | 202K | 202K | 0.95 | 3.15 | TRS | Tool calling, multilingual, long-horizon tasks,... |
+| GLM-5-Turbo | Z.ai | T1 | 202K | 131K | 1.2 | 4.0 | TR | Tool reliability, low error rate |
 | Gemini 2.5 Pro | Google | T1 | 1M | 65K | 1.25 | 10.0 | VTRS | Adaptive reasoning, GRIND |
 | Amazon Nova Premier | Amazon | T1 | 1M | 32K | 2.5 | 12.5 | VT | AWS ecosystem |
 | Cohere Command-A | Cohere | T1 | 256K | 8K | 2.5 | 10.0 | S | Enterprise |
 | MiniMax M2.5 | MiniMax | T2 | 196K | 196K | 0.15 | 0.9 | TRS | Best SWE/$, batch coding, browser automation, w... |
-| MiniMax M2.7 | MiniMax | T2 | 196K | 196K | 0.24 | 0.96 | TRS | Agentic tasks, GDPval |
+| MiniMax M2.7 | MiniMax | T2 | 204K | 131K | 0.3 | 1.2 | TRS | Agentic tasks, GDPval |
 | Kimi K2.5 | Moonshot | T2 | 262K | — | 0.45 | 2.2 | — | Vision + reasoning, budget GPQA, writing |
 | Kimi K2 | Moonshot | T2 | 131K | — | 0.4 | 2.0 | — | Budget Kimi |
 | GLM-4.7 | Z.ai | T2 | 202K | 131K | 0.4 | 1.75 | TRS | Tool calling budget |
-| GLM-4.6 | Z.ai | T2 | 198K | 16K | 0.43 | 1.74 | TRS | General tasks |
+| GLM-4.6 | Z.ai | T2 | 202K | 131K | 0.5 | 2.0 | TRS | General tasks |
 | GLM-4.5 | Z.ai | T2 | 131K | 98K | 0.6 | 2.2 | TR | Function calling #1 |
-| Qwen3.5-397B | Alibaba | T2 | 131K | 65K | 0.385 | 2.45 | VTRS | Vision+video+reasoning, instruction following #... |
-| Qwen3.5-122B | Alibaba | T2 | 262K | 262K | 0.26 | 2.08 | VTRS | Budget reasoning |
-| Qwen3.5-35B | Alibaba | T2 | 262K | 81K | 0.14 | 1.0 | VTRS | Mid-tier reasoning |
-| Qwen3-Coder | Alibaba | T2 | 262K | 65K | 0.22 | 1.8 | TS | Coding |
+| Qwen3.5-397B | Alibaba | T2 | 262K | 65K | 0.45 | 3.0 | VTRS | Vision+video+reasoning, instruction following #... |
+| Qwen3.5-122B | Alibaba | T2 | 262K | 65K | 0.26 | 2.08 | VTRS | Budget reasoning |
+| Qwen3.5-35B | Alibaba | T2 | 262K | 262K | 0.14 | 1.0 | VTRS | Mid-tier reasoning |
+| Qwen3-Coder | Alibaba | T2 | 262K | 65K | 0.3 | 1.0 | TS | Coding |
 | Qwen3-Coder-Plus | Alibaba | T2 | 1M | 65K | 0.65 | 3.25 | TS | Long context code |
-| DeepSeek V3.2 | DeepSeek | T2 | 128K | 64K | 0.2145 | 0.3217 | TRS | Cheapest quality, hallucination resistance budget |
+| DeepSeek V3.2 | DeepSeek | T2 | 163K | 65K | 0.269 | 0.4 | TRS | Cheapest quality, hallucination resistance budget |
 | DeepSeek R1 | DeepSeek | T2 | 64K | 16K | 0.7 | 2.5 | TRS | Deep reasoning, medical budget king |
 | DeepSeek V3.2 Speciale | DeepSeek | T2 | 163K | 163K | 0.287 | 0.431 | RS | Enhanced V3.2 |
 | Grok 4.1 Fast | xAI | T2 | 2M | 30K | 0.2 | 0.5 | VTRS | Consilium, 2M context, long context budget |
@@ -83,7 +83,7 @@ For full JSON data, fetch these URLs directly:
 | Amazon Nova 2 Lite | Amazon | T2 | 1M | 65K | 0.3 | 2.5 | VTR | Multimodal 1M context |
 | Inception Mercury 2 | Inception | T2 | 128K | 50K | 0.25 | 0.75 | TRS | Speed king 872 tok/s |
 | Inception Mercury Coder | Inception | T2 | 128K | 32K | 0.25 | 0.75 | TS | Fast code |
-| MiniMax M1 | MiniMax | T2 | 1M | 40K | 0.4 | 2.2 | TR | Long context 1M |
+| MiniMax M1 | MiniMax | T2 | 1M | 40K | 0.55 | 2.2 | TR | Long context 1M |
 | MiniMax 01 | MiniMax | T2 | 1M | 1000K | 0.2 | 1.1 | V | Vision + 1M context |
 | Mistral Large 2512 | Mistral | T2 | 262K | — | 0.5 | 1.5 | VTS | EU compliance, vision |
 | Mistral Medium 3.1 | Mistral | T2 | 131K | — | 0.4 | 2.0 | VTS | EU compliance |
@@ -96,7 +96,7 @@ For full JSON data, fetch these URLs directly:
 | GLM-4.5 Air | Z.ai | T3 | 131K | 98K | 0.13 | 0.85 | TR | Budget GLM, batch general, classification |
 | Qwen Plus | Alibaba | T3 | 1M | 32K | 0.26 | 0.78 | TS | 1M context budget |
 | Llama 4 Scout | Meta | T3 | 327K | 16K | 0.1 | 0.3 | VTS | 10M context!, Vision, Speed king |
-| GLM-4.7-FlashX | Z.ai | T3 | 202K | 16K | 0.06 | 0.4 | TRS | Ultra-cheap tool calling, Tau2 98.8% |
+| GLM-4.7-FlashX | Z.ai | T3 | 131K | 131K | 0.06 | 0.4 | TRS | Ultra-cheap tool calling, Tau2 98.8% |
 | GLM-4-32B | Z.ai | T3 | 128K | — | 0.1 | 0.1 | T | Open-weight 32B |
 | Qwen3.5-Flash | Alibaba | T3 | 1M | 65K | 0.065 | 0.26 | VTRS | 1M context ultra-budget |
 | Qwen3.5-9B | Alibaba | T3 | 262K | 262K | 0.1 | 0.15 | VTRS | Tiny + vision+video |
@@ -108,11 +108,11 @@ For full JSON data, fetch these URLs directly:
 | DeepSeek V3.1 | DeepSeek | T3 | 163K | 32K | 0.25 | 0.95 | TRS | Budget DeepSeek |
 | Amazon Nova Micro | Amazon | T3 | 128K | 5K | 0.035 | 0.14 | T | Cheapest AWS |
 | Amazon Nova Lite | Amazon | T3 | 300K | 5K | 0.06 | 0.24 | VT | Vision budget, 300K context |
-| Mistral Small 3.2 | Mistral | T3 | 128K | 16K | 0.075 | 0.2 | VTS | Vision tiny |
+| Mistral Small 3.2 | Mistral | T3 | 131K | 16K | 0.1 | 0.3 | VTS | Vision tiny |
 | Mistral Small 3.1 | Mistral | T3 | 128K | 128K | 0.35 | 0.56 | V | Vision cheapest, EU multilingual |
-| Mistral Nemo | Mistral | T3 | 131K | 16K | 0.02 | 0.03 | TS | Cheapest text |
+| Mistral Nemo | Mistral | T3 | 131K | 16K | 0.02 | 0.04 | TS | Cheapest text |
 | Devstral Small | Mistral | T3 | 131K | — | 0.1 | 0.3 | TS | Code budget EU |
-| Google Gemma 3 27B | Google | T3 | 131K | 16K | 0.08 | 0.16 | VTS | Open-weight vision |
+| Google Gemma 3 27B | Google | T3 | 131K | 131K | 0.08 | 0.45 | VTS | Open-weight vision |
 | MiniMax M2.5 (Free) | MiniMax | FREE | 196K | 8K | 0 | 0 | TR | Best free coder, batch coding, code review free |
 | Qwen3 Coder 480B (Free) | Alibaba | FREE | 262K | 262K | 0 | 0 | T | Coding free #1, 480B MoE 35B active |
 | Hermes 3 405B (Free) | Nous Research | FREE | 131K | — | 0 | 0 | — | Reasoning free, uncensored, general 405B |
