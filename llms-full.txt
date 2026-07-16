@@ -1,5 +1,5 @@
 # AI Model Benchmarks 2026 — Full Data for AI Agents
-# Updated: 2026-07-15
+# Updated: 2026-07-16
 
 This file contains the complete routing table and model summary.
 For full JSON data, fetch these URLs directly:
@@ -96,7 +96,7 @@ For full JSON data, fetch these URLs directly:
 | GLM-4.5 Air | Z.ai | T3 | 131K | 98K | 0.13 | 0.85 | TR | Budget GLM, batch general, classification |
 | Qwen Plus | Alibaba | T3 | 1M | 32K | 0.26 | 0.78 | TS | 1M context budget |
 | Llama 4 Scout | Meta | T3 | 327K | 16K | 0.1 | 0.3 | VTS | 10M context!, Vision, Speed king |
-| GLM-4.7-FlashX | Z.ai | T3 | 131K | 131K | 0.06 | 0.4 | TRS | Ultra-cheap tool calling, Tau2 98.8% |
+| GLM-4.7-FlashX | Z.ai | T3 | 202K | 16K | 0.06 | 0.4 | TRS | Ultra-cheap tool calling, Tau2 98.8% |
 | GLM-4-32B | Z.ai | T3 | 128K | — | 0.1 | 0.1 | T | Open-weight 32B |
 | Qwen3.5-Flash | Alibaba | T3 | 1M | 65K | 0.065 | 0.26 | VTRS | 1M context ultra-budget |
 | Qwen3.5-9B | Alibaba | T3 | 262K | 262K | 0.1 | 0.15 | VTRS | Tiny + vision+video |
