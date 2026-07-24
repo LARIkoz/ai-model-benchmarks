@@ -1,5 +1,5 @@
 # AI Model Benchmarks 2026 — Full Data for AI Agents
-# Updated: 2026-07-23
+# Updated: 2026-07-24
 
 This file contains the complete routing table and model summary.
 For full JSON data, fetch these URLs directly:
@@ -54,13 +54,13 @@ For full JSON data, fetch these URLs directly:
 | Claude Haiku 4.5 | Anthropic | T1 | 200K | 64K | 1.0 | 5.0 | VTRS | Budget Claude, fast tasks |
 | Grok 4 | xAI | T1 | 256K | — | 3.0 | 15.0 | VTRS | Assembly deobfuscation, coding |
 | Grok 4.20 Beta | xAI | T1 | 2M | — | 2.0 | 6.0 | VTRS | Hallucination resistance, fact-checking, long c... |
-| GLM-5 | Z.ai | T1 | 202K | 202K | 0.95 | 3.15 | TRS | Tool calling, multilingual, long-horizon tasks,... |
+| GLM-5 | Z.ai | T1 | 204K | 131K | 0.95 | 2.55 | TRS | Tool calling, multilingual, long-horizon tasks,... |
 | GLM-5-Turbo | Z.ai | T1 | 202K | 131K | 1.2 | 4.0 | TR | Tool reliability, low error rate |
 | Gemini 2.5 Pro | Google | T1 | 1M | 65K | 1.25 | 10.0 | VTRS | Adaptive reasoning, GRIND |
 | Amazon Nova Premier | Amazon | T1 | 1M | 32K | 2.5 | 12.5 | VT | AWS ecosystem |
 | Cohere Command-A | Cohere | T1 | 256K | 8K | 2.5 | 10.0 | S | Enterprise |
 | MiniMax M2.5 | MiniMax | T2 | 196K | 196K | 0.15 | 0.9 | TRS | Best SWE/$, batch coding, browser automation, w... |
-| MiniMax M2.7 | MiniMax | T2 | 196K | 131K | 0.25 | 1.0 | TRS | Agentic tasks, GDPval |
+| MiniMax M2.7 | MiniMax | T2 | 204K | 131K | 0.3 | 1.2 | TRS | Agentic tasks, GDPval |
 | Kimi K2.5 | Moonshot | T2 | 262K | — | 0.45 | 2.2 | — | Vision + reasoning, budget GPQA, writing |
 | Kimi K2 | Moonshot | T2 | 131K | — | 0.4 | 2.0 | — | Budget Kimi |
 | GLM-4.7 | Z.ai | T2 | 202K | 131K | 0.4 | 1.75 | TRS | Tool calling budget |
@@ -69,7 +69,7 @@ For full JSON data, fetch these URLs directly:
 | Qwen3.5-397B | Alibaba | T2 | 262K | 65K | 0.39 | 2.34 | VTRS | Vision+video+reasoning, instruction following #... |
 | Qwen3.5-122B | Alibaba | T2 | 262K | 65K | 0.26 | 2.08 | VTRS | Budget reasoning |
 | Qwen3.5-35B | Alibaba | T2 | 262K | 262K | 0.14 | 1.0 | VTRS | Mid-tier reasoning |
-| Qwen3-Coder | Alibaba | T2 | 262K | 65K | 0.3 | 1.0 | TS | Coding |
+| Qwen3-Coder | Alibaba | T2 | 262K | 65K | 0.38 | 1.55 | TS | Coding |
 | Qwen3-Coder-Plus | Alibaba | T2 | 1M | 65K | 0.65 | 3.25 | TS | Long context code |
 | DeepSeek V3.2 | DeepSeek | T2 | 163K | 65K | 0.269 | 0.4 | TRS | Cheapest quality, hallucination resistance budget |
 | DeepSeek R1 | DeepSeek | T2 | 64K | 16K | 0.7 | 2.5 | TRS | Deep reasoning, medical budget king |
@@ -92,7 +92,7 @@ For full JSON data, fetch these URLs directly:
 | Llama 4 Maverick | Meta | T2 | 1M | 16K | None | None | VTS | Vision, MMLU-Pro |
 | GLM-4.6V | Z.ai | T2 | 131K | 32K | 0.3 | 0.9 | VTR | Vision + VIDEO input |
 | GLM-4.5V | Z.ai | T2 | 65K | 16K | 0.6 | 1.8 | VTR | Vision |
-| Qwen3.5-27B | Alibaba | T3 | 262K | 81K | 0.26 | 2.6 | VTRS | Vision+video |
+| Qwen3.5-27B | Alibaba | T3 | 262K | 65K | 0.195 | 1.56 | VTRS | Vision+video |
 | GLM-4.5 Air | Z.ai | T3 | 131K | 98K | 0.13 | 0.85 | TR | Budget GLM, batch general, classification |
 | Qwen Plus | Alibaba | T3 | 1M | 32K | 0.26 | 0.78 | TS | 1M context budget |
 | Llama 4 Scout | Meta | T3 | 327K | 16K | 0.1 | 0.3 | VTS | 10M context!, Vision, Speed king |
@@ -112,7 +112,7 @@ For full JSON data, fetch these URLs directly:
 | Mistral Small 3.1 | Mistral | T3 | 128K | 128K | 0.35 | 0.56 | V | Vision cheapest, EU multilingual |
 | Mistral Nemo | Mistral | T3 | 131K | 16K | 0.019 | 0.03 | TS | Cheapest text |
 | Devstral Small | Mistral | T3 | 131K | — | 0.1 | 0.3 | TS | Code budget EU |
-| Google Gemma 3 27B | Google | T3 | 110K | 131K | 0.1 | 0.3 | VTS | Open-weight vision |
+| Google Gemma 3 27B | Google | T3 | 131K | 131K | 0.08 | 0.45 | VTS | Open-weight vision |
 | MiniMax M2.5 (Free) | MiniMax | FREE | 196K | 8K | 0 | 0 | TR | Best free coder, batch coding, code review free |
 | Qwen3 Coder 480B (Free) | Alibaba | FREE | 262K | 262K | 0 | 0 | T | Coding free #1, 480B MoE 35B active |
 | Hermes 3 405B (Free) | Nous Research | FREE | 131K | — | 0 | 0 | — | Reasoning free, uncensored, general 405B |

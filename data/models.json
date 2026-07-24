@@ -93,7 +93,7 @@
       "deterministic_seed": false,
       "is_moderated": true,
       "source": "openrouter",
-      "updated": "2026-07-23"
+      "updated": "2026-07-24"
     },
     "manual": {
       "knowledge_cutoff": "2025-05",
@@ -175,7 +175,7 @@
       "deterministic_seed": false,
       "is_moderated": true,
       "source": "openrouter",
-      "updated": "2026-07-23"
+      "updated": "2026-07-24"
     },
     "manual": {
       "knowledge_cutoff": "2025-04",
@@ -228,7 +228,7 @@
       "deterministic_seed": false,
       "is_moderated": true,
       "source": "openrouter",
-      "updated": "2026-07-23"
+      "updated": "2026-07-24"
     }
   },
   {
@@ -304,7 +304,7 @@
       "deterministic_seed": true,
       "is_moderated": false,
       "source": "openrouter",
-      "updated": "2026-07-23"
+      "updated": "2026-07-24"
     },
     "manual": {
       "knowledge_cutoff": "2025-06",
@@ -368,7 +368,7 @@
       "deterministic_seed": true,
       "is_moderated": false,
       "source": "openrouter",
-      "updated": "2026-07-23"
+      "updated": "2026-07-24"
     }
   },
   {
@@ -465,7 +465,7 @@
       "deterministic_seed": true,
       "is_moderated": false,
       "source": "openrouter",
-      "updated": "2026-07-23"
+      "updated": "2026-07-24"
     },
     "manual": {
       "knowledge_cutoff": "2025-06",
@@ -541,7 +541,7 @@
       "deterministic_seed": true,
       "is_moderated": true,
       "source": "openrouter",
-      "updated": "2026-07-23"
+      "updated": "2026-07-24"
     },
     "manual": {
       "knowledge_cutoff": "2025-03",
@@ -619,7 +619,7 @@
       "deterministic_seed": true,
       "is_moderated": true,
       "source": "openrouter",
-      "updated": "2026-07-23"
+      "updated": "2026-07-24"
     }
   },
   {
@@ -699,7 +699,7 @@
       "deterministic_seed": false,
       "is_moderated": true,
       "source": "openrouter",
-      "updated": "2026-07-23"
+      "updated": "2026-07-24"
     },
     "manual": {
       "knowledge_cutoff": "2025-05",
@@ -758,7 +758,7 @@
       "deterministic_seed": false,
       "is_moderated": true,
       "source": "openrouter",
-      "updated": "2026-07-23"
+      "updated": "2026-07-24"
     },
     "manual": {
       "knowledge_cutoff": "2025-04",
@@ -819,7 +819,7 @@
       "deterministic_seed": false,
       "is_moderated": true,
       "source": "openrouter",
-      "updated": "2026-07-23"
+      "updated": "2026-07-24"
     },
     "manual": {
       "knowledge_cutoff": "2025-04",
@@ -942,14 +942,14 @@
     "tier": 1,
     "pricing": {
       "input": 0.95,
-      "output": 3.15,
+      "output": 2.55,
       "unit": "per_million_tokens",
       "cached_input": 0.2,
       "cache_discount": "80%",
       "source": "openrouter",
-      "updated": "2026-07-23"
+      "updated": "2026-07-24"
     },
-    "context_length": 202752,
+    "context_length": 204800,
     "scores": {
       "swe_v": {
         "value": 77.8,
@@ -1002,7 +1002,7 @@
     "open_weight": true,
     "params": "744B",
     "openrouter_id": "z-ai/glm-5",
-    "max_output_tokens": 202752,
+    "max_output_tokens": 131072,
     "capabilities": {
       "vision": false,
       "audio_input": false,
@@ -1019,7 +1019,7 @@
       "deterministic_seed": true,
       "is_moderated": false,
       "source": "openrouter",
-      "updated": "2026-07-23"
+      "updated": "2026-07-24"
     }
   },
   {
@@ -1068,7 +1068,7 @@
       "deterministic_seed": false,
       "is_moderated": false,
       "source": "openrouter",
-      "updated": "2026-07-23"
+      "updated": "2026-07-24"
     }
   },
   {
@@ -1124,7 +1124,7 @@
       "deterministic_seed": true,
       "is_moderated": false,
       "source": "openrouter",
-      "updated": "2026-07-23"
+      "updated": "2026-07-24"
     },
     "manual": {
       "knowledge_cutoff": "2025-03",
@@ -1171,7 +1171,7 @@
       "deterministic_seed": false,
       "is_moderated": true,
       "source": "openrouter",
-      "updated": "2026-07-23"
+      "updated": "2026-07-24"
     }
   },
   {
@@ -1210,7 +1210,7 @@
       "deterministic_seed": true,
       "is_moderated": true,
       "source": "openrouter",
-      "updated": "2026-07-23"
+      "updated": "2026-07-24"
     }
   },
   {
@@ -1280,7 +1280,7 @@
       "deterministic_seed": true,
       "is_moderated": false,
       "source": "openrouter",
-      "updated": "2026-07-23"
+      "updated": "2026-07-24"
     }
   },
   {
@@ -1289,15 +1289,15 @@
     "provider": "MiniMax",
     "tier": 2,
     "pricing": {
-      "input": 0.25,
-      "output": 1.0,
+      "input": 0.3,
+      "output": 1.2,
       "unit": "per_million_tokens",
       "cached_input": 0.06,
       "cache_discount": "80%",
       "source": "openrouter",
-      "updated": "2026-07-17"
+      "updated": "2026-07-24"
     },
-    "context_length": 196608,
+    "context_length": 204800,
     "scores": {
       "swe_pro": {
         "value": 56.2,
@@ -1334,7 +1334,7 @@
       "deterministic_seed": true,
       "is_moderated": false,
       "source": "openrouter",
-      "updated": "2026-07-23"
+      "updated": "2026-07-24"
     }
   },
   {
@@ -1450,7 +1450,7 @@
       "deterministic_seed": true,
       "is_moderated": false,
       "source": "openrouter",
-      "updated": "2026-07-23"
+      "updated": "2026-07-24"
     }
   },
   {
@@ -1500,7 +1500,7 @@
       "deterministic_seed": true,
       "is_moderated": false,
       "source": "openrouter",
-      "updated": "2026-07-23"
+      "updated": "2026-07-24"
     }
   },
   {
@@ -1545,7 +1545,7 @@
       "deterministic_seed": false,
       "is_moderated": false,
       "source": "openrouter",
-      "updated": "2026-07-23"
+      "updated": "2026-07-24"
     }
   },
   {
@@ -1607,7 +1607,7 @@
       "deterministic_seed": true,
       "is_moderated": false,
       "source": "openrouter",
-      "updated": "2026-07-23"
+      "updated": "2026-07-24"
     },
     "manual": {
       "knowledge_cutoff": "2025-06",
@@ -1665,7 +1665,7 @@
       "deterministic_seed": true,
       "is_moderated": false,
       "source": "openrouter",
-      "updated": "2026-07-23"
+      "updated": "2026-07-24"
     }
   },
   {
@@ -1720,7 +1720,7 @@
       "deterministic_seed": true,
       "is_moderated": false,
       "source": "openrouter",
-      "updated": "2026-07-23"
+      "updated": "2026-07-24"
     }
   },
   {
@@ -1729,13 +1729,13 @@
     "provider": "Alibaba",
     "tier": 2,
     "pricing": {
-      "input": 0.3,
-      "output": 1.0,
+      "input": 0.38,
+      "output": 1.55,
       "unit": "per_million_tokens",
       "cached_input": 0.02,
       "cache_discount": "90%",
       "source": "openrouter",
-      "updated": "2026-07-15"
+      "updated": "2026-07-24"
     },
     "context_length": 262144,
     "scores": {},
@@ -1760,7 +1760,7 @@
       "deterministic_seed": true,
       "is_moderated": false,
       "source": "openrouter",
-      "updated": "2026-07-23"
+      "updated": "2026-07-24"
     },
     "max_output_tokens": 65536
   },
@@ -1802,7 +1802,7 @@
       "deterministic_seed": true,
       "is_moderated": false,
       "source": "openrouter",
-      "updated": "2026-07-23"
+      "updated": "2026-07-24"
     }
   },
   {
@@ -1862,7 +1862,7 @@
       "deterministic_seed": true,
       "is_moderated": false,
       "source": "openrouter",
-      "updated": "2026-07-23"
+      "updated": "2026-07-24"
     },
     "manual": {
       "knowledge_cutoff": "2025-06",
@@ -1919,7 +1919,7 @@
       "deterministic_seed": true,
       "is_moderated": false,
       "source": "openrouter",
-      "updated": "2026-07-23"
+      "updated": "2026-07-24"
     },
     "manual": {
       "knowledge_cutoff": "2025-01",
@@ -2154,7 +2154,7 @@
       "deterministic_seed": true,
       "is_moderated": false,
       "source": "openrouter",
-      "updated": "2026-07-23"
+      "updated": "2026-07-24"
     }
   },
   {
@@ -2196,7 +2196,7 @@
       "deterministic_seed": true,
       "is_moderated": false,
       "source": "openrouter",
-      "updated": "2026-07-23"
+      "updated": "2026-07-24"
     },
     "manual": {
       "knowledge_cutoff": "2025-03",
@@ -2244,7 +2244,7 @@
       "deterministic_seed": false,
       "is_moderated": true,
       "source": "openrouter",
-      "updated": "2026-07-23"
+      "updated": "2026-07-24"
     }
   },
   {
@@ -2283,7 +2283,7 @@
       "deterministic_seed": false,
       "is_moderated": true,
       "source": "openrouter",
-      "updated": "2026-07-23"
+      "updated": "2026-07-24"
     }
   },
   {
@@ -2329,7 +2329,7 @@
       "deterministic_seed": false,
       "is_moderated": false,
       "source": "openrouter",
-      "updated": "2026-07-23"
+      "updated": "2026-07-24"
     }
   },
   {
@@ -2407,7 +2407,7 @@
       "deterministic_seed": true,
       "is_moderated": false,
       "source": "openrouter",
-      "updated": "2026-07-23"
+      "updated": "2026-07-24"
     }
   },
   {
@@ -2446,7 +2446,7 @@
       "deterministic_seed": false,
       "is_moderated": false,
       "source": "openrouter",
-      "updated": "2026-07-23"
+      "updated": "2026-07-24"
     }
   },
   {
@@ -2487,7 +2487,7 @@
       "deterministic_seed": true,
       "is_moderated": false,
       "source": "openrouter",
-      "updated": "2026-07-23"
+      "updated": "2026-07-24"
     },
     "manual": {
       "knowledge_cutoff": "2025-06",
@@ -2533,7 +2533,7 @@
       "deterministic_seed": true,
       "is_moderated": false,
       "source": "openrouter",
-      "updated": "2026-07-23"
+      "updated": "2026-07-24"
     }
   },
   {
@@ -2572,7 +2572,7 @@
       "deterministic_seed": true,
       "is_moderated": false,
       "source": "openrouter",
-      "updated": "2026-07-23"
+      "updated": "2026-07-24"
     }
   },
   {
@@ -2663,7 +2663,7 @@
       "deterministic_seed": true,
       "is_moderated": false,
       "source": "openrouter",
-      "updated": "2026-07-23"
+      "updated": "2026-07-24"
     },
     "manual": {
       "knowledge_cutoff": "2025-03",
@@ -2710,7 +2710,7 @@
       "deterministic_seed": true,
       "is_moderated": false,
       "source": "openrouter",
-      "updated": "2026-07-23"
+      "updated": "2026-07-24"
     }
   },
   {
@@ -2749,7 +2749,7 @@
       "deterministic_seed": true,
       "is_moderated": false,
       "source": "openrouter",
-      "updated": "2026-07-23"
+      "updated": "2026-07-24"
     }
   },
   {
@@ -2758,11 +2758,11 @@
     "provider": "Alibaba",
     "tier": 3,
     "pricing": {
-      "input": 0.26,
-      "output": 2.6,
+      "input": 0.195,
+      "output": 1.56,
       "unit": "per_million_tokens",
       "source": "openrouter",
-      "updated": "2026-07-18"
+      "updated": "2026-07-24"
     },
     "context_length": 262144,
     "scores": {},
@@ -2771,7 +2771,7 @@
     ],
     "license": "proprietary",
     "openrouter_id": "qwen/qwen3.5-27b",
-    "max_output_tokens": 81920,
+    "max_output_tokens": 65536,
     "capabilities": {
       "vision": true,
       "audio_input": false,
@@ -2788,7 +2788,7 @@
       "deterministic_seed": true,
       "is_moderated": false,
       "source": "openrouter",
-      "updated": "2026-07-23"
+      "updated": "2026-07-24"
     }
   },
   {
@@ -2829,7 +2829,7 @@
       "deterministic_seed": true,
       "is_moderated": false,
       "source": "openrouter",
-      "updated": "2026-07-23"
+      "updated": "2026-07-24"
     }
   },
   {
@@ -2868,7 +2868,7 @@
       "deterministic_seed": true,
       "is_moderated": false,
       "source": "openrouter",
-      "updated": "2026-07-23"
+      "updated": "2026-07-24"
     }
   },
   {
@@ -2927,7 +2927,7 @@
       "deterministic_seed": true,
       "is_moderated": false,
       "source": "openrouter",
-      "updated": "2026-07-23"
+      "updated": "2026-07-24"
     }
   },
   {
@@ -2972,7 +2972,7 @@
       "deterministic_seed": true,
       "is_moderated": false,
       "source": "openrouter",
-      "updated": "2026-07-23"
+      "updated": "2026-07-24"
     },
     "max_output_tokens": 16384
   },
@@ -3052,7 +3052,7 @@
       "deterministic_seed": true,
       "is_moderated": false,
       "source": "openrouter",
-      "updated": "2026-07-23"
+      "updated": "2026-07-24"
     }
   },
   {
@@ -3091,7 +3091,7 @@
       "deterministic_seed": true,
       "is_moderated": false,
       "source": "openrouter",
-      "updated": "2026-07-23"
+      "updated": "2026-07-24"
     }
   },
   {
@@ -3130,7 +3130,7 @@
       "deterministic_seed": true,
       "is_moderated": false,
       "source": "openrouter",
-      "updated": "2026-07-23"
+      "updated": "2026-07-24"
     }
   },
   {
@@ -3169,7 +3169,7 @@
       "deterministic_seed": true,
       "is_moderated": false,
       "source": "openrouter",
-      "updated": "2026-07-23"
+      "updated": "2026-07-24"
     }
   },
   {
@@ -3247,7 +3247,7 @@
       "deterministic_seed": true,
       "is_moderated": false,
       "source": "openrouter",
-      "updated": "2026-07-23"
+      "updated": "2026-07-24"
     }
   },
   {
@@ -3325,7 +3325,7 @@
       "deterministic_seed": true,
       "is_moderated": false,
       "source": "openrouter",
-      "updated": "2026-07-23"
+      "updated": "2026-07-24"
     }
   },
   {
@@ -3364,7 +3364,7 @@
       "deterministic_seed": false,
       "is_moderated": true,
       "source": "openrouter",
-      "updated": "2026-07-23"
+      "updated": "2026-07-24"
     }
   },
   {
@@ -3404,7 +3404,7 @@
       "deterministic_seed": false,
       "is_moderated": true,
       "source": "openrouter",
-      "updated": "2026-07-23"
+      "updated": "2026-07-24"
     }
   },
   {
@@ -3442,7 +3442,7 @@
       "deterministic_seed": true,
       "is_moderated": false,
       "source": "openrouter",
-      "updated": "2026-07-23"
+      "updated": "2026-07-24"
     },
     "max_output_tokens": 16384
   },
@@ -3485,7 +3485,7 @@
       "deterministic_seed": true,
       "is_moderated": false,
       "source": "openrouter",
-      "updated": "2026-07-23"
+      "updated": "2026-07-24"
     }
   },
   {
@@ -3524,7 +3524,7 @@
       "deterministic_seed": true,
       "is_moderated": false,
       "source": "openrouter",
-      "updated": "2026-07-23"
+      "updated": "2026-07-24"
     }
   },
   {
@@ -3571,13 +3571,13 @@
     "provider": "Google",
     "tier": 3,
     "pricing": {
-      "input": 0.1,
-      "output": 0.3,
+      "input": 0.08,
+      "output": 0.45,
       "unit": "per_million_tokens",
       "source": "openrouter",
-      "updated": "2026-07-17"
+      "updated": "2026-07-24"
     },
-    "context_length": 110000,
+    "context_length": 131072,
     "scores": {},
     "best_for": [
       "Open-weight vision"
@@ -3602,7 +3602,7 @@
       "deterministic_seed": true,
       "is_moderated": false,
       "source": "openrouter",
-      "updated": "2026-07-23"
+      "updated": "2026-07-24"
     }
   },
   {
@@ -3766,7 +3766,7 @@
       "deterministic_seed": true,
       "is_moderated": false,
       "source": "openrouter",
-      "updated": "2026-07-23"
+      "updated": "2026-07-24"
     }
   },
   {
@@ -3924,7 +3924,7 @@
       "deterministic_seed": true,
       "is_moderated": false,
       "source": "openrouter",
-      "updated": "2026-07-23"
+      "updated": "2026-07-24"
     }
   },
   {
@@ -4078,7 +4078,7 @@
       "deterministic_seed": true,
       "is_moderated": false,
       "source": "openrouter",
-      "updated": "2026-07-23"
+      "updated": "2026-07-24"
     }
   },
   {
@@ -4153,7 +4153,7 @@
       "deterministic_seed": true,
       "is_moderated": false,
       "source": "openrouter",
-      "updated": "2026-07-23"
+      "updated": "2026-07-24"
     }
   },
   {
@@ -4190,7 +4190,7 @@
       "deterministic_seed": true,
       "is_moderated": false,
       "source": "openrouter",
-      "updated": "2026-07-23"
+      "updated": "2026-07-24"
     }
   },
   {
@@ -4227,7 +4227,7 @@
       "deterministic_seed": true,
       "is_moderated": false,
       "source": "openrouter",
-      "updated": "2026-07-23"
+      "updated": "2026-07-24"
     }
   },
   {
@@ -4645,7 +4645,7 @@
       "deterministic_seed": true,
       "is_moderated": false,
       "source": "openrouter",
-      "updated": "2026-07-23"
+      "updated": "2026-07-24"
     }
   },
   {
