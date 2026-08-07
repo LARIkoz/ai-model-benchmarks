@@ -1049,7 +1049,7 @@
         </div>
       </div>
       <div class="verified-badge">
-        ✓ Verified 2026-08-06 (v3) · Next update: 2026-08-13
+        ✓ Verified 2026-08-07 (v3) · Next update: 2026-08-14
       </div>
     </section>
 
@@ -1387,7 +1387,7 @@
     <section id="matrix" class="fade-in">
       <div class="section-tag">Quick Decision Matrix</div>
       <h2 class="section-title">I need a model for X → use Y</h2>
-      <p class="section-sub">Fastest lookup. Verified 2026-08-06.</p>
+      <p class="section-sub">Fastest lookup. Verified 2026-08-07.</p>
       <input
         type="text"
         class="search-box search-matrix"
@@ -1470,14 +1470,14 @@
       // DATA — update here (quarterly)
       // ============================================================
 
-      const VERIFIED = "2026-08-06";
+      const VERIFIED = "2026-08-07";
       const NEXT_UPDATE = "2026-03-31";
 
       // MEGA-TABLE rows
       const MODELS = [
         {tier: "1", name: "Claude Opus 4.6", priceIn: 5.0, priceOut: 25.0, ctx: "1M", maxOut: "128K", caps: "VTRS", swe_v: {v:80.8,d:"2026-03",s:"https://scale.com/leaderboard"}, swe_pro: {v:45.9,d:"2026-03",s:"https://scale.com/leaderboard"}, gpqa: {v:91.3,d:"2026-03",s:"https://artificialanalysis.ai/models"}, hle: {v:40.0,d:"2026-03",s:"https://www-cdn.anthropic.com/78073f739564e986ff3e28522761a7a0b4484f84.pdf"}, arc: {v:68.8,d:"2026-03",s:"https://arcprize.org"}, tau2: {v:99.3,d:"2026-03",s:"https://github.com/sierra-research/tau-bench"}, benchlm: {v:76,d:"2026-03",s:"https://benchlm.ai"}, best: "Reasoning, tool calling, writing, medical content, code review"},
         {tier: "1", name: "Claude Opus 4.5", priceIn: 5.0, priceOut: 25.0, ctx: "200K", maxOut: "64K", caps: "VTRS", swe_v: {v:80.9,d:"2026-03",s:"https://scale.com/leaderboard"}, swe_pro: {v:45.9,d:"2026-03",s:"https://scale.com/leaderboard"}, gpqa: {v:87.0,d:"2026-03",s:"https://artificialanalysis.ai/models"}, hle: {v:28.4,d:"2026-03",s:"https://lastexam.ai"}, arc: null, tau2: null, benchlm: {v:62,d:"2026-03",s:"https://benchlm.ai"}, best: "Reasoning, long-horizon tasks"},
-        {tier: "1", name: "Claude Opus 4.1", priceIn: 15.0, priceOut: 75.0, ctx: "200K", maxOut: "32K", caps: "VTRS", swe_v: null, swe_pro: null, gpqa: null, hle: null, arc: null, tau2: null, benchlm: null, best: "Function calling"},
+        {tier: "1", name: "Claude Opus 4.1", priceIn: 15.0, priceOut: 75.0, ctx: "200K", maxOut: "32K", caps: "VTR", swe_v: null, swe_pro: null, gpqa: null, hle: null, arc: null, tau2: null, benchlm: null, best: "Function calling"},
         {tier: "1", name: "Gemini 3.1 Pro", priceIn: 2.0, priceOut: 12.0, ctx: "1M", maxOut: "65K", caps: "VTRSA", swe_v: {v:80.6,d:"2026-03",s:"https://scale.com/leaderboard"}, swe_pro: {v:43.3,d:"2026-03",s:"https://scale.com/leaderboard"}, gpqa: {v:94.1,d:"2026-03",s:"https://artificialanalysis.ai/models"}, hle: {v:37.2,d:"2026-03",s:"https://lastexam.ai"}, arc: {v:77.1,d:"2026-03",s:"https://arcprize.org"}, tau2: null, benchlm: {v:83,d:"2026-03",s:"https://benchlm.ai"}, best: "GPQA, ARC-AGI-2, medical research, vision, long documents"},
         {tier: "1", name: "Gemini 3 Pro", priceIn: 2.0, priceOut: 12.0, ctx: "65K", maxOut: "32K", caps: "VRSI", swe_v: {v:76.2,d:"2026-03",s:"https://scale.com/leaderboard"}, swe_pro: {v:43.3,d:"2026-03",s:"https://scale.com/leaderboard"}, gpqa: {v:91.9,d:"2026-03",s:"https://artificialanalysis.ai/models"}, hle: null, arc: null, tau2: null, benchlm: null, best: "Scraper code generation, vision"},
         {tier: "1", name: "GPT-5.4", priceIn: 2.5, priceOut: 15.0, ctx: "1M", maxOut: "128K", caps: "VTRS", swe_v: {v:80,d:"2026-03",s:"https://scale.com/leaderboard"}, swe_pro: {v:41.8,d:"2026-03",s:"https://scale.com/leaderboard"}, gpqa: {v:92.0,d:"2026-03",s:"https://artificialanalysis.ai/models"}, hle: {v:41.6,d:"2026-03",s:"https://lastexam.ai"}, arc: {v:73.3,d:"2026-03",s:"https://arcprize.org"}, tau2: null, benchlm: {v:80,d:"2026-03",s:"https://benchlm.ai"}, best: "Math, agentic coding, JS deobfuscation, scientific coding"},
@@ -1501,7 +1501,7 @@
         {tier: "2", name: "GLM-4.6", priceIn: 0.5, priceOut: 2.0, ctx: "202K", maxOut: "131K", caps: "TRS", swe_v: {v:68.0,d:"2026-03",s:"https://scale.com/leaderboard"}, swe_pro: null, gpqa: {v:81.0,d:"2026-03",s:"https://artificialanalysis.ai/models"}, hle: null, arc: null, tau2: null, benchlm: null, best: "General tasks"},
         {tier: "2", name: "GLM-4.5", priceIn: 0.6, priceOut: 2.2, ctx: "131K", maxOut: "98K", caps: "TR", swe_v: null, swe_pro: null, gpqa: null, hle: null, arc: null, tau2: null, benchlm: null, best: "Function calling #1"},
         {tier: "2", name: "Qwen3.5-397B", priceIn: 0.39, priceOut: 2.34, ctx: "262K", maxOut: "65K", caps: "VTRS", swe_v: {v:76.4,d:"2026-03",s:"https://scale.com/leaderboard"}, swe_pro: {v:38.7,d:"2026-03",s:"https://scale.com/leaderboard"}, gpqa: {v:88.4,d:"2026-03",s:"https://artificialanalysis.ai/models"}, hle: null, arc: null, tau2: null, benchlm: null, best: "Vision+video+reasoning, instruction following #1, budget GPQA"},
-        {tier: "2", name: "Qwen3.5-122B", priceIn: 0.26, priceOut: 2.08, ctx: "262K", maxOut: "65K", caps: "VTRS", swe_v: {v:72.0,d:"2026-03",s:"https://scale.com/leaderboard"}, swe_pro: null, gpqa: {v:86.6,d:"2026-03",s:"https://artificialanalysis.ai/models"}, hle: null, arc: null, tau2: null, benchlm: null, best: "Budget reasoning"},
+        {tier: "2", name: "Qwen3.5-122B", priceIn: 0.29, priceOut: 2.4, ctx: "262K", maxOut: "81K", caps: "VTRS", swe_v: {v:72.0,d:"2026-03",s:"https://scale.com/leaderboard"}, swe_pro: null, gpqa: {v:86.6,d:"2026-03",s:"https://artificialanalysis.ai/models"}, hle: null, arc: null, tau2: null, benchlm: null, best: "Budget reasoning"},
         {tier: "2", name: "Qwen3.5-35B", priceIn: 0.14, priceOut: 1.0, ctx: "262K", maxOut: "262K", caps: "VTRS", swe_v: {v:69.2,d:"2026-03",s:"https://scale.com/leaderboard"}, swe_pro: null, gpqa: {v:84.2,d:"2026-03",s:"https://artificialanalysis.ai/models"}, hle: null, arc: null, tau2: null, benchlm: null, best: "Mid-tier reasoning"},
         {tier: "2", name: "Qwen3-Coder", priceIn: 0.3, priceOut: 1.0, ctx: "262K", maxOut: "65K", caps: "TS", swe_v: null, swe_pro: null, gpqa: null, hle: null, arc: null, tau2: null, benchlm: null, best: "Coding"},
         {tier: "2", name: "Qwen3-Coder-Plus", priceIn: 0.65, priceOut: 3.25, ctx: "1M", maxOut: "65K", caps: "TS", swe_v: null, swe_pro: null, gpqa: null, hle: null, arc: null, tau2: null, benchlm: null, best: "Long context code"},
