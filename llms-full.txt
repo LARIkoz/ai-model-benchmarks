@@ -1,5 +1,5 @@
 # AI Model Benchmarks 2026 — Full Data for AI Agents
-# Updated: 2026-08-14
+# Updated: 2026-08-15
 
 This file contains the complete routing table and model summary.
 For full JSON data, fetch these URLs directly:
@@ -54,7 +54,7 @@ For full JSON data, fetch these URLs directly:
 | Claude Haiku 4.5 | Anthropic | T1 | 200K | 64K | 1.0 | 5.0 | VTRS | Budget Claude, fast tasks |
 | Grok 4 | xAI | T1 | 256K | — | 3.0 | 15.0 | VTRS | Assembly deobfuscation, coding |
 | Grok 4.20 Beta | xAI | T1 | 2M | — | 2.0 | 6.0 | VTRS | Hallucination resistance, fact-checking, long c... |
-| GLM-5 | Z.ai | T1 | 204K | 131K | 0.95 | 2.55 | TRS | Tool calling, multilingual, long-horizon tasks,... |
+| GLM-5 | Z.ai | T1 | 198K | 128K | 0.6 | 1.92 | TRS | Tool calling, multilingual, long-horizon tasks,... |
 | GLM-5-Turbo | Z.ai | T1 | 202K | 131K | 1.2 | 4.0 | TR | Tool reliability, low error rate |
 | Gemini 2.5 Pro | Google | T1 | 1M | 65K | 1.25 | 10.0 | VTRS | Adaptive reasoning, GRIND |
 | Amazon Nova Premier | Amazon | T1 | 1M | 32K | 2.5 | 12.5 | VT | AWS ecosystem |
@@ -64,11 +64,11 @@ For full JSON data, fetch these URLs directly:
 | Kimi K2.5 | Moonshot | T2 | 262K | — | 0.45 | 2.2 | — | Vision + reasoning, budget GPQA, writing |
 | Kimi K2 | Moonshot | T2 | 131K | — | 0.4 | 2.0 | — | Budget Kimi |
 | GLM-4.7 | Z.ai | T2 | 202K | 131K | 0.4 | 1.75 | TRS | Tool calling budget |
-| GLM-4.6 | Z.ai | T2 | 202K | 131K | 0.5 | 2.0 | TRS | General tasks |
+| GLM-4.6 | Z.ai | T2 | 204K | 131K | 0.55 | 2.2 | TRS | General tasks |
 | GLM-4.5 | Z.ai | T2 | 131K | 98K | 0.6 | 2.2 | TR | Function calling #1 |
-| Qwen3.5-397B | Alibaba | T2 | 262K | 262K | 0.5 | 3.6 | VTRS | Vision+video+reasoning, instruction following #... |
+| Qwen3.5-397B | Alibaba | T2 | 262K | 65K | 0.39 | 2.34 | VTRS | Vision+video+reasoning, instruction following #... |
 | Qwen3.5-122B | Alibaba | T2 | 262K | 81K | 0.29 | 2.4 | VTRS | Budget reasoning |
-| Qwen3.5-35B | Alibaba | T2 | 262K | 262K | 0.25 | 1.25 | VTRS | Mid-tier reasoning |
+| Qwen3.5-35B | Alibaba | T2 | 262K | 65K | 0.225 | 1.8 | VTRS | Mid-tier reasoning |
 | Qwen3-Coder | Alibaba | T2 | 262K | 65K | 0.3 | 1.0 | TS | Coding |
 | Qwen3-Coder-Plus | Alibaba | T2 | 1M | 65K | 0.65 | 3.25 | TS | Long context code |
 | DeepSeek V3.2 | DeepSeek | T2 | 163K | 65K | 0.269 | 0.4 | TRS | Cheapest quality, hallucination resistance budget |
@@ -89,7 +89,7 @@ For full JSON data, fetch these URLs directly:
 | Mistral Medium 3.1 | Mistral | T2 | 131K | — | 0.4 | 2.0 | VTS | EU compliance |
 | Codestral | Mistral | T2 | 256K | — | 0.3 | 0.9 | TS | Code, JS deobfuscation budget |
 | Devstral Medium | Mistral | T2 | 131K | — | 0.4 | 2.0 | TS | Code agent |
-| Llama 4 Maverick | Meta | T2 | 128K | 16K | None | None | VTS | Vision, MMLU-Pro |
+| Llama 4 Maverick | Meta | T2 | 1M | 16K | None | None | VTS | Vision, MMLU-Pro |
 | GLM-4.6V | Z.ai | T2 | 131K | 32K | 0.3 | 0.9 | VTR | Vision + VIDEO input |
 | GLM-4.5V | Z.ai | T2 | 65K | 16K | 0.6 | 1.8 | VTR | Vision |
 | Qwen3.5-27B | Alibaba | T3 | 262K | 65K | 0.195 | 1.56 | VTRS | Vision+video |
