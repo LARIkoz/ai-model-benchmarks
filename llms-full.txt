@@ -1,5 +1,5 @@
 # AI Model Benchmarks 2026 — Full Data for AI Agents
-# Updated: 2026-08-15
+# Updated: 2026-08-16
 
 This file contains the complete routing table and model summary.
 For full JSON data, fetch these URLs directly:
@@ -83,7 +83,7 @@ For full JSON data, fetch these URLs directly:
 | Amazon Nova 2 Lite | Amazon | T2 | 1M | 65K | 0.3 | 2.5 | VTR | Multimodal 1M context |
 | Inception Mercury 2 | Inception | T2 | 128K | 50K | 0.25 | 0.75 | TRS | Speed king 872 tok/s |
 | Inception Mercury Coder | Inception | T2 | 128K | 32K | 0.25 | 0.75 | TS | Fast code |
-| MiniMax M1 | MiniMax | T2 | 1M | 40K | 0.55 | 2.2 | TR | Long context 1M |
+| MiniMax M1 | MiniMax | T2 | 1M | 40K | 0.4 | 2.2 | TR | Long context 1M |
 | MiniMax 01 | MiniMax | T2 | 1M | 1000K | 0.2 | 1.1 | V | Vision + 1M context |
 | Mistral Large 2512 | Mistral | T2 | 262K | — | 0.5 | 1.5 | VTS | EU compliance, vision |
 | Mistral Medium 3.1 | Mistral | T2 | 131K | — | 0.4 | 2.0 | VTS | EU compliance |
@@ -100,7 +100,7 @@ For full JSON data, fetch these URLs directly:
 | GLM-4-32B | Z.ai | T3 | 128K | — | 0.1 | 0.1 | T | Open-weight 32B |
 | Qwen3.5-Flash | Alibaba | T3 | 1M | 65K | 0.065 | 0.26 | VTRS | 1M context ultra-budget |
 | Qwen3.5-9B | Alibaba | T3 | 262K | 262K | 0.1 | 0.15 | VTRS | Tiny + vision+video |
-| Qwen3-30B | Alibaba | T3 | 40K | 16K | 0.12 | 0.5 | TR | MoE small |
+| Qwen3-30B | Alibaba | T3 | 131K | 8K | 0.13 | 0.52 | TR | MoE small |
 | Qwen3-Coder-30B | Alibaba | T3 | 262K | 262K | 0.07 | 0.28 | TS | Code small |
 | Qwen Turbo | Alibaba | T3 | 131K | 8K | 0.0325 | 0.13 | T | Cheapest Qwen |
 | Gemini 2.5 Flash Lite | Google | T3 | 1M | 65K | 0.1 | 0.4 | VTRS | Cheapest Gemini 1M |
