@@ -1,5 +1,5 @@
 # AI Model Benchmarks 2026 — Full Data for AI Agents
-# Updated: 2026-08-16
+# Updated: 2026-08-17
 
 This file contains the complete routing table and model summary.
 For full JSON data, fetch these URLs directly:
@@ -83,7 +83,7 @@ For full JSON data, fetch these URLs directly:
 | Amazon Nova 2 Lite | Amazon | T2 | 1M | 65K | 0.3 | 2.5 | VTR | Multimodal 1M context |
 | Inception Mercury 2 | Inception | T2 | 128K | 50K | 0.25 | 0.75 | TRS | Speed king 872 tok/s |
 | Inception Mercury Coder | Inception | T2 | 128K | 32K | 0.25 | 0.75 | TS | Fast code |
-| MiniMax M1 | MiniMax | T2 | 1M | 40K | 0.4 | 2.2 | TR | Long context 1M |
+| MiniMax M1 | MiniMax | T2 | 1M | 40K | 0.55 | 2.2 | TR | Long context 1M |
 | MiniMax 01 | MiniMax | T2 | 1M | 1000K | 0.2 | 1.1 | V | Vision + 1M context |
 | Mistral Large 2512 | Mistral | T2 | 262K | — | 0.5 | 1.5 | VTS | EU compliance, vision |
 | Mistral Medium 3.1 | Mistral | T2 | 131K | — | 0.4 | 2.0 | VTS | EU compliance |
