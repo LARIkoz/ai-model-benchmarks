@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-21",
+  "updated": "2026-08-22",
   "source": "openrouter.ai/api/v1/models",
   "cache_pricing_by_provider": [
     {
@@ -144,8 +144,8 @@
     },
     {
       "model": "DeepSeek V3.2",
-      "input_per_m": 0.269,
-      "cached_per_m": 0.1345,
+      "input_per_m": 0.26,
+      "cached_per_m": 0.13,
       "discount": "50%",
       "note": null
     },
@@ -196,5 +196,5 @@
     "Each request is completely unique (no common prefix)",
     "Models without cache support"
   ],
-  "checked_at": "2026-08-21"
+  "checked_at": "2026-08-22"
 }
