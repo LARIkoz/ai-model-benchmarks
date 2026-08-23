@@ -1,5 +1,5 @@
 # AI Model Benchmarks 2026 — Full Data for AI Agents
-# Updated: 2026-08-22
+# Updated: 2026-08-23
 
 This file contains the complete routing table and model summary.
 For full JSON data, fetch these URLs directly:
@@ -67,7 +67,7 @@ For full JSON data, fetch these URLs directly:
 | GLM-4.6 | Z.ai | T2 | 202K | 131K | 0.5 | 2.0 | TRS | General tasks |
 | GLM-4.5 | Z.ai | T2 | 131K | 98K | 0.6 | 2.2 | TR | Function calling #1 |
 | Qwen3.5-397B | Alibaba | T2 | 262K | 65K | 0.39 | 2.34 | VTRS | Vision+video+reasoning, instruction following #... |
-| Qwen3.5-122B | Alibaba | T2 | 262K | 65K | 0.26 | 2.08 | VTRS | Budget reasoning |
+| Qwen3.5-122B | Alibaba | T2 | 262K | 262K | 0.26 | 2.08 | VTRS | Budget reasoning |
 | Qwen3.5-35B | Alibaba | T2 | 262K | 262K | 0.25 | 1.25 | VTRS | Mid-tier reasoning |
 | Qwen3-Coder | Alibaba | T2 | 262K | 65K | 0.3 | 1.0 | TS | Coding |
 | Qwen3-Coder-Plus | Alibaba | T2 | 1M | 65K | 0.65 | 3.25 | TS | Long context code |
@@ -100,7 +100,7 @@ For full JSON data, fetch these URLs directly:
 | GLM-4-32B | Z.ai | T3 | 128K | — | 0.1 | 0.1 | T | Open-weight 32B |
 | Qwen3.5-Flash | Alibaba | T3 | 1M | 65K | 0.065 | 0.26 | VTRS | 1M context ultra-budget |
 | Qwen3.5-9B | Alibaba | T3 | 262K | 262K | 0.1 | 0.15 | VTRS | Tiny + vision+video |
-| Qwen3-30B | Alibaba | T3 | 131K | 8K | 0.13 | 0.52 | TR | MoE small |
+| Qwen3-30B | Alibaba | T3 | 40K | 16K | 0.12 | 0.5 | TR | MoE small |
 | Qwen3-Coder-30B | Alibaba | T3 | 262K | 262K | 0.07 | 0.28 | TS | Code small |
 | Qwen Turbo | Alibaba | T3 | 131K | 8K | 0.0325 | 0.13 | T | Cheapest Qwen |
 | Gemini 2.5 Flash Lite | Google | T3 | 1M | 65K | 0.1 | 0.4 | VTRS | Cheapest Gemini 1M |
