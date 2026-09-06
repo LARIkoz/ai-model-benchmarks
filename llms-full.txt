@@ -1,5 +1,5 @@
 # AI Model Benchmarks 2026 — Full Data for AI Agents
-# Updated: 2026-09-05
+# Updated: 2026-09-06
 
 This file contains the complete routing table and model summary.
 For full JSON data, fetch these URLs directly:
@@ -68,7 +68,7 @@ For full JSON data, fetch these URLs directly:
 | GLM-4.5 | Z.ai | T2 | 131K | 98K | 0.6 | 2.2 | TR | Function calling #1 |
 | Qwen3.5-397B | Alibaba | T2 | 262K | 235K | 0.55 | 3.5 | VTRS | Vision+video+reasoning, instruction following #... |
 | Qwen3.5-122B | Alibaba | T2 | 262K | 81K | 0.29 | 2.4 | VTRS | Budget reasoning |
-| Qwen3.5-35B | Alibaba | T2 | 262K | 16K | 0.08 | 0.75 | VTRS | Mid-tier reasoning |
+| Qwen3.5-35B | Alibaba | T2 | 256K | 16K | 0.3125 | 1.25 | VTRS | Mid-tier reasoning |
 | Qwen3-Coder | Alibaba | T2 | 262K | 65K | 0.3 | 1.0 | TS | Coding |
 | Qwen3-Coder-Plus | Alibaba | T2 | 1M | 65K | 0.65 | 3.25 | TS | Long context code |
 | DeepSeek V3.2 | DeepSeek | T2 | 163K | 65K | 0.269 | 0.4 | TRS | Cheapest quality, hallucination resistance budget |
