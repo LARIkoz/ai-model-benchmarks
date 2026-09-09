@@ -1,5 +1,5 @@
 # AI Model Benchmarks 2026 — Full Data for AI Agents
-# Updated: 2026-09-08
+# Updated: 2026-09-09
 
 This file contains the complete routing table and model summary.
 For full JSON data, fetch these URLs directly:
@@ -64,9 +64,9 @@ For full JSON data, fetch these URLs directly:
 | Kimi K2.5 | Moonshot | T2 | 262K | — | 0.45 | 2.2 | — | Vision + reasoning, budget GPQA, writing |
 | Kimi K2 | Moonshot | T2 | 131K | — | 0.4 | 2.0 | — | Budget Kimi |
 | GLM-4.7 | Z.ai | T2 | 202K | 131K | 0.4 | 1.75 | TRS | Tool calling budget |
-| GLM-4.6 | Z.ai | T2 | 204K | 131K | 0.55 | 2.2 | TRS | General tasks |
+| GLM-4.6 | Z.ai | T2 | 198K | 16K | 0.43 | 1.75 | TRS | General tasks |
 | GLM-4.5 | Z.ai | T2 | 131K | 98K | 0.6 | 2.2 | TR | Function calling #1 |
-| Qwen3.5-397B | Alibaba | T2 | 262K | 65K | 0.39 | 2.34 | VTRS | Vision+video+reasoning, instruction following #... |
+| Qwen3.5-397B | Alibaba | T2 | 262K | 235K | 0.55 | 3.5 | VTRS | Vision+video+reasoning, instruction following #... |
 | Qwen3.5-122B | Alibaba | T2 | 262K | 81K | 0.29 | 2.4 | VTRS | Budget reasoning |
 | Qwen3.5-35B | Alibaba | T2 | 256K | 16K | 0.3125 | 1.25 | VTRS | Mid-tier reasoning |
 | Qwen3-Coder | Alibaba | T2 | 262K | 65K | 0.3 | 1.0 | TS | Coding |
@@ -83,7 +83,7 @@ For full JSON data, fetch these URLs directly:
 | Amazon Nova 2 Lite | Amazon | T2 | 1M | 65K | 0.3 | 2.5 | VTR | Multimodal 1M context |
 | Inception Mercury 2 | Inception | T2 | 128K | 50K | 0.25 | 0.75 | TRS | Speed king 872 tok/s |
 | Inception Mercury Coder | Inception | T2 | 128K | 32K | 0.25 | 0.75 | TS | Fast code |
-| MiniMax M1 | MiniMax | T2 | 1M | 40K | 0.4 | 2.2 | TR | Long context 1M |
+| MiniMax M1 | MiniMax | T2 | 1M | 40K | 0.55 | 2.2 | TR | Long context 1M |
 | MiniMax 01 | MiniMax | T2 | 1M | 900K | 0.2 | 1.1 | V | Vision + 1M context |
 | Mistral Large 2512 | Mistral | T2 | 262K | 209K | 0.5 | 1.5 | VTS | EU compliance, vision |
 | Mistral Medium 3.1 | Mistral | T2 | 131K | 104K | 0.4 | 2.0 | VTS | EU compliance |
