@@ -1,5 +1,5 @@
 # AI Model Benchmarks 2026 — Full Data for AI Agents
-# Updated: 2026-09-15
+# Updated: 2026-09-16
 
 This file contains the complete routing table and model summary.
 For full JSON data, fetch these URLs directly:
@@ -83,7 +83,7 @@ For full JSON data, fetch these URLs directly:
 | Amazon Nova 2 Lite | Amazon | T2 | 1M | 65K | 0.3 | 2.5 | VTR | Multimodal 1M context |
 | Inception Mercury 2 | Inception | T2 | 128K | 50K | 0.25 | 0.75 | TRS | Speed king 872 tok/s |
 | Inception Mercury Coder | Inception | T2 | 128K | 32K | 0.25 | 0.75 | TS | Fast code |
-| MiniMax M1 | MiniMax | T2 | 1M | 40K | 0.55 | 2.2 | TR | Long context 1M |
+| MiniMax M1 | MiniMax | T2 | 1M | 40K | 0.4 | 2.2 | TR | Long context 1M |
 | MiniMax 01 | MiniMax | T2 | 1M | 900K | 0.2 | 1.1 | V | Vision + 1M context |
 | Mistral Large 2512 | Mistral | T2 | 262K | 209K | 0.5 | 1.5 | VTS | EU compliance, vision |
 | Mistral Medium 3.1 | Mistral | T2 | 131K | 104K | 0.4 | 2.0 | VTS | EU compliance |
@@ -108,7 +108,7 @@ For full JSON data, fetch these URLs directly:
 | DeepSeek V3.1 | DeepSeek | T3 | 163K | 32K | 0.25 | 0.95 | TRS | Budget DeepSeek |
 | Amazon Nova Micro | Amazon | T3 | 128K | 5K | 0.035 | 0.14 | T | Cheapest AWS |
 | Amazon Nova Lite | Amazon | T3 | 300K | 5K | 0.06 | 0.24 | VT | Vision budget, 300K context |
-| Mistral Small 3.2 | Mistral | T3 | 128K | 16K | 0.075 | 0.2 | VTS | Vision tiny |
+| Mistral Small 3.2 | Mistral | T3 | 256K | 16K | 0.0938 | 0.25 | VTS | Vision tiny |
 | Mistral Small 3.1 | Mistral | T3 | 128K | 102K | 0.35 | 0.56 | V | Vision cheapest, EU multilingual |
 | Mistral Nemo | Mistral | T3 | 131K | 16K | 0.019 | 0.03 | TS | Cheapest text |
 | Devstral Small | Mistral | T3 | 131K | — | 0.1 | 0.3 | TS | Code budget EU |
