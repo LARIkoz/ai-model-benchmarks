@@ -1,5 +1,5 @@
 # AI Model Benchmarks 2026 — Full Data for AI Agents
-# Updated: 2026-10-07
+# Updated: 2026-10-08
 
 This file contains the complete routing table and model summary.
 For full JSON data, fetch these URLs directly:
@@ -71,7 +71,7 @@ For full JSON data, fetch these URLs directly:
 | Qwen3.5-35B | Alibaba | T2 | 262K | 235K | 0.15 | 1.0 | VTRS | Mid-tier reasoning |
 | Qwen3-Coder | Alibaba | T2 | 262K | 65K | 0.3 | 1.0 | TS | Coding |
 | Qwen3-Coder-Plus | Alibaba | T2 | 1M | 65K | 0.65 | 3.25 | TS | Long context code |
-| DeepSeek V3.2 | DeepSeek | T2 | 131K | 65K | 0.28 | 0.42 | TRS | Cheapest quality, hallucination resistance budget |
+| DeepSeek V3.2 | DeepSeek | T2 | 163K | 147K | 0.259 | 0.42 | TRS | Cheapest quality, hallucination resistance budget |
 | DeepSeek R1 | DeepSeek | T2 | 64K | 16K | 0.7 | 2.5 | TR | Deep reasoning, medical budget king |
 | DeepSeek V3.2 Speciale | DeepSeek | T2 | 163K | 163K | 0.287 | 0.431 | RS | Enhanced V3.2 |
 | Grok 4.1 Fast | xAI | T2 | 2M | 30K | 0.2 | 0.5 | VTRS | Consilium, 2M context, long context budget |
@@ -92,7 +92,7 @@ For full JSON data, fetch these URLs directly:
 | Llama 4 Maverick | Meta | T2 | 128K | 16K | None | None | VTS | Vision, MMLU-Pro |
 | GLM-4.6V | Z.ai | T2 | 131K | 32K | 0.3 | 0.9 | VTR | Vision + VIDEO input |
 | GLM-4.5V | Z.ai | T2 | 65K | 16K | 0.6 | 1.8 | VTR | Vision |
-| Qwen3.5-27B | Alibaba | T3 | 262K | 65K | 0.195 | 1.56 | VTRS | Vision+video |
+| Qwen3.5-27B | Alibaba | T3 | 262K | 81K | 0.26 | 2.6 | VTRS | Vision+video |
 | GLM-4.5 Air | Z.ai | T3 | 131K | 98K | 0.13 | 0.85 | TR | Budget GLM, batch general, classification |
 | Qwen Plus | Alibaba | T3 | 1M | 32K | 0.26 | 0.78 | TS | 1M context budget |
 | Llama 4 Scout | Meta | T3 | 327K | 16K | 0.1 | 0.3 | VTS | 10M context!, Vision, Speed king |
