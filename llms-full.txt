@@ -1,5 +1,5 @@
 # AI Model Benchmarks 2026 — Full Data for AI Agents
-# Updated: 2026-10-08
+# Updated: 2026-10-09
 
 This file contains the complete routing table and model summary.
 For full JSON data, fetch these URLs directly:
@@ -66,9 +66,9 @@ For full JSON data, fetch these URLs directly:
 | GLM-4.7 | Z.ai | T2 | 202K | 131K | 0.6 | 2.2 | TRS | Tool calling budget |
 | GLM-4.6 | Z.ai | T2 | 198K | 16K | 0.43 | 1.75 | TRS | General tasks |
 | GLM-4.5 | Z.ai | T2 | 131K | 98K | 0.6 | 2.2 | TR | Function calling #1 |
-| Qwen3.5-397B | Alibaba | T2 | 262K | 81K | 0.45 | 3.0 | VTRS | Vision+video+reasoning, instruction following #... |
+| Qwen3.5-397B | Alibaba | T2 | 262K | 235K | 0.55 | 3.5 | VTRS | Vision+video+reasoning, instruction following #... |
 | Qwen3.5-122B | Alibaba | T2 | 262K | 65K | 0.26 | 2.08 | VTRS | Budget reasoning |
-| Qwen3.5-35B | Alibaba | T2 | 262K | 235K | 0.15 | 1.0 | VTRS | Mid-tier reasoning |
+| Qwen3.5-35B | Alibaba | T2 | 262K | 32K | 0.08 | 0.75 | VTRS | Mid-tier reasoning |
 | Qwen3-Coder | Alibaba | T2 | 262K | 65K | 0.3 | 1.0 | TS | Coding |
 | Qwen3-Coder-Plus | Alibaba | T2 | 1M | 65K | 0.65 | 3.25 | TS | Long context code |
 | DeepSeek V3.2 | DeepSeek | T2 | 163K | 147K | 0.259 | 0.42 | TRS | Cheapest quality, hallucination resistance budget |
@@ -110,7 +110,7 @@ For full JSON data, fetch these URLs directly:
 | Amazon Nova Lite | Amazon | T3 | 300K | 5K | 0.06 | 0.24 | VT | Vision budget, 300K context |
 | Mistral Small 3.2 | Mistral | T3 | 256K | 16K | 0.0938 | 0.25 | VTS | Vision tiny |
 | Mistral Small 3.1 | Mistral | T3 | 128K | 102K | 0.35 | 0.56 | VTS | Vision cheapest, EU multilingual |
-| Mistral Nemo | Mistral | T3 | 131K | 16K | 0.019 | 0.03 | TS | Cheapest text |
+| Mistral Nemo | Mistral | T3 | 131K | 16K | 0.029 | 0.03 | TS | Cheapest text |
 | Devstral Small | Mistral | T3 | 131K | — | 0.1 | 0.3 | TS | Code budget EU |
 | Google Gemma 3 27B | Google | T3 | 131K | 117K | 0.08 | 0.45 | VTS | Open-weight vision |
 | MiniMax M2.5 (Free) | MiniMax | FREE | 196K | 8K | 0 | 0 | TR | Best free coder, batch coding, code review free |
