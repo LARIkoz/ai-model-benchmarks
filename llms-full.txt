@@ -1,5 +1,5 @@
 # AI Model Benchmarks 2026 — Full Data for AI Agents
-# Updated: 2026-11-02
+# Updated: 2026-11-03
 
 This file contains the complete routing table and model summary.
 For full JSON data, fetch these URLs directly:
@@ -101,7 +101,7 @@ For full JSON data, fetch these URLs directly:
 | Qwen3.5-Flash | Alibaba | T3 | 1M | 65K | 0.065 | 0.26 | VTRS | 1M context ultra-budget |
 | Qwen3.5-9B | Alibaba | T3 | 262K | 235K | 0.17 | 0.25 | VTRS | Tiny + vision+video |
 | Qwen3-30B | Alibaba | T3 | 40K | 16K | 0.12 | 0.5 | TRS | MoE small |
-| Qwen3-Coder-30B | Alibaba | T3 | 262K | 235K | 0.07 | 0.28 | TS | Code small |
+| Qwen3-Coder-30B | Alibaba | T3 | 262K | 235K | 0.15 | 0.6 | TS | Code small |
 | Qwen Turbo | Alibaba | T3 | 131K | 8K | 0.0325 | 0.13 | T | Cheapest Qwen |
 | Gemini 2.5 Flash Lite | Google | T3 | 1M | 65K | 0.1 | 0.4 | VTRS | Cheapest Gemini 1M |
 | Gemini 2.0 Flash | Google | T3 | 1M | 8K | 0.1 | 0.4 | VTS | Multimodal budget |
