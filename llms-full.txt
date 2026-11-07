@@ -1,5 +1,5 @@
 # AI Model Benchmarks 2026 — Full Data for AI Agents
-# Updated: 2026-11-06
+# Updated: 2026-11-07
 
 This file contains the complete routing table and model summary.
 For full JSON data, fetch these URLs directly:
@@ -58,8 +58,8 @@ For full JSON data, fetch these URLs directly:
 | GLM-5-Turbo | Z.ai | T1 | 202K | 131K | 1.2 | 4.0 | TR | Tool reliability, low error rate |
 | Gemini 2.5 Pro | Google | T1 | 1M | 65K | 1.25 | 10.0 | VTRS | Adaptive reasoning, GRIND |
 | Amazon Nova Premier | Amazon | T1 | 1M | 32K | 2.5 | 12.5 | VT | AWS ecosystem |
-| Cohere Command-A | Cohere | T1 | 256K | 8K | 2.5 | 10.0 | S | Enterprise |
-| MiniMax M2.5 | MiniMax | T2 | 198K | 32K | 0.27 | 0.95 | TRS | Best SWE/$, batch coding, browser automation, w... |
+| Cohere Command-A | Cohere | T1 | 256K | 8K | 2.5 | 10.0 | TS | Enterprise |
+| MiniMax M2.5 | MiniMax | T2 | 65K | 58K | 0.3 | 1.2 | TRS | Best SWE/$, batch coding, browser automation, w... |
 | MiniMax M2.7 | MiniMax | T2 | 196K | 176K | 0.21 | 0.84 | TR | Agentic tasks, GDPval |
 | Kimi K2.5 | Moonshot | T2 | 262K | — | 0.45 | 2.2 | — | Vision + reasoning, budget GPQA, writing |
 | Kimi K2 | Moonshot | T2 | 131K | — | 0.4 | 2.0 | — | Budget Kimi |
