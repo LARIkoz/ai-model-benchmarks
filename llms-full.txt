@@ -1,5 +1,5 @@
 # AI Model Benchmarks 2026 — Full Data for AI Agents
-# Updated: 2026-11-11
+# Updated: 2026-11-12
 
 This file contains the complete routing table and model summary.
 For full JSON data, fetch these URLs directly:
@@ -99,7 +99,7 @@ For full JSON data, fetch these URLs directly:
 | GLM-4.7-FlashX | Z.ai | T3 | 131K | 117K | 0.06 | 0.4 | TRS | Ultra-cheap tool calling, Tau2 98.8% |
 | GLM-4-32B | Z.ai | T3 | 128K | — | 0.1 | 0.1 | T | Open-weight 32B |
 | Qwen3.5-Flash | Alibaba | T3 | 1M | 65K | 0.065 | 0.26 | VTRS | 1M context ultra-budget |
-| Qwen3.5-9B | Alibaba | T3 | 262K | 235K | 0.17 | 0.25 | VTRS | Tiny + vision+video |
+| Qwen3.5-9B | Alibaba | T3 | 262K | 40K | 0.136 | 0.201 | VTRS | Tiny + vision+video |
 | Qwen3-30B | Alibaba | T3 | 40K | 16K | 0.12 | 0.5 | TRS | MoE small |
 | Qwen3-Coder-30B | Alibaba | T3 | 262K | 235K | 0.15 | 0.6 | TS | Code small |
 | Qwen Turbo | Alibaba | T3 | 131K | 8K | 0.0325 | 0.13 | T | Cheapest Qwen |
@@ -112,7 +112,7 @@ For full JSON data, fetch these URLs directly:
 | Mistral Small 3.1 | Mistral | T3 | 128K | 102K | 0.35 | 0.56 | VTS | Vision cheapest, EU multilingual |
 | Mistral Nemo | Mistral | T3 | 131K | 16K | 0.029 | 0.03 | TS | Cheapest text |
 | Devstral Small | Mistral | T3 | 131K | — | 0.1 | 0.3 | TS | Code budget EU |
-| Google Gemma 3 27B | Google | T3 | 131K | 117K | 0.08 | 0.45 | VTS | Open-weight vision |
+| Google Gemma 3 27B | Google | T3 | 131K | 117K | 0.08 | 0.35 | VTS | Open-weight vision |
 | MiniMax M2.5 (Free) | MiniMax | FREE | 196K | 8K | 0 | 0 | TR | Best free coder, batch coding, code review free |
 | Qwen3 Coder 480B (Free) | Alibaba | FREE | 262K | 262K | 0 | 0 | T | Coding free #1, 480B MoE 35B active |
 | Hermes 3 405B (Free) | Nous Research | FREE | 131K | — | 0 | 0 | — | Reasoning free, uncensored, general 405B |
